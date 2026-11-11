@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XPHERE — Finance, on a Chain You Can Trust</title>
+<meta name="description" content="XPHERE is a dual-chain Layer 1: an xpHash proof-of-work Proof Chain and a PBFT Main Chain with one-second finality. EVM-compatible. Build, stake, mine or join the Union.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="hide-notes"><button id="noteToggle" hidden></button><button id="gfxToggle" hidden></button>
+
+
+
+<!-- ================= HEADER ================= -->
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="#" aria-label="XPHERE home"><img class="mk" src="images/xphere-logo.png" alt=""><img class="type" src="images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="index.html" class="on">Home</a>
+      <a href="union.html">Union</a>
+      <a href="https://x-phere.com/staking.html">Stake</a>
+      <a href="https://x-phere.com/grant.html">Grant</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="https://docs.x-phere.com/whitepaper">Whitepaper</a>
+        </div>
+      </div>
+      <a href="https://docs.x-phere.com/">Docs</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-light hide-sm" href="https://docs.x-phere.com/ecosystem/directory">Explore apps</a>
+      <a class="btn btn-primary" href="mailto:Contact@X-phere.com">Get in touch</a>
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero2">
+  <div class="frame" id="frame">
+    <div class="glow"></div>
+    <svg class="lines" id="lines" aria-hidden="true"></svg>
+    <div class="hero-in">
+      
+      <div class="cross" id="cross"></div>
+      <p class="eyebrow" style="margin:0 0 18px;color:#c9c2bf">EVM-compatible Layer 1</p>
+      <h1>Finance, on a chain<br>you can trust</h1>
+      <p class="sub">Every block is secured by proof of work and final in about a second. Every rule is on-chain, open for anyone to check.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://xp.tamsa.io/" target="_blank" rel="noopener">Explore network</a>
+        <a class="btn btn-light" href="https://stake.x-phere.com">Stake XP</a>
+      </div>
+    </div>
+    <dl class="hstats">
+      <div><dt><span class="live" data-xp-live>Live</span> Block height</dt><dd data-xp-stat="block">—</dd></div>
+      <div><dt>Validators</dt><dd data-xp-stat="council">—</dd></div>
+      <div><dt>Block time · Finality</dt><dd>~1 sec</dd></div>
+      <div><dt><a href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener">XP burned ↗</a></dt><dd data-xp-stat="burn">—</dd></div>
+    </dl>
+    <div style="text-align:center;position:relative"></div>
+
+<!-- ================= LOGOS ================= -->
+<div class="logos">
+  <div class="wrap">
+    <p class="label">Teams building and validating on XPHERE </p>
+    <div class="marquee">
+      <div class="track" id="track">
+        <img src="images/01.ankr.svg" alt="Ankr"><img src="images/02.Nansen.svg" alt="Nansen"><img src="images/13.Hacken.svg" alt="Hacken"><img src="images/03.Onekey.svg" alt="OneKey"><img src="images/04.Dcent.svg" alt="D'CENT"><img src="images/05.ZIGAP.svg" alt="ZIGAP"><img src="images/06.TAMSA.svg" alt="TAMSA"><img src="images/10.XCROLL.svg" alt="XCROLL"><img src="images/09.RWA_NOVA.svg" alt="RWA NOVA"><img src="images/11.Xmarket.svg" alt="Xmarket"><img src="images/12.Xwarp.svg" alt="Xwarp"><img src="images/07.Coincreate.svg" alt="Coincreate"><img src="images/08.Lighthouse.svg" alt="Lighthouse"><img src="images/14.HorizonXVC.svg" alt="HorizonX VC"><img src="images/15.NextGen_Ventures.svg" alt="NextGen Ventures"><img src="images/16.AiNode.svg" alt="AiNode">
+      </div>
+    </div>
+  </div>
+</div>
+  </div><!-- /frame -->
+</div><!-- /hero2 -->
+
+<!-- ================= FINANCE (v2.0) ================= -->
+<section id="finance" class="fin2">
+  <div class="fin-frame">
+    <div class="fin-head2">
+      <div>
+        <span class="eyebrow">Finance on XPHERE</span>
+        <h2 class="h2">Ready for real finance</h2>
+        <a class="mini-btn" href="mailto:Contact@X-phere.com">Get in touch</a>
+      </div>
+      <p>XPHERE gives finance a chain it can rely on: yield paid from real revenue, stable value that settles in a second, and identity anchored to records anyone can check.</p>
+    </div>
+    <div class="fin-cols">
+      <a class="fcol" href="https://stake.x-phere.com" target="_blank" rel="noopener">
+        <svg class="fi" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><circle cx="12" cy="12" r="3.2"/><path d="M12 8.8V7.5M12 16.5v-1.3M15.2 12h1.3M7.5 12h1.3"/></svg>
+        <h3>Staking Vault <span class="st live">Live</span></h3>
+        <p>Real yield, not new issuance. Stake native XP in a non-custodial vault. Rewards come from what a validator actually earns, and the rest is burned.</p>
+      </a>
+      <a class="fcol" href="mailto:Contact@X-phere.com">
+        <svg class="fi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2c-.5-.9-1.6-1.4-2.8-1.4-1.6 0-2.8.8-2.8 2.1 0 2.9 5.8 1.4 5.8 4.2 0 1.3-1.2 2.1-2.9 2.1-1.3 0-2.4-.6-2.9-1.5M12 6.3v1.5M12 16.2v1.5"/></svg>
+        <h3>Stablecoins</h3>
+        <p>Issue and settle stable value with one-second finality, EVM-standard tokens and a public audit trail anyone can follow.</p>
+      </a>
+      <a class="fcol" href="#">
+        <svg class="fi" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.5 1.8-2.3 3.2-2.3s2.6.8 3.2 2.3M14.5 10h3.5M14.5 13.5h2.5"/></svg>
+        <h3>Digital Identity <span class="st">In development</span></h3>
+        <p>DID and HACS services are being built on XPHERE, so identity and credentials can be checked against on-chain records.</p>
+      </a>
+    </div>
+    <div class="fin-note"></div>
+  </div>
+</section>
+
+<!-- ================= dAPPS deck (v2.1) ================= -->
+<section id="apps" class="pcar">
+  <div class="wrap">
+    <div class="pc-head">
+      <span class="eyebrow">Ecosystem</span>
+      <h2 class="h2">Apps running on XPHERE</h2>
+      <p>Apps, explorers, wallets and infrastructure,<br>already live on the network.</p>
+    </div>
+    <div class="deck" id="deck">
+      <article class="pc" data-i="1">
+        <div class="lg"><span class="tbox"><img src="images/xcroll_mark.png" alt="XCROLL" style="width:44px;max-width:none;max-height:none"></span></div>
+        <h3>XCROLL</h3>
+        <p class="kicker">One-line description goes here</p>
+        <p class="tags">Category · Key feature · Key metric</p>
+        <a class="pill" href="#">Visit XCROLL <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><span class="tbox"><img src="images/faiyah.svg" alt="Faiyah" style="height:40px;width:auto;max-width:none;max-height:none"></span></div>
+        <h3>Faiyah</h3>
+        <p class="kicker">Multichain DeFi, from swaps to launches</p>
+        <p class="tags">Staking · P2P swap · Burn pools · Launchpad · DEX</p>
+        <a class="pill" href="https://faiyah.app/" target="_blank" rel="noopener">Open Faiyah <i>›</i></a>
+      </article>
+      <article class="pc" data-i="2" data-start>
+        <div class="lg"><img class="tile" src="images/xeffy.png" alt="Xeffy"></div>
+        <h3>Xeffy</h3>
+        <p class="kicker">Yield vaults backed by real-world assets</p>
+        <p class="tags">RWA · Yield vaults · XEF token on XPHERE</p>
+        <a class="pill" href="#">Visit Xeffy <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><span class="tbox"><img src="images/pumpkinswap.svg" alt="PumpkinSwap" style="width:48px;max-width:none;max-height:none"></span></div>
+        <h3>PumpkinSwap</h3>
+        <p class="kicker">Swap tokens on XPHERE in one step</p>
+        <p class="tags">Swap · Pools · Bridge</p>
+        <a class="pill" href="https://pumpkinswap.app/swap" target="_blank" rel="noopener">Open PumpkinSwap <i>›</i></a>
+      </article>
+      <article class="pc" data-i="3">
+        <div class="lg"><img class="tile" src="images/phos.png" alt="Phos"></div>
+        <h3>Phos</h3>
+        <p class="kicker">One-line description goes here</p>
+        <p class="tags">Category · Key feature · Key metric</p>
+        <a class="pill" href="#">Visit Phos <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><img class="tile" src="images/eco-xpscan.png" alt="XPScan"></div>
+        <h3>XPScan</h3>
+        <p class="kicker">The official XPHERE explorer</p>
+        <p class="tags">Blocks · Contract verification · Union · Burn dashboards</p>
+        <a class="pill" href="https://xpscan.io/" target="_blank" rel="noopener">Open XPScan <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><img class="tile pad" src="images/eco-tamsa.png" alt="Tamsa"></div>
+        <h3>Tamsa Explorer</h3>
+        <p class="kicker">Mainnet explorer with a public API</p>
+        <p class="tags">Blocks · Union · Network data</p>
+        <a class="pill" href="https://xp.tamsa.io/" target="_blank" rel="noopener">Open Tamsa <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><img class="tile pad" src="images/eco-zigap.png" alt="ZIGAP"></div>
+        <h3>ZIGAP</h3>
+        <p class="kicker">The wallet with XPHERE built in</p>
+        <p class="tags">Official partner wallet · No network setup</p>
+        <a class="pill" href="https://about.zigap.io/" target="_blank" rel="noopener">Open ZIGAP <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><img class="tile pad" src="images/eco-vault.png" alt="XP Union Vault"></div>
+        <h3>XP Union Vault</h3>
+        <p class="kicker">Real-yield staking for XP</p>
+        <p class="tags">60% to stakers · 40%+ burned · 0% fees</p>
+        <a class="pill" href="https://stake.x-phere.com/" target="_blank" rel="noopener">Open the Vault <i>›</i></a>
+      </article>
+      <article class="pc">
+        <div class="lg"><img class="tile pad" src="images/eco-ankr.png" alt="Ankr"></div>
+        <h3>Ankr RPC</h3>
+        <p class="kicker">Global RPC for Mainnet and Testnet</p>
+        <p class="tags">Public endpoints · Mainnet · Testnet</p>
+        <a class="pill" href="https://www.ankr.com/rpc/xphere/" target="_blank" rel="noopener">Open Ankr RPC <i>›</i></a>
+      </article>    </div>
+    <div class="deck-nav">
+      <button class="dn" id="prevBtn" aria-label="Previous">‹</button>
+      <div class="dots" id="dots"></div>
+      <button class="dn" id="nextBtn" aria-label="Next">›</button>
+    </div>
+    <div style="text-align:center;margin-top:18px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEY FEATURES (v2.6, Monad "Technology" card style) ================= -->
+<section id="features">
+  <div class="wrap">
+    <div class="kf-head">
+      <div>
+        <span class="eyebrow">Key features</span>
+        <h2 class="h2">Two chains,<br>one mission</h2>
+        <a class="mini-btn red" href="https://docs.x-phere.com/whitepaper">Read the whitepaper</a>
+      </div>
+      <p>Two chains securing each other, blocks every second, and the EVM the industry already builds on. The fundamentals finance needs.</p>
+    </div>
+    <div class="kf-grid">
+      <article class="kf">
+        <button class="kf-plus" aria-label="More">+</button>
+        <svg class="kf-art" data-art="chain" aria-hidden="true"></svg>
+        <div class="kf-foot"><span class="lab">Architecture</span><b>Dual chain</b></div>
+        <div class="kf-more">
+          <p>The Main Chain finalizes transactions with PBFT; the Proof Chain anchors security with proof of work.</p>
+          <ul><li>Main Chain <b>PBFT</b></li><li>Proof Chain <b>xpHash</b></li></ul>
+          <a href="https://docs.x-phere.com/whitepaper">Read the whitepaper →</a>
+        </div>
+      </article>
+      <article class="kf">
+        <button class="kf-plus" aria-label="More">+</button>
+        <svg class="kf-art" data-art="stack" aria-hidden="true"></svg>
+        <div class="kf-foot"><span class="lab">Compatibility</span><b>Cancun EVM</b></div>
+        <div class="kf-more">
+          <p>Bring your Solidity as it is. Contracts, wallets and tools built for Ethereum work on XPHERE unchanged.</p>
+          <ul><li>Chain ID <b>20250217</b></li><li>Tooling <b>Hardhat · Foundry<br>MetaMask</b></li></ul>
+          <a href="https://docs.x-phere.com/developers/quickstart">Developer quickstart →</a>
+        </div>
+      </article>
+      <article class="kf">
+        <button class="kf-plus" aria-label="More">+</button>
+        <svg class="kf-art" data-art="dial" aria-hidden="true"></svg>
+        <div class="kf-foot"><span class="lab">Throughput</span><b>4,000 TPS</b></div>
+        <div class="kf-more">
+          <p>Top-tier throughput, built so busy applications keep moving without congestion: a new block about every second, final the moment it lands.</p>
+          <ul><li>Block time <b>~1 sec</b></li><li>Finality <b>Deterministic</b></li></ul>
+          <a href="https://xp.tamsa.io/" target="_blank" rel="noopener">Watch it live →</a>
+        </div>
+      </article>
+      <article class="kf">
+        <button class="kf-plus" aria-label="More">+</button>
+        <svg class="kf-art" data-art="guard" aria-hidden="true"></svg>
+        <div class="kf-foot"><span class="lab">Security</span><b>51% attack resistant</b></div>
+        <div class="kf-more">
+          <p>An attacker would need majority hash power on the Proof Chain and control of the staked Union validators, at the same time.</p>
+          <ul><li>Proof Chain <b>xpHash PoW</b></li><li>Union slots <b>Capped at 31 · 35M XP each</b></li></ul>
+          <a href="https://docs.x-phere.com/whitepaper">Read the whitepaper →</a>
+        </div>
+      </article>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ================= 1.0 → 2.0 (v2.8) ================= -->
+<section id="evolution">
+  <div class="wrap">
+    <div class="kf-head">
+      <div>
+        <span class="eyebrow">XPHERE 2.0</span>
+        <h2 class="h2">The next evolution<br>begins</h2>
+      </div>
+      <p>XPHERE 2.0 was rebuilt around what 1.0 got wrong: closed contracts, dropped transactions and irregular blocks.</p>
+    </div>
+    <div class="evo2">
+      <div class="er eh"><span></span><span class="c1">XPHERE 1.0</span><span class="c2">XPHERE 2.0</span></div>
+      <div class="er"><span class="k">Architecture</span><span class="c1">Proprietary smart contract structure</span><span class="c2">Dual chain: PBFT Main Chain with an xpHash proof-of-work Proof Chain</span></div>
+      <div class="er"><span class="k">Compatibility</span><span class="c1">Hard for EVM developers and users to adopt</span><span class="c2">Cancun-level EVM. Solidity, Hardhat, Foundry and MetaMask work as they are</span></div>
+      <div class="er"><span class="k">Transactions</span><span class="c1">Users often saw dropped transactions</span><span class="c2">Deterministic PBFT finality in about one second</span></div>
+      <div class="er"><span class="k">Block generation</span><span class="c1">Irregular block times</span><span class="c2">A new block about every second</span></div>
+      <div class="er el"><span class="k">Supply</span><span class="c1">1.5B XP</span><span class="c2">5.5B hard cap, with 1.5B carried over to 1.0 holders</span></div>
+    </div>
+    
+  </div>
+</section>
+<!-- ================= TOKENOMICS (v3.0 redesign, moved under XPHERE 2.0) ================= -->
+<section id="tokenomics">
+  <div class="wrap">
+    <div class="kf-head">
+      <div>
+        <span class="eyebrow">Tokenomics</span>
+        <h2 class="h2">A hard cap,<br>and a fee that burns.</h2>
+        <a class="mini-btn" href="https://docs.x-phere.com/resources/tokenomics">Full tokenomics</a>
+      </div>
+      <p>Supply is fixed, emission shrinks every year, and three separate burns take XP out of circulation for good.</p>
+    </div>
+
+    <div class="tk-main">
+      <div class="tk-side">
+        <div><span class="lab">Hard cap</span><b>5.5B <em>XP</em></b><small>1.5B from XPHERE 1.0 · 4B emitted over 100 years</small></div>
+        <div><span class="lab">Emission</span><b>−26.28% <em>/ yr</em></b><small>Year 2 live: 1,474.4 XP per 60-block cycle</small></div>
+        <div><span class="lab"><span class="live" data-xp-live>Live</span> Burned by the Vault</span><b><span data-xp-stat="burn">—</span> <em>XP</em></b><small>Fee burns are on top of this</small></div>
+      </div>
+    </div>
+
+    <div class="tk-row">
+      <div class="tk-card">
+        <span class="lab">Block rewards</span>
+        <h4>Minted every 60 blocks</h4>
+        <div class="tk-ring" data-split="40,40,20" data-c="#f2efed,#ff9738,#5f5856" data-glow="-1"><div class="mid"><b>80%</b><em>to miners &amp; validators</em></div></div>
+        <ul class="tk-leg"><li><i style="background:#f2efed"></i>Miners<b>40%</b></li><li><i style="background:#ff9738"></i>Union<b>40%</b></li><li><i style="background:#5f5856"></i>Foundation<b>20%</b></li></ul>
+      </div>
+      <div class="tk-card">
+        <span class="lab">Transaction fees</span>
+        <h4>Half of every fee burns</h4>
+        <div class="tk-ring" data-split="50,20,20,10" data-c="#e7453a,#ff9738,#f2efed,#5f5856" data-glow="0"><div class="mid"><b>50%</b><em>burned forever</em></div></div>
+        <ul class="tk-leg"><li><i style="background:#e7453a"></i>Burned<b>50%</b></li><li><i style="background:#ff9738"></i>Union<b>20%</b></li><li><i style="background:#f2efed"></i>Miners<b>20%</b></li><li><i style="background:#5f5856"></i>Foundation<b>10%</b></li></ul>
+      </div>
+      <div class="tk-card">
+        <span class="lab">Three burns</span>
+        <h4>XP that never comes back</h4>
+        <ol class="tk-burns">
+          <li><span>01</span><div><b>Transaction fees</b>50% of every fee is destroyed.</div></li>
+          <li><span>02</span><div><b>Union Vault</b>40%+ of daily staking rewards, plus yield from unfilled capacity.</div></li>
+          <li><span>03</span><div><b>Interim validator nodes</b>Everything they earn until a Union member takes the seat.</div></li>
+        </ol>
+        <a class="tk-link" href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener">Burn records ↗</a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- ================= PARTICIPATE (v3.4: "Three ways into the network" in the story-card UI) ================= -->
+<section class="stories" id="participate">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Participate</span>
+        <h2 class="h2">Three ways into the network.</h2>
+      </div>
+      <a class="btn btn-line" href="https://docs.x-phere.com/">Read the docs →</a>
+    </div>
+    <div class="story-grid" style="margin-top:12px">
+      <a class="story" href="https://docs.x-phere.com/staking/overview">
+        <div class="vis v2"><svg class="ill" data-ill="stake" aria-hidden="true"></svg><div class="big">Stake</div></div>
+        <div class="body"><h3>Stake XP</h3><p class="desc">Deposit native XP in the Union Vault. Rewards come from what the Foundation's validator node actually earns. 0% platform fees, 7-day cooldown, no node required.</p><span class="more">How staking works →</span></div>
+      </a>
+      <a class="story" href="https://docs.x-phere.com/mining">
+        <div class="vis v2"><svg class="ill" data-ill="mine" aria-hidden="true"></svg><div class="big">Mine</div></div>
+        <div class="body"><h3>Mine the Proof Chain</h3><p class="desc">The Proof Chain is secured by xpHash proof of work. Since the xpHash hard fork, blocks are sealed with an IceRiver XP0 ASIC. Rewards pay straight to your targetMiner address, with no claim transaction.</p><span class="more">Mining guide ↗</span></div>
+      </a>
+      <a class="story" href="#">
+        <div class="vis v2"><svg class="ill" data-ill="union" aria-hidden="true"></svg><div class="big">Union</div></div>
+        <div class="body"><h3>Join the Union</h3><p class="desc">Union members validate Proof Chain blocks, record them on the Main Chain and vote on network policy. Each slot requires a 35,000,000 XP stake, dedicated infrastructure and Foundation approval. Interim Foundation nodes burn what they earn, so a new member displaces a burn, not another member.</p><span class="more">Union membership →</span></div>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+
+<!-- ================= ROADMAP (v3.8 redesign, moved under Participate) ================= -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="kf-head">
+      <div>
+        <span class="eyebrow">Roadmap</span>
+        <h2 class="h2">Where XPHERE<br>is going.</h2>
+        <a class="mini-btn" href="https://docs.x-phere.com/whitepaper#7-roadmap">Full roadmap</a>
+      </div>
+      <p>Three phases: commercialize the upgraded mainnet, open the ecosystem on stable infrastructure, then scale real usage.</p>
+    </div>
+    <div class="rm2" id="rm2">
+      <div class="rm2-line"><i class="rm2-fill"></i></div>
+      <div class="rm2-col done">
+        <div class="rm2-top"><b>2025</b><span class="rm2-st">Delivered</span></div>
+        <div class="rm2-dot"></div>
+        <div class="rm2-card"><h4>Commercialization</h4><p>Mainnet launch with EVM compatibility, Union validator onboarding, CEX listings.</p></div>
+      </div>
+      <div class="rm2-col done">
+        <div class="rm2-top"><b>2026</b><span class="rm2-st">Delivered</span></div>
+        <div class="rm2-dot"></div>
+        <div class="rm2-card"><h4>xpHash hard fork</h4><p>Proof Chain PoW upgrade, active from Proof Chain block 1,740,000.</p></div>
+      </div>
+      <div class="rm2-col now">
+        <div class="rm2-top"><b>2026</b><span class="rm2-st">In progress</span></div>
+        <div class="rm2-dot"></div>
+        <div class="rm2-card"><h4>Ecosystem expansion</h4><p>Ecosystem Fund, 31 Union validators, DeFi, stablecoin and RWA infrastructure.</p></div>
+      </div>
+      <div class="rm2-col">
+        <div class="rm2-top"><b>2027</b><span class="rm2-st">Planned</span></div>
+        <div class="rm2-dot"></div>
+        <div class="rm2-card"><h4>Real-usage scaling</h4><p>dApp ecosystem activation, institutional tokenization pilots, governance framework.</p></div>
+      </div>
+    </div>
+    <p class="rd-foot">Protocol upgrades activate at a deterministic block height and are announced on official channels. See the <a href="https://docs.x-phere.com/resources/network-upgrades">network upgrade history</a> for activation heights.</p>
+      </div>
+</section>
+<!-- ================= BUILD / CONNECT (v2.9, replaces the old Tools grid) ================= -->
+<section id="build">
+  <div class="wrap">
+    <div class="kf-head">
+      <div>
+        <span class="eyebrow">Build on XPHERE</span>
+        <h2 class="h2">Connect in a minute.<br><span class="grad">Verify everything yourself.</span></h2>
+      </div>
+      <p>Contracts compiled for Ethereum run here unmodified. The figures below are read live from Mainnet, in your browser.</p>
+    </div>
+    <div class="bd-live"><span class="live" data-xp-live>Live</span> XPHERE Mainnet</div>
+    <div class="bd-stats">
+      <div><span class="lab">Chain ID</span><b class="mono">20250217</b><small>Mainnet</small></div>
+      <div><span class="lab">Block height</span><b class="mono" data-xp-stat="block">—</b><small>~1 second blocks</small></div>
+      <div><span class="lab">Council validators</span><b class="mono" data-xp-stat="council">—</b><small>Union slots + Foundation nodes</small></div>
+      <div><span class="lab">Base fee</span><b class="mono" data-xp-stat="gas">—</b><small>50% of every fee burns</small></div>
+    </div>
+    <div class="bd-nets">
+      <div class="bd-net">
+        <h3>Mainnet <span>Chain ID 20250217</span></h3>
+        <ul>
+          <li><code>https://rpc.x-phere.com</code><button class="cp" data-cp="https://rpc.x-phere.com">Copy</button></li>
+          <li><code>https://en-hkg.x-phere.com</code><button class="cp" data-cp="https://en-hkg.x-phere.com">Copy</button></li>
+          <li><code>https://en-bkk.x-phere.com</code><button class="cp" data-cp="https://en-bkk.x-phere.com">Copy</button></li>
+        </ul>
+        <p>Explorers <a href="https://xpscan.io" target="_blank" rel="noopener">xpscan.io</a> · <a href="https://xp.tamsa.io" target="_blank" rel="noopener">xp.tamsa.io</a> · RPC also on <a href="https://www.ankr.com/rpc/xphere/" target="_blank" rel="noopener">Ankr</a></p>
+      </div>
+      <div class="bd-net">
+        <h3>Testnet <span>Chain ID 1998991</span></h3>
+        <ul>
+          <li><code>https://testnet.x-phere.com</code><button class="cp" data-cp="https://testnet.x-phere.com">Copy</button></li>
+        </ul>
+        <p>Faucet <a href="https://faucet.x-phere.com" target="_blank" rel="noopener">faucet.x-phere.com</a> · Explorer <a href="https://xpt.tamsa.io" target="_blank" rel="noopener">xpt.tamsa.io</a></p>
+        <a class="mini-btn red" href="https://docs.x-phere.com/developers/quickstart" style="margin-top:22px">Developer quickstart</a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- ================= EVENTS (v4.5: real events, photos, links to X; press section removed) ================= -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="kf-head">
+      <div>
+        <span class="eyebrow">Events</span>
+        <h2 class="h2">Where XPHERE<br>shows up.</h2>
+        <a class="mini-btn" href="https://x.com/Xphere_official" target="_blank" rel="noopener">Follow on X</a>
+      </div>
+      <p>From Seoul to Singapore to Manila, XPHERE shows up where builders, miners and investors meet.</p>
+    </div>
+    <div class="evg">
+      <a class="evc big" href="https://x.com/Xphere_official/status/2107717239558504455" target="_blank" rel="noopener">
+        <img src="images/ev-token2049.png" alt="XPHERE booth at TOKEN2049 Singapore">
+        <div class="evc-in"><span class="evc-date">OCT 6–7, 2026 · SINGAPORE</span><h3>TOKEN2049 Singapore</h3><p>Booth MB4-16, Level 4: two chains, one mission. Meeting builders, founders and investors around the dual-chain Layer 1.</p><span class="evc-go">View on X ↗</span></div>
+      </a>
+      <a class="evc" href="https://x.com/Xphere_official/status/2105822315179377006" target="_blank" rel="noopener">
+        <img src="images/ev-mtn.png" alt="XPHERE 2.0 keynote at Mining the Night, Seoul">
+        <div class="evc-in"><span class="evc-date">SEP 30, 2026 · SEOUL · KBW 2026</span><h3>Mining the Night</h3><p>A live IceRiver XP0 mining demo, partners like XCROLL, Nansen and HackenProof, and the XPHERE 2.0 story.</p><span class="evc-go">View on X ↗</span></div>
+      </a>
+      <a class="evc" href="https://x.com/Xphere_official/status/2073795819686515068" target="_blank" rel="noopener">
+        <img src="images/ev-pbw.jpg" alt="XPHERE co-founder on the Philippine Blockchain Week main stage">
+        <div class="evc-in"><span class="evc-date">JUL 2026 · MANILA</span><h3>Philippine Blockchain Week</h3><p>Main-stage panel on bringing real-world assets on-chain, and title sponsor of BLOCK:LOUNGE.</p><span class="evc-go">View on X ↗</span></div>
+      </a>
+    </div>
+    
+  </div>
+</section>
+<!-- ================= FINAL CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <div class="counter" data-xp-stat="block">—</div>
+    <p class="cap">blocks finalized on XPHERE Mainnet · <a href="https://xpscan.io" style="text-decoration:underline">verify on XPScan</a></p>
+    <h2 class="h2">Build on a chain you can verify yourself.</h2>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://docs.x-phere.com/developers/quickstart">Start building →</a>
+      <a class="btn btn-ghost" href="mailto:Contact@X-phere.com">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="community">
+        <a class="logo" href="#" style="color:#fff">x<b>-</b>phere</a>
+        <p>Follow network upgrades, Union news and events.</p>
+        <div class="socials">
+          <a href="https://x.com/Xphere_official">X</a>
+          <a href="https://t.me/Xphere_official">Telegram</a>
+          <a href="https://discord.gg/xphere">Discord</a>
+        </div>
+      </div>
+      <div><h6>Network</h6><ul><li><a href="#">Build</a></li><li><a href="https://stake.x-phere.com">Stake</a></li><li><a href="https://docs.x-phere.com/mining">Mine</a></li><li><a href="union.html">Union</a></li></ul></div>
+      <div><h6>Developers</h6><ul><li><a href="https://docs.x-phere.com/">Documentation</a></li><li><a href="https://docs.x-phere.com/references">RPC reference</a></li><li><a href="https://faucet.x-phere.com">Faucet</a></li><li><a href="https://github.com/xpherechain">GitHub</a></li></ul></div>
+      <div><h6>Ecosystem</h6><ul><li><a href="https://docs.x-phere.com/ecosystem/directory">Directory</a></li><li><a href="https://x-phere.com/grant.html">Grant Program</a></li><li><a href="#">Events</a></li><li><a href="https://xpscan.io">XPScan</a></li></ul></div>
+      <div><h6>Foundation</h6><ul><li><a href="https://docs.x-phere.com/whitepaper">Whitepaper</a></li><li><a href="#">Security &amp; official domains</a></li><li><a href="mailto:partners@x-phere.com">Partners</a></li><li><a href="mailto:Contact@X-phere.com">Contact</a></li></ul></div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 XPHERE Foundation. All rights reserved.</span>
+      <span>Official domains only: x-phere.com · stake.x-phere.com · xpscan.io</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* draft notes toggle */
+(function(){
+  var b=document.getElementById('noteToggle');
+  b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  /* duplicate marquee for seamless loop */
+  var t=document.getElementById('track'); t.innerHTML+=t.innerHTML;
+})();
+
+/* (retired v1.2) Monad-like converging lines */
+(function(){
+  return;
+  var frame=document.getElementById('frame'),svg=document.getElementById('lines'),cross=document.getElementById('cross');
+  var NS='http://www.w3.org/2000/svg',N=24;
+  function draw(){
+    var W=frame.clientWidth,fr=frame.getBoundingClientRect(),cr=cross.getBoundingClientRect();
+    var cy=cr.top-fr.top+cr.height/2,cx=W/2,spread=Math.min(300,cy-60);
+    svg.setAttribute('viewBox','0 0 '+W+' '+frame.clientHeight);
+    svg.innerHTML='';
+    var defs=document.createElementNS(NS,'defs');
+    defs.innerHTML='<linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#ff9738" stop-opacity=".22"/><stop offset=".5" stop-color="#e7453a" stop-opacity=".8"/><stop offset="1" stop-color="#ff9738" stop-opacity=".22"/></linearGradient>';
+    svg.appendChild(defs);
+    for(var i=0;i<N;i++){
+      var t=i/(N-1),y=cy-spread+t*spread*2,k=Math.abs(t-.5)*2;
+      var p=document.createElementNS(NS,'path');
+      p.setAttribute('d','M -20 '+y+' C '+(W*.28)+' '+y+' '+(W*.34)+' '+cy+' '+cx+' '+cy+' C '+(W*.66)+' '+cy+' '+(W*.72)+' '+y+' '+(W+20)+' '+y);
+      p.setAttribute('pathLength','1');
+      p.setAttribute('stroke','url(#lg)');
+      p.setAttribute('stroke-opacity',(1-k*.45).toFixed(2));
+      p.style.animationDelay=(Math.abs(t-.5)*0.6).toFixed(2)+'s';
+      svg.appendChild(p);
+    }
+  }
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,120);});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);else window.addEventListener('load',draw);
+  draw();
+})();
+
+/* live mainnet stats — same RPC calls as the current x-phere.com (xphere-live.js) */
+(function(){
+  var RPC=["https://en-hkg.x-phere.com","https://en-bkk.x-phere.com"],idx=0;
+  function all(s){return Array.prototype.slice.call(document.querySelectorAll(s));}
+  function group(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,",");}
+  function hex(h){if(typeof h!=="string")return null;var n=parseInt(h,16);return isFinite(n)?n:null;}
+  function batch(calls,tries){
+    tries=tries||RPC.length;
+    var body=calls.map(function(m,i){return{jsonrpc:"2.0",id:i+1,method:m,params:[]};});
+    return fetch(RPC[idx%RPC.length],{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})
+      .then(function(r){if(!r.ok)throw 0;return r.json();})
+      .then(function(j){var by={};(Array.isArray(j)?j:[j]).forEach(function(x){by[x.id]=x;});return body.map(function(p){var x=by[p.id];return x&&!x.error?x.result:null;});})
+      .catch(function(e){idx++;if(tries>1)return batch(calls,tries-1);throw e;});
+  }
+  function set(k,v){all('[data-xp-stat="'+k+'"]').forEach(function(el){if(el.textContent===v)return;el.textContent=v;el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick');});}
+  function live(ok){all('[data-xp-live]').forEach(function(el){el.classList.toggle('down',!ok);el.textContent=ok?'Live':'Offline';});}
+  function refresh(){
+    batch(["eth_blockNumber","xp_getCouncilSize","eth_gasPrice"]).then(function(o){
+      var h=hex(o[0]),c=typeof o[1]==="number"?o[1]:hex(o[1]),g=hex(o[2]);
+      if(h!==null)set("block",group(h));
+      if(c!==null)set("council",String(c));
+      if(g!==null){var gw=g/1e9;set("gas",(gw<10?gw.toFixed(2):gw.toFixed(1))+" gwei");}
+      live(h!==null);
+    }).catch(function(){live(false);});
+  }
+  refresh();setInterval(function(){if(!document.hidden)refresh();},3000);
+
+  /* cumulative XP burned — RewardDistributor.totalBurned(), the same counter as stake.x-phere.com/burn.html */
+  function burn(){
+    fetch(RPC[idx%RPC.length],{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({jsonrpc:"2.0",id:9,method:"eth_call",params:[{to:"0x24C5912B63a8B41DA80EBDC2115949fcbb41Fddf",data:"0xd89135cd"},"latest"]})})
+      .then(function(r){return r.json();})
+      .then(function(j){if(!j||!j.result)return;var xp=BigInt(j.result)/1000000000000000000n;set("burn",group(xp.toString()));})
+      .catch(function(){});
+  }
+  burn();setInterval(function(){if(!document.hidden)burn();},30000);
+
+  /* add-to-wallet */
+  all('[data-add-network]').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.preventDefault();
+      if(!window.ethereum){window.open('https://docs.x-phere.com/developers/wallet-setup','_blank');return;}
+      window.ethereum.request({method:'wallet_addEthereumChain',params:[{chainId:'0x134fe69',chainName:'Xphere Mainnet',nativeCurrency:{name:'Xphere',symbol:'XP',decimals:18},rpcUrls:RPC,blockExplorerUrls:['https://xpscan.io']}]}).catch(function(){});
+    });
+  });
+})();
+
+/* dApp deck — continuous position; click / arrows / dots / drag (with momentum) to rotate */
+(function(){
+  var deck=document.getElementById('deck'),cards=[].slice.call(deck.querySelectorAll('.pc')),n=cards.length,dots=document.getElementById('dots');
+  var pos=Math.max(0,cards.indexOf(deck.querySelector('.pc[data-start]'))),X=230,mob=false;
+  function mod(a){return ((a%n)+n)%n;}
+  function metrics(){mob=window.innerWidth<=760;var half=deck.clientWidth/2,cw=cards[0].offsetWidth;X=mob?150:Math.min(230,(half-cw*.76/2)/(2*.94));}
+  function layout(p){
+    var cur=mod(Math.round(p));
+    cards.forEach(function(c,j){
+      var off=j-p;off=((off%n)+n)%n;if(off>n/2)off-=n;
+      var a=Math.abs(off),sg=off<0?-1:1;
+      var s=a<=1?1-.12*a:a<=2?.88-.12*(a-1):.76;
+      var xu=a<=1?a:Math.min(1.88,1+(a-1)*.88);
+      var op=mob?(a<=1?1:Math.max(0,1-(a-1)*2)):(a<=1?1:a<=2?1-.5*(a-1):Math.max(0,.5*(1-(a-2)/.6)));
+      c.style.transform='translate(-50%,-50%) translateX('+(sg*xu*X).toFixed(1)+'px) scale('+s.toFixed(3)+')';
+      c.style.zIndex=Math.round(20-a*4);
+      c.style.opacity=op.toFixed(3);
+      c.style.setProperty('--fade',(a<=1?1-.38*a:Math.min(.8,.62+.18*(a-1))).toFixed(3));
+      c.style.filter=a>1?'blur('+((a-1)*.6).toFixed(2)+'px) saturate('+(1-.2*Math.min(1,a-1)).toFixed(2)+')':'none';
+      c.style.pointerEvents=op<.05?'none':'auto';
+      c.classList.toggle('on',j===cur);
+    });
+    [].forEach.call(dots.children,function(d,j){d.classList.toggle('on',j===cur);});
+  }
+  function go(i){var d=((i-pos)%n+n)%n;if(d>n/2)d-=n;pos=Math.round(pos+d);layout(pos);}
+  cards.forEach(function(c,i){var d=document.createElement('b');d.onclick=function(){go(i);};dots.appendChild(d);
+    c.addEventListener('click',function(e){if(moved)return;if(i!==mod(Math.round(pos))){e.preventDefault();go(i);}});});
+  document.getElementById('prevBtn').onclick=function(){go(Math.round(pos)-1);};
+  document.getElementById('nextBtn').onclick=function(){go(Math.round(pos)+1);};
+  // drag to spin
+  var down=false,moved=false,sx=0,sp=0,lx=0,lt=0,vx=0;
+  deck.addEventListener('pointerdown',function(e){if(e.button!==0)return;down=true;moved=false;sx=lx=e.clientX;sp=pos;lt=performance.now();vx=0;});
+  window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;
+    if(!moved&&Math.abs(dx)>6){moved=true;deck.classList.add('dragging');try{deck.setPointerCapture(e.pointerId);}catch(_){}}
+    if(!moved)return;var now=performance.now();vx=.8*vx+.2*((e.clientX-lx)/Math.max(1,now-lt));lx=e.clientX;lt=now;
+    pos=sp-dx/(X*1.1);layout(pos);});
+  function end(){if(!down)return;down=false;deck.classList.remove('dragging');
+    if(moved){pos=Math.round(pos-vx*260/(X*1.1));layout(pos);setTimeout(function(){moved=false;},0);}}
+  window.addEventListener('pointerup',end);window.addEventListener('pointercancel',end);
+  deck.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();}},true);
+  deck.addEventListener('dragstart',function(e){e.preventDefault();});
+  window.addEventListener('resize',function(){metrics();layout(pos);});
+  metrics();layout(pos);
+})();
+
+/* hero centre graphic — A: two crossing orbits (the X mark), B: dual chain block stream */
+(function(){
+  var frame=document.getElementById('frame'),svg=document.getElementById('lines'),cross=document.getElementById('cross'),btn=document.getElementById('gfxToggle');
+  var mode='A';
+  function geo(){
+    var W=frame.clientWidth,H=frame.clientHeight,fr=frame.getBoundingClientRect(),cr=cross.getBoundingClientRect();
+    return {W:W,H:H,cx:W/2,cy:cr.top-fr.top+cr.height/2,ch:cr.height};
+  }
+  function ell(cx,cy,rx,ry){return 'M '+(cx-rx)+' '+cy+' A '+rx+' '+ry+' 0 1 0 '+(cx+rx)+' '+cy+' A '+rx+' '+ry+' 0 1 0 '+(cx-rx)+' '+cy;}
+
+  /* lens (vesica) with pointed tips — the shape of each stroke in the XPHERE mark */
+  function lens(L,w){
+    var c=1.38;
+    return 'M '+(-L)+' 0 C '+(-L*.42)+' '+(-w*c)+' '+(L*.42)+' '+(-w*c)+' '+L+' 0 C '+(L*.42)+' '+(w*c)+' '+(-L*.42)+' '+(w*c)+' '+(-L)+' 0 Z';
+  }
+  function orbit(g){
+    var L=Math.min(g.W*.34,400,(g.cy+40)*1.05),w=L*.36,s='';
+    s+='<defs><linearGradient id="og" gradientUnits="userSpaceOnUse" x1="'+(-L)+'" x2="'+L+'" y1="0" y2="0">'+
+       '<stop offset="0" stop-color="#ff9738" stop-opacity=".15"/><stop offset=".28" stop-color="#e7453a" stop-opacity=".7"/>'+
+       '<stop offset=".5" stop-color="#cf1512" stop-opacity="1"/><stop offset=".72" stop-color="#e7453a" stop-opacity=".7"/>'+
+       '<stop offset="1" stop-color="#ff9738" stop-opacity=".15"/></linearGradient>'+
+       '<radialGradient id="cg"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#ff9738"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></radialGradient>'+
+       '<radialGradient id="lf"><stop offset="0" stop-color="#cf1512" stop-opacity=".16"/><stop offset="1" stop-color="#cf1512" stop-opacity="0"/></radialGradient>'+
+       '<filter id="gl"><feGaussianBlur stdDeviation="2.5"/></filter></defs>';
+    [-45,45].forEach(function(a,ai){
+      s+='<g transform="translate('+g.cx+' '+g.cy+') rotate('+a+')">';
+      s+='<path d="'+lens(L,w)+'" stroke="none" style="fill:url(#lf);animation:none;stroke-dasharray:none"/>';
+      [1,.8,.6].forEach(function(k,ki){
+        s+='<path class="orb" pathLength="1" d="'+lens(L*k,w*k)+'" stroke="url(#og)" stroke-opacity="'+(1-ki*.3)+'" style="animation-delay:'+(ki*.15+ai*.2)+'s"/>';
+      });
+      var d=lens(L,w);
+      for(var j=0;j<2;j++){
+        s+='<circle r="3.2" fill="#ffc08a" filter="url(#gl)"><animateMotion dur="'+(10+ai*2)+'s" begin="-'+(j*5+ai*2)+'s" repeatCount="indefinite" path="'+d+'"/></circle>'+
+           '<circle r="1.6" fill="#fff"><animateMotion dur="'+(10+ai*2)+'s" begin="-'+(j*5+ai*2)+'s" repeatCount="indefinite" path="'+d+'"/></circle>';
+      }
+      s+='</g>';
+    });
+    s+='<circle class="pulse" cx="'+g.cx+'" cy="'+g.cy+'" r="9" fill="none" stroke="#ff9738" stroke-width="1"/>'+
+       '<circle cx="'+g.cx+'" cy="'+g.cy+'" r="16" fill="url(#cg)" opacity=".9"/>';
+    return s;
+  }
+
+  function chains(g){
+    var B=30,STEP=46,y1=g.cy-34,y2=g.cy+34-B,n=Math.ceil(g.W/STEP)+4,s='';
+    var x0=g.cx-B/2-Math.ceil(g.cx/STEP+2)*STEP;
+    s+='<defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" x2="'+g.W+'" y1="0" y2="0">'+
+       '<stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".2" stop-color="#fff" stop-opacity=".9"/>'+
+       '<stop offset=".8" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>'+
+       '<mask id="fm"><rect x="0" y="0" width="'+g.W+'" height="'+g.H+'" fill="url(#fade)"/></mask></defs>';
+    s+='<g mask="url(#fm)"><g class="move" style="--step:-'+STEP+'px">';
+    for(var i=0;i<n;i++){
+      var x=x0+i*STEP;
+      s+='<line x1="'+(x+B)+'" y1="'+(y1+B/2)+'" x2="'+(x+STEP)+'" y2="'+(y1+B/2)+'" stroke="#ff9738" stroke-opacity=".45"/>'+
+         '<line x1="'+(x+B)+'" y1="'+(y2+B/2)+'" x2="'+(x+STEP)+'" y2="'+(y2+B/2)+'" stroke="#e7453a" stroke-opacity=".6"/>'+
+         '<line x1="'+(x+B/2)+'" y1="'+(y1+B)+'" x2="'+(x+B/2)+'" y2="'+y2+'" stroke="#8f8885" stroke-opacity=".35" stroke-dasharray="2 3"/>'+
+         '<rect class="chain" x="'+x+'" y="'+y1+'" width="'+B+'" height="'+B+'" rx="7" fill="rgba(255,151,56,.06)" stroke="#ff9738" stroke-opacity=".6"/>'+
+         '<rect class="chain" x="'+x+'" y="'+y2+'" width="'+B+'" height="'+B+'" rx="7" fill="rgba(231,69,58,.22)" stroke="#e7453a" stroke-opacity=".85"/>';
+    }
+    s+='</g></g>';
+    s+='<rect class="slot" x="'+(g.cx-B/2-8)+'" y="'+(y1-8)+'" width="'+(B+16)+'" height="'+(y2+B-y1+16)+'" rx="12" fill="rgba(255,151,56,.06)" stroke="#ffb27a" stroke-width="1.2"/>';
+    var lx=Math.max(16,g.cx-Math.min(g.W*.38,440));
+    s+='<text x="'+lx+'" y="'+(y1-14)+'">PROOF CHAIN · xpHash PoW</text>'+
+       '<text x="'+lx+'" y="'+(y2+B+24)+'">MAIN CHAIN · PBFT FINALITY</text>';
+    return s;
+  }
+
+  /* v1.6 — the XPHERE mark itself: two rounded ellipses crossing at ±45°, one passing over the other
+     (thin gap where it crosses, like the logo), with outer orbit echoes carrying moving light points */
+  function orbit2(g){
+    var rx=Math.min(g.W*.3,330,(g.cy+20)*.95),ry=rx*.31,BG='#1c1918',s='';
+    var T=function(a){return 'translate('+g.cx+' '+g.cy+') rotate('+a+')';};
+    s+='<defs>'+
+      '<linearGradient id="og2" gradientUnits="userSpaceOnUse" x1="'+(-rx)+'" x2="'+rx+'" y1="0" y2="0">'+
+        '<stop offset="0" stop-color="#ff9738" stop-opacity=".55"/><stop offset=".5" stop-color="#e7453a"/><stop offset="1" stop-color="#ff9738" stop-opacity=".55"/></linearGradient>'+
+      '<linearGradient id="ff2" gradientUnits="userSpaceOnUse" x1="'+(-rx)+'" x2="'+rx+'" y1="0" y2="0">'+
+        '<stop offset="0" stop-color="#ff9738" stop-opacity=".10"/><stop offset=".5" stop-color="#cf1512" stop-opacity=".30"/><stop offset="1" stop-color="#ff9738" stop-opacity=".10"/></linearGradient>'+
+      '<linearGradient id="eg2" gradientUnits="userSpaceOnUse" x1="'+(-rx*1.5)+'" x2="'+(rx*1.5)+'" y1="0" y2="0">'+
+        '<stop offset="0" stop-color="#ff9738" stop-opacity=".05"/><stop offset=".5" stop-color="#e7453a" stop-opacity=".8"/><stop offset="1" stop-color="#ff9738" stop-opacity=".05"/></linearGradient>'+
+      '<radialGradient id="halo2"><stop offset="0" stop-color="#e7453a" stop-opacity=".28"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></radialGradient>'+
+      '<radialGradient id="cg"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#ff9738"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></radialGradient>'+
+      '<clipPath id="underB"><path transform="rotate(90)" d="'+ell(0,0,rx+3,ry+3)+'"/></clipPath>'+
+      '<filter id="gl"><feGaussianBlur stdDeviation="2.5"/></filter>'+
+    '</defs>';
+    var still='stroke-dasharray:none;animation:fade 1.6s ease forwards;opacity:0;';
+    s+='<circle cx="'+g.cx+'" cy="'+g.cy+'" r="'+(rx*1.05)+'" style="fill:url(#halo2)"/>';
+    /* under stroke (+45°) */
+    s+='<g transform="'+T(45)+'"><path d="'+ell(0,0,rx,ry)+'" style="fill:url(#ff2);stroke:url(#og2);stroke-width:1.8;'+still+'"/></g>';
+    /* gap: the over stroke's outline in background colour, clipped to the under stroke */
+    s+='<g transform="'+T(-45)+'"><path clip-path="url(#underB)" d="'+ell(0,0,rx,ry)+'" style="fill:none;stroke:'+BG+';stroke-width:9;'+still+'"/></g>';
+    /* over stroke (−45°) */
+    s+='<g transform="'+T(-45)+'"><path d="'+ell(0,0,rx,ry)+'" style="fill:url(#ff2);stroke:url(#og2);stroke-width:1.8;'+still+'"/></g>';
+    /* orbit echoes + moving light points */
+    [-45,45].forEach(function(a,ai){
+      s+='<g transform="'+T(a)+'">';
+      [1.24,1.5].forEach(function(k,ki){
+        var d=ell(0,0,rx*k,ry*k*(1+ki*.12));
+        s+='<path class="orb" pathLength="1" d="'+d+'" stroke="url(#eg2)" stroke-opacity="'+(ki?'.45':'.75')+'" style="animation-delay:'+(.4+ki*.2+ai*.15)+'s"/>';
+        s+='<circle r="3.2" fill="#ffc08a" filter="url(#gl)"><animateMotion dur="'+(12+ki*4+ai*2)+'s" begin="-'+(ki*6+ai*3)+'s" repeatCount="indefinite" path="'+d+'"/></circle>'+
+           '<circle r="1.6" fill="#fff"><animateMotion dur="'+(12+ki*4+ai*2)+'s" begin="-'+(ki*6+ai*3)+'s" repeatCount="indefinite" path="'+d+'"/></circle>';
+      });
+      s+='</g>';
+    });
+    s+='<circle class="pulse" cx="'+g.cx+'" cy="'+g.cy+'" r="9" fill="none" stroke="#ff9738" stroke-width="1"/>'+
+       '<circle cx="'+g.cx+'" cy="'+g.cy+'" r="14" fill="url(#cg)" opacity=".85"/>';
+    return s;
+  }
+
+  /* v1.7 — fine-line version: nested thin rounded ellipses in the XPHERE mark geometry (±45°),
+     no fills; the −45° set passes over the +45° set with a tiny weave break at every crossing */
+  function orbit3(g){
+    var rx=Math.min(g.W*.36,420,g.ch*.5),R=.3,s='',ks=[1,1.3];
+    var T=function(a){return 'translate('+g.cx+' '+g.cy+') rotate('+a+')';};
+    s+='<defs>'+
+      '<linearGradient id="eg3" gradientUnits="userSpaceOnUse" x1="'+(-rx*1.3)+'" x2="'+(rx*1.3)+'" y1="0" y2="0">'+
+        '<stop offset="0" stop-color="#ff9738" stop-opacity=".08"/><stop offset=".3" stop-color="#ff9738" stop-opacity=".55"/>'+
+        '<stop offset=".5" stop-color="#e7453a" stop-opacity=".95"/><stop offset=".7" stop-color="#ff9738" stop-opacity=".55"/>'+
+        '<stop offset="1" stop-color="#ff9738" stop-opacity=".08"/></linearGradient>'+
+      '<radialGradient id="cg"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#ff9738"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></radialGradient>'+
+      '<filter id="gl"><feGaussianBlur stdDeviation="2.5"/></filter>'+
+      '<mask id="weave" maskUnits="userSpaceOnUse" x="0" y="0" width="'+g.W+'" height="'+g.H+'">'+
+        '<rect x="0" y="0" width="'+g.W+'" height="'+g.H+'" fill="#fff"/><g transform="'+T(-45)+'">';
+    ks.forEach(function(k){s+='<path d="'+ell(0,0,rx*k,rx*k*R)+'" style="fill:none;stroke:#000;stroke-width:7;stroke-dasharray:none;animation:none"/>';});
+    s+='</g></mask></defs>';
+    function set(a,masked,ai){
+      var o=(masked?'<g mask="url(#weave)">':'<g>')+'<g transform="'+T(a)+'">';
+      ks.forEach(function(k,ki){
+        var op=[1,.5][ki];
+        o+='<path class="orb" pathLength="1" d="'+ell(0,0,rx*k,rx*k*R)+'" stroke="url(#eg3)" stroke-opacity="'+op+'" style="animation-delay:'+(ki*.12+ai*.2)+'s"/>';
+      });
+      [0,1].forEach(function(ki,j){
+        var d=ell(0,0,rx*ks[ki],rx*ks[ki]*R),dur=(14+j*5+ai*2);
+        o+='<circle r="3" fill="#ffc08a" filter="url(#gl)"><animateMotion dur="'+dur+'s" begin="-'+(j*7+ai*4)+'s" repeatCount="indefinite" path="'+d+'"/></circle>'+
+           '<circle r="1.5" fill="#fff"><animateMotion dur="'+dur+'s" begin="-'+(j*7+ai*4)+'s" repeatCount="indefinite" path="'+d+'"/></circle>';
+      });
+      return o+'</g></g>';
+    }
+    s+=set(45,true,0)+set(-45,false,1);
+    s+='<circle class="pulse" cx="'+g.cx+'" cy="'+g.cy+'" r="9" fill="none" stroke="#ff9738" stroke-width="1"/>'+
+       '<circle cx="'+g.cx+'" cy="'+g.cy+'" r="14" fill="url(#cg)" opacity=".85"/>';
+    return s;
+  }
+
+  function draw(){
+    var g=geo();
+    svg.setAttribute('viewBox','0 0 '+g.W+' '+g.H);
+    svg.innerHTML=mode==='A'?orbit3(g):chains(g);
+  }
+  btn.onclick=function(){mode=mode==='A'?'B':'A';btn.textContent=mode==='A'?'중앙 그래픽: A 궤도':'중앙 그래픽: B 듀얼체인';draw();};
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,120);});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+  draw();
+})();
+</script>
+<script>/* key features: "+" toggles the detail panel */
+document.querySelectorAll('.kf-plus').forEach(function(b){b.addEventListener('click',function(){b.parentNode.classList.toggle('open');});});
+</script>
+<script>/* key feature art — isometric drawings (x,y on the ground plane, z up) */
+(function(){
+  var S=20;
+  function P(x,y,z){return [(x-y)*0.866*S,(x+y)*0.5*S-z*S];}
+  function B(){this.o='';this.b=[1e9,1e9,-1e9,-1e9];}
+  B.prototype.pt=function(p){var b=this.b;b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);return p[0].toFixed(1)+','+p[1].toFixed(1);};
+  B.prototype.poly=function(a,c){var s=this;this.o+='<polygon class="'+c+'" points="'+a.map(function(p){return s.pt(p);}).join(' ')+'"/>';};
+  B.prototype.line=function(a,b,c){this.o+='<polyline class="'+c+'" points="'+this.pt(a)+' '+this.pt(b)+'"/>';};
+  B.prototype.d=function(a,closed){var s=this;return a.map(function(p,i){return (i?'L':'M')+s.pt(p);}).join('')+(closed?'Z':'');};
+  B.prototype.box=function(x,y,z,w,d,h,c){
+    this.o+='<g class="'+(c||'')+'">';
+    this.poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],'fl');
+    this.poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],'fr');
+    this.poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],'ft');
+    this.o+='</g>';};
+  B.prototype.ring=function(r,z,n){var a=[];for(var i=0;i<n;i++){var t=i/n*Math.PI*2;a.push(P(r*Math.cos(t),r*Math.sin(t),z));}return a;};
+  B.prototype.out=function(svg,pad){var b=this.b,p=pad||12;svg.setAttribute('viewBox',[b[0]-p,b[1]-p,b[2]-b[0]+2*p,b[3]-b[1]+2*p].map(function(v){return v.toFixed(1);}).join(' '));svg.innerHTML=this.o;};
+
+  var art={
+    supply:function(g){ // emission steps down 26.28% a year; capped supply line above
+      var n=6,h=3.0,i,w=.62,sp=.82,x0=-(n-1)*sp/2-w/2;
+      g.line(P(x0-.3,-.31,3.3),P(x0+(n-1)*sp+w+.3,-.31,3.3),'dash');
+      for(i=0;i<n;i++){g.box(x0+i*sp,-.31,0,w,w,h,i===0?'hl':(i===n-1?'wire':''));h*=.7372;}
+      var a=P(x0+w/2,0,3.0+.02),b=P(x0+(n-1)*sp+w/2,0,.6);
+      g.o+='<circle class="acc" r="2.6"><animateMotion dur="3s" repeatCount="indefinite" path="'+g.d([P(x0+w/2,0,3.0),P(x0+sp+w/2,0,3.0*.7372),P(x0+2*sp+w/2,0,3.0*.5435),P(x0+3*sp+w/2,0,3.0*.4007),P(x0+4*sp+w/2,0,3.0*.2954),P(x0+5*sp+w/2,0,3.0*.2178)])+'"/></circle>';
+    },
+    guard:function(g){ // two layers an attacker must take at once: hash power below, staked Union above
+      var i,n=8,R=1.9,Z=1.9,pts=[];
+      g.o+='<path class="dash" d="'+g.d(g.ring(R,0,90),true)+'"/>';
+      for(i=0;i<n;i++){var t=i/n*Math.PI*2+Math.PI/8,x=R*Math.cos(t),y=R*Math.sin(t);pts.push([x,y]);}
+      pts.slice().sort(function(a,b){return (a[0]+a[1])-(b[0]+b[1]);}).forEach(function(q){g.line(P(q[0],q[1],.4),P(q[0],q[1],Z),'vl');g.box(q[0]-.2,q[1]-.2,0,.4,.4,.4,'');});
+      g.o+='<path d="'+g.d(g.ring(R,Z,90),true)+'"/>';
+      pts.forEach(function(q){var c=P(q[0],q[1],Z);g.o+='<circle class="dt" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="2"/>';});
+      g.box(-.35,-.35,0,.7,.7,1.3,'hl');
+      g.o+='<circle class="acc" r="3"><animateMotion dur="5s" repeatCount="indefinite" path="'+g.d(g.ring(R,Z,90),true)+'"/></circle>';
+    },
+    tps:function(g){ // transactions streaming down three lanes into the next block
+      var L0=-3.2,L1=1.0,lanes=[-.9,0,.9],i;
+      g.box(L0-.2,-1.45,0,L1-L0+.4,2.9,.12,'');
+      lanes.forEach(function(y){g.line(P(L0,y,.12),P(L1,y,.12),'dash');});
+      g.box(1.25,-1.2,0,1.5,2.4,1.25,'hl');
+      var c=P(2,0,1.25);g.o+='<circle class="acc" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="2.6"><animate attributeName="opacity" values="1;.3;1" dur="1s" repeatCount="indefinite"/></circle>';
+      var dx=P(L1-L0-.4,0,0),k=0;
+      lanes.forEach(function(y,li){for(i=0;i<3;i++){var b=new B();b.box(L0,y-.2,.12,.4,.4,.4,'');g.pt(P(L0,y,.6));
+        var dur=1.8+li*.25,beg=-(i*dur/3)-li*.3;
+        g.o+='<g>'+b.o+'<animateTransform attributeName="transform" type="translate" values="0 0;'+dx[0].toFixed(1)+' '+dx[1].toFixed(1)+'" dur="'+dur+'s" begin="'+beg.toFixed(2)+'s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.12;.85;1" dur="'+dur+'s" begin="'+beg.toFixed(2)+'s" repeatCount="indefinite"/></g>';}});
+    },
+    chain:function(g){ // proof chain (wireframe, below) anchors main chain (solid, above)
+      var n=4,sp=1.3,w=.9,x0=-(n-1)*sp/2-w/2,Z=2.9,i,cx;
+      for(i=0;i<n-1;i++)g.line(P(x0+i*sp+w,w/2,w/2),P(x0+(i+1)*sp,w/2,w/2),'lk');
+      for(i=0;i<n;i++)g.box(x0+i*sp,-w/2,0,w,w,w,'wire');
+      for(i=0;i<n;i++){cx=x0+i*sp+w/2;g.line(P(cx,0,w),P(cx,0,Z),'vl');}
+      for(i=0;i<n-1;i++)g.line(P(x0+i*sp+w,w/2,Z+w/2),P(x0+(i+1)*sp,w/2,Z+w/2),'lk');
+      for(i=0;i<n;i++)g.box(x0+i*sp,-w/2,Z,w,w,w,i===n-1?'new':'');
+      var path=g.d([P(x0+w/2,0,Z+w),P(x0+(n-1)*sp+w/2,0,Z+w)]);
+      g.o+='<circle class="acc" r="3"><animateMotion dur="3.2s" repeatCount="indefinite" path="'+path+'"/></circle>';
+      g.o+='<circle class="acc" r="2.4" opacity=".7"><animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite" path="'+g.d([P(x0+w/2,0,0),P(x0+w/2,0,Z)])+'"/></circle>';
+    },
+    stack:function(g){ // the EVM as stacked layers; contract on top
+      var W=3,h=.22,zs=[0,1.05,2.1],i,c;
+      for(i=0;i<3;i++){
+        g.o+='<g class="'+(i===2?'float':i===1?'float2':'')+'">';
+        if(i>0)[[-W/2,W/2],[W/2,W/2],[W/2,-W/2]].forEach(function(q){g.line(P(q[0],q[1],zs[i-1]+h),P(q[0],q[1],zs[i]),'vl');});
+        g.box(-W/2,-W/2,zs[i],W,W,h,'');
+        if(i===2){
+          var z=zs[2]+h;
+          for(var a=0;a<5;a++)for(var b=0;b<5;b++){if(a>0&&a<4&&b>0&&b<4)continue;var p=P(-1.2+a*.6,-1.2+b*.6,z);g.pt(p);g.o+='<circle class="dt" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="1.3"/>';}
+          g.box(-.55,-.55,z,1.1,1.1,.32,'hl');
+          c=P(0,0,z+.32);g.o+='<circle class="acc" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="2.6"/>';
+        }
+        g.o+='</g>';
+      }
+    },
+    chip:function(g){ // xpHash ASIC on a board, hash pulses running out along traces
+      var z=.22,H=.75,ts=[-.45,0,.45],paths=[];
+      g.box(-1.9,-1.9,0,3.8,3.8,z,'');
+      ts.forEach(function(t){
+        g.line(P(H+.2,t,z),P(1.75,t,z),'tr');g.line(P(-H-.2,t,z),P(-1.75,t,z),'tr');
+        g.line(P(t,H+.2,z),P(t,1.75,z),'tr');g.line(P(t,-H-.2,z),P(t,-1.75,z),'tr');
+        paths.push(g.d([P(H+.2,t,z),P(1.75,t,z)]),g.d([P(t,H+.2,z),P(t,1.75,z)]));
+        g.box(-H-.18,t-.07,z,.18,.14,.07,'');g.box(t-.07,-H-.18,z,.14,.18,.07,'');
+      });
+      g.box(-H,-H,z,2*H,2*H,.55,'');
+      ts.forEach(function(t){g.box(H,t-.07,z,.18,.14,.07,'');g.box(t-.07,H,z,.14,.18,.07,'');});
+      var zt=z+.55;g.poly([P(-.42,-.42,zt),P(.42,-.42,zt),P(.42,.42,zt),P(-.42,.42,zt)],'hl ft');
+      var c=P(0,0,zt);g.o+='<circle class="acc" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="2.6"><animate attributeName="opacity" values="1;.3;1" dur="1.2s" repeatCount="indefinite"/></circle>';
+      [0,3,5].forEach(function(k,j){g.o+='<circle class="acc" r="2.2"><animateMotion dur="1.8s" begin="'+(j*.6)+'s" repeatCount="indefinite" path="'+paths[k]+'"/></circle>';});
+    },
+    gauge:function(g){ // throughput: the dial reads as a gauge, transactions pour into the block stack
+      var i,R=2.6;
+      for(i=0;i<60;i++){var t=i/60*Math.PI*2,r2=i%5?2.42:2.22;g.line(P(R*Math.cos(t),R*Math.sin(t),0),P(r2*Math.cos(t),r2*Math.sin(t),0),i%5?'tick':'tickM');}
+      g.o+='<path class="dash" d="'+g.d(g.ring(1.95,0,90),true)+'"/>';
+      g.o+='<path d="'+g.d(g.ring(1.25,0,90),true)+'"/>';
+      // gauge arc filling to ~80%
+      var arc=[];for(i=0;i<=96;i++){var a=Math.PI*.75+i/96*Math.PI*2*.8;arc.push(P(2.75*Math.cos(a),2.75*Math.sin(a),0));}
+      g.o+='<path class="gtrack" d="'+g.d(arc)+'"/>';
+      g.o+='<path class="gauge" pathLength="100" d="'+g.d(arc)+'" stroke-dasharray="0 100"><animate attributeName="stroke-dasharray" values="0 100;100 0;100 0;0 100" keyTimes="0;.55;.85;1" dur="3.6s" repeatCount="indefinite"/></path>';
+      var rx=1.2247*S,ry=.7071*S;
+      g.o+='<ellipse class="pulse" cx="0" cy="0" rx="'+(1.25*rx)+'" ry="'+(1.25*ry)+'"><animate attributeName="rx" values="'+(0.5*rx)+';'+(2.5*rx)+'" dur="1s" repeatCount="indefinite"/><animate attributeName="ry" values="'+(0.5*ry)+';'+(2.5*ry)+'" dur="1s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="1s" repeatCount="indefinite"/></ellipse>';
+      g.box(-.4,-.4,0,.8,.8,.3,'');g.box(-.4,-.4,.38,.8,.8,.3,'');g.box(-.4,-.4,.76,.8,.8,.3,'beat');
+      // transactions flying in from the rim
+      var top=P(0,0,1.1);
+      for(i=0;i<14;i++){var a2=i/14*Math.PI*2+.2,st=P(2.05*Math.cos(a2),2.05*Math.sin(a2),0),beg=-(i*.13).toFixed(2);
+        g.o+='<circle class="tx" r="1.4"><animateMotion dur="1.3s" begin="'+beg+'s" repeatCount="indefinite" path="M'+st[0].toFixed(1)+','+st[1].toFixed(1)+'L'+top[0].toFixed(1)+','+top[1].toFixed(1)+'"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.8;1" dur="1.3s" begin="'+beg+'s" repeatCount="indefinite"/></circle>';}
+    },    dial:function(g){ // a one-second dial; a block lands on every beat
+      var i,R=2.6;
+      for(i=0;i<60;i++){var t=i/60*Math.PI*2,r2=i%5?2.42:2.22;g.line(P(R*Math.cos(t),R*Math.sin(t),0),P(r2*Math.cos(t),r2*Math.sin(t),0),i%5?'tick':'tickM');}
+      g.o+='<path class="dash" d="'+g.d(g.ring(1.95,0,90),true)+'"/>';
+      g.o+='<path d="'+g.d(g.ring(1.25,0,90),true)+'"/>';
+      var rx=1.2247*S,ry=.7071*S;
+      g.o+='<ellipse class="pulse" cx="0" cy="0" rx="'+(1.25*rx)+'" ry="'+(1.25*ry)+'"><animate attributeName="rx" values="'+(0.5*rx)+';'+(2.5*rx)+'" dur="1s" repeatCount="indefinite"/><animate attributeName="ry" values="'+(0.5*ry)+';'+(2.5*ry)+'" dur="1s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="1s" repeatCount="indefinite"/></ellipse>';
+      g.o+='<circle class="acc" r="3"><animateMotion dur="6s" repeatCount="indefinite" path="'+g.d(g.ring(2.6,0,120),true)+'"/></circle>';
+      g.box(-.4,-.4,0,.8,.8,.3,'');g.box(-.4,-.4,.38,.8,.8,.3,'');g.box(-.4,-.4,.76,.8,.8,.3,'beat');
+    }
+  };
+  document.querySelectorAll('.kf-art[data-art]').forEach(function(svg){var g=new B();art[svg.getAttribute('data-art')](g);g.out(svg,14);});
+})();
+</script>
+<script>document.querySelectorAll('.cp').forEach(function(b){b.addEventListener('click',function(){try{navigator.clipboard.writeText(b.dataset.cp);}catch(e){}b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent='Copy';b.classList.remove('done');},1400);});});</script>
+<script>/* tokenomics: supply schedule chart + split donuts */
+(function(){
+  var svg=document.getElementById('tkChart'); if(svg){
+  var W=760,H=320,L=46,R=14,T=18,B=34,Y=12,r=.7372,E1=4/(1/(1-r)); // E1 ≈ 1.0512B
+  function X(y){return L+(W-L-R)*y/Y;} function V(b){return T+(H-T-B)*(1-b/6);}
+  var s='<g class="grid">';[0,1.5,3,4.5,6].forEach(function(v){s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+V(v)+'" y2="'+V(v)+'"/><text x="'+(L-8)+'" y="'+(V(v)+3.5)+'" text-anchor="end">'+(v?v+'B':'0')+'</text>';});
+  s+='</g><g class="bars">';
+  for(var y=1;y<=Y;y++){var e=E1*Math.pow(r,y-1),h=(H-T-B)*e/6*2.2,bw=(W-L-R)/Y*.42,x=X(y-.5)-bw/2;s+='<rect x="'+x.toFixed(1)+'" y="'+(V(0)-h).toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+h.toFixed(1)+'" rx="2" style="transition-delay:'+(y*.05)+'s"/>';}
+  s+='</g>';
+  var pts=[],k;for(k=0;k<=Y*10;k++){var yy=k/10,sup=1.5+4*(1-Math.pow(r,yy));pts.push(X(yy).toFixed(1)+','+V(sup).toFixed(1));}
+  s+='<defs><linearGradient id="tkA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7453a" stop-opacity=".28"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></linearGradient></defs>';
+  s+='<path class="area" fill="url(#tkA)" d="M'+X(0)+','+V(0)+'L'+pts.join('L')+'L'+X(Y)+','+V(0)+'Z"/>';
+  s+='<polyline class="line" pathLength="1" points="'+pts.join(' ')+'"/>';
+  s+='<g class="cap"><line class="capl" x1="'+L+'" x2="'+(W-R)+'" y1="'+V(5.5)+'" y2="'+V(5.5)+'"/><text x="'+(W-R)+'" y="'+(V(5.5)-8)+'" text-anchor="end">HARD CAP 5.5B</text></g>';
+  var now=(Date.now()-Date.UTC(2025,1,17))/31557600000,ns=1.5+4*(1-Math.pow(r,now));
+  s+='<g class="now"><line class="nowl" x1="'+X(now)+'" x2="'+X(now)+'" y1="'+V(0)+'" y2="'+(V(ns)-14)+'"/><circle cx="'+X(now)+'" cy="'+V(ns)+'" r="5" fill="#e7453a"/><circle cx="'+X(now)+'" cy="'+V(ns)+'" r="5" fill="none" stroke="#e7453a"><animate attributeName="r" values="5;14" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="1.8s" repeatCount="indefinite"/></circle><text x="'+(X(now)+10)+'" y="'+(V(ns)-18)+'">NOW · YEAR '+Math.ceil(now)+'</text></g>';
+  s+='<g>';[0,2,4,6,8,10,12].forEach(function(v){s+='<text x="'+X(v)+'" y="'+(H-10)+'" text-anchor="middle">'+(v?'Y'+v:'LAUNCH')+'</text>';});s+='</g>';
+  svg.innerHTML=s;}
+  document.querySelectorAll('.tk-ring').forEach(function(w){
+    var sp=w.dataset.split.split(',').map(Number),cs=w.dataset.c.split(','),gl=+w.dataset.glow,o='<svg viewBox="0 0 200 200">',i,acc=0,gap=4.2;
+    for(i=0;i<100;i++){var a=i/100*Math.PI*2,r1=i%10?93:90,r2=97;o+='<line class="tk'+(i%10?'':' M')+'" x1="'+(100+r1*Math.cos(a)).toFixed(2)+'" y1="'+(100+r1*Math.sin(a)).toFixed(2)+'" x2="'+(100+r2*Math.cos(a)).toFixed(2)+'" y2="'+(100+r2*Math.sin(a)).toFixed(2)+'"/>';}
+    o+='<circle class="rtrack" cx="100" cy="100" r="76"/><circle class="inner" cx="100" cy="100" r="62"/>';
+    sp.forEach(function(v,k){o+='<circle class="seg'+(k===gl?' glow':'')+'" cx="100" cy="100" r="76" pathLength="100" stroke="'+cs[k]+'" stroke-dasharray="0 100" stroke-dashoffset="'+(-(acc+gap/2)).toFixed(2)+'" data-d="'+(v-gap).toFixed(2)+' '+(100-v+gap).toFixed(2)+'" style="transition-delay:'+(k*.22)+'s"/>';acc+=v;});
+    w.insertAdjacentHTML('afterbegin',o+'</svg>');
+  });
+  function show(){if(svg)svg.classList.add('in');document.querySelectorAll('.tk-ring .seg').forEach(function(c){c.setAttribute('stroke-dasharray',c.dataset.d);});}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show();io.disconnect();}});},{threshold:.25});io.observe(document.querySelector('.tk-row'));}else show();
+})();
+</script>
+<script>/* participate illustrations — isometric, x/y ground plane, z up */
+(function(){
+  var S=18;function P(x,y,z){return [(x-y)*0.866*S,(x+y)*0.5*S-z*S];}
+  function G(){this.o='';this.b=[1e9,1e9,-1e9,-1e9];}
+  G.prototype.pt=function(p){var b=this.b;b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);return p[0].toFixed(1)+','+p[1].toFixed(1);};
+  G.prototype.poly=function(a,c){var s=this;this.o+='<polygon class="'+(c||'')+'" points="'+a.map(function(p){return s.pt(p);}).join(' ')+'"/>';};
+  G.prototype.line=function(a,b,c){this.o+='<polyline class="'+(c||'')+'" points="'+this.pt(a)+' '+this.pt(b)+'"/>';};
+  G.prototype.d=function(a,cl){var s=this;return a.map(function(p,i){return (i?'L':'M')+s.pt(p);}).join('')+(cl?'Z':'');};
+  G.prototype.box=function(x,y,z,w,d,h,c){this.o+='<g class="'+(c||'')+'">';
+    this.poly([P(x,y+d,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x,y+d,z+h)],'fl');
+    this.poly([P(x+w,y,z),P(x+w,y+d,z),P(x+w,y+d,z+h),P(x+w,y,z+h)],'fr');
+    this.poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+d,z+h),P(x,y+d,z+h)],'ft');this.o+='</g>';};
+  G.prototype.arc=function(cx,cy,z,r,a0,a1,n){var a=[];for(var i=0;i<=n;i++){var t=a0+(a1-a0)*i/n;a.push(P(cx+r*Math.cos(t),cy+r*Math.sin(t),z));}return a;};
+  G.prototype.coin=function(cx,cy,z,r,h,c){var q=Math.PI/4,front=this.arc(cx,cy,z,r,-q,3*q,24),topf=this.arc(cx,cy,z+h,r,-q,3*q,24).reverse();
+    this.o+='<g class="'+(c||'')+'">';this.poly(front.concat(topf),'fl');this.poly(this.arc(cx,cy,z+h,r,0,Math.PI*2,48),'ft');
+    this.o+='<path class="soft" d="'+this.d(this.arc(cx,cy,z+h,r*.7,0,Math.PI*2,40),true)+'"/></g>';};
+  G.prototype.out=function(svg,pad){var b=this.b,p=pad||10;svg.setAttribute('viewBox',[b[0]-p,b[1]-p,b[2]-b[0]+2*p,b[3]-b[1]+2*p].map(function(v){return v.toFixed(1);}).join(' '));svg.setAttribute('preserveAspectRatio','xMaxYMin meet');svg.innerHTML=this.o;};
+  var ill={
+    stake:function(g){ // one XP coin standing in the light: reeded white rim, solid XPHERE mark, a sheen passing over
+      g.pt([12,14]);g.pt([204,162]);
+      var cx=128,cy=86,T='translate('+cx+' '+cy+') rotate(-6) scale(.8 1)';
+      var o='<defs><clipPath id="coinFace"><circle r="54"/></clipPath><linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><linearGradient id="streak" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>';
+      o+='<path class="streak" d="M0,128 C60,104 120,98 210,58" stroke="url(#streak)" stroke-width="1.2"/><path class="streak" d="M10,152 C80,124 150,114 210,94" stroke="url(#streak)" stroke-width=".8" opacity=".6"/>';
+      o+='<g class="coin3d">';
+      for(i=7;i>=1;i--){o+='<g transform="translate('+(cx-i*1.2).toFixed(2)+' '+(cy+i*.65).toFixed(2)+') rotate(-6) scale(.8 1)"><circle r="56" class="edge'+(i===7?' back':'')+'"/></g>';}
+      o+='<g transform="'+T+'">'+
+         '<circle r="56" class="face"/><circle r="56" class="rimglow"/><circle r="49" class="inner-rim"/>'+
+
+         '<g clip-path="url(#coinFace)"><rect class="sheen" x="-120" y="-60" width="46" height="120" fill="url(#sheen)" transform="rotate(20)"><animate attributeName="x" values="-120;90;90" keyTimes="0;.55;1" dur="4.2s" repeatCount="indefinite"/></rect></g>'+
+       '</g>'+
+       '<image class="logo-img" href="images/xphere-logo.png" x="-30" y="-30" width="60" height="60" transform="translate('+cx+' '+cy+') rotate(-6) scale(.82 1)"/>'+
+       '</g></g>';
+      [[44,40,1.6,0],[182,30,1.2,.8],[196,124,1.4,1.6],[60,150,1,2.2]].forEach(function(s){o+='<circle class="spark" cx="'+s[0]+'" cy="'+s[1]+'" r="'+s[2]+'"><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="'+s[3]+'s" repeatCount="indefinite"/></circle>';});
+      g.o+=o;
+    },    mine:function(g){ // IceRiver XP0-style miner: finned aluminium body, two fans on top, I/O panel on the front
+      var x=-1.6,y=-1.4,w=3.2,d=2.8,z0=0,H=1.6,zt=z0+H,i;
+      // skirt fins under the body (front-left face)
+
+      g.box(x,y,z0,w,d,H,'');
+      // I/O panel on the front-left face (plane y+d)
+      var Y=y+d;
+      g.poly([P(x+.15,Y,z0+.35),P(x+w-.15,Y,z0+.35),P(x+w-.15,Y,zt-.12),P(x+.15,Y,zt-.12)],'soft');
+      g.poly([P(.75,Y,.55),P(1.25,Y,.55),P(1.25,Y,.95),P(.75,Y,.95)],'');
+      g.poly([P(.85,Y,.62),P(1.15,Y,.62),P(1.15,Y,.85),P(.85,Y,.85)],'soft');
+      var jack=[];for(i=0;i<24;i++){var a=i/24*Math.PI*2;jack.push(P(.05+.14*Math.cos(a),Y,.95+.14*Math.sin(a)));}g.o+='<path d="'+g.d(jack,true)+'"/>';
+      g.line(P(-.55,Y,1.0),P(-.25,Y,1.0),'soft');
+      g.line(P(-1.15,Y,1.25),P(-1.15,Y+.25,1.95),'');g.line(P(-1.25,Y,1.1),P(-1.05,Y,1.1),'');
+      var led=P(1.4,Y,1.3);g.o+='<circle class="dot" cx="'+led[0].toFixed(1)+'" cy="'+led[1].toFixed(1)+'" r="1.8"><animate attributeName="opacity" values="1;.2;1" dur=".9s" repeatCount="indefinite"/></circle>';
+      // fan channel on top (fins removed down the middle), two fans with grills
+      [[0,-.7],[0,.7]].forEach(function(f){
+        [.5,.36,.2,.07].forEach(function(r,k){var c=[];for(var j=0;j<40;j++){var a=j/40*Math.PI*2;c.push(P(f[0]+r*Math.cos(a),f[1]+r*Math.sin(a),zt));}g.o+='<path class="'+(k%2?'soft':'')+'" d="'+g.d(c,true)+'"/>';});
+        [[.5,.5],[-.5,.5],[.5,-.5],[-.5,-.5]].forEach(function(q){var c=P(f[0]+q[0]*.95,f[1]+q[1]*.95,zt);g.o+='<circle class="dot" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="1.1" opacity=".7"/>';});
+      });
+      // top fins running front-to-back, either side of the fan channel
+      for(i=0;i<11;i++){var tx=x+.05+i*.3;if(tx>-.62&&tx<.55)continue;g.box(tx,y,zt,.07,d,.42,'');}
+      // side fins on the right face, back to front
+      for(i=0;i<10;i++){var sy=y+.08+i*.29;g.box(x+w,sy,z0+.05,.32,.07,H-.1,'');}
+      // hashes rising off the fans
+      [[0,-.7,0],[0,.7,.8],[0,-.7,1.6]].forEach(function(q){var a=P(q[0],q[1],zt+.3),b=P(q[0],q[1],zt+2.1);g.pt(b);
+        g.o+='<rect class="hash" x="'+(a[0]-2.5).toFixed(1)+'" y="'+(a[1]-2.5).toFixed(1)+'" width="5" height="5" rx="1"><animate attributeName="y" values="'+(a[1]-2.5)+';'+(b[1]-2.5)+'" dur="2.4s" begin="'+q[2]+'s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="2.4s" begin="'+q[2]+'s" repeatCount="indefinite"/></rect>';});
+    },    union:function(g){ // a capped council: seats around the core, linked to it
+      var n=8,R=2.3,core=[0,0],seats=[],i;
+      g.o+='<path class="dash" d="'+g.d(g.arc(0,0,0,R+.7,0,Math.PI*2,80),true)+'"/>';
+      for(i=0;i<n;i++){var t=i/n*Math.PI*2+Math.PI/8;seats.push([R*Math.cos(t),R*Math.sin(t),.9+(i%3)*.18]);}
+      var all=seats.map(function(s){return {x:s[0],y:s[1],h:s[2]};});all.push({x:0,y:0,h:2.2,core:1});
+      all.sort(function(a,b){return (a.x+a.y)-(b.x+b.y);});
+      all.forEach(function(s){ if(!s.core)g.line(P(s.x,s.y,s.h),P(0,0,2.2),'soft'); });
+      all.forEach(function(s){var w=s.core?.7:.4;g.box(s.x-w/2,s.y-w/2,0,w,w,s.h,s.core?'hot':'');});
+      g.o+='<circle class="dot" r="2.4"><animateMotion dur="5s" repeatCount="indefinite" path="'+g.d(g.arc(0,0,0,R+.7,0,Math.PI*2,80),true)+'"/></circle>';
+    }
+  };
+  document.querySelectorAll('svg.ill[data-ill]').forEach(function(s){var g=new G();ill[s.getAttribute('data-ill')](g);g.out(s,10);});
+})();
+</script>
+
+<script>(function(){var r=document.getElementById('rm2');if(!r)return;if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){r.classList.add('in');io.disconnect();}},{threshold:.3});io.observe(r);}else r.classList.add('in');})();</script>
+<script src="nav.js"></script>
+</body>
+</html>
