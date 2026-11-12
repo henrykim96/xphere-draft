@@ -1203,3 +1203,9 @@ footer.ft2{background:#171514;border-top:1px solid #2e2826}
 /* v4.0: sections alternate dark / gray column (Home and Union) */
 body > section:nth-of-type(odd){--sb:var(--paper)}
 body > section:nth-of-type(even){--sb:#1f1c1b}
+
+/* v4.1 mobile fixes */
+@media (max-width:600px){
+  .bd-stats>div{padding:18px 16px 16px}
+  .bd-stats b{font-size:clamp(17px,5.2vw,22px);letter-spacing:-.03em;white-space:nowrap}
+}

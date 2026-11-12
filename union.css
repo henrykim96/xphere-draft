@@ -603,3 +603,13 @@ body > section.u-sec{padding:104px 0}
 .j-alt{margin-top:22px;font-size:14.5px;color:var(--t2);border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
 .j-alt:hover{color:#fff;border-color:#5a4f4c}
 @media (max-width:640px){.u-join .card.j2{padding:56px 20px 52px}.j-mail{flex-wrap:wrap;border-radius:18px;padding:14px}.j-addr{flex:1 1 60%}.j-send{flex:1 1 100%;justify-content:center}}
+
+/* mobile fixes v2 */
+@media (max-width:900px){
+  .u-proc .wrap{grid-template-columns:1fr}
+  .u-proc .u-steps{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .j-addr{font-size:15px}
+  .j-mail{gap:8px}
+}

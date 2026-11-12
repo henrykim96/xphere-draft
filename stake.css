@@ -198,3 +198,11 @@
 .sk-art .chip2 .cv{font-weight:600;fill:#fff}
 .sk-art .chip2.bn .cv{fill:#ff6a58}
 .sk-art .chip2 .bg{stroke:#5a4f4c}
+
+/* mobile fixes */
+@media (max-width:640px){
+  .sk-params .bar span{font-size:0;gap:0;padding:0 12px}
+  .sk-params .bar b{font-size:16px}
+  .un-ring.arena.sk-art,.un-ring.arena.gr-art{aspect-ratio:auto;overflow:hidden}
+  .un-ring.arena.sk-art svg,.un-ring.arena.gr-art svg{width:150%;height:auto;margin-left:-25%}
+}
