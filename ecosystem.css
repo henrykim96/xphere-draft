@@ -1,0 +1,49 @@
+/* ===== Ecosystem page (shares style.css + union.css + stake.css + grant.css) ===== */
+
+/* hero art extras */
+.gr-art .lit polygon{stroke:#ff8a75}
+.gr-art .lit .ft{fill:#5a1e18}.gr-art .lit .fr{fill:#2e1210}.gr-art .lit .fl{fill:#3e1613}
+
+/* directory toolbar */
+.eco-bar{margin-top:48px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.eco-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.eco-tabs button{font:inherit;font-size:14px;color:var(--t2);background:transparent;border:1px solid var(--ln2);border-radius:99px;padding:9px 14px 9px 16px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .25s}
+.eco-tabs button span{font-family:var(--mono);font-size:11px;color:var(--t3);transition:color .25s}
+.eco-tabs button:hover{color:#fff;border-color:#5a4f4c}
+.eco-tabs button.on{color:#fff;background:rgba(231,69,58,.14);border-color:rgba(231,69,58,.6)}
+.eco-tabs button.on span{color:#ff8a75}
+.eco-search{display:flex;align-items:center;gap:8px;padding:0 14px;height:42px;border:1px solid var(--ln2);border-radius:99px;background:rgba(10,8,8,.4);min-width:240px;transition:border-color .25s}
+.eco-search:focus-within{border-color:rgba(231,69,58,.6)}
+.eco-search svg{width:16px;height:16px;fill:none;stroke:var(--t3);stroke-width:1.6;stroke-linecap:round;flex:none}
+.eco-search input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--t1);font:inherit;font-size:14px}
+.eco-search input::placeholder{color:var(--t3)}
+
+/* directory grid */
+.eco-grid{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.eco-card{position:relative;display:flex;flex-direction:column;padding:24px 24px 22px;border:1px solid var(--ln);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent 60%),var(--card);transition:border-color .3s,transform .3s,box-shadow .3s;animation:ecoIn .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d)}
+.eco-card:hover{border-color:rgba(231,69,58,.5);transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(231,69,58,.45)}
+@keyframes ecoIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eco-card .top{display:flex;justify-content:space-between;align-items:flex-start}
+.eco-card .lg{width:52px;height:52px;border-radius:14px;overflow:hidden;display:grid;place-items:center;background:#f5f1ef;border:1px solid var(--ln2)}
+.eco-card .lg img{width:100%;height:100%;object-fit:cover}
+.eco-card .lg.dk{background:#0f0c0b}
+.eco-card .lg.dk img{width:72%;height:72%;object-fit:contain}
+.eco-card .cat{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);border:1px solid var(--ln2);border-radius:99px;padding:5px 10px}
+.eco-card h3{margin-top:20px;font-size:19px;font-weight:500;letter-spacing:-.02em;color:var(--t1)}
+.eco-card .k{margin-top:6px;font-size:15px;line-height:1.5;color:var(--t1);opacity:.85}
+.eco-card .t{margin-top:10px;font-size:13px;line-height:1.55;color:var(--t3)}
+.eco-card .go{margin-top:auto;padding-top:20px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.eco-card .go i{font-style:normal;display:inline-block;transition:transform .25s}
+.eco-card:hover .go i{transform:translate(2px,-2px)}
+.eco-empty{margin-top:30px;text-align:center;color:var(--t3)}
+.eco-cta-p{margin-top:18px;max-width:560px;font-size:16px;line-height:1.6;color:var(--t2)}
+
+@media (max-width:1000px){.eco-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+  .eco-grid{grid-template-columns:1fr}
+  .eco-bar{flex-direction:column;align-items:stretch}
+  .eco-tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none}
+  .eco-tabs::-webkit-scrollbar{display:none}
+  .eco-tabs button{flex:none}
+  .eco-search{min-width:0}
+}

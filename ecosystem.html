@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecosystem | XPHERE</title>
+<meta name="description" content="Apps, explorers, wallets and infrastructure, already live on XPHERE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="union.css">
+<link rel="stylesheet" href="stake.css">
+<link rel="stylesheet" href="grant.css">
+<link rel="stylesheet" href="ecosystem.css">
+</head>
+<body class="hide-notes"><button id="noteToggle" hidden></button><button id="gfxToggle" hidden></button>
+
+
+<!-- ================= HEADER ================= -->
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="index.html" aria-label="XPHERE home"><img class="mk" src="images/xphere-logo.png" alt=""><img class="type" src="images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="union.html">Union</a>
+      <a href="stake.html">Stake</a>
+      <a href="ecosystem.html" class="on">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="https://docs.x-phere.com/whitepaper">Whitepaper</a>
+        </div>
+      </div>
+      <a href="https://docs.x-phere.com/">Docs</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero2">
+  <div class="frame">
+    <div class="glow"></div>
+    <div class="hero-in">
+      <div class="un-ring arena gr-art" aria-hidden="true"><svg id="ecoArt" viewBox="0 0 1000 430"></svg></div>
+      <p class="eyebrow" style="margin:0 0 18px;color:#c9c2bf">XPHERE Ecosystem</p>
+      <h1>Apps running<br>on XPHERE</h1>
+      <p class="sub">Apps, explorers, wallets and infrastructure, already live on the network.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#list">Explore the ecosystem</a>
+        <a class="btn btn-light" href="grant.html">Build on XPHERE</a>
+      </div>
+    </div>
+    <dl class="hstats" id="ecoStats">
+      <div><dt>Projects</dt><dd data-c="all">—</dd></div>
+      <div><dt>DeFi</dt><dd data-c="defi">—</dd></div>
+      <div><dt>Apps</dt><dd data-c="apps">—</dd></div>
+      <div><dt>Network tools</dt><dd data-c="tools">—</dd></div>
+    </dl>
+  </div>
+</div>
+
+<!-- ================= DIRECTORY ================= -->
+<section class="u u-sec" id="list">
+  <div class="wrap">
+    <div class="u-head"><span class="eyebrow u-eb">Directory</span><h2>Explore the ecosystem</h2></div>
+    <div class="eco-bar">
+      <div class="eco-tabs" id="tabs" role="tablist"></div>
+      <label class="eco-search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><input id="q" type="search" placeholder="Search projects" autocomplete="off"></label>
+    </div>
+    <div class="eco-grid" id="grid"></div>
+    <p class="eco-empty" id="empty" hidden>No projects match that search.</p>
+    
+  </div>
+</section>
+
+<!-- ================= LIST YOUR PROJECT ================= -->
+<section class="u u-sec u-join" id="join">
+  <div class="wrap">
+    <div class="card j2">
+      <span class="eyebrow">Build on XPHERE</span>
+      <h2>Building something<br><span class="gr">on XPHERE?</span></h2>
+      <p class="eco-cta-p">Whether you're launching a dApp, building infrastructure, or growing our community — we want to hear from you.</p>
+      <div class="sk-cta">
+        <a class="j-send" href="grant.html">Apply for a grant <span>→</span></a>
+        <a class="btn btn-light" href="https://docs.x-phere.com/">Developer docs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="ft2" id="footer">
+  <div class="wrap">
+    <div class="ft2-top">
+      <a class="ft2-logo" href="index.html" aria-label="XPHERE home"><img src="images/xphere-logo.png" alt=""><img src="images/xphere-type.png" alt="XPHERE"></a>
+      <a class="ft2-mail" href="mailto:Contact@X-phere.com">Contact@X-phere.com<i><svg viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></i></a>
+    </div>
+    <nav class="ft2-links"><a href="https://x-phere.com/security.html">Security &amp; official domains</a><span>·</span><a href="https://docs.x-phere.com/">Docs</a><span>·</span><a href="stake.html">Stake XP</a><span>·</span><a href="https://xpscan.io">Explorer</a></nav>
+    <p class="ft2-copy">© All rights reserved - XPHERE Foundation</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+
+  /* ---------- directory data (same entries as the Home "Apps running on XPHERE" cards) ---------- */
+  var CAT={defi:'DeFi',apps:'Apps',wallets:'Wallets',explorers:'Explorers',infra:'Infrastructure'};
+  var P=[
+    {n:'XCROLL',c:'apps',k:'Watch short videos, earn rewards',t:'Watch-to-earn · Shorts · Viewer rewards',u:'https://xcroll.ai/',img:'images/xcroll_mark.png',dark:1},
+    {n:'Phos',c:'apps',k:'Token launchpad built on XPHERE',t:'Launchpad · Token launches · XPHERE-native',u:'https://phos.land/',img:'images/phos.png'},
+    {n:'Xeffy',c:'defi',k:'An institutional-grade gateway to vaults and RWA',t:'Vault strategies · Real-world assets · XEF token on XPHERE',u:'https://xeffy.io/',img:'images/xeffy.png'},
+    {n:'Faiyah',c:'defi',k:'Multichain DeFi, from swaps to launches',t:'Staking · P2P swap · Burn pools · Launchpad · DEX',u:'https://faiyah.app/',img:'images/faiyah.svg',dark:1},
+    {n:'PumpkinSwap',c:'defi',k:'Swap tokens on XPHERE in one step',t:'Swap · Pools · Bridge',u:'https://pumpkinswap.app/swap',img:'images/pumpkinswap.svg',dark:1},
+    {n:'XP Union Vault',c:'defi',k:'Real-yield staking for XP',t:'60% to stakers · 40%+ burned · 0% fees',u:'https://stake.x-phere.com/',img:'images/eco-vault.png'},
+    {n:'ZIGAP',c:'wallets',k:'The wallet with XPHERE built in',t:'Partner wallet · No network setup',u:'https://about.zigap.io/',img:'images/eco-zigap.png'},
+    {n:'XPScan',c:'explorers',k:'The XPHERE explorer',t:'Blocks · Contract verification · Union · Burn dashboards',u:'https://xpscan.io/',img:'images/eco-xpscan.png'},
+    {n:'Tamsa Explorer',c:'explorers',k:'Mainnet explorer with a public API',t:'Blocks · Union · Network data',u:'https://xp.tamsa.io/',img:'images/eco-tamsa.png'},
+    {n:'Ankr RPC',c:'infra',k:'Global RPC for Mainnet and Testnet',t:'Public endpoints · Mainnet · Testnet',u:'https://www.ankr.com/rpc/xphere/',img:'images/eco-ankr.png'}
+  ];
+  var cur='all',grid=document.getElementById('grid'),tabs=document.getElementById('tabs'),q=document.getElementById('q'),empty=document.getElementById('empty');
+  function count(c){return c==='all'?P.length:P.filter(function(p){return p.c===c;}).length;}
+  /* stats strip */
+  document.querySelector('[data-c="all"]').textContent=P.length;
+  document.querySelector('[data-c="defi"]').textContent=count('defi');
+  document.querySelector('[data-c="apps"]').textContent=count('apps');
+  document.querySelector('[data-c="tools"]').textContent=count('wallets')+count('explorers')+count('infra');
+  /* tabs */
+  ['all'].concat(Object.keys(CAT)).forEach(function(c){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.dataset.c=c;
+    b.innerHTML=(c==='all'?'All':CAT[c])+'<span>'+count(c)+'</span>';b.onclick=function(){cur=c;render();};tabs.appendChild(b);});
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function render(){
+    var term=q.value.trim().toLowerCase(),n=0,h='';
+    tabs.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b.dataset.c===cur);b.setAttribute('aria-selected',b.dataset.c===cur);});
+    P.forEach(function(p){
+      if(cur!=='all'&&p.c!==cur)return;
+      if(term&&(p.n+' '+p.k+' '+p.t).toLowerCase().indexOf(term)<0)return;
+      n++;
+      h+='<a class="eco-card" href="'+p.u+'" target="_blank" rel="noopener" style="--d:'+(n*40)+'ms">'+
+         '<div class="top"><span class="lg'+(p.dark?' dk':'')+'"><img src="'+p.img+'" alt=""></span><span class="cat">'+CAT[p.c]+'</span></div>'+
+         '<h3>'+esc(p.n)+'</h3><p class="k">'+esc(p.k)+'</p><p class="t">'+esc(p.t)+'</p>'+
+         '<span class="go">Visit <i>↗</i></span></a>';});
+    grid.innerHTML=h;empty.hidden=n>0;}
+  q.addEventListener('input',render);render();
+
+  /* ---------- hero: a small isometric district — platforms of different heights, linked, a few lit ---------- */
+  (function(){
+    var s=document.getElementById('ecoArt'),SC=42,OX=500,OY=235,h='';
+    function Pt(x,y,z){return [OX+(x-y)*0.866*SC,OY+(x+y)*0.5*SC-z*SC];}
+    function q2(p){return p[0].toFixed(1)+','+p[1].toFixed(1);}
+    function poly(a,c){return '<polygon class="'+(c||'')+'" points="'+a.map(q2).join(' ')+'"/>';}
+    function box(x,y,z,w,d,hh,c){return '<g class="'+(c||'')+'">'+
+      poly([Pt(x,y+d,z),Pt(x+w,y+d,z),Pt(x+w,y+d,z+hh),Pt(x,y+d,z+hh)],'fl')+
+      poly([Pt(x+w,y,z),Pt(x+w,y+d,z),Pt(x+w,y+d,z+hh),Pt(x+w,y,z+hh)],'fr')+
+      poly([Pt(x,y,z+hh),Pt(x+w,y,z+hh),Pt(x+w,y+d,z+hh),Pt(x,y+d,z+hh)],'ft')+'</g>';}
+    var i,j;
+    for(i=-6;i<=6;i++){h+='<polyline class="gd" points="'+q2(Pt(i,-6,0))+' '+q2(Pt(i,6,0))+'"/><polyline class="gd" points="'+q2(Pt(-6,i,0))+' '+q2(Pt(6,i,0))+'"/>';}
+    /* 3x3 district: [x,y,height,lit] — one centre hub, eight projects around it */
+    var C=[[-2.4,-2.4,1.0,0],[0,-2.4,1.6,1],[2.4,-2.4,.8,0],[-2.4,0,1.4,0],[0,0,2.4,2],[2.4,0,1.2,1],[-2.4,2.4,.7,1],[0,2.4,1.1,0],[2.4,2.4,1.5,0]];
+    /* links between neighbours on the ground */
+    var L=[[0,1],[1,2],[3,4],[4,5],[6,7],[7,8],[0,3],[3,6],[1,4],[4,7],[2,5],[5,8]];
+    L.forEach(function(e,k){var a=C[e[0]],b2=C[e[1]],pa=Pt(a[0]+.6,a[1]+.6,0),pb=Pt(b2[0]+.6,b2[1]+.6,0);
+      h+='<polyline class="rt" points="'+q2(pa)+' '+q2(pb)+'"/>';
+      h+='<circle class="spk" r="2.6" opacity="0"><animateMotion dur="2.6s" begin="'+(k*.45)+'s" repeatCount="indefinite" path="M'+q2(pa)+' L'+q2(pb)+'"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="2.6s" begin="'+(k*.45)+'s" repeatCount="indefinite"/></circle>';});
+    /* platforms + towers, drawn back to front */
+    C.slice().sort(function(a,b2){return (a[0]+a[1])-(b2[0]+b2[1]);}).forEach(function(c,k){
+      h+=box(c[0]-.2,c[1]-.2,0,1.6,1.6,.18,'');
+      var cls=c[3]===2?'hot':(c[3]?'lit':'');
+      var g='<g>'+(c[3]?'<animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="'+(2.6+k*.3).toFixed(1)+'s" repeatCount="indefinite"/>':'')+box(c[0]+.2,c[1]+.2,.18,.8,.8,c[2],cls)+'</g>';
+      h+=g;});
+    s.innerHTML=h;
+  })();
+
+  /* reveal on scroll */
+  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15}):null;
+  document.querySelectorAll('.u .rv').forEach(function(el,i){el.style.transitionDelay=((i%4)*.08)+'s';io?io.observe(el):el.classList.add('in');});
+})();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
