@@ -87,6 +87,17 @@
   </div>
 </section>
 
+<!-- ================= PARTNERS ================= -->
+<section class="u u-sec" id="partners">
+  <div class="wrap">
+    <div class="u-head"><span class="eyebrow u-eb">Partners</span><h2>Teams building and<br>validating on XPHERE</h2></div>
+    <div class="pt-grid" id="ptGrid"></div>
+    <h3 class="pt-sub">Media partners</h3>
+    <div class="pt-grid sm" id="ptMedia"></div>
+    
+  </div>
+</section>
+
 <!-- ================= LIST YOUR PROJECT ================= -->
 <section class="u u-sec u-join" id="join">
   <div class="wrap">
@@ -158,6 +169,14 @@
          '<span class="go">Visit <i>↗</i></span></a>';});
     grid.innerHTML=h;empty.hidden=n>0;}
   q.addEventListener('input',render);render();
+
+  /* partners: same 19 logos as the Home logo strip */
+  var PT=['01.ankr','02.Nansen','03.Onekey','04.Dcent','05.ZIGAP','06.TAMSA','07.Coincreate','08.Lighthouse','09.RWA_NOVA','10.XCROLL','11.Xmarket','12.Xwarp','13.Hacken','14.HorizonXVC','15.NextGen_Ventures','16.AiNode'],
+      MD=['m03.Tokenpost','m01.NINJA_promo','m02.BITCOURIER'];
+  function tiles(list){return list.map(function(f,i){var nm=f.replace(/^m?\d+\./,'').replace(/_/g,' ');
+    return '<div class="pt" style="--d:'+(i*30)+'ms" title="'+nm+'"><img src="images/'+f+'.svg" alt="'+nm+'"></div>';}).join('');}
+  document.getElementById('ptGrid').innerHTML=tiles(PT);
+  document.getElementById('ptMedia').innerHTML=tiles(MD);
 
   /* ---------- hero: a small isometric district — platforms of different heights, linked, a few lit ---------- */
   (function(){
