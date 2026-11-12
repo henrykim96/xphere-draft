@@ -1209,3 +1209,7 @@ body > section:nth-of-type(even){--sb:#1f1c1b}
   .bd-stats>div{padding:18px 16px 16px}
   .bd-stats b{font-size:clamp(17px,5.2vw,22px);letter-spacing:-.03em;white-space:nowrap}
 }
+
+/* v4.2: Community dropdown (X, Telegram, Discord) */
+.hdr .menu .dd-com .dd-p a{display:flex;align-items:center;gap:10px}
+.hdr .menu .dd-com .dd-p svg{width:16px;height:16px;fill:currentColor;flex:none;opacity:.85}
