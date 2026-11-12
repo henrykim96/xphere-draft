@@ -57,18 +57,18 @@
     <div class="hero-in">
       <div class="un-ring arena gr-art" aria-hidden="true"><svg id="ecoArt" viewBox="0 0 1000 430"></svg></div>
       <p class="eyebrow" style="margin:0 0 18px;color:#c9c2bf">XPHERE Ecosystem</p>
-      <h1>Apps running<br>on XPHERE</h1>
-      <p class="sub">Apps, explorers, wallets and infrastructure, already live on the network.</p>
+      <h1>One network,<br>many builders</h1>
+      <p class="sub">The apps, wallets, explorers and infrastructure already live on XPHERE, and the partners building alongside them.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="#list">Explore the ecosystem</a>
-        <a class="btn btn-light" href="grant.html">Build on XPHERE</a>
+        <a class="btn btn-light" href="#partners">Explore partners</a>
       </div>
     </div>
     <dl class="hstats" id="ecoStats">
       <div><dt>Projects</dt><dd data-c="all">—</dd></div>
       <div><dt>DeFi</dt><dd data-c="defi">—</dd></div>
       <div><dt>Apps</dt><dd data-c="apps">—</dd></div>
-      <div><dt>Network tools</dt><dd data-c="tools">—</dd></div>
+      <div><dt>Partners</dt><dd data-c="partners">—</dd></div>
     </dl>
   </div>
 </div>
@@ -151,7 +151,7 @@
   document.querySelector('[data-c="all"]').textContent=P.length;
   document.querySelector('[data-c="defi"]').textContent=count('defi');
   document.querySelector('[data-c="apps"]').textContent=count('apps');
-  document.querySelector('[data-c="tools"]').textContent=count('wallets')+count('explorers')+count('infra');
+  document.querySelector('[data-c="partners"]').textContent=19;
   /* tabs */
   ['all'].concat(Object.keys(CAT)).forEach(function(c){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.dataset.c=c;
     b.innerHTML=(c==='all'?'All':CAT[c])+'<span>'+count(c)+'</span>';b.onclick=function(){cur=c;render();};tabs.appendChild(b);});
