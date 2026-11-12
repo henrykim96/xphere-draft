@@ -122,6 +122,7 @@
     {n:'PumpkinSwap',c:'defi',k:'Swap tokens on XPHERE in one step',t:'Swap · Pools · Bridge',u:'https://pumpkinswap.app/swap',img:'images/pumpkinswap.svg'},
     {n:'XP Union Vault',c:'defi',k:'Real-yield staking for XP',t:'60% to stakers · 40%+ burned · 0% fees',u:'https://stake.x-phere.com/',img:'images/eco-vault.png'},
     {n:'ZIGAP',c:'wallets',k:'The wallet with XPHERE built in',t:'Partner wallet · No network setup',u:'https://about.zigap.io/',img:'images/eco-zigap.png'},
+    {n:'XPScan',c:'explorers',k:'The XPHERE explorer',t:'Blocks · Contract verification · Union · Burn dashboards',u:'https://xpscan.io/',img:'images/eco-xpscan.png',raw:1},
     {n:'Tamsa Explorer',c:'explorers',k:'Mainnet explorer with a public API',t:'Blocks · Union · Network data',u:'https://xp.tamsa.io/',img:'images/eco-tamsa.png'},
     {n:'Ankr RPC',c:'infra',k:'Global RPC for Mainnet and Testnet',t:'Public endpoints · Mainnet · Testnet',u:'https://www.ankr.com/rpc/xphere/',img:'images/eco-ankr.png'}
   ];
@@ -144,7 +145,7 @@
       if(term&&(p.n+' '+p.k+' '+p.t).toLowerCase().indexOf(term)<0)return;
       n++;
       h+='<a class="eco-card" href="'+p.u+'" target="_blank" rel="noopener" style="--d:'+(n*40)+'ms">'+
-         '<div class="top"><span class="lg"><img src="'+p.img+'" alt="" style="--s:'+(p.s||1)+'"></span><span class="cat">'+CAT[p.c]+'</span></div>'+
+         '<div class="top"><span class="lg'+(p.raw?' raw':'')+'"><img src="'+p.img+'" alt="" style="--s:'+(p.s||1)+'"></span><span class="cat">'+CAT[p.c]+'</span></div>'+
          '<h3>'+esc(p.n)+'</h3><p class="k">'+esc(p.k)+'</p><p class="t">'+esc(p.t)+'</p>'+
          '<span class="go">Visit <i>↗</i></span></a>';});
     grid.innerHTML=h;empty.hidden=n>0;}
