@@ -1,0 +1,24 @@
+/* ===== Grant page (shares style.css + union.css + stake.css) ===== */
+
+/* hero art: isometric line style, same tones as Home key-feature art */
+.gr-art::before{background:radial-gradient(closest-side at 50% 55%,rgba(231,69,58,.16),transparent)}
+.gr-art svg{display:block}
+.gr-art polygon,.gr-art polyline,.gr-art path{stroke:#b5adaa;stroke-width:1.1;stroke-linejoin:round;stroke-linecap:round;fill:none;vector-effect:non-scaling-stroke}
+.gr-art .ft{fill:#36302d}.gr-art .fr{fill:#221e1d}.gr-art .fl{fill:#2a2523}
+.gr-art .hot polygon{stroke:#ff8a75}
+.gr-art .hot .ft{fill:#e7453a}.gr-art .hot .fr{fill:#8a1a14}.gr-art .hot .fl{fill:#b3241b}
+.gr-art .gd{stroke:rgba(231,69,58,.1)}
+.gr-art .rt{stroke:#5f5856;stroke-dasharray:2 5}
+.gr-art .spk{fill:#ff8a75;filter:drop-shadow(0 0 6px rgba(231,69,58,.9))}
+
+/* what is */
+.gr-sub{margin:18px auto 0;max-width:720px;text-align:center;font-size:17px;line-height:1.6;color:var(--t2)}
+#what .u-what3 article{flex-direction:row;align-items:center;gap:18px;padding:24px 26px}
+#what .u-what3 h3{font-size:18px;font-weight:500;letter-spacing:-.02em;color:var(--t1)}
+
+/* apply card */
+.gr-steps{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:640px}
+.gr-steps div{padding:18px 20px;border:1px solid #3a2a27;border-radius:14px;background:rgba(10,8,8,.55);text-align:left}
+.gr-steps b{display:block;font-size:22px;font-weight:500;letter-spacing:-.02em;color:#f5f1ef}
+.gr-steps span{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--t2)}
+@media (max-width:640px){.gr-steps{grid-template-columns:1fr}}

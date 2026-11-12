@@ -1154,3 +1154,52 @@ section.s2{padding:96px 0}
   .un-ring{width:260px;height:260px}
   section.s2{padding:72px 0}
 }
+/* ===== v3.3 — simple footer (like the live site): logo + contact pill, one link row, copyright ===== */
+footer.ft2{background:#080707;border-top:1px solid #231e1d;padding:44px 0 46px;color:#8f8885}
+footer.ft2 .wrap{max-width:1190px;padding:0 36px}
+.ft2-top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.ft2-logo{display:inline-flex;align-items:center;gap:8px;opacity:.6;transition:opacity .2s}
+.ft2-logo:hover{opacity:.9}
+.ft2-logo img:first-child{width:24px;height:24px;filter:grayscale(1) brightness(1.6)}
+.ft2-logo img:last-child{height:14px;width:auto}
+.ft2-mail{display:inline-flex;align-items:center;gap:14px;height:40px;padding:0 5px 0 18px;border-radius:999px;background:#161312;border:1px solid #2c2624;font-size:14px;color:#bdb6b3;transition:border-color .2s,color .2s}
+.ft2-mail:hover{border-color:#4a3330;color:#fff}
+.ft2-mail i{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#ff6a4d,#cf1512);display:grid;place-items:center}
+.ft2-mail svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:1.6;stroke-linejoin:round}
+.ft2-links{margin-top:40px;display:flex;flex-wrap:wrap;gap:6px 8px;font-size:13px}
+.ft2-links a{color:#d9d4d1}
+.ft2-links a:hover{color:#fff}
+.ft2-links span{color:#5f5856}
+.ft2-copy{margin-top:16px;font-size:13px;color:#6f6866}
+@media (max-width:760px){footer.ft2 .wrap{padding:0 20px}.ft2-links{margin-top:28px}}
+
+/* v3.5 — header CTAs removed: keep the menu centred on the page */
+@media (min-width:861px){.hdr .nav{position:relative}.hdr .menu{position:absolute;left:50%;transform:translateX(-50%)}}
+
+/* v3.6 — centred section head (same as the apps deck head) */
+.fin-head2.center{grid-template-columns:1fr;gap:16px;text-align:center;justify-items:center}
+.fin-head2.center p{justify-self:center;max-width:560px;font-size:18px}
+
+/* v3.7 — every section head centred like the apps deck: eyebrow → title → description → button */
+.kf-head{grid-template-columns:1fr!important;gap:0;text-align:center;justify-items:center;align-items:center}
+.kf-head > div{display:contents}
+.kf-head .eyebrow{order:1}
+.kf-head .h2{order:2;margin-top:14px}
+.kf-head p{order:3;justify-self:center!important;max-width:580px;margin-top:18px!important;font-size:18px;line-height:1.6}
+.kf-head .mini-btn{order:4;margin-top:24px}
+.sec-head{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:22px}
+.sec-head .h2{max-width:none}
+/* v3.8 — tighter space above section eyebrows (home) */
+body > section:not(.u):not(.hero){padding-top:84px}
+.fin-head2{padding-top:84px}
+@media (max-width:760px){body > section:not(.u):not(.hero){padding-top:64px}.fin-head2{padding-top:64px}}
+body > section#finance{padding-top:0}
+
+/* v3.9 — build live label follows the centred head; footer takes the page column colour */
+#build .bd-live{display:flex;justify-content:center;width:100%}
+footer.ft2{background:#171514;border-top:1px solid #2e2826}
+.ft2-mail{background:#1f1b1a}
+
+/* v4.0: sections alternate dark / gray column (Home and Union) */
+body > section:nth-of-type(odd){--sb:var(--paper)}
+body > section:nth-of-type(even){--sb:#1f1c1b}
