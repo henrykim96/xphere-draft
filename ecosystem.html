@@ -115,11 +115,11 @@
   /* ---------- directory data (same entries as the Home "Apps running on XPHERE" cards) ---------- */
   var CAT={defi:'DeFi',apps:'Apps',wallets:'Wallets',explorers:'Explorers',infra:'Infrastructure'};
   var P=[
-    {n:'XCROLL',c:'apps',k:'Watch short videos, earn rewards',t:'Watch-to-earn · Shorts · Viewer rewards',u:'https://xcroll.ai/',img:'images/xcroll_mark.png',dark:1},
-    {n:'Phos',c:'apps',k:'Token launchpad built on XPHERE',t:'Launchpad · Token launches · XPHERE-native',u:'https://phos.land/',img:'images/phos.png'},
-    {n:'Xeffy',c:'defi',k:'An institutional-grade gateway to vaults and RWA',t:'Vault strategies · Real-world assets · XEF token on XPHERE',u:'https://xeffy.io/',img:'images/xeffy.png'},
-    {n:'Faiyah',c:'defi',k:'Multichain DeFi, from swaps to launches',t:'Staking · P2P swap · Burn pools · Launchpad · DEX',u:'https://faiyah.app/',img:'images/faiyah.svg',dark:1},
-    {n:'PumpkinSwap',c:'defi',k:'Swap tokens on XPHERE in one step',t:'Swap · Pools · Bridge',u:'https://pumpkinswap.app/swap',img:'images/pumpkinswap.svg',dark:1},
+    {n:'XCROLL',c:'apps',k:'Watch short videos, earn rewards',t:'Watch-to-earn · Shorts · Viewer rewards',u:'https://xcroll.ai/',img:'images/xcroll_mark.png'},
+    {n:'Phos',c:'apps',k:'Token launchpad built on XPHERE',t:'Launchpad · Token launches · XPHERE-native',u:'https://phos.land/',img:'images/phos-black.png',s:1.25},
+    {n:'Xeffy',c:'defi',k:'An institutional-grade gateway to vaults and RWA',t:'Vault strategies · Real-world assets · XEF token on XPHERE',u:'https://xeffy.io/',img:'images/xeffy-mark.png',s:1.15},
+    {n:'Faiyah',c:'defi',k:'Multichain DeFi, from swaps to launches',t:'Staking · P2P swap · Burn pools · Launchpad · DEX',u:'https://faiyah.app/',img:'images/faiyah.svg'},
+    {n:'PumpkinSwap',c:'defi',k:'Swap tokens on XPHERE in one step',t:'Swap · Pools · Bridge',u:'https://pumpkinswap.app/swap',img:'images/pumpkinswap.svg'},
     {n:'XP Union Vault',c:'defi',k:'Real-yield staking for XP',t:'60% to stakers · 40%+ burned · 0% fees',u:'https://stake.x-phere.com/',img:'images/eco-vault.png'},
     {n:'ZIGAP',c:'wallets',k:'The wallet with XPHERE built in',t:'Partner wallet · No network setup',u:'https://about.zigap.io/',img:'images/eco-zigap.png'},
     {n:'XPScan',c:'explorers',k:'The XPHERE explorer',t:'Blocks · Contract verification · Union · Burn dashboards',u:'https://xpscan.io/',img:'images/eco-xpscan.png'},
@@ -145,7 +145,7 @@
       if(term&&(p.n+' '+p.k+' '+p.t).toLowerCase().indexOf(term)<0)return;
       n++;
       h+='<a class="eco-card" href="'+p.u+'" target="_blank" rel="noopener" style="--d:'+(n*40)+'ms">'+
-         '<div class="top"><span class="lg'+(p.dark?' dk':'')+'"><img src="'+p.img+'" alt=""></span><span class="cat">'+CAT[p.c]+'</span></div>'+
+         '<div class="top"><span class="lg"><img src="'+p.img+'" alt="" style="--s:'+(p.s||1)+'"></span><span class="cat">'+CAT[p.c]+'</span></div>'+
          '<h3>'+esc(p.n)+'</h3><p class="k">'+esc(p.k)+'</p><p class="t">'+esc(p.t)+'</p>'+
          '<span class="go">Visit <i>↗</i></span></a>';});
     grid.innerHTML=h;empty.hidden=n>0;}

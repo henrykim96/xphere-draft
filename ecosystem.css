@@ -47,3 +47,7 @@
   .eco-tabs button{flex:none}
   .eco-search{min-width:0}
 }
+
+/* logos: black tiles like Home, consistent mark size */
+.eco-card .lg{background:#000;border-color:rgba(255,255,255,.12)}
+.eco-card .lg img{width:62%;height:62%;object-fit:contain;transform:scale(var(--s,1))}
