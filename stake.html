@@ -29,7 +29,7 @@
         <div class="dd-p">
           <a href="grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
-          <a href="https://docs.x-phere.com/whitepaper">Whitepaper</a>
+          <a href="docs/whitepaper.html">Whitepaper</a>
         </div>
       </div>
       <div class="dd dd-com">
@@ -40,7 +40,15 @@
           <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
-      <a href="https://docs.x-phere.com/">Docs</a>
+      <div class="dd dd-docs">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="docs/developer-guide.html">Developer Guide</a><a class="di" href="docs/references.html">References &amp; RPC</a><a class="di" href="docs/testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="docs/staking.html">Staking (Union Vault)</a><a class="di" href="docs/mining.html">Mining</a><a class="di" href="docs/nodes.html">Run a Node</a><a class="di" href="docs/union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="docs/grant-program.html">Grant Program</a><a class="di" href="docs/ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="docs/faq.html">FAQ</a><a class="di" href="docs/glossary.html">Glossary</a><a class="di" href="docs/tokenomics.html">Tokenomics</a><a class="di" href="docs/security.html">Security</a><a class="di" href="docs/network-upgrades.html">Network Upgrades</a><a class="di" href="docs/governance.html">Governance</a></div>
+        </div>
+      </div>
     </nav>
     <div class="nav-cta">
       <button class="burger" id="burger" aria-label="Menu">≡</button>
@@ -59,7 +67,7 @@
       <p class="sub">The Union Vault is the Foundation's non-custodial staking vault. It takes what the Foundation's Union validator node <em>actually earns</em> and splits it two ways: 60% streams to stakers, and more than 40% is permanently burned. No new issuance funds these rewards.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="https://stake.x-phere.com">Open the Union Vault</a>
-        <a class="btn btn-light" href="https://docs.x-phere.com/staking/overview">Read the staking docs</a>
+        <a class="btn btn-light" href="docs/staking.html">Read the staking docs</a>
       </div>
     </div>
     <dl class="hstats sk-live">
@@ -123,7 +131,7 @@
     <div class="sk-links">
       <a class="rv" href="https://stake.x-phere.com/status.html"><h3>Live vault status <span>↗</span></h3><p>Solvency, governance state and current parameters.</p></a>
       <a class="rv" href="https://stake.x-phere.com/burn.html"><h3>Burn records <span>↗</span></h3><p>Every daily burn, cross-checkable on XPScan.</p></a>
-      <a class="rv" href="https://docs.x-phere.com/staking/fees-and-risks"><h3>Fees &amp; risks <span>↗</span></h3><p>The full risk profile, in the documentation.</p></a>
+      <a class="rv" href="docs/staking-fees-and-risks.html"><h3>Fees &amp; risks <span>↗</span></h3><p>The full risk profile, in the documentation.</p></a>
     </div>
   </div>
 </section>
@@ -140,7 +148,7 @@
       <li><span class="k">Timelock <small>48 hour minimum delay</small></span><code>0x0737B4EEB4dA0920cE7CeE2D1eF64E0f57211F4E</code><button type="button" data-copy="0x0737B4EEB4dA0920cE7CeE2D1eF64E0f57211F4E">Copy</button></li>
       <li class="bnr"><span class="k">Burn address</span><code>0x000000000000000000000000000000000000dEaD</code><button type="button" data-copy="0x000000000000000000000000000000000000dEaD">Copy</button></li>
     </ul>
-    <p class="sk-ref">Full contract reference: <a href="https://docs.x-phere.com/staking/contracts">docs.x-phere.com/staking/contracts</a></p>
+    <p class="sk-ref">Full contract reference: <a href="docs/staking-contracts.html">docs.x-phere.com/staking/contracts</a></p>
   </div>
 </section>
 
@@ -149,7 +157,7 @@
   <div class="wrap">
     <div class="u-head"><span class="eyebrow u-eb">Safety</span><h2>Before you stake</h2></div>
     <div class="sk-risk">
-      <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><path d="M3 4v16h18"/><path d="M6 8l4 4 3-2 6 6"/></svg></i><h3>APR is not guaranteed</h3><p>Vault rewards come from what the validator node actually earns, so the rate moves with real network activity. It can fall. Past distributions do not predict future ones, and staking carries risk. Read the <a href="https://docs.x-phere.com/staking/fees-and-risks">fees and risks</a> page before you deposit.</p></article>
+      <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><path d="M3 4v16h18"/><path d="M6 8l4 4 3-2 6 6"/></svg></i><h3>APR is not guaranteed</h3><p>Vault rewards come from what the validator node actually earns, so the rate moves with real network activity. It can fall. Past distributions do not predict future ones, and staking carries risk. Read the <a href="docs/staking-fees-and-risks.html">fees and risks</a> page before you deposit.</p></article>
       <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M12 8v5M12 16h.01"/></svg></i><h3>Avoid staking scams</h3>
         <ul><li>The only official vault is <a href="https://stake.x-phere.com">stake.x-phere.com</a>. Anything else is not ours.</li><li>Verify the contract address against this page or the docs before signing.</li><li>The Foundation never asks for your seed phrase or private key, and never DMs you a "guaranteed APR" offer.</li><li>Report impersonation to <a href="mailto:security@x-phere.com">security@x-phere.com</a>.</li></ul></article>
       <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></i><h3>You do not need 35,000,000 XP to stake</h3><p>That threshold applies only to <a href="union.html">Union validator membership</a>, which is a separate, permissioned programme requiring dedicated server infrastructure. Staking in the Union Vault has no minimum of that kind and requires no node.</p></article>
@@ -166,9 +174,9 @@
       <h2>Put your XP to work —<br><span class="gr">and shrink supply</span></h2>
       <div class="sk-cta">
         <a class="j-send" href="https://stake.x-phere.com">Open the Union Vault <span>→</span></a>
-        <a class="btn btn-light" href="https://docs.x-phere.com/staking/user-guide">Step-by-step user guide</a>
+        <a class="btn btn-light" href="docs/staking-user-guide.html">Step-by-step user guide</a>
       </div>
-      <p class="sk-disc">Staking involves risk and rewards are not guaranteed. Nothing on this page is financial advice. Always verify the official domain and contract addresses — <a href="https://x-phere.com/security.html">security &amp; official domains</a>.</p>
+      <p class="sk-disc">Staking involves risk and rewards are not guaranteed. Nothing on this page is financial advice. Always verify the official domain and contract addresses — <a href="security.html">security &amp; official domains</a>.</p>
     </div>
   </div>
 </section>
@@ -180,7 +188,7 @@
       <a class="ft2-logo" href="index.html" aria-label="XPHERE home"><img src="images/xphere-logo.png" alt=""><img src="images/xphere-type.png" alt="XPHERE"></a>
       <a class="ft2-mail" href="mailto:Contact@X-phere.com">Contact@X-phere.com<i><svg viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></i></a>
     </div>
-    <nav class="ft2-links"><a href="https://x-phere.com/security.html">Security &amp; official domains</a><span>·</span><a href="https://docs.x-phere.com/">Docs</a><span>·</span><a href="https://stake.x-phere.com">Stake XP</a><span>·</span><a href="https://xpscan.io">Explorer</a></nav>
+    <nav class="ft2-links"><a href="security.html">Security &amp; official domains</a><span>·</span><a href="docs/developer-guide.html">Docs</a><span>·</span><a href="https://stake.x-phere.com">Stake XP</a><span>·</span><a href="https://xpscan.io">Explorer</a></nav>
     <p class="ft2-copy">© All rights reserved - XPHERE Foundation</p>
   </div>
 </footer>

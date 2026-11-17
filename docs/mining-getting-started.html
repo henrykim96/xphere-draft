@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Participate</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Staking (Union Vault) <i>&#8964;</i></button><div class="dx-sec-p"><a href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a href="staking-faq.html">FAQ</a></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button">Mining <i>&#8964;</i></button><div class="dx-sec-p"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a class="on" href="mining-getting-started.html">Getting Started</a><a href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Run a Node <i>&#8964;</i></button><div class="dx-sec-p"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Union Membership <i>&#8964;</i></button><div class="dx-sec-p"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Participate</span><i>/</i><span>Mining</span></div>
+    <h1>Getting Started</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<p>This guide covers running the <strong>IceRiver XP0</strong> xpHash ASIC — the only miner currently able to seal
+valid XPHERE blocks.</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>The software miner is deprecated</div><div class="admonitionContent_BuS1"><p>The previous setup based on the <code>miner-darwin-amd64</code> / <code>miner-windows-amd64</code> binaries and
+<code>config.json</code> is <strong>no longer supported</strong>, and the HTTP mining endpoints that went with it
+(<code>*-mining.x-phere.com</code>) no longer serve anything. After the <a class="" href="mining-xphash-fork.html">xpHash hard fork</a>, only
+the IceRiver XP0 ASIC can produce valid blocks. The instructions below replace that flow entirely.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-you-need">What you need</h2>
+<ul>
+<li class="">An <strong>IceRiver XP0</strong> xpHash ASIC (see <a class="" href="mining-requirements.html">System Requirements</a>)</li>
+<li class="">An XPHERE wallet address to be paid to — a <a href="https://about.zigap.io" target="_blank" rel="noopener noreferrer" class="">Zigap</a> wallet on the
+<code>XPHERE 2.0</code> network works, as does any address you control</li>
+<li class="">Wired Ethernet, and power and cooling adequate for the unit</li>
+</ul>
+<p>You do <strong>not</strong> need to run a node. The pool submits work to the network on your behalf.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-get-a-payout-address"><span class="n">1</span>Get a payout address</h2>
+<p>Mining rewards are paid to an ordinary XPHERE address. Create one in
+<a href="https://about.zigap.io" target="_blank" rel="noopener noreferrer" class="">Zigap</a> on the <code>XPHERE 2.0</code> network, or use any wallet address you already
+control, and copy it.</p>
+<p>Keep the private key for this address secure — it is the only thing standing between an attacker and
+your accumulated rewards.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-connect-the-xp0"><span class="n">2</span>Connect the XP0</h2>
+<ol>
+<li class="">Connect the unit to power and to your network over Ethernet.</li>
+<li class="">Find its IP address from your router&#x27;s client list or the IceRiver discovery tool.</li>
+<li class="">Open that IP in a browser and sign in to the device dashboard.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-point-it-at-a-pool"><span class="n">3</span>Point it at a pool</h2>
+<p>XPHERE mining runs over <strong>Stratum</strong>. In the XP0 dashboard, add a pool with these values:</p>
+<table><thead><tr><th>Field</th><th>Mainnet</th><th>Testnet</th></tr></thead><tbody><tr><td>Pool URL</td><td><code>stratum+tcp://xphash.xppool.io:3333</code></td><td><code>stratum+tcp://testnet-xphash.xppool.io:3333</code></td></tr><tr><td>Worker / account</td><td>your XPHERE payout address</td><td>your XPHERE payout address</td></tr><tr><td>Password</td><td>not used — leave blank or <code>x</code></td><td>not used — leave blank or <code>x</code></td></tr></tbody></table>
+<p>Save and restart mining from the dashboard.</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Check the address you paste</div><div class="admonitionContent_BuS1"><p>Mining pools are a standing target for lookalike domains. Confirm the hostname character by
+character against <a href="https://xppool.io" target="_blank" rel="noopener noreferrer" class="">xppool.io</a> before saving it, and treat any pool address that
+arrived by direct message as unverified. See <a class="" href="security.html">Security</a>.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="running-several-units">Running several units</h3>
+<p>Use the <strong>same payout address</strong> on every unit and give each one a distinct worker name — <code>rig-01</code>,
+<code>rig-02</code>, and so on. Contributions from all workers accumulate to that one address. The exact field
+name for the worker label depends on your dashboard firmware.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-confirm-it-is-working"><span class="n">4</span>Confirm it is working</h2>
+<p>Three checks, in order:</p>
+<ol>
+<li class=""><strong>On the unit</strong> — the dashboard should show accepted shares climbing within a minute or two of
+connecting. Rejected shares at a steady non-trivial rate mean something is misconfigured.</li>
+<li class=""><strong>On the pool</strong> — your address should appear with a live hashrate on
+<a href="https://xppool.io" target="_blank" rel="noopener noreferrer" class="">xppool.io</a>.</li>
+<li class=""><strong>On chain</strong> — once a payout clears, the balance shows up on
+<a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> or through <code>eth_getBalance</code>:</li>
+</ol>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST https://rpc.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getBalance&quot;,&quot;params&quot;:[&quot;0xYOUR_ADDRESS&quot;,&quot;latest&quot;],&quot;id&quot;:1}&#x27;</span><br></div></code></pre></div></div>
+<p>Expect a delay before the first payout — see the thresholds below.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-pool-payouts-work">How pool payouts work</h2>
+<p>These are the terms XP Pool publishes:</p>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Algorithm</td><td>XPHash, with variable difficulty (VarDiff)</td></tr><tr><td>Pool fee</td><td><strong>1%</strong>, deducted from each reward cycle before distribution</td></tr><tr><td>Minimum payout</td><td><strong>10 XP</strong> — paid out automatically once your confirmed balance reaches it</td></tr><tr><td>Distribution</td><td>every <strong>10 minutes</strong>, in proportion to accumulated difficulty contribution</td></tr><tr><td>VarDiff target</td><td>one share every ~10 seconds, adjusted to your hashrate</td></tr></tbody></table>
+<p>Shares are weighted by difficulty rather than counted: a difficulty-256 share is worth twice a
+difficulty-128 share. What earns you a payout is total difficulty contributed, not how many shares
+you submitted — so VarDiff adjusting your difficulty up does not reduce your earnings.</p>
+<p>If a unit disconnects, it is marked offline immediately, but any balance already accrued is
+preserved and still paid.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Pool rewards and protocol rewards are different things</div><div class="admonitionContent_BuS1"><p>The pool distributes the <strong>40% miner share</strong> of each minted block reward among its participants,
+after its own fee. The 40/40/20 split between miners, the <a class="" href="union-membership.html">Union</a>, and the Foundation is set
+by the protocol. See <a class="" href="mining-rewards.html">Mining Rewards</a> and <a class="" href="tokenomics.html">Tokenomics</a>.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="one-pool-is-a-concentration-risk">One pool is a concentration risk</h2>
+<p><strong><a href="https://xppool.io" target="_blank" rel="noopener noreferrer" class="">XP Pool</a> is currently the only mining pool operating on XPHERE.</strong> That is a
+practical fact worth planning around rather than a recommendation:</p>
+<ul>
+<li class="">If it is unreachable, there is no second pool to fail over to today.</li>
+<li class="">Hashrate concentrated in a single pool is a centralization pressure the network would rather not
+have. Additional pools are welcome.</li>
+</ul>
+<p>Listing a pool here is informational. It is not an endorsement, an audit, or a guarantee — the same
+policy that applies to the <a class="" href="ecosystem-directory.html">Ecosystem Directory</a>. Operating a pool is
+independent of the Foundation, and you deal with its operator on your own terms.</p>
+<p>If you run a pool and want it listed, contact the Foundation at
+<a href="mailto:Contact@X-phere.com" target="_blank" rel="noopener noreferrer" class="">Contact@X-phere.com</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<ul>
+<li class=""><a class="" href="mining-requirements.html">System Requirements</a> — the XP0 and what it needs</li>
+<li class=""><a class="" href="mining-rewards.html">Mining Rewards</a> — how the protocol splits each block reward</li>
+<li class=""><a class="" href="mining-xphash-fork.html">xpHash Fork</a> — why ASICs, and what changed at the fork</li>
+<li class=""><a class="" href="tokenomics.html">Tokenomics</a> — emission schedule and supply</li>
+<li class=""><a class="" href="security.html">Security</a> — verifying official XPHERE properties</li>
+</ul></div></div></div>
+    <div class="dx-pager"><a class="pv" href="mining-requirements.html"><small>Previous</small><i>&#8592;</i> System Requirements</a><a class="nx" href="mining-rewards.html"><small>Next</small>Mining Rewards <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#what-you-need">What you need</a><a href="#1-get-a-payout-address">1. Get a payout address</a><a href="#2-connect-the-xp0">2. Connect the XP0</a><a href="#3-point-it-at-a-pool">3. Point it at a pool</a><a href="#running-several-units" class="sub">Running several units</a><a href="#4-confirm-it-is-working">4. Confirm it is working</a><a href="#how-pool-payouts-work">How pool payouts work</a><a href="#one-pool-is-a-concentration-risk">One pool is a concentration risk</a><a href="#see-also">See Also</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

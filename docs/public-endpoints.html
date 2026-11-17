@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public JSON-RPC Endpoints | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Build</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Developer Guide <i>&#8964;</i></button><div class="dx-sec-p"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a href="evm-compatibility.html">EVM Compatibility</a></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button">References &amp; RPC <i>&#8964;</i></button><div class="dx-sec-p"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a href="gas-and-fees.html">Gas and Transaction Fees</a><a class="on" href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div><a class="dx-top" href="testnet-faucet.html">Testnet Faucet</a></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Build</span><i>/</i><span>References &amp; RPC</span></div>
+    <h1>Public JSON-RPC Endpoints</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown"><p>Public JSON-RPC endpoints let you read the chain and send transactions without running a node of
+your own. They are the fastest way to start, and for many applications they are enough permanently.</p>
+<p>Running your own <a class="" href="nodes-endpoint-node.html">Endpoint Node</a> buys you a dedicated rate limit,
+access to namespaces the public endpoints do not serve, and independence from a third party — at the
+cost of storage, bandwidth, and the operational time to keep it healthy.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="considerations">Considerations</h2>
+<ul>
+<li class="">Node providers are not liable for any damages or losses resulting from traffic or interactions with the nodes.</li>
+<li class="">High traffic concentration on certain nodes may lead to service delays.</li>
+<li class="">To prevent excessive requests, rate limits may be applied on a per-node basis and are subject to change without prior notice.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="public-json-rpc-endpoints">Public JSON-RPC Endpoints</h2>
+<p>Below is a list of network domains offered by XPHERE’s public node providers.</p>
+<p>The namespace column in the tables below is what each endpoint reports for <code>rpc_modules</code>. You can reproduce it against any endpoint:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST &lt;ENDPOINT&gt; \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;rpc_modules&quot;,&quot;params&quot;:[],&quot;id&quot;:1}&#x27;</span><br></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mainnet-public-json-rpc-endpoints--chain-id-20250217-0x134fe69">Mainnet Public JSON-RPC Endpoints — Chain ID <code>20250217</code> (<code>0x134fe69</code>)</h3>
+<p>Please note that these endpoints are provided to the community for testing and development purposes. As uptime and stability cannot be guaranteed, they should not be used for commercial purposes.</p>
+<p><strong>HTTPS</strong></p>
+<table><thead><tr><th>Service Provider</th><th>Endpoints</th><th>Namespaces (<code>rpc_modules</code>)</th><th>Type</th></tr></thead><tbody><tr><td>XPHERE Foundation</td><td><code>https://rpc.x-phere.com</code> (load balanced, use this)<br><code>https://en-hkg.x-phere.com</code><br><code>https://en-bkk.x-phere.com</code></td><td><code>eth</code>, <code>net</code>, <code>rpc</code>, <code>xp</code></td><td>Full</td></tr><tr><td>Ankr</td><td><code>https://rpc.ankr.com/xphere_mainnet</code></td><td><code>eth</code>, <code>net</code>, <code>rpc</code>, <code>xp</code>, plus <code>admin</code>, <code>debug</code>, <code>personal</code>, <code>txpool</code>, <code>web3</code> advertised but partly disabled — see the caveats below</td><td>Full</td></tr></tbody></table>
+<p><strong>WebSocket</strong></p>
+<table><thead><tr><th>Service Provider</th><th>Endpoints</th><th>Namespaces (<code>rpc_modules</code>)</th><th>Type</th></tr></thead><tbody><tr><td>XPHERE Foundation</td><td><code>wss://rpc.x-phere.com/ws</code> (load balanced, use this)<br><code>wss://en-hkg.x-phere.com/ws</code><br><code>wss://en-bkk.x-phere.com/ws</code></td><td><code>eth</code>, <code>net</code>, <code>rpc</code>, <code>xp</code></td><td>Full</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testnet-public-json-rpc-endpoints--chain-id-1998991-0x1e808f">Testnet Public JSON-RPC Endpoints — Chain ID <code>1998991</code> (<code>0x1e808f</code>)</h3>
+<p>The Testnet native token is <strong>XPT</strong>, not XP. Fund an address from the <a class="" href="testnet-faucet.html">Faucet</a> and read the result on <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xpt.tamsa.io</a>.</p>
+<p><strong>HTTPS</strong></p>
+<table><thead><tr><th>Service Provider</th><th>Endpoints</th><th>Namespaces (<code>rpc_modules</code>)</th><th>Type</th></tr></thead><tbody><tr><td>XPHERE Foundation</td><td><code>https://testnet.x-phere.com</code></td><td><code>eth</code>, <code>net</code>, <code>rpc</code>, <code>xp</code>, <code>debug</code></td><td>Full</td></tr><tr><td>Ankr</td><td><code>https://rpc.ankr.com/xphere_testnet</code></td><td><code>eth</code>, <code>net</code>, <code>rpc</code>, <code>xp</code>, plus <code>admin</code>, <code>debug</code>, <code>personal</code>, <code>txpool</code>, <code>web3</code> advertised but partly disabled — see the caveats below</td><td>Full</td></tr></tbody></table>
+<p><strong>WebSocket</strong></p>
+<table><thead><tr><th>Service Provider</th><th>Endpoints</th><th>Namespaces (<code>rpc_modules</code>)</th><th>Type</th></tr></thead><tbody><tr><td>XPHERE Foundation</td><td><code>wss://testnet.x-phere.com/ws/</code></td><td><code>eth</code>, <code>net</code>, <code>rpc</code>, <code>web3</code></td><td>Full</td></tr></tbody></table>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Two Testnet WebSocket differences from Mainnet</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><strong>Trailing slash.</strong> <code>wss://testnet.x-phere.com/ws</code> answers <code>301 Moved Permanently</code> to <code>/ws/</code>. Clients that do not follow redirects during the handshake must use <code>/ws/</code>. Mainnet upgrades at <code>/ws</code> directly.</li>
+<li class=""><strong>No <code>xp</code> namespace over WebSocket.</strong> The Testnet WebSocket endpoint reports <code>eth</code>, <code>net</code>, <code>rpc</code>, <code>web3</code>, and <code>xp_blockNumber</code> there returns <code>-32601</code>. Use <code>https://testnet.x-phere.com</code> over HTTPS for <code>xp_*</code> calls. <code>eth_subscribe</code> works on both networks&#x27; WebSocket endpoints.</li>
+</ul></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rpc-service-providers">RPC Service Providers</h2>
+<p>Below is a list of XPHERE&#x27;s Public Node Providers.</p>
+<table><thead><tr><th>Provider</th><th>Mainnet</th><th>Testnet</th><th>Notes</th></tr></thead><tbody><tr><td>XPHERE Foundation</td><td><code>https://rpc.x-phere.com</code>, <code>https://en-hkg.x-phere.com</code>, <code>https://en-bkk.x-phere.com</code></td><td><code>https://testnet.x-phere.com</code></td><td>Operated by the Foundation, rate-limited</td></tr><tr><td><a href="https://www.ankr.com/rpc/xphere/" target="_blank" rel="noopener noreferrer" class="">Ankr</a></td><td><code>https://rpc.ankr.com/xphere_mainnet</code></td><td><code>https://rpc.ankr.com/xphere_testnet</code></td><td>Global infrastructure provider; XPHERE is listed in Ankr&#x27;s public chain directory. Ankr also operates a <a class="" href="union-membership.html">Union</a> validator slot on XPHERE.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ankr">Ankr</h3>
+<p>XPHERE is available in <a href="https://www.ankr.com/rpc/xphere/" target="_blank" rel="noopener noreferrer" class="">Ankr&#x27;s public RPC directory</a> alongside
+80+ other networks, with <strong>both Mainnet and Testnet endpoints served from Ankr&#x27;s global
+infrastructure</strong> — no signup or API key required to start.</p>
+<table><thead><tr><th>What it gives you</th><th>Detail</th></tr></thead><tbody><tr><td>Both environments</td><td><code>xphere_mainnet</code> (Chain ID <code>20250217</code>, native <code>XP</code>) and <code>xphere_testnet</code> (Chain ID <code>1998991</code>, native <code>XPT</code>) — <code>eth_chainId</code> returns <code>0x134fe69</code> and <code>0x1e808f</code> respectively</td></tr><tr><td>Geographic reach</td><td>Requests are served from Ankr&#x27;s global edge network rather than a single region</td></tr><tr><td>Standard EVM surface</td><td>The methods dApps rely on — <code>eth_call</code>, <code>eth_getLogs</code>, <code>eth_gasPrice</code>, <code>eth_getBlockByNumber</code>, <code>eth_sendRawTransaction</code> — work as on any EVM chain</td></tr><tr><td>The <code>xp_*</code> namespace</td><td>Available on both Ankr endpoints — <code>xp_blockNumber</code> returns a height on <code>xphere_mainnet</code> and <code>xphere_testnet</code> alike</td></tr><tr><td>A second opinion</td><td>An independently operated endpoint to fail over to when a Foundation endpoint is unreachable</td></tr></tbody></table>
+<p>Ankr also operates a <strong>Union validator</strong> slot on XPHERE, staking 35,000,000 XP and taking its turn
+proposing Main Chain blocks (see <a class="" href="union-members.html">Union Members</a>).</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>What to know before relying on it</div><div class="admonitionContent_BuS1"><ul>
+<li class=""><code>rpc_modules</code> on Ankr advertises <code>admin</code>, <code>debug</code>, <code>personal</code>, <code>txpool</code>, and <code>web3</code>, but the
+methods behind them are gated on the public tier. <code>eth_newFilter</code> and <code>personal_listAccounts</code>
+both return <code>-32075 Method disabled</code> on <code>xphere_testnet</code>. If your indexer needs filters or
+<code>debug_*</code>, use a Foundation endpoint or <a class="" href="nodes-install-xen.html">run your own node</a>.</li>
+<li class="">Historical <strong>state</strong> queries against very old blocks are not served (this applies to the
+Foundation&#x27;s public endpoints as well). Recent state, and full block/transaction/log history,
+are available.</li>
+<li class="">Ankr applies its own rate limits to the public tier, independent of the Foundation&#x27;s.</li>
+</ul></div></div>
+<p>Community providers who would like their public endpoint referenced here can contact the Foundation at <strong><a href="mailto:Contact@X-phere.com" target="_blank" rel="noopener noreferrer" class="">Contact@X-phere.com</a></strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="running-your-own-rpc">Running Your Own RPC</h2>
+<p>For production workloads (dApps with &gt; 1k DAU, indexers, bots), run a dedicated <a class="" href="nodes-install-xen.html">Endpoint Node</a>. Public endpoints are best-effort.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<ul>
+<li class=""><a class="" href="network-info.html">Network Info</a> — Chain IDs, native symbols, explorers</li>
+<li class=""><a class="" href="testnet-faucet.html">Testnet Faucet</a> — 10 XPT per address per 24 h</li>
+<li class=""><a class="" href="json-rpc.html">JSON-RPC Reference</a></li>
+<li class=""><a class="" href="xphere-rpc.html">XPHERE-Specific RPC</a></li>
+</ul></div></div></div>
+    <div class="dx-pager"><a class="pv" href="gas-and-fees.html"><small>Previous</small><i>&#8592;</i> Gas and Transaction Fees</a><a class="nx" href="javascript-api.html"><small>Next</small>JavaScript API libraries <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#considerations">Considerations</a><a href="#public-json-rpc-endpoints">Public JSON-RPC Endpoints</a><a href="#mainnet-public-json-rpc-endpoints--chain-id-20250217-0x134fe69" class="sub">Mainnet Public JSON-RPC Endpoints — Chain ID 20250217 (0x134fe69)</a><a href="#testnet-public-json-rpc-endpoints--chain-id-1998991-0x1e808f" class="sub">Testnet Public JSON-RPC Endpoints — Chain ID 1998991 (0x1e808f)</a><a href="#rpc-service-providers">RPC Service Providers</a><a href="#ankr" class="sub">Ankr</a><a href="#running-your-own-rpc">Running Your Own RPC</a><a href="#see-also">See Also</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

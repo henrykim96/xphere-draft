@@ -97,3 +97,60 @@
   .pt-grid.sm{grid-template-columns:repeat(3,minmax(0,1fr))}
   .pt-grid.sm .pt{padding:0 10px}
 }
+
+/* core contributors */
+.core-grid{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.core{position:relative;overflow:hidden;display:flex;flex-direction:column;padding:36px 36px 34px;border:1px solid var(--ln2);border-radius:20px;background:linear-gradient(160deg,rgba(231,69,58,.1),transparent 45%),linear-gradient(180deg,rgba(255,255,255,.03),transparent 60%),var(--card);transition:border-color .3s,transform .3s}
+.core::after{content:"";position:absolute;right:-80px;top:-80px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(231,69,58,.18),transparent 65%);pointer-events:none}
+.core:hover{border-color:rgba(231,69,58,.5);transform:translateY(-3px)}
+.core-lg{height:56px;display:flex;align-items:center}
+.core-lg img{height:44px;width:auto;max-width:100%}
+.core h3{margin-top:28px;font-size:24px;font-weight:400;letter-spacing:-.025em;color:var(--t1)}
+.core p{margin-top:10px;font-size:15.5px;line-height:1.6;color:var(--t2);max-width:460px}
+.core-tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+.core-tags span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);border:1px solid var(--ln2);border-radius:99px;padding:6px 11px}
+.core-go{margin-top:auto;padding-top:26px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.core-go i{font-style:normal;display:inline-block;transition:transform .25s}
+.core:hover .core-go i{transform:translate(2px,-2px)}
+@media (max-width:800px){.core-grid{grid-template-columns:1fr}.core{padding:28px 24px 26px}.core-lg img{height:36px}}
+
+/* everyday services (Seoul Labs) */
+.eco-card .lg.mono{background:linear-gradient(145deg,#3a1512,#160909);border-color:rgba(231,69,58,.45);font-family:"Geist",sans-serif;font-size:17px;font-weight:600;letter-spacing:-.02em;color:#ff8a75}
+.eco-card.life{border-style:dashed;border-color:#3a3230}
+.eco-card.life:hover{border-style:solid}
+.eco-card .foot{margin-top:auto;padding-top:20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.eco-card .stt{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#ffb3a6}
+.eco-card .stt::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(231,69,58,.18)}
+.eco-card .by{font-size:12px;color:var(--t3)}
+
+/* everyday services: light, consumer-app cards (Web2 feel) */
+.life-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.life-card{display:flex;flex-direction:column;gap:16px;padding:24px;border-radius:22px;background:#f5f1ef;color:#1c1716;box-shadow:0 20px 40px -26px rgba(0,0,0,.8);transition:transform .3s,box-shadow .3s;animation:ecoIn .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d)}
+.life-card:hover{transform:translateY(-4px);box-shadow:0 26px 50px -24px rgba(231,69,58,.5)}
+.app-ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(145deg,#ff6a58,#c4231a);color:#fff;font-family:"Geist",sans-serif;font-size:19px;font-weight:600;letter-spacing:-.02em;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 18px -8px rgba(196,35,26,.7)}
+.life-b h3{font-size:19px;font-weight:600;letter-spacing:-.02em;color:#1c1716}
+.life-b p{margin-top:6px;font-size:14.5px;line-height:1.5;color:#4a403d}
+.life-b p.lt{margin-top:8px;font-size:12.5px;color:#8a8280}
+.life-f{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:4px}
+.life-f .pill{font-size:12px;font-weight:500;color:#c4231a;background:rgba(231,69,58,.1);border-radius:99px;padding:6px 12px}
+.life-f .by{font-size:12px;color:#8a8280}
+@media (max-width:1000px){.life-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.life-grid{grid-template-columns:1fr}}
+/* everyday services: dark like the rest of the site, app-style rounded cards */
+.life-card{background:linear-gradient(180deg,rgba(255,255,255,.04),transparent 60%),#1d1918;border:1px solid var(--ln2);color:var(--t1);box-shadow:none}
+.life-card:hover{border-color:rgba(231,69,58,.5);box-shadow:0 22px 44px -26px rgba(231,69,58,.45)}
+.life-b h3{color:var(--t1)}
+.life-b p{color:var(--t2)}
+.life-b p.lt{color:var(--t3)}
+.life-f .pill{color:#ffb3a6;background:rgba(231,69,58,.14)}
+.life-f .by{color:var(--t3)}
+.app-ic.img{background:none;padding:0;overflow:hidden;border-radius:50%;box-shadow:0 8px 18px -8px rgba(20,90,180,.7)}
+.app-ic.img img{width:100%;height:100%;object-fit:cover;display:block}
+/* app icons: black rounded tiles like the directory logos */
+.app-ic{background:#000;border:1px solid rgba(255,255,255,.12);color:#ff6a58;box-shadow:none}
+.app-ic.img{border-radius:16px;padding:0;display:grid;place-items:center;box-shadow:none}
+.app-ic.img img{width:78%;height:78%;border-radius:50%;object-fit:cover}
+.app-ic.img{background:#000;border:1px solid rgba(255,255,255,.12)}
+.app-ic.img.sq img{width:82%;height:82%;border-radius:0;object-fit:contain}
+.life-card.on-air .pill{color:#7fe3b0;background:rgba(61,220,151,.12)}
+a.life-card .by{color:var(--red);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}

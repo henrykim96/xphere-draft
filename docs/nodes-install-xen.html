@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XEN Install Guide | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Participate</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Staking (Union Vault) <i>&#8964;</i></button><div class="dx-sec-p"><a href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a href="staking-faq.html">FAQ</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Mining <i>&#8964;</i></button><div class="dx-sec-p"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a href="mining-getting-started.html">Getting Started</a><a href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button">Run a Node <i>&#8964;</i></button><div class="dx-sec-p"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a class="on" href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Union Membership <i>&#8964;</i></button><div class="dx-sec-p"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Participate</span><i>/</i><span>Run a Node</span></div>
+    <h1>XEN Install Guide</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="download">Download</h2>
+<p>Get the current release from the <a class="" href="nodes-downloads.html">Download page</a>, or fetch it directly:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -LO https://docs.x-phere.com/downloads/xen-v0.9.0-amd64-linux.tar.gz</span><br></div><div class="token-line"><span class="token plain">curl -LO https://docs.x-phere.com/downloads/xen-v0.9.0-amd64-linux.tar.gz.sha256</span><br></div><div class="token-line"><span class="token plain">sha256sum -c xen-v0.9.0-amd64-linux.tar.gz.sha256</span><br></div></code></pre></div></div>
+<p>Verify the checksum before extracting — the expected output is
+<code>xen-v0.9.0-amd64-linux.tar.gz: OK</code>.</p>
+<p>Only the <strong>Linux x86-64 (amd64)</strong> build is distributed.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installation">Installation</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="linux-archive-distribution">Linux Archive Distribution</h3>
+<p>Extract the archive where you want the node to live:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">tar -xzf xen-v0.9.0-amd64-linux.tar.gz</span><br></div><div class="token-line"><span class="token plain">cd xen-v0.9.0-amd64-linux</span><br></div></code></pre></div></div>
+<p>The package contains the binary, the daemon script, and a working configuration:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">xen-v0.9.0-amd64-linux/</span><br></div><div class="token-line"><span class="token plain">├── bin/</span><br></div><div class="token-line"><span class="token plain">│   ├── xen</span><br></div><div class="token-line"><span class="token plain">│   └── xend</span><br></div><div class="token-line"><span class="token plain">├── conf/</span><br></div><div class="token-line"><span class="token plain">│   ├── xend.conf</span><br></div><div class="token-line"><span class="token plain">│   └── genesis.json</span><br></div><div class="token-line"><span class="token plain">└── README.md</span><br></div></code></pre></div></div>
+<table><thead><tr><th>File Name</th><th>File Description</th></tr></thead><tbody><tr><td>bin/xen</td><td>XEN executable file</td></tr><tr><td>bin/xend</td><td>XEN start/termination script file</td></tr><tr><td>conf/xend.conf</td><td>XEN configuration file</td></tr><tr><td>conf/genesis.json</td><td>Mainnet genesis file</td></tr><tr><td>README.md</td><td>Setup guide bundled with the package</td></tr></tbody></table>
+<p><strong>Note</strong>: Do NOT alter the file structure or file names. <code>xend</code> locates <code>conf/</code> relative to its own
+directory, so moving the binaries out of <code>bin/</code> breaks startup.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="installed-location">Running the Commands</h3>
+<p>The binaries are <strong>not installed onto your <code>PATH</code></strong>. Run every command in this guide from the
+package root — the directory holding <code>bin/</code> and <code>conf/</code> — as <code>./bin/xen</code> and <code>./bin/xend</code>.</p>
+<p>If you prefer them on your <code>PATH</code>, add the <code>bin/</code> directory rather than copying the binaries out of
+it:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">export PATH=&quot;$PWD/bin:$PATH&quot;</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="configuration">Configuration</h2>
+<p>The EN configuration is to create a data directory and to set up the environment variables on the configuration file <code>xend.conf</code>.</p>
+<ol>
+<li class="">Create the EN data directory.</li>
+<li class="">Configure the XEN with <code>xend.conf</code>.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="en-data-directory-creation">XEN Data Directory Creation</h3>
+<p>XPHERE blockchain data keeps increasing, so place the data directory on a volume with room to spare. Block data alone already exceeds <strong>300 GB</strong> and grows with every block, and the node specification calls for <strong>2 TB NVMe minimum (4 TB+ recommended)</strong> — see <a class="" href="nodes-requirements.html">System Requirements</a>. You need to create the directory on your desired path.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">mkdir -p ~/xen_data</span><br></div></code></pre></div></div>
+<p>The path must match <code>DATA_DIR</code> in <code>conf/xend.conf</code>, which defaults to <code>~/xen_data</code>. If you place the
+data elsewhere, update that value before starting the node.</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><p>Chain data grows continuously with every block. Size the volume with headroom rather than to the current chain size, and monitor free space on the data volume for the life of the node.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="then-initialize-the-blockchain-data-using-xen-init">Then, initialize the blockchain data using xen init</h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">./bin/xen init --datadir ~/xen_data ./conf/genesis.json</span><br></div></code></pre></div></div>
+<p><code>conf/genesis.json</code> is the <strong>Mainnet</strong> genesis (network ID <code>20250217</code>).</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="update-the-configuration-file">Update the Configuration File</h3>
+<p>The configuration file is <code>conf/xend.conf</code> inside the extracted package. The shipped defaults are
+ready to run against Mainnet — review these before starting:</p>
+<table><thead><tr><th>Setting</th><th>Shipped value</th><th>Note</th></tr></thead><tbody><tr><td><code>NETWORK_ID</code></td><td><code>20250217</code></td><td>Mainnet</td></tr><tr><td><code>DATA_DIR</code></td><td><code>~/xen_data</code></td><td>Must match the directory you created</td></tr><tr><td><code>PORT</code></td><td><code>44323</code></td><td>P2P — must be reachable for peering</td></tr><tr><td><code>BOOTNODES</code></td><td>two Mainnet bootstrap nodes</td><td>Pre-set; see below</td></tr><tr><td><code>RPC_ADDR</code> / <code>WS_ADDR</code></td><td><code>0.0.0.0</code></td><td>Binds to <strong>all</strong> interfaces — see the security note</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="bootstrap-nodes">Bootstrap Nodes</h4>
+<p><code>BOOTNODES</code> in the shipped <code>conf/xend.conf</code> already lists the Mainnet bootstrap nodes, so a freshly
+initialized node discovers peers on its own. The entries use XPHERE&#x27;s <code>xni://</code> node URL form:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">xni://&lt;128-char node id&gt;@&lt;ip&gt;:31323?ntype=bn</span><br></div></code></pre></div></div>
+<p>Multiple nodes are comma-separated. Discovery runs over <strong>UDP port 31323</strong>, so outbound UDP to that
+port must be permitted by your firewall. If you need to add a peer by hand at runtime:</p>
+<div class="language-javascript codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-javascript codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token operator">&gt;</span><span class="token plain"> admin</span><span class="token punctuation">.</span><span class="token method function property-access">addPeer</span><span class="token punctuation">(</span><span class="token string">&quot;xni://&lt;node id&gt;@&lt;ip&gt;:&lt;port&gt;?ntype=bn&quot;</span><span class="token punctuation">)</span><br></div></code></pre></div></div>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Review the RPC binding before exposing the node</div><div class="admonitionContent_BuS1"><p>The shipped configuration binds HTTP-RPC (<code>28551</code>) and WebSocket (<code>28552</code>) to <code>0.0.0.0</code> with
+<code>RPC_VHOSTS=&quot;*&quot;</code>, <code>RPC_CORSDOMAIN=&quot;*&quot;</code>, and <code>WS_ORIGINS=&quot;*&quot;</code>. On a host with a public IP, the
+node&#x27;s RPC is reachable from the internet. The exposed namespaces are <code>eth,net,xp</code> — <code>admin</code> and
+<code>personal</code> are not enabled — but the endpoint can still be used without limit by anyone who finds it.</p><p>For a node that is not meant to be a public endpoint, set <code>RPC_ADDR</code> and <code>WS_ADDR</code> to <code>127.0.0.1</code>,
+or block both ports at the firewall. Port <code>44323</code> (P2P) does need to stay reachable.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="startup-the-en">Startup the Xend</h2>
+<p>Start, stop, and inspect the node with the <code>xend</code> script:</p>
+<p><strong>start</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ ./bin/xend start</span><br></div><div class="token-line"><span class="token plain">Starting xend: OK</span><br></div></code></pre></div></div>
+<p><strong>stop</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ ./bin/xend stop</span><br></div><div class="token-line"><span class="token plain">Shutting down xend: Killed</span><br></div></code></pre></div></div>
+<p><strong>status</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ ./bin/xend status</span><br></div><div class="token-line"><span class="token plain">xend is running</span><br></div></code></pre></div></div>
+<p><code>restart</code> is also supported. Logs are written to <code>LOG_DIR</code>, which defaults to <code>$DATA_DIR/logs</code>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="confirm-the-node-is-syncing">Confirm the Node Is Syncing</h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">./bin/xen attach --datadir ~/xen_data</span><br></div><div class="token-line"><span class="token plain">&gt; net.peerCount</span><br></div><div class="token-line"><span class="token plain">&gt; xp.blockNumber</span><br></div></code></pre></div></div>
+<p><code>net.peerCount</code> should rise above <code>0</code> within a minute or two, and <code>xp.blockNumber</code> should keep
+climbing. If the peer count stays at <code>0</code>, check outbound UDP/TCP on port <code>31323</code> and confirm
+<code>BOOTNODES</code> is populated in <code>conf/xend.conf</code>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Sync faster with a snapshot</div><div class="admonitionContent_BuS1"><p>Syncing Mainnet from genesis takes a long time. Restoring a published chain-data snapshot is the
+faster path — see <a class="" href="nodes-snapshots.html">Chain Data Snapshots</a>.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-the-installation">Testing the Installation</h2>
+<p>It is time to check that X Endpoint Node is successfully installed and it is working as expected after installation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="process-status">Process Status</h3>
+<p>Check the node&#x27;s process status with the <code>xend</code> script:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ ./bin/xend status</span><br></div><div class="token-line"><span class="token plain">xend is running</span><br></div></code></pre></div></div>
+<p>You can also confirm the process directly:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ ps -ef | grep &#x27;[x]en --networkid&#x27;</span><br></div></code></pre></div></div>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Running XEN as a service</div><div class="admonitionContent_BuS1"><p>Only the archive distribution is published — there is no RPM or <code>.deb</code> package, so no
+<code>xend.service</code> unit is installed and <code>systemctl status xend.service</code> will not find anything.</p><p>To run XEN under systemd, write your own unit that calls the <code>xend</code> script, for example:</p><div class="language-ini codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-ini codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain"># /etc/systemd/system/xend.service</span><br></div><div class="token-line"><span class="token plain">[Unit]</span><br></div><div class="token-line"><span class="token plain">Description=XPHERE Endpoint Node</span><br></div><div class="token-line"><span class="token plain">After=network-online.target</span><br></div><div class="token-line"><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">[Service]</span><br></div><div class="token-line"><span class="token plain">Type=forking</span><br></div><div class="token-line"><span class="token plain">User=xphere</span><br></div><div class="token-line"><span class="token plain">WorkingDirectory=/opt/xen-v0.9.0-amd64-linux</span><br></div><div class="token-line"><span class="token plain">ExecStart=/opt/xen-v0.9.0-amd64-linux/bin/xend start</span><br></div><div class="token-line"><span class="token plain">ExecStop=/opt/xen-v0.9.0-amd64-linux/bin/xend stop</span><br></div><div class="token-line"><span class="token plain">Restart=on-failure</span><br></div><div class="token-line"><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">[Install]</span><br></div><div class="token-line"><span class="token plain">WantedBy=multi-user.target</span><br></div></code></pre></div></div><p>Adjust <code>User</code> and the paths to match your installation, then
+<code>sudo systemctl daemon-reload &amp;&amp; sudo systemctl enable --now xend</code>.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="logs">Logs</h3>
+<p>The log is stored in <code>xend.out</code> file located in the path defined in the <code>LOG_DIR</code> field of the <code>xend.conf</code> file. When the node works properly, you can see that each block is imported per second as follows.</p>
+<p>Example:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ tail xend.out</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:52:58 +09] [5] Inserted a new block                      number=208163 hash=09d12c…7e2b27 txs=0 gas=0 elapsed=1.862ms      processTxs=250ns     finalize=231.833µs validateState=38.583µs  totalWrite=977.25µs     trieWrite=240.25µs</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:52:59 +09] [51] Commit new mining work                    number=208164 hash=df58fa…94e3c4 txs=0 elapsed=355µs        commitTime=217.917µs finalizeTime=130.875µs</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:52:59 +09] [25] received a quorum of the messages and change state to prepared  msgType=1 prepareMsgNum=3 commitMsgNum=0 valSet=4</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:52:59 +09] [24] Committed                                 number=208164 hash=612653…bfd9ba address=0xB54da36969A54362D0EDbA4E8c38eE199471eB9F</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:52:59 +09] [51] Successfully sealed new block             number=208164 hash=612653…bfd9ba</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:52:59 +09] [51] Successfully wrote mined block            num=208164 hash=612653…bfd9ba txs=0 elapsed=597.416µs</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:53:00 +09] [51] Commit new mining work                    number=208165 hash=105c7a…ecf460 txs=0 elapsed=2.503ms      commitTime=496.125µs finalizeTime=1.987ms</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:53:00 +09] [25] received a quorum of the messages and change state to prepared  msgType=2 valSet=4</span><br></div><div class="token-line"><span class="token plain">INFO[03/05,11:53:00 +09] [24] Committed                                 number=208165 hash=be0cc2…80878c</span><br></div></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="queries">Queries</h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="xen-console">xen console</h4>
+<p>XPHERE provides a CLI client: <code>xen console</code>. Another way of using the client is to connect to the process via IPC (inter-process communication). The IPC file <code>xphere.ipc</code> is located in the <code>DATA_DIR</code> path on an XEN.</p>
+<p>Please execute the following command and check out the result.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">$ ./bin/xen attach --datadir ~/xen_data</span><br></div><div class="token-line"><span class="token plain">Welcome to the Xphere JavaScript console!</span><br></div><div class="token-line"><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">instance: Xphere/v0.9.0/linux-amd64/go1.22.12</span><br></div><div class="token-line"><span class="token plain"> datadir: /home/user/xen_data</span><br></div><div class="token-line"><span class="token plain"> modules: admin:1.0 debug:1.0 eth:1.0 governance:1.0 istanbul:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0 xp:1.0</span><br></div><div class="token-line"><span class="token plain"> &gt;</span><br></div></code></pre></div></div>
+<p>The <code>modules:</code> line lists the namespaces this connection can call. Over IPC no whitelist is applied,
+which is why the list is long. The full command reference is in
+<a class="" href="nodes-xen-cli.html">XEN CLI Commands</a>.</p>
+<p>The useful APIs to check the status of XEN:</p>
+<ul>
+<li class=""><code>xp.blockNumber</code> (to get the latest block number)</li>
+<li class=""><code>net.peerCount</code> (to get the number of the connected XPHERE nodes currently)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="xphere-blocknumber">xp.blockNumber</h4>
+<p>You can get the latest block number to see if blocks are propagated properly.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">&gt; xp.blockNumber</span><br></div><div class="token-line"><span class="token plain">45160854</span><br></div></code></pre></div></div>
+<p>Compare it against a public endpoint or <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> — if your node is still syncing,
+its number will be lower and should be climbing.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="net-peercount">net.peerCount</h4>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">&gt; net.peerCount</span><br></div><div class="token-line"><span class="token plain">6</span><br></div></code></pre></div></div>
+<p>The above command line returns the number of nodes that the XEN connects to.</p></div></div></div>
+    <div class="dx-pager"><a class="pv" href="nodes-requirements.html"><small>Previous</small><i>&#8592;</i> System Requirements</a><a class="nx" href="nodes-xen-cli.html"><small>Next</small>XEN CLI Commands <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#download">Download</a><a href="#installation">Installation</a><a href="#linux-archive-distribution" class="sub">Linux Archive Distribution</a><a href="#installed-location" class="sub">Running the Commands</a><a href="#configuration">Configuration</a><a href="#en-data-directory-creation" class="sub">XEN Data Directory Creation</a><a href="#then-initialize-the-blockchain-data-using-xen-init" class="sub">Then, initialize the blockchain data using xen init</a><a href="#update-the-configuration-file" class="sub">Update the Configuration File</a><a href="#startup-the-en">Startup the Xend</a><a href="#confirm-the-node-is-syncing" class="sub">Confirm the Node Is Syncing</a><a href="#testing-the-installation">Testing the Installation</a><a href="#process-status" class="sub">Process Status</a><a href="#logs" class="sub">Logs</a><a href="#queries" class="sub">Queries</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

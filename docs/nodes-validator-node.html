@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validator Node | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Participate</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Staking (Union Vault) <i>&#8964;</i></button><div class="dx-sec-p"><a href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a href="staking-faq.html">FAQ</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Mining <i>&#8964;</i></button><div class="dx-sec-p"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a href="mining-getting-started.html">Getting Started</a><a href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button">Run a Node <i>&#8964;</i></button><div class="dx-sec-p"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a class="on" href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Union Membership <i>&#8964;</i></button><div class="dx-sec-p"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Participate</span><i>/</i><span>Run a Node</span></div>
+    <h1>Validator Node</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<p>A <strong>Validator Node</strong> participates in the Main Chain&#x27;s optimized PBFT consensus, proposing and finalizing blocks. Validators are sampled from the <strong>Council</strong> into the active <strong>Committee</strong> each round.</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><p>Validator slots are <strong>permissioned</strong> during the current network phase. Applications go through the <a href="../index.html" target="_blank" rel="noopener noreferrer" class="">XPHERE Foundation</a>. This guide documents the operational requirements once admitted.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="eligibility">Eligibility</h2>
+<p>To be admitted to the Council, a candidate must:</p>
+<ol>
+<li class="">Submit a formal application to the XPHERE Foundation</li>
+<li class="">Stake the validator bond — a Union membership is <strong>35,000,000 XP</strong> (see <a class="" href="union-staking.html">Union Staking</a>)</li>
+<li class="">Operate infrastructure meeting the hardware requirements below</li>
+<li class="">Maintain ≥ 99.9% uptime across two consecutive monitoring epochs — operating the node reliably is an ongoing obligation of membership, not a one-time admission check</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hardware-requirements">Hardware Requirements</h2>
+<table><thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th></tr></thead><tbody><tr><td>vCPU</td><td>16</td><td>32</td></tr><tr><td>Memory</td><td>32 GiB</td><td>64 GiB</td></tr><tr><td>Storage</td><td>2 TB NVMe</td><td>4 TB NVMe</td></tr><tr><td>Disk IOPS</td><td>5,000</td><td>15,000+</td></tr><tr><td>Network</td><td>1 Gbps</td><td>5 Gbps</td></tr><tr><td>Geographic redundancy</td><td>Single region</td><td>Multi-AZ</td></tr></tbody></table>
+<p>The vCPU minimum matches the <strong>16 cores</strong> published in the <a class="" href="union-membership.html">Union</a> eligibility requirements.
+Storage is sized well above the published floor because chain data alone already exceeds 300 GB and
+grows continuously. PBFT message rounds are latency-sensitive, so network jitter matters as much as
+raw bandwidth.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup-overview">Setup Overview</h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Detailed setup instructions — the validator binary, configuration, keystore provisioning, seed peers, and registration — are not published here. The XPHERE Foundation provides initial technical support to admitted members as part of the registration process.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operational-slos">Operational SLOs</h2>
+<p>These are the service levels Union members commit to under the Council agreement. They are not
+enforced automatically by the protocol — the Foundation monitors them and applies the conduct terms
+below.</p>
+<table><thead><tr><th>Metric</th><th>Target</th><th>Action if breached</th></tr></thead><tbody><tr><td>Block proposal success</td><td>≥ 99.5%</td><td>Investigate dropped peers</td></tr><tr><td>PREPARE→COMMIT latency</td><td>≤ 200 ms p99</td><td>Check network jitter</td></tr><tr><td>Disk IOPS</td><td>≥ 5,000</td><td>Upgrade storage</td></tr><tr><td>Uptime</td><td>≥ 99.9%</td><td>Improve runbook coverage</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="slashing-conditions">Slashing Conditions</h2>
+<p>The current network does <strong>not</strong> implement automated on-chain slashing. The Foundation enforces the
+following conditions through the Council agreement:</p>
+<ul>
+<li class=""><strong>Double-signing</strong> — proposing conflicting blocks at the same height and round</li>
+<li class=""><strong>Equivocation</strong> — voting <code>PREPARE</code> and <code>COMMIT</code> for conflicting blocks in the same round</li>
+<li class=""><strong>Extended downtime</strong> — more than 48 hours consecutively offline</li>
+</ul>
+<p>Penalties range from bond reduction to removal from the Council.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring">Monitoring</h2>
+<p>Recommended Prometheus metrics to scrape from <code>--metrics --prometheus</code>:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">xphere_consensus_round_total</span><br></div><div class="token-line"><span class="token plain">xphere_consensus_proposals_accepted_total</span><br></div><div class="token-line"><span class="token plain">xphere_consensus_proposals_orphaned_total</span><br></div><div class="token-line"><span class="token plain">xphere_p2p_peers</span><br></div><div class="token-line"><span class="token plain">xphere_chain_head_block_number</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<ul>
+<li class=""><a class="" href="nodes-install-xen.html">Endpoint Node setup</a> — base of the validator binary</li>
+<li class=""><a class="" href="whitepaper.html#i-main-chain-optimized-pbft-consensus">Whitepaper §3 — Main Chain Consensus</a></li>
+<li class=""><a class="" href="whitepaper.html#ii-51-attack-mitigation-in-xphere">Whitepaper §4 — 51% Attack Mitigation</a></li>
+</ul></div></div></div>
+    <div class="dx-pager"><a class="pv" href="nodes-snapshots.html"><small>Previous</small><i>&#8592;</i> Use Chaindata Snapshots</a><a class="nx" href="nodes-downloads.html"><small>Next</small>XEN Package Downloads <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#eligibility">Eligibility</a><a href="#hardware-requirements">Hardware Requirements</a><a href="#setup-overview">Setup Overview</a><a href="#operational-slos">Operational SLOs</a><a href="#slashing-conditions">Slashing Conditions</a><a href="#monitoring">Monitoring</a><a href="#see-also">See Also</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

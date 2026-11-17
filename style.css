@@ -1213,3 +1213,19 @@ body > section:nth-of-type(even){--sb:#1f1c1b}
 /* v4.2: Community dropdown (X, Telegram, Discord) */
 .hdr .menu .dd-com .dd-p a{display:flex;align-items:center;gap:10px}
 .hdr .menu .dd-com .dd-p svg{width:16px;height:16px;fill:currentColor;flex:none;opacity:.85}
+
+/* v4.3: Docs mega dropdown (4 groups, 15 items, no links yet) */
+.hdr .menu .dd-docs .dd-p{left:auto;right:-16px;min-width:0;width:max-content;flex-direction:row;gap:6px;padding:14px 12px}
+.menu .dd-docs:hover .dd-p,.menu .dd-docs.open .dd-p,.menu .dd-docs:focus-within .dd-p{display:flex}
+.dd-docs .dg{display:flex;flex-direction:column;min-width:150px;padding:0 6px}
+.dd-docs .dg + .dg{border-left:1px solid var(--line);padding-left:12px}
+.dd-docs .dh{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);padding:6px 10px 8px}
+.dd-docs .di{padding:8px 10px;border-radius:8px;color:#d9d4d1;white-space:nowrap;font-size:13.5px;text-transform:none;letter-spacing:0;font-family:"Geist",sans-serif;cursor:default;transition:background .2s,color .2s}
+.dd-docs .di:hover{background:#2a2524;color:#fff}
+@media (max-width:860px){
+  .hdr .menu .dd-docs .dd-p{position:static;flex-direction:column;width:auto;right:auto;padding:8px 0}
+  .dd-docs .dg + .dg{border-left:0;padding-left:6px;border-top:1px solid var(--line);margin-top:6px;padding-top:6px}
+}
+.dd-docs a.di{display:block;cursor:pointer;color:#fff}
+.dd-docs a.di::after{content:" ↗";font-size:11px;color:var(--red);opacity:0}
+.dd-docs a.di:hover::after{opacity:1}

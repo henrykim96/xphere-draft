@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Resources</div><nav class="dx-nav"><a class="dx-top" href="faq.html">FAQ</a><a class="dx-top" href="glossary.html">Glossary</a><a class="dx-top" href="union-staking.html">Union Staking</a><a class="dx-top" href="tokenomics.html">Tokenomics</a><a class="dx-top" href="governance.html">Governance</a><a class="dx-top on" href="security.html">Security</a><a class="dx-top" href="network-upgrades.html">Network Upgrades</a><a class="dx-top" href="bridge.html">Bridge</a></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Resources</span><i>/</i><span>Security</span></div>
+    <h1>Security</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<p>This page states how to report a security issue to the XPHERE Foundation, what the Foundation
+considers in scope, and how anyone can independently verify that a domain, repository, or contract
+address is genuinely ours.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reporting-a-vulnerability">Reporting a Vulnerability</h2>
+<p>Send security reports to <strong><code>security@x-phere.com</code></strong> with the subject prefix <strong><code>[SECURITY]</code></strong>.</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Do not disclose publicly first</div><div class="admonitionContent_BuS1"><p>Do <strong>not</strong> open a public GitHub issue, forum post, or social media thread for a suspected
+vulnerability. A public report exposes the issue to everyone before a fix exists.</p></div></div>
+<p>Please include as much of the following as you can:</p>
+<table><thead><tr><th>Field</th><th>What to provide</th></tr></thead><tbody><tr><td>Description</td><td>What the issue is, in plain terms</td></tr><tr><td>Affected component</td><td>Protocol, node software, a specific contract address, or a specific domain</td></tr><tr><td>Reproduction steps</td><td>The minimum sequence needed to observe the behaviour</td></tr><tr><td>Impact assessment</td><td>What an attacker could achieve — funds at risk, consensus effect, data exposure</td></tr></tbody></table>
+<p>Supporting material helps: transaction hashes, block heights, logs, proof-of-concept code, and the
+software version or commit you tested against.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="coordinated-disclosure">Coordinated disclosure</h3>
+<p>The Foundation asks reporters to allow time for the issue to be investigated and remediated before
+publishing details. If you intend to disclose publicly, please tell us in your first message so
+timing can be coordinated.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>The Foundation has <strong>not published</strong> a bug bounty program or a stated response-time commitment.
+Anyone offering a bounty payout, or claiming to act for the Foundation, outside of
+<code>security@x-phere.com</code> should be treated as unverified.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scope">Scope</h2>
+<table><thead><tr><th>In scope</th><th>Out of scope</th></tr></thead><tbody><tr><td>The XPHERE protocol and consensus</td><td>Third-party dApps, bridges, and services built on XPHERE</td></tr><tr><td>XPHERE node software</td><td>Third-party wallets, explorers, and RPC providers not operated by the Foundation</td></tr><tr><td>The Foundation&#x27;s official contracts (see below)</td><td>Contracts deployed by other parties on XPHERE</td></tr><tr><td>The Foundation&#x27;s official web properties (see below)</td><td>Sites, tokens, and social accounts not listed below</td></tr></tbody></table>
+<p>Issues in third-party applications belong to their operators. If you find one, report it to that
+operator. If a third-party issue also indicates a defect in the protocol or in an official contract,
+report that part to <code>security@x-phere.com</code>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="verified-official-properties">Verified Official Properties</h2>
+<p>Impersonation is the most common attack against blockchain users. Everything the Foundation operates
+is listed here. <strong>Anything not on this list is not ours.</strong></p>
+<table><thead><tr><th>Property</th><th>Address</th></tr></thead><tbody><tr><td>Website</td><td><code>https://x-phere.com</code></td></tr><tr><td>Documentation</td><td><code>https://docs.x-phere.com</code></td></tr><tr><td>Staking portal</td><td><code>https://stake.x-phere.com</code></td></tr><tr><td>Mainnet explorer</td><td><code>https://xpscan.io</code></td></tr><tr><td>Testnet faucet</td><td><code>https://faucet.x-phere.com</code></td></tr><tr><td>Mainnet RPC</td><td><code>https://rpc.x-phere.com</code>, <code>https://en-hkg.x-phere.com</code>, <code>https://en-bkk.x-phere.com</code></td></tr><tr><td>Testnet RPC</td><td><code>https://testnet.x-phere.com</code></td></tr><tr><td>GitHub organization</td><td><a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer" class=""><code>github.com/xpherechain</code></a></td></tr><tr><td>Telegram</td><td><a href="https://t.me/Xphere_official" target="_blank" rel="noopener noreferrer" class=""><code>t.me/Xphere_official</code></a></td></tr><tr><td>X</td><td><a href="https://x.com/Xphere_official" target="_blank" rel="noopener noreferrer" class=""><code>x.com/Xphere_official</code></a></td></tr><tr><td>Discord</td><td><a href="https://discord.com/invite/xphere" target="_blank" rel="noopener noreferrer" class=""><code>discord.com/invite/xphere</code></a> (same invite as <code>discord.gg/xphere</code>)</td></tr><tr><td>General contact</td><td><code>Contact@X-phere.com</code></td></tr><tr><td>Staking partnerships</td><td><code>partners@x-phere.com</code></td></tr><tr><td>Security reports</td><td><code>security@x-phere.com</code></td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="official-contract-addresses">Official contract addresses</h3>
+<p>XPHERE Mainnet — Chain ID <code>20250217</code>.</p>
+<table><thead><tr><th>Contract</th><th>Address</th></tr></thead><tbody><tr><td><strong>XPStakingVault</strong></td><td><code>0xaE4435bB474716E130be2aC8e6C244f171451064</code></td></tr><tr><td><strong>RewardDistributor</strong></td><td><code>0x24C5912B63a8B41DA80EBDC2115949fcbb41Fddf</code></td></tr><tr><td><strong>WXP</strong></td><td><code>0x780E8c0443F6d702De0c72650648C7CAA591e8f0</code></td></tr><tr><td><strong>Timelock (48 h)</strong></td><td><code>0x0737B4EEB4dA0920cE7CeE2D1eF64E0f57211F4E</code></td></tr></tbody></table>
+<p>The authoritative copy of this list, with the burn address and verification instructions, is
+<a class="" href="staking-contracts.html">Contracts &amp; Verification</a>.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Explorers the Foundation does not operate</div><div class="admonitionContent_BuS1"><p>The Tamsa explorers — <a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xp.tamsa.io</a> (Mainnet) and <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xpt.tamsa.io</a> (Testnet) — are operated by their own team, not by the XPHERE Foundation. They are the explorers the docs link to for Testnet because no XPScan testnet instance is published, but they are third-party properties and are not covered by the list above.</p></div></div>
+<p>The faucet distributes <strong>XPT</strong> on Testnet (Chain ID <code>1998991</code>) only. It never distributes Mainnet <code>XP</code>, never asks for a private key or seed phrase, and never requires a wallet connection — a &quot;faucet&quot; that asks for any of those is not ours. See <a class="" href="testnet-faucet.html">Testnet Faucet</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="protecting-yourself">Protecting Yourself</h2>
+<ul>
+<li class=""><strong>Check the domain before connecting a wallet.</strong> Look-alike domains are the most common attack.
+The only official staking address is <code>https://stake.x-phere.com</code>.</li>
+<li class=""><strong>The Foundation never asks for your seed phrase or private key</strong>, and <strong>never DMs first</strong>. Anyone
+who does either is impersonating us.</li>
+<li class=""><strong>Treat unpublished offers as fraud.</strong> Any &quot;guaranteed APR&quot;, bonus, or airdrop claim that does not
+appear on the official channels above is fraudulent. Rewards from the vault come from what the
+validator node actually earns and are <strong>not guaranteed</strong> — see <a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a>.</li>
+<li class=""><strong>Verify contract addresses against these docs</strong> before you interact with a contract. Never trust
+an address pasted in a DM, a comment, or an unofficial site.</li>
+<li class=""><strong>Report impersonation</strong> to <code>security@x-phere.com</code> so it can be taken down.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-you-can-verify-on-chain">What You Can Verify On-Chain</h2>
+<p>Two properties of the XP Union Vault bound its security surface, and both are checkable on-chain
+rather than taken on trust:</p>
+<table><thead><tr><th>Property</th><th>Guarantee</th></tr></thead><tbody><tr><td>Contract logic</td><td><strong>Not upgradeable</strong> — no proxy sits in front of the vault, so the code deployed at the addresses above is the code that runs</td></tr><tr><td>Operational parameters</td><td>Change <strong>only through a 48-hour on-chain timelock</strong>, so every change is publicly visible before it takes effect</td></tr></tbody></table>
+<p>Read the contracts directly with any EVM tool against a public RPC endpoint — see
+<a class="" href="staking-contracts.html">Contracts &amp; Verification</a> for worked examples, and
+<a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a> for the risks that remain even with these properties in
+place.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="audits">Audits</h2>
+<p>The XPHERE Main Chain client has been audited by <a href="https://hacken.io/audits/xphere/" target="_blank" rel="noopener noreferrer" class="">Hacken</a>, an
+independent blockchain security firm.</p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Auditor</td><td>Hacken</td></tr><tr><td>Scope</td><td><code>xchain</code> — the Layer 1 protocol implementation (Golang)</td></tr><tr><td>Completed</td><td><strong>3 March 2025</strong></td></tr><tr><td>Findings</td><td>3</td></tr><tr><td>Status</td><td>Completed</td></tr><tr><td>Listing</td><td><a href="https://hacken.io/audits/xphere/" target="_blank" rel="noopener noreferrer" class="">hacken.io/audits/xphere</a></td></tr></tbody></table>
+<p>The audit record is published on Hacken&#x27;s own site, so it can be checked independently of anything
+the Foundation states here.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Scope and timing</div><div class="admonitionContent_BuS1"><p>This audit covers the Main Chain client source. It is a point-in-time review completed on the date
+above — it does not certify code written or changed afterwards, and it does not cover the staking
+contracts, which have their own verifiable on-chain properties documented in
+<a class="" href="staking-contracts.html">Contracts &amp; Verification</a>.</p></div></div>
+<p>Further audit reports are published as they become available, through the
+<a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer" class="">GitHub organization</a> and Foundation announcements. No report should
+be considered official unless it is published there or on the auditor&#x27;s own site.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<ul>
+<li class=""><a class="" href="staking-contracts.html">Contracts &amp; Verification</a></li>
+<li class=""><a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a></li>
+<li class=""><a class="" href="faq.html">FAQ</a></li>
+</ul></div></div></div>
+    <div class="dx-pager"><a class="pv" href="governance.html"><small>Previous</small><i>&#8592;</i> Governance</a><a class="nx" href="network-upgrades.html"><small>Next</small>Network Upgrades <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#reporting-a-vulnerability">Reporting a Vulnerability</a><a href="#coordinated-disclosure" class="sub">Coordinated disclosure</a><a href="#scope">Scope</a><a href="#verified-official-properties">Verified Official Properties</a><a href="#official-contract-addresses" class="sub">Official contract addresses</a><a href="#protecting-yourself">Protecting Yourself</a><a href="#what-you-can-verify-on-chain">What You Can Verify On-Chain</a><a href="#audits">Audits</a><a href="#see-also">See Also</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

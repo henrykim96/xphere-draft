@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XP Staking (Union Vault) | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Participate</div><nav class="dx-nav"><div class="dx-sec open"><button class="dx-sec-t" type="button">Staking (Union Vault) <i>&#8964;</i></button><div class="dx-sec-p"><a class="on" href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a href="staking-faq.html">FAQ</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Mining <i>&#8964;</i></button><div class="dx-sec-p"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a href="mining-getting-started.html">Getting Started</a><a href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Run a Node <i>&#8964;</i></button><div class="dx-sec-p"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Union Membership <i>&#8964;</i></button><div class="dx-sec-p"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Participate</span><i>/</i><span>Staking (Union Vault)</span></div>
+    <h1>XP Staking (Union Vault)</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<p><strong>XP Union Vault</strong> is a non-custodial staking vault that turns the real earnings of the Foundation&#x27;s Union validator node into <strong>staker rewards and permanent XP burn at the same time</strong>.</p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Staking service — <a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer" class="">stake.x-phere.com</a></div><div class="admonitionContent_BuS1"><p>Stake, claim, and unstake at <strong><a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer" class="">stake.x-phere.com</a></strong>.
+Live protocol state: <a href="https://stake.x-phere.com/status.html" target="_blank" rel="noopener noreferrer" class=""><code>/status.html</code></a> · Burn record: <a href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener noreferrer" class=""><code>/burn.html</code></a></p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-makes-it-different">What Makes It Different</h2>
+<table><thead><tr><th>Pillar</th><th>What it means</th></tr></thead><tbody><tr><td><strong>① Real yield</strong></td><td>Rewards are <strong>not newly minted</strong>. They come from validator rewards the Union node actually earned.</td></tr><tr><td><strong>② Deflationary</strong></td><td><strong>More than 40% of every day&#x27;s rewards are permanently burned</strong> to <code>0x…dEaD</code>.</td></tr><tr><td><strong>③ Non-custodial</strong></td><td>Your principal is <strong>never re-deployed or re-staked</strong>. It stays yours and is withdrawable in full.</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="at-a-glance">At a Glance</h2>
+<table><thead><tr><th>Parameter</th><th>Current value</th></tr></thead><tbody><tr><td>Network</td><td>XPHERE Mainnet, Chain ID <code>20250217</code></td></tr><tr><td>Deposit asset</td><td>Native <strong>XP</strong> — no wrapping required</td></tr><tr><td>Cap</td><td><strong>2,000,000 XP</strong> (guarded launch; raised in stages through the 48-hour timelock, target <strong>35,000,000 XP</strong>)</td></tr><tr><td>Settlement epoch</td><td><strong>1 day</strong>, permissionless <code>settle</code></td></tr><tr><td>Distribution</td><td><strong>60% to stakers · 40%+ burned</strong></td></tr><tr><td>Reward accrual</td><td>Streamed over 24 hours, <strong>accruing every second</strong></td></tr><tr><td>Unstaking</td><td>Request → <strong>7-day cooldown</strong> → 100% of principal</td></tr><tr><td>Reward claiming</td><td><strong>No expiry</strong> — claim any time</td></tr><tr><td>User fees</td><td><strong>0%</strong> — you pay gas only</td></tr><tr><td>Standard</td><td>ERC-4626 vault with ERC-7540-style asynchronous redemption</td></tr><tr><td>Upgradeability</td><td>Contract logic is <strong>not upgradeable</strong> (no proxy). Operational parameters change only through a <strong>48-hour on-chain timelock</strong>.</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-the-split-works-in-one-line">How the Split Works, in One Line</h2>
+<p>Each day, the rewards that flowed into the vault are split by how full the cap is:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">staker allocation = inflow × 60% × (staked ÷ cap)</span><br></div><div class="token-line"><span class="token plain">everything else   = burned</span><br></div></code></pre></div></div>
+<p>Every staker is paid for <strong>their own seat only</strong>, so your APR does not depend on how many others join. The yield attached to empty seats is burned. See <a class="" href="staking-how-it-works.html">How It Works</a>.</p>
+<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><p>APR <strong>varies with the node&#x27;s earnings and is not guaranteed</strong>, and staking a smart contract carries risk. All example figures in these pages are illustrative. Read <a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a> before staking.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-to-next">Where to Next</h2>
+<ul>
+<li class=""><a class="" href="staking-how-it-works.html">How It Works</a> — settlement, the reserved-seat model, streaming, vault accounting</li>
+<li class=""><a class="" href="staking-user-guide.html">User Guide</a> — stake, claim, and unstake step by step</li>
+<li class=""><a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a> — what you pay and what you accept</li>
+<li class=""><a class="" href="staking-for-partners.html">For Partners</a> — one-URL referral integration</li>
+<li class=""><a class="" href="staking-contracts.html">Contracts &amp; Verification</a> — addresses and how to verify them yourself</li>
+<li class=""><a class="" href="staking-faq.html">FAQ</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<ul>
+<li class=""><a class="" href="union-staking.html">Union Staking</a> — the protocol-level Union reward share</li>
+<li class=""><a class="" href="mining-rewards.html">Mining Rewards</a> — the 20 / 40 / 40 minted-reward split</li>
+</ul></div></div></div>
+    <div class="dx-pager"><span></span><a class="nx" href="staking-how-it-works.html"><small>Next</small>How It Works <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#what-makes-it-different">What Makes It Different</a><a href="#at-a-glance">At a Glance</a><a href="#how-the-split-works-in-one-line">How the Split Works, in One Line</a><a href="#where-to-next">Where to Next</a><a href="#see-also">See Also</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

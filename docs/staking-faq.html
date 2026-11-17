@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Staking FAQ | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Participate</div><nav class="dx-nav"><div class="dx-sec open"><button class="dx-sec-t" type="button">Staking (Union Vault) <i>&#8964;</i></button><div class="dx-sec-p"><a href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a class="on" href="staking-faq.html">FAQ</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Mining <i>&#8964;</i></button><div class="dx-sec-p"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a href="mining-getting-started.html">Getting Started</a><a href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Run a Node <i>&#8964;</i></button><div class="dx-sec-p"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Union Membership <i>&#8964;</i></button><div class="dx-sec-p"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Participate</span><i>/</i><span>Staking (Union Vault)</span></div>
+    <h1>Staking FAQ</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rewards">Rewards</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-does-the-yield-come-from">Where does the yield come from?</h3>
+<p>From validator rewards the Foundation&#x27;s <strong>Union validator node actually earned</strong>. Nothing is newly minted to pay stakers — this is real yield.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="is-the-apr-guaranteed">Is the APR guaranteed?</h3>
+<p><strong>No.</strong> The rate moves with the node&#x27;s earnings. Every figure shown in the interface or these docs is <strong>illustrative</strong>, not a promise. See <a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-is-the-daily-amount-calculated">How is the daily amount calculated?</h3>
+<p>At each daily settlement:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">staker allocation = inflow × 60% × (staked ÷ cap)</span><br></div><div class="token-line"><span class="token plain">everything else   = burned</span><br></div></code></pre></div></div>
+<p>See <a class="" href="staking-how-it-works.html">How It Works</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-my-apr-fall-when-more-people-stake">Does my APR fall when more people stake?</h3>
+<p><strong>No.</strong> Each staker is paid for their own seat against the cap, so your rate is independent of how many others join or leave.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-do-rewards-arrive">When do rewards arrive?</h3>
+<p>They <strong>stream over 24 hours, accruing every second</strong>, rather than landing as a daily lump sum. That also means depositing right before a settlement cannot capture a whole day of rewards.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="do-rewards-expire-if-i-dont-claim">Do rewards expire if I don&#x27;t claim?</h3>
+<p><strong>No.</strong> Claim whenever you like.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="does-claiming-rewards-affect-my-principal">Does claiming rewards affect my principal?</h3>
+<p>No. Principal and rewards are on <strong>separate ledgers</strong>. Claiming does not touch your stake or start a cooldown.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="burn">Burn</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-much-is-burned">How much is burned?</h3>
+<p><strong>More than 40% of every day&#x27;s rewards.</strong> At a full cap the split is exactly <strong>60% stakers / 40% burn</strong>; the emptier the vault, the more is burned. With <strong>no stakers, 100% is burned</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-do-burned-tokens-go">Where do burned tokens go?</h3>
+<p>To <code>0x000000000000000000000000000000000000dEaD</code> — permanently and publicly, see <a href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener noreferrer" class=""><code>/burn.html</code></a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="staking-and-withdrawing">Staking and Withdrawing</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-do-i-deposit">What do I deposit?</h3>
+<p><strong>Native XP</strong>, as-is. No wrapping and no approval step.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="is-my-principal-used-for-anything">Is my principal used for anything?</h3>
+<p>No. The vault is <strong>non-custodial</strong> — your principal is <strong>not re-deployed or re-staked</strong>. It remains yours and is withdrawable in full.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-do-i-withdraw">How do I withdraw?</h3>
+<p><strong>Request unstake → 7-day cooldown → claim matured</strong>, and you receive <strong>100% of your principal</strong>. See the <a class="" href="staking-user-guide.html#4-unstake">User Guide</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-if-rewards-stop">What if rewards stop?</h3>
+<p>Your <strong>principal is still fully withdrawable</strong>. Principal and rewards are tracked separately.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-is-there-a-cap">Why is there a cap?</h3>
+<p>The vault is in <strong>guarded launch</strong>. Capacity is raised <strong>in stages</strong>, each step going through the <strong>48-hour on-chain timelock</strong>, toward the target of <strong>35,000,000 XP</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fees">Fees</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-does-it-cost">What does it cost?</h3>
+<p><strong>0%</strong> — no deposit, claim, or withdrawal fee. You pay <strong>network gas only</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="do-referral-links-cost-me-anything">Do referral links cost me anything?</h3>
+<p>No. Staking through a partner link (<code>?ref=…</code>) gives <strong>exactly the same</strong> rewards as staking directly. See <a class="" href="staking-for-partners.html">For Partners</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-and-verification">Security and Verification</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-the-contracts-be-upgraded">Can the contracts be upgraded?</h3>
+<p><strong>No.</strong> The logic is <strong>not upgradeable</strong> and there is no proxy. Only <strong>operational parameters</strong> can change, and only through the <strong>48-hour timelock</strong>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-are-shares-and-why-1-xp--1000">What are shares, and why 1 XP = 1,000?</h3>
+<p>Shares are an <strong>internal accounting unit</strong> of the ERC-4626 vault. The ratio is <strong>permanently fixed at 1 XP = 1,000 shares</strong> to block share-price inflation attacks; redemption follows an <strong>ERC-7540-style asynchronous</strong> flow (request, then claim after maturity).</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-do-i-check-the-vault-is-solvent">How do I check the vault is solvent?</h3>
+<p>Open <a href="https://stake.x-phere.com/status.html" target="_blank" rel="noopener noreferrer" class=""><code>/status.html</code></a> — it shows live, on-chain <strong>solvency (holdings ≥ liabilities)</strong>, governance, and current parameters. Contract addresses are in <a class="" href="staking-contracts.html">Contracts &amp; Verification</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-do-i-avoid-scams">How do I avoid scams?</h3>
+<p>Stake only at <strong><code>https://stake.x-phere.com</code></strong>, verify contract addresses against <a class="" href="staking-contracts.html">Contracts &amp; Verification</a>, and remember the Foundation never asks for seed phrases or private keys.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<ul>
+<li class=""><a class="" href="staking.html">Overview</a></li>
+<li class=""><a class="" href="staking-how-it-works.html">How It Works</a></li>
+<li class=""><a class="" href="staking-user-guide.html">User Guide</a></li>
+<li class=""><a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a></li>
+</ul></div></div></div>
+    <div class="dx-pager"><a class="pv" href="staking-contracts.html"><small>Previous</small><i>&#8592;</i> Contracts &amp; Verification</a><a class="nx" href="mining.html"><small>Next</small>Introduction <i>&#8594;</i></a></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#rewards">Rewards</a><a href="#where-does-the-yield-come-from" class="sub">Where does the yield come from?</a><a href="#is-the-apr-guaranteed" class="sub">Is the APR guaranteed?</a><a href="#how-is-the-daily-amount-calculated" class="sub">How is the daily amount calculated?</a><a href="#does-my-apr-fall-when-more-people-stake" class="sub">Does my APR fall when more people stake?</a><a href="#when-do-rewards-arrive" class="sub">When do rewards arrive?</a><a href="#do-rewards-expire-if-i-dont-claim" class="sub">Do rewards expire if I don&#x27;t claim?</a><a href="#does-claiming-rewards-affect-my-principal" class="sub">Does claiming rewards affect my principal?</a><a href="#burn">Burn</a><a href="#how-much-is-burned" class="sub">How much is burned?</a><a href="#where-do-burned-tokens-go" class="sub">Where do burned tokens go?</a><a href="#staking-and-withdrawing">Staking and Withdrawing</a><a href="#what-do-i-deposit" class="sub">What do I deposit?</a><a href="#is-my-principal-used-for-anything" class="sub">Is my principal used for anything?</a><a href="#how-do-i-withdraw" class="sub">How do I withdraw?</a><a href="#what-if-rewards-stop" class="sub">What if rewards stop?</a><a href="#why-is-there-a-cap" class="sub">Why is there a cap?</a><a href="#fees">Fees</a><a href="#what-does-it-cost" class="sub">What does it cost?</a><a href="#do-referral-links-cost-me-anything" class="sub">Do referral links cost me anything?</a><a href="#security-and-verification">Security and Verification</a><a href="#can-the-contracts-be-upgraded" class="sub">Can the contracts be upgraded?</a><a href="#what-are-shares-and-why-1-xp--1000" class="sub">What are shares, and why 1 XP = 1,000?</a><a href="#how-do-i-check-the-vault-is-solvent" class="sub">How do I check the vault is solvent?</a><a href="#how-do-i-avoid-scams" class="sub">How do I avoid scams?</a><a href="#see-also">See Also</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

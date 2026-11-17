@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XPHERE v2.0 | XPHERE Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+
+
+<header class="hdr">
+  <div class="nav">
+    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
+    <nav class="menu" id="menu">
+      <a href="../index.html">Home</a>
+      <a href="../union.html">Union</a>
+      <a href="../stake.html">Stake</a>
+      <a href="../ecosystem.html">Ecosystem</a>
+      <div class="dd">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="../grant.html">Grant</a>
+          <a href="https://github.com/xpherechain">GitHub</a>
+          <a href="whitepaper.html">Whitepaper</a>
+        </div>
+      </div>
+      <div class="dd dd-com">
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <div class="dd-p">
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+        </div>
+      </div>
+      <div class="dd dd-docs">
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <div class="dd-p">
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
+          <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-cta">
+      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    </div>
+  </div>
+</header>
+
+<div class="dx">
+  <aside class="dx-side"><div class="dx-grp">Whitepaper</div><nav class="dx-nav dx-ch"><a class="dx-top" href="#abstract">ABSTRACT</a><a class="dx-top" href="#table-of-contents">Table of Contents</a><a class="dx-top" href="#1-introduction">1. INTRODUCTION</a><a class="dx-top" href="#2-technical-specifications">2. TECHNICAL SPECIFICATIONS</a><a class="dx-top" href="#3-dual-chain-architecture">3. DUAL-CHAIN ARCHITECTURE</a><a class="dx-top" href="#4-consensus">4. CONSENSUS</a><a class="dx-top" href="#5-economic-model-of-the-coin">5. ECONOMIC MODEL OF THE COIN</a><a class="dx-top" href="#6-ethereum-compatibility-in-xphere">6. ETHEREUM COMPATIBILITY IN XPHERE</a><a class="dx-top" href="#7-roadmap">7. ROADMAP</a><a class="dx-top" href="#8-conclusion">8. CONCLUSION</a></nav></aside>
+  <main class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Whitepaper</span><i>/</i><span>Whitepaper</span></div>
+    <h1>XPHERE v2.0</h1>
+    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+
+<p>Paul Kim</p>
+<p><em>Last Updated: July 7, 2026</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="abstract">ABSTRACT</h2>
+<p>Traditional blockchain networks have faced challenges in overcoming the blockchain trilemma of scalability, security, and decentralization. To address this, we have designed a <strong>Dual-Chain Architecture</strong> consisting of the <strong>Main Chain</strong> and the <strong>Proof Chain</strong>.</p>
+<p>The Main Chain delivers scalability and efficient transaction processing through an optimized PBFT consensus, while the Proof Chain ensures security and decentralized trust with a robust PoW mechanism. By dividing roles between the two chains, the architecture achieves a balance of trust and efficiency.</p>
+<p>This innovative design supports diverse applications such as finance, logistics, and digital asset management, aiming to expand the potential of decentralized networks and drive the next generation of blockchain innovation.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="table-of-contents">Table of Contents</h2>
+<ol>
+<li class=""><a href="#1-introduction" class="">Introduction</a></li>
+<li class=""><a href="#2-technical-specifications" class="">Technical Specifications</a>
+<ol>
+<li class=""><a href="#i-network-architecture" class="">Network Architecture</a></li>
+<li class=""><a href="#ii-node-requirements" class="">Node Requirements</a></li>
+<li class=""><a href="#iii-transaction-throughput" class="">Transaction Throughput</a></li>
+</ol>
+</li>
+<li class=""><a href="#3-dual-chain-architecture" class="">Dual-chain Architecture</a>
+<ol>
+<li class=""><a href="#i-main-chain-optimized-pbft-consensus" class="">Main Chain: Optimized PBFT Consensus</a></li>
+<li class=""><a href="#ii-proof-chain-pow-based-validation-layer" class="">Proof Chain: PoW-Based Validation Layer</a></li>
+<li class=""><a href="#iii-interaction-between-main-chain-and-proof-chain" class="">Interaction Between Main Chain and Proof Chain</a></li>
+</ol>
+</li>
+<li class=""><a href="#4-consensus" class="">Consensus</a>
+<ol>
+<li class=""><a href="#i-consensus-mechanism-trust-and-security-with-proof-of-work-pow" class="">Consensus Mechanism: Trust and Security with Proof of Work (PoW)</a></li>
+<li class=""><a href="#ii-51-attack-mitigation-in-xphere" class="">51% Attack Mitigation in XPHERE</a></li>
+</ol>
+</li>
+<li class=""><a href="#5-economic-model-of-the-coin" class="">Economic Model of the Coin</a>
+<ol>
+<li class=""><a href="#a-coin-utility-and-role-in-the-network" class="">Coin Utility and Role in the Network</a></li>
+<li class=""><a href="#b-union-staking-and-reward-mechanism" class="">Union Staking and Reward Mechanism</a></li>
+<li class=""><a href="#c-emission-mechanism" class="">Emission Mechanism</a></li>
+<li class=""><a href="#d-transaction-fee-burn-mechanism" class="">Transaction Fee Burn Mechanism</a></li>
+<li class=""><a href="#e-distribution-model" class="">Distribution Model</a></li>
+</ol>
+</li>
+<li class=""><a href="#6-ethereum-compatibility-in-xphere" class="">Ethereum Compatibility in XPHERE</a>
+<ol>
+<li class=""><a href="#i-key-aspects-of-ethereum-compatibility" class="">Key Aspects of Ethereum Compatibility</a></li>
+<li class=""><a href="#ii-benefits-of-ethereum-compatibility" class="">Benefits of Ethereum Compatibility</a></li>
+<li class=""><a href="#iii-building-a-bridge-between-ecosystems" class="">Building a Bridge Between Ecosystems</a></li>
+</ol>
+</li>
+<li class=""><a href="#7-roadmap" class="">Roadmap</a>
+<ol>
+<li class=""><a href="#i-2025--network-commercialization-and-global-ecosystem-foundation" class="">2025 — Network Commercialization and Global Ecosystem Foundation</a></li>
+<li class=""><a href="#ii-2026--open-ecosystem-expansion-and-public-infrastructure-growth" class="">2026 — Open Ecosystem Expansion and Public Infrastructure Growth</a></li>
+<li class=""><a href="#iii-2027--application-layer-expansion-and-real-usage-ecosystem" class="">2027 — Application Layer Expansion and Real-Usage Ecosystem</a></li>
+</ol>
+</li>
+<li class=""><a href="#8-conclusion" class="">Conclusion</a></li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-introduction"><span class="n">1</span>INTRODUCTION</h2>
+<p>The blockchain space has experienced rapid innovation, yet many networks face challenges in balancing accessibility, stability, and user adoption. <strong>XPHERE 1.0</strong> was introduced as a unique blockchain platform with its own smart contract structure, distinct from the commonly used EVM (Ethereum Virtual Machine) ecosystem. While this proprietary approach offered certain technical advantages, it also introduced significant limitations.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-limitations-of-xphere-10">Key Limitations of XPHERE 1.0:</h3>
+<ul>
+<li class=""><strong>Limited Accessibility</strong>:<!-- -->
+<ul>
+<li class="">The proprietary smart contract structure made it difficult for existing EVM developers and users to adopt the platform, hindering ecosystem growth.</li>
+</ul>
+</li>
+<li class=""><strong>Transaction Drop Issues</strong>:<!-- -->
+<ul>
+<li class="">Users often experienced dropped transactions, leading to frustration and reduced reliability for decentralized applications.</li>
+</ul>
+</li>
+<li class=""><strong>Inconsistent Block Generation</strong>:<!-- -->
+<ul>
+<li class="">Irregular block times created uncertainty for users and developers, impacting both usability and security.</li>
+</ul>
+</li>
+</ul>
+<p>These limitations not only restricted the growth of XPHERE&#x27;s ecosystem but also posed potential risks to its long-term adoption and scalability.</p>
+<p>To address these challenges and unlock the full potential of the network, we developed <strong>XPHERE v2.0</strong>, an upgraded blockchain platform designed to enhance accessibility, reliability, and scalability. By learning from the shortcomings of XPHERE v1.0, XPHERE v2.0 introduces a robust architecture that integrates <strong>dual-chain technology</strong> and significantly improves the user experience.</p>
+<p>XPHERE v2.0 is built with the following key objectives:</p>
+<ul>
+<li class="">Seamless integration with EVM-compatible tools and ecosystems, opening the network to a wider range of developers and users.</li>
+<li class="">Improved transaction reliability to eliminate dropped transactions and enhance overall network trust.</li>
+<li class="">Consistent block generation for predictable performance and better support for decentralized applications.</li>
+</ul>
+<p>XPHERE v2.0 represents a significant step forward, addressing the foundational challenges of its predecessor while paving the way for a more accessible and reliable blockchain ecosystem.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-technical-specifications"><span class="n">2</span>TECHNICAL SPECIFICATIONS</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="i-network-architecture">i. Network Architecture</h3>
+<p>XPHERE&#x27;s dual-chain architecture consists of the Main Chain and the Proof Chain. The Main Chain handles transaction processing and block finalization, while the Proof Chain focuses on validator selection and cryptographic proof generation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ii-node-requirements">ii. Node Requirements</h3>
+<p>The figures below are the protocol-level baseline for participating in Main Chain consensus. They describe the class of machine the protocol was designed around — they are not a provisioning specification:</p>
+<ul>
+<li class=""><strong>CPU</strong>: 16 CPUs</li>
+<li class=""><strong>RAM</strong>: 32 GB</li>
+<li class=""><strong>Storage</strong>: 500 GB+ SSD</li>
+<li class=""><strong>Network</strong>: High-speed internet connection with at least 100 Mbps bandwidth</li>
+</ul>
+<p>Storage is a moving requirement: block data alone already exceeds 300 GB, so operators should provision headroom beyond the current chain size rather than the baseline. Before provisioning any node, see <a class="" href="nodes-requirements.html">System Requirements</a> and <a class="" href="nodes-validator-node.html">Validator Node</a> for the current operating requirements, which reflect chain growth and are authoritative for operators.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iii-transaction-throughput">iii. Transaction Throughput</h3>
+<p>XPHERE&#x27;s architecture is designed to handle a high volume of transactions, with the Main Chain capable of processing up to 4,000 transactions per second (TPS).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-dual-chain-architecture"><span class="n">3</span>DUAL-CHAIN ARCHITECTURE</h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="i-main-chain-optimized-pbft-consensus">i. Main Chain: Optimized PBFT Consensus</h3>
+<p>The <strong>Main Chain</strong> in XPHERE&#x27;s dual-chain architecture adopts an optimized version of the <strong>Practical Byzantine Fault Tolerance (PBFT)</strong> consensus mechanism. This design resolves critical challenges in scalability and communication overhead that traditional PBFT systems face, while maintaining robust security and decentralization.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations-of-traditional-pbft">Limitations of Traditional PBFT</h4>
+<p>PBFT is widely recognized for its fault tolerance and high security. However, as the number of participating nodes increases, its communication overhead grows exponentially. The consensus process requires multiple stages, including:</p>
+<ol>
+<li class=""><strong>Request</strong>: A client submits a transaction to the network.</li>
+<li class=""><strong>Pre-Prepare</strong>: The primary node broadcasts the transaction request to all other nodes.</li>
+<li class=""><strong>Prepare</strong>: Nodes verify the request and exchange their prepared status.</li>
+<li class=""><strong>Commit</strong>: Nodes exchange commit messages to finalize consensus.</li>
+<li class=""><strong>Reply</strong>: A consensus decision is sent back to the client.</li>
+</ol>
+<p>In each stage, all nodes communicate with one another, resulting in excessive network traffic and resource consumption. This limitation has traditionally been mitigated by restricting the number of nodes participating in the consensus process, which risks reducing decentralization.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="xpheres-solution-council-and-committee">XPHERE’s Solution: Council and Committee</h4>
+<p>To address these challenges, XPHERE employs an <strong>optimized PBFT</strong> mechanism by introducing a <strong>Council</strong> and a <strong>Committee</strong> structure. This approach significantly reduces communication overhead while retaining the benefits of PBFT.</p>
+<ol>
+<li class=""><strong>Council Formation</strong>:<!-- -->
+<ul>
+<li class="">The Council is a governing body comprising selected nodes in the network.</li>
+<li class="">Members are chosen based on predefined criteria to ensure decentralization and fairness.</li>
+<li class="">Council membership is drawn from the <strong>Union</strong> — the network&#x27;s staked validator group described in <a href="#b-union-staking-and-reward-mechanism" class="">Union Staking and Reward Mechanism</a> — so the Council and Committee described here are formed from Union validator nodes.</li>
+</ul>
+</li>
+<li class=""><strong>Dynamic Committee Selection</strong>:<!-- -->
+<ul>
+<li class="">For each consensus round, a subset of Council members, the <strong>Committee</strong>, is randomly selected.</li>
+<li class="">The Committee handles the exchange of consensus messages, reducing the need for communication among all nodes.</li>
+</ul>
+</li>
+<li class=""><strong>Efficient Consensus Communication</strong>:<!-- -->
+<ul>
+<li class="">By confining message exchanges to the Committee, the communication load is drastically reduced.</li>
+<li class="">Even as the number of total nodes grows, the communication complexity remains constant or minimally affected.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="consensus-process-in-xpheres-main-chain">Consensus Process in XPHERE&#x27;s Main Chain</h4>
+<p>The modified PBFT consensus mechanism in XPHERE operates as follows:</p>
+<ol>
+<li class="">A client submits a transaction to the network.</li>
+<li class="">The Council receives the transaction and selects a Committee for the current round.</li>
+<li class="">The Committee exchanges and verifies consensus messages (e.g., Pre-Prepare, Prepare, Commit).</li>
+<li class="">Once consensus is reached, the Committee broadcasts the finalized decision to the network.</li>
+<li class="">The network responds to the client with the consensus result.</li>
+</ol>
+<p>This streamlined process ensures efficient communication and predictable performance, even as the network scales.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-advantages">Key Advantages</h4>
+<ul>
+<li class=""><strong>Improved Scalability</strong>: By limiting consensus communication to the Committee, the network avoids the exponential growth in overhead seen in traditional PBFT systems.</li>
+<li class=""><strong>Enhanced Security</strong>: Randomized Committee selection adds unpredictability, reducing risks from targeted attacks.</li>
+<li class=""><strong>Decentralization Maintained</strong>: While the Committee conducts consensus, the Council ensures broad representation and fairness.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="comparison-traditional-pbft-vs-xphere-pbft">Comparison: Traditional PBFT vs. XPHERE PBFT</h4>
+<table><thead><tr><th><strong>Feature</strong></th><th><strong>Traditional PBFT</strong></th><th><strong>XPHERE PBFT</strong></th></tr></thead><tbody><tr><td><strong>Communication Overhead</strong></td><td>Exponential (O(n²))</td><td>Limited to Committee (O(k²))</td></tr><tr><td><strong>Scalability</strong></td><td>Poor as network size grows</td><td>Scalable with Council-Committee model</td></tr><tr><td><strong>Decentralization</strong></td><td>Reduced due to node limits</td><td>Retained with Council representation</td></tr><tr><td><strong>Security</strong></td><td>Strong but resource-intensive</td><td>Strong with randomized Committee</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion">Conclusion</h4>
+<p>By integrating the Council and Committee structure, XPHERE’s Main Chain optimizes PBFT to meet the demands of modern blockchain ecosystems. This innovative approach not only ensures high performance and security but also lays the foundation for a scalable and decentralized future.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ii-proof-chain-pow-based-validation-layer">ii. Proof Chain: PoW-Based Validation Layer</h3>
+<p>The <strong>Proof Chain</strong> in XPHERE&#x27;s dual-chain architecture serves as a dedicated validation layer, designed to select validators and perform cryptographic proof computations. Its Proof-of-Work (PoW) operations are powered by <strong>xpHash</strong>, a purpose-built algorithm that succeeds the network&#x27;s original PoW at a deterministic activation height (see <a href="#xphash-the-proof-chains-native-proof-of-work-algorithm" class="">xpHash: The Proof Chain’s Native Proof-of-Work Algorithm</a>). Built upon well-established cryptographic primitives, xpHash ensures robust security and integrity within the network. Notably, transaction processing does not occur within the Proof Chain, as its sole purpose is to establish trust and validate validators efficiently.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="role-of-the-proof-chain">Role of the Proof Chain</h4>
+<p>The Proof Chain&#x27;s primary functions are:</p>
+<ol>
+<li class=""><strong>Validator Selection</strong>:<!-- -->
+<ul>
+<li class="">The Proof Chain is responsible for determining which nodes are eligible to participate as validators within the network.</li>
+<li class="">This process is secured through cryptographic proof generated by PoW operations.</li>
+</ul>
+</li>
+<li class=""><strong>Proof Generation</strong>:<!-- -->
+<ul>
+<li class="">Using the <strong>xpHash</strong> algorithm, nodes solve complex computational puzzles to produce proofs.</li>
+<li class="">The produced proof is a verifiable output that establishes the validator’s eligibility.</li>
+</ul>
+</li>
+<li class=""><strong>Supporting Security</strong>:<!-- -->
+<ul>
+<li class="">The computational difficulty of PoW ensures that the network remains resistant to tampering and Sybil attacks.</li>
+<li class="">This layer acts as a foundation of trust for the network’s operation.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="proof-chain-consensus-process">Proof Chain Consensus Process</h4>
+<ol>
+<li class="">Nodes compete to solve a PoW puzzle using the xpHash algorithm.</li>
+<li class="">The first node to generate a valid proof submits it to the network for verification.</li>
+<li class="">The proof is used to select the next validator(s) for the network.</li>
+<li class="">Once validators are selected, their role is passed to the Main Chain for transaction processing and block finalization.</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-characteristics-of-the-proof-chain">Key Characteristics of the Proof Chain</h4>
+<ol>
+<li class=""><strong>Dedicated Validation Layer</strong>:<!-- -->
+<ul>
+<li class="">The Proof Chain does not handle transaction processing, ensuring its focus remains solely on validation and proof generation.</li>
+</ul>
+</li>
+<li class=""><strong>Enhanced Security</strong>:<!-- -->
+<ul>
+<li class="">By using xpHash and PoW, the Proof Chain provides robust protection against attacks, including Sybil attacks and tampering.</li>
+</ul>
+</li>
+<li class=""><strong>Scalability through Specialization</strong>:<!-- -->
+<ul>
+<li class="">Offloading the validation process to the Proof Chain allows the Main Chain to focus on transaction processing, improving overall network efficiency.</li>
+</ul>
+</li>
+<li class=""><strong>Trust Foundation for the Main Chain</strong>:<!-- -->
+<ul>
+<li class="">Validators selected through the Proof Chain provide a trusted basis for the Main Chain’s operations.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="advantages-of-the-proof-chain">Advantages of the Proof Chain</h4>
+<table><thead><tr><th><strong>Feature</strong></th><th><strong>Benefit</strong></th></tr></thead><tbody><tr><td><strong>Secure Validator Selection</strong></td><td>Ensures only eligible nodes participate in consensus.</td></tr><tr><td><strong>xpHash PoW Integration</strong></td><td>Offers high security and verifiable proof generation.</td></tr><tr><td><strong>Specialized Function</strong></td><td>Avoids processing transactions, keeping the validation process lean.</td></tr><tr><td><strong>Scalable Architecture</strong></td><td>Allows the Main Chain to operate efficiently without validation overhead.</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="xphash-the-proof-chains-native-proof-of-work-algorithm">xpHash: The Proof Chain’s Native Proof-of-Work Algorithm</h4>
+<p>The Proof Chain employs <strong>xpHash</strong>, a Proof-of-Work algorithm designed specifically for the operational characteristics of the XPHERE network. Rather than relying solely on a general-purpose hash function, xpHash is purpose-built to align with the Proof Chain’s role as a dedicated validator-selection and proof-generation layer within XPHERE’s dual-chain architecture.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="design-objectives">Design Objectives</h5>
+<p>xpHash is governed by four design objectives that reflect XPHERE’s long-term direction:</p>
+<ol>
+<li class=""><strong>Network Stability</strong>:<!-- -->
+<ul>
+<li class="">xpHash is calibrated against the Proof Chain’s block production cadence and validator selection model.</li>
+<li class="">This alignment yields more predictable block intervals and a more stable progression of the Proof Chain over time.</li>
+</ul>
+</li>
+<li class=""><strong>Mining Environment Optimization</strong>:<!-- -->
+<ul>
+<li class="">The algorithm is shaped around the operational realities of miners and pools that support the XPHERE network.</li>
+<li class="">The result is a healthier, more sustainable, and more participation-friendly mining environment for ecosystem participants.</li>
+</ul>
+</li>
+<li class=""><strong>Headroom for Hardware and Ecosystem Expansion</strong>:<!-- -->
+<ul>
+<li class="">As the XPHERE ecosystem evolves to encompass new hardware profiles, new categories of participants, and new application domains, the Proof Chain must scale alongside that growth.</li>
+<li class="">xpHash provides the algorithmic headroom required to absorb such expansion without disruptive future migrations.</li>
+</ul>
+</li>
+<li class=""><strong>Foundation for a Long-Term Proof-of-Work Strategy</strong>:<!-- -->
+<ul>
+<li class="">xpHash is positioned not as an isolated change but as the basis of XPHERE’s multi-year Proof-of-Work roadmap.</li>
+<li class="">It enables coherent iteration and refinement of the Proof Chain within a single, unified algorithmic framework.</li>
+</ul>
+</li>
+</ol>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="cryptographic-foundation">Cryptographic Foundation</h5>
+<p>xpHash composes multiple well-established cryptographic primitives into a verifiable Proof-of-Work construction. The specific internal composition is treated as part of XPHERE&#x27;s protocol surface and is not detailed in this document. As a production-grade PoW algorithm, xpHash provides the following essential cryptographic properties:</p>
+<ul>
+<li class=""><strong>Collision Resistance</strong>: It is computationally infeasible to find two different inputs that produce the same output.</li>
+<li class=""><strong>Pre-image Resistance</strong>: It is virtually impossible to derive the original input from the output.</li>
+<li class=""><strong>Efficient Verification</strong>: Once a proof is generated, it can be quickly and easily verified by all nodes.</li>
+<li class=""><strong>Difficulty Adjustment</strong>: By requiring proofs to meet specific criteria, the network can dynamically adjust computational difficulty to control the time taken to find a valid proof.</li>
+</ul>
+<p>Together with the design objectives above, these properties give xpHash the security guarantees expected of a production PoW algorithm, while the XPHERE-specific design allows the Proof Chain to behave predictably under the network&#x27;s actual operational conditions.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="activation-parameters">Activation Parameters</h5>
+<p>xpHash is activated on the Proof Chain at deterministic block heights, providing a clean and verifiable upgrade boundary:</p>
+<table><thead><tr><th>Network</th><th>Activation Block</th><th>Configuration Parameter</th></tr></thead><tbody><tr><td>Testnet</td><td>327,400</td><td><code>XPHASH_FORK_BLOCK = 327400</code></td></tr><tr><td>Mainnet</td><td>1,740,000</td><td><code>XPHASH_FORK_BLOCK = 1740000</code></td></tr></tbody></table>
+<p>Blocks below the activation height are validated under the prior rule set, while blocks at and above the activation height are produced and validated under xpHash. This height-based activation preserves the complete history of the chain and defines a deterministic boundary for the algorithmic upgrade.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-1">Conclusion</h4>
+<p>The Proof Chain is an integral part of XPHERE’s dual-chain architecture, providing a secure and efficient mechanism for validator selection through Proof-of-Work. With <strong>xpHash</strong> as its native proof algorithm, the Proof Chain operates on a foundation designed specifically for the XPHERE ecosystem — reinforcing network stability, optimizing the mining environment, and establishing a coherent basis for the network’s long-term Proof-of-Work direction.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iii-interaction-between-main-chain-and-proof-chain">iii. Interaction Between Main Chain and Proof Chain</h3>
+<p><img decoding="async" loading="lazy" alt="XPHERE Architecture" src="https://docs.x-phere.com/assets/images/xphere-architecture-53b61b64aa755e2041fda63bc61316b0.jpeg" width="1920" height="1080" class="img_ev3q"></p>
+<p>The <strong>Main Chain</strong> and <strong>Proof Chain</strong> in XPHERE&#x27;s dual-chain architecture operate in a tightly integrated manner, ensuring seamless communication and functionality. The two chains work collaboratively through <strong>algorithmic computations</strong> and <strong>RPC (Remote Procedure Call) communication</strong> to maintain a synchronized network state and facilitate validator selection.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-collaboration-mechanisms">Key Collaboration Mechanisms</h4>
+<ol>
+<li class=""><strong>Status Synchronization via RPC Communication</strong>:<!-- -->
+<ul>
+<li class="">The Proof Chain and Main Chain regularly exchange data through efficient RPC communication protocols.</li>
+<li class="">This process ensures that the current state of both chains remains synchronized, enabling real-time updates on validator statuses and system metrics.</li>
+</ul>
+</li>
+<li class=""><strong>Validator Selection Coordination</strong>:<!-- -->
+<ul>
+<li class="">The Proof Chain performs intensive <strong>xpHash PoW computations</strong> to generate proofs and determine eligible validators.</li>
+<li class="">These selected validators are then communicated to the Main Chain, which assigns them roles in block validation and consensus processes.</li>
+<li class="">The collaborative approach ensures fairness and reliability in validator selection, strengthening network security and decentralization.</li>
+</ul>
+</li>
+<li class=""><strong>Algorithmic Data Exchange</strong>:<!-- -->
+<ul>
+<li class="">Computation results, such as PoW proofs and validator scores, are dynamically shared between the chains.</li>
+<li class="">This exchange allows the Main Chain to make informed decisions about block production and consensus finalization.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="interaction-flow">Interaction Flow</h4>
+<ol>
+<li class=""><strong>Proof Generation on the Proof Chain</strong>:<!-- -->
+<ul>
+<li class="">Nodes compete to solve PoW challenges, and the Proof Chain generates cryptographic proofs.</li>
+</ul>
+</li>
+<li class=""><strong>Validator Status Update via RPC</strong>:<!-- -->
+<ul>
+<li class="">The Proof Chain shares validated proof data with the Main Chain.</li>
+<li class="">The Main Chain updates its validator registry based on the received data.</li>
+</ul>
+</li>
+<li class=""><strong>Consensus Execution on the Main Chain</strong>:<!-- -->
+<ul>
+<li class="">Validators selected by the Proof Chain participate in the Main Chain&#x27;s consensus mechanism.</li>
+<li class="">This ensures a continuous and transparent validator rotation.</li>
+</ul>
+</li>
+<li class=""><strong>State Feedback to the Proof Chain</strong>:<!-- -->
+<ul>
+<li class="">The Main Chain provides feedback to the Proof Chain, including validator performance and system status, enabling adjustments in future validator selection processes.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="advantages-of-this-integration">Advantages of This Integration</h4>
+<table><thead><tr><th><strong>Feature</strong></th><th><strong>Benefit</strong></th></tr></thead><tbody><tr><td><strong>Real-Time Synchronization</strong></td><td>Maintains a consistent network state across both chains.</td></tr><tr><td><strong>Secure Validator Selection</strong></td><td>Ensures fairness and reliability through collaborative data exchange.</td></tr><tr><td><strong>Efficient Resource Allocation</strong></td><td>Offloads computation-heavy tasks to the Proof Chain, optimizing network performance.</td></tr><tr><td><strong>Enhanced Scalability</strong></td><td>Modular interaction between chains allows the network to scale seamlessly.</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-2">Conclusion</h4>
+<p>The integration of the Main Chain and Proof Chain through algorithmic computations and RPC communication is a cornerstone of XPHERE&#x27;s dual-chain architecture. This collaboration enables secure, reliable validator selection and efficient state synchronization, ensuring the network operates cohesively and scales effectively to meet the demands of decentralized applications.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-consensus"><span class="n">4</span>CONSENSUS</h2>
+<p>XPHERE does not rely on a single consensus mechanism. Consensus is divided across the two chains of the dual-chain architecture described in Sections 2 and 3:</p>
+<ul>
+<li class=""><strong>Proof Chain — Proof of Work.</strong> Miners compete on the <strong>xpHash</strong> Proof-of-Work algorithm. This work secures the network and drives validator selection; the Proof Chain does not process transactions.</li>
+<li class=""><strong>Main Chain — Optimized PBFT.</strong> The <strong>Union</strong> performs the optimized PBFT process described in <a href="#i-main-chain-optimized-pbft-consensus" class="">Main Chain: Optimized PBFT Consensus</a>, producing block consensus and finality.</li>
+</ul>
+<p>Two terms are used throughout this document and should not be confused. The <strong>Union</strong> is the <em>group</em>: the set of staked members that participates in Main Chain consensus, governance, and reward distribution. <strong>Validator</strong> is the <em>technical role</em>: every Union member operates a validator node, so a Union member is a validator, and the Council and Committee of Section 3 are formed from Union validators. <strong>Miner</strong> refers to a separate role — a participant contributing xpHash hash power to the Proof Chain, which requires no Union membership.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="i-consensus-mechanism-trust-and-security-with-proof-of-work-pow">i. Consensus Mechanism: Trust and Security with Proof of Work (PoW)</h3>
+<p>On the <strong>Proof Chain</strong>, trust and security are established through <strong>Proof of Work (PoW)</strong>, a time-tested method that reinforces the network&#x27;s integrity. PoW leverages the computational power of participants to protect the chain from malicious activities while ensuring data integrity. In XPHERE, PoW is scoped to validator selection and proof generation rather than to transaction ordering, which the Main Chain handles through PBFT.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-principles-of-pow">Core Principles of PoW</h4>
+<ol>
+<li class=""><strong>Computational Effort</strong>:<!-- -->
+<ul>
+<li class="">Miners compete to solve complex mathematical puzzles, a process requiring significant computational resources.</li>
+<li class="">The first miner to produce a valid proof gains the right to add a new block to the Proof Chain, and that proof feeds the network&#x27;s validator selection process.</li>
+</ul>
+</li>
+<li class=""><strong>Verification of Work</strong>:<!-- -->
+<ul>
+<li class="">The result of the computation (proof) can be easily verified by other nodes in the network, ensuring fairness and validity in the consensus process.</li>
+</ul>
+</li>
+<li class=""><strong>Economic Incentives</strong>:<!-- -->
+<ul>
+<li class="">Miners are rewarded for their computational efforts, creating a strong incentive for honest participation. The miner share of each block reward is set out in <a href="#e-distribution-model" class="">Distribution Model</a>.</li>
+<li class="">The high cost of computation acts as a deterrent against malicious actions, as any attempt to manipulate the network would require disproportionate resources.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pow-and-network-security">PoW and Network Security</h4>
+<ol>
+<li class=""><strong>Resistance to Attacks</strong>:<!-- -->
+<ul>
+<li class=""><strong>Sybil Attack Prevention</strong>: PoW requires computational resources that make it economically impractical for attackers to generate fake nodes at scale.</li>
+<li class=""><strong>51% Attack Defense</strong>: The cost of acquiring a majority of the network&#x27;s computational power rises as the network grows, and — as described in <a href="#ii-51-attack-mitigation-in-xphere" class="">51% Attack Mitigation in XPHERE</a> — hash power alone does not confer control over Main Chain consensus.</li>
+</ul>
+</li>
+<li class=""><strong>Immutable Ledger</strong>:<!-- -->
+<ul>
+<li class="">Altering the blockchain would require re-computing the PoW for all subsequent blocks, which becomes exponentially harder over time.</li>
+</ul>
+</li>
+<li class=""><strong>Decentralized Trust</strong>:<!-- -->
+<ul>
+<li class="">Trust is distributed across the network, removing the need for a centralized authority.</li>
+<li class="">The consensus process is designed so that no single participant can unilaterally manipulate the system.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="optimized-pow-in-xphere">Optimized PoW in XPHERE</h4>
+<p>XPHERE’s implementation of PoW is tailored to its dual-chain architecture, with enhancements to improve efficiency and scalability:</p>
+<ol>
+<li class=""><strong>Specialized Role in the Proof Chain</strong>:<!-- -->
+<ul>
+<li class="">PoW is exclusively used in the <strong>Proof Chain</strong> for validator selection, allowing the network to offload computationally heavy tasks from the Main Chain.</li>
+<li class="">This separation ensures that the Main Chain remains optimized for transaction processing and block finalization.</li>
+</ul>
+</li>
+<li class=""><strong>Efficient Computation Design</strong>:<!-- -->
+<ul>
+<li class="">XPHERE integrates <strong>xpHash</strong>, a Proof-of-Work algorithm composed of well-established cryptographic primitives, as the backbone of its PoW mechanism. This provides robust security through collision resistance and pre-image resistance while ensuring efficient validation of computational proofs.</li>
+</ul>
+</li>
+<li class=""><strong>Energy Optimization</strong>:<!-- -->
+<ul>
+<li class="">While maintaining PoW’s inherent security benefits, XPHERE incorporates mechanisms to minimize computational waste, addressing common energy concerns associated with traditional PoW networks.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits-of-pow-in-xphere">Benefits of PoW in XPHERE</h4>
+<ul>
+<li class=""><strong>Proven Security</strong>: PoW provides a secure and resilient consensus method, as demonstrated by leading blockchain networks like Bitcoin.</li>
+<li class=""><strong>Reliable Validation</strong>: Miners must perform verifiable computational work, and the resulting proofs can be independently checked by any node, minimizing fraudulent activities and maintaining the blockchain&#x27;s integrity.</li>
+<li class=""><strong>Decentralization</strong>: PoW ensures the distribution of power across the network, reducing risks of centralization and enhancing trust among participants.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-role-of-pow-in-xphere">The Role of PoW in XPHERE</h4>
+<p>In XPHERE, PoW is a cornerstone of its validator selection process. The use of <strong>xpHash</strong> for computational tasks ensures a secure, fair, and transparent mechanism. By isolating validation tasks to the Proof Chain, XPHERE enhances the Main Chain&#x27;s efficiency, enabling the network to achieve high performance without compromising security or scalability.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ii-51-attack-mitigation-in-xphere">ii. 51% Attack Mitigation in XPHERE</h3>
+<p>XPHERE&#x27;s consensus design is intended to make <strong>51% attacks</strong> — a prevalent concern in PoW-based systems — economically impractical. Mining itself is permissionless: any participant running supported xpHash mining hardware may contribute hash power to the Proof Chain, and no approval is required to mine. What the design constrains is the path from hash power to block acceptance, because Proof Chain work alone does not finalize blocks — PBFT consensus among Union validators on the Main Chain does.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="mechanisms-that-raise-the-cost-of-a-51-attack">Mechanisms That Raise the Cost of a 51% Attack</h4>
+<ol>
+<li class=""><strong>Separation of Mining from Finality</strong>:<!-- -->
+<ul>
+<li class="">Miners produce proofs on the Proof Chain; blocks are agreed and finalized by the Union through PBFT consensus on the Main Chain.</li>
+<li class="">Accumulating hash power therefore does not, on its own, give an actor the ability to rewrite Main Chain history.</li>
+</ul>
+</li>
+<li class=""><strong>Randomized Miner-to-Validator Assignment</strong>:<!-- -->
+<ul>
+<li class="">Miners cannot choose which Union node their work is submitted to.</li>
+<li class="">The network assigns miners to Union nodes in a randomized manner, which is designed to prevent an attacker from concentrating work on a chosen validator and to make collusion between a miner and a specific validator substantially harder.</li>
+</ul>
+</li>
+<li class=""><strong>Separation of Miners and the Union</strong>:<!-- -->
+<ul>
+<li class="">Miners operate independently and have no influence over which Union node validates their work.</li>
+<li class="">The two roles are economically and operationally distinct: mining requires hash power, while Union membership requires a stake of <strong>35 million XP</strong> per member (see <a href="#b-union-staking-and-reward-mechanism" class="">Union Staking and Reward Mechanism</a>).</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-this-design-matters">Why This Design Matters</h4>
+<ul>
+<li class=""><strong>Higher Cost of Coordinated Attacks</strong>:<br>
+<!-- -->Controlling block production would require both a majority of Proof Chain hash power <em>and</em> control of the Union validator set that performs Main Chain consensus. Requiring both a hardware position and a large staked position makes such an attack substantially more expensive than acquiring hash power alone.</li>
+<li class=""><strong>Fair and Decentralized Validation</strong>:<br>
+<!-- -->Randomized miner-to-validator assignment is designed to prevent any single entity from monopolizing validation, reinforcing the network&#x27;s decentralized nature.</li>
+<li class=""><strong>Verifiable Participation</strong>:<br>
+<!-- -->Union membership, per-member stake, and proposed-block counts are published on the network explorers, so the distribution of consensus power can be independently checked at <a href="https://xpscan.io/unions" target="_blank" rel="noopener noreferrer" class="">xpscan.io/unions</a> or <a href="https://xp.tamsa.io/main/unions" target="_blank" rel="noopener noreferrer" class="">xp.tamsa.io/main/unions</a>.</li>
+</ul>
+<p>No consensus system can offer an absolute guarantee against attack. The objective of this design is narrower and testable: to make a 51% attack economically irrational and publicly observable, while preserving open participation in mining and decentralized validation.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-economic-model-of-the-coin"><span class="n">5</span>ECONOMIC MODEL OF THE COIN</h2>
+<p>As XPHERE operates on its own mainnet, the native asset is classified as a <strong>coin</strong> rather than a token. The coin’s distribution, emission mechanism, and utility are carefully designed to ensure a sustainable and balanced ecosystem for the network&#x27;s growth.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="a-coin-utility-and-role-in-the-network">A. Coin Utility and Role in the Network</h3>
+<p>XPHERE’s coin serves as the foundation of the ecosystem, enabling key functionalities such as:</p>
+<ol>
+<li class=""><strong>Transaction Fees</strong>:<!-- -->
+<ul>
+<li class="">Used for processing and validating transactions on the Main Chain.</li>
+</ul>
+</li>
+<li class=""><strong>Staking</strong>:<!-- -->
+<ul>
+<li class="">Validators are required to stake coins to participate in consensus, ensuring alignment with the network’s security and integrity.</li>
+</ul>
+</li>
+<li class=""><strong>Incentives for Miners and the Union</strong>:<!-- -->
+<ul>
+<li class="">Coins are rewarded to Proof Chain miners and to Union validator nodes, driving active network participation. See <a href="#e-distribution-model" class="">Distribution Model</a> for the exact split.</li>
+</ul>
+</li>
+<li class=""><strong>Governance</strong>:<!-- -->
+<ul>
+<li class="">Coin holders may participate in future governance mechanisms, influencing decisions related to network upgrades and policies.</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b-union-staking-and-reward-mechanism">B. Union Staking and Reward Mechanism</h3>
+<p>XPHERE introduces a <strong>Union staking system</strong> that allows network participants to contribute to network security and governance while earning rewards through block validation activities.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="union-participation-requirements">Union Participation Requirements</h4>
+<ol>
+<li class=""><strong>Staking Threshold</strong>:<!-- -->
+<ul>
+<li class="">To participate as a Union member, participants must stake exactly <strong>35 million XP coins</strong>.</li>
+<li class="">This substantial staking requirement ensures that only committed participants with significant network investment can join the Union.</li>
+</ul>
+</li>
+<li class=""><strong>Node Address Registration</strong>:<!-- -->
+<ul>
+<li class="">During the staking process, participants must provide a valid <strong>node address</strong> that will be associated with their Union membership.</li>
+<li class="">This node address serves as the identifier for reward distribution and network participation tracking.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="union-reward-distribution">Union Reward Distribution</h4>
+<ol>
+<li class=""><strong>Block Proposer Selection and Rewards</strong>:<!-- -->
+<ul>
+<li class="">When a Union member&#x27;s node address serves as the <strong>block proposer</strong> in the Union rotation, that specific Union member receives <strong>40% of the block reward</strong> for the proposed block.</li>
+</ul>
+</li>
+<li class=""><strong>Reward Distribution Logic</strong>:<!-- -->
+<ul>
+<li class="">Union block-proposer turns follow a <strong>round-robin rotation</strong>: eligible Union members are cycled sequentially in a predetermined order.</li>
+<li class="">This rotation is distinct from Proof Chain mining — miners compete through xpHash Proof-of-Work to seal Proof Chain blocks, while Union proposer turns advance deterministically through the rotation.</li>
+<li class="">Once a block is successfully validated, the Union member who serves as the <strong>proposer at the reward distribution moment</strong> on the Main Chain receives <strong>40% of that block&#x27;s reward</strong> automatically distributed to their registered node address.</li>
+</ul>
+</li>
+<li class=""><strong>Round-Robin Proposer Rotation</strong>:<!-- -->
+<ul>
+<li class="">The network maintains a sequential order of all eligible Union validators in the round-robin cycle.</li>
+<li class="">Each Union member gets their turn to serve as block proposer based on this predetermined rotation.</li>
+<li class="">This systematic approach distributes proposer opportunities evenly among all participating Union members.</li>
+<li class="">Because the rotation is deterministic, each member&#x27;s position in the cycle — and therefore when its proposer turn comes around — is predictable. The rotation determines turn order only; the value of the rewards attached to a turn depends on the emission schedule and on network activity, both of which change over time.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits-of-union-participation">Benefits of Union Participation</h4>
+<ul>
+<li class=""><strong>Predictable Proposer Turns</strong>: The deterministic rotation distributes block-proposal opportunities evenly across members, so participation is not dependent on competing for a turn.</li>
+<li class=""><strong>Network Governance</strong>: Union members gain enhanced governance rights within the XPHERE ecosystem.</li>
+<li class=""><strong>Long-term Alignment</strong>: The substantial staking requirement aligns Union members&#x27; interests with the network&#x27;s long-term success.</li>
+<li class=""><strong>Security Contribution</strong>: Union staking enhances overall network security through increased stake-based participation.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="c-emission-mechanism">C. Emission Mechanism</h3>
+<ol>
+<li class=""><strong>Total Supply</strong>:<!-- -->
+<ul>
+<li class="">The total coin supply is capped at 5.5 billion coins, combining the legacy token distribution with a long-term emission schedule.</li>
+<li class=""><strong>1.5 billion coins</strong> were pre-distributed based on the total supply of XPHERE 1.0, ensuring continuity for existing holders.</li>
+<li class="">The remaining <strong>4 billion coins</strong> will be distributed over 100 years as mining and validation rewards.</li>
+<li class="">This structure ensures both scarcity and long-term value preservation.</li>
+</ul>
+</li>
+<li class=""><strong>Deflationary Model</strong>:<!-- -->
+<ul>
+<li class="">The emission follows a <strong>26.28% annual reduction model</strong>, gradually decreasing the reward for miners and validators each year.</li>
+<li class="">This deflationary mechanism promotes scarcity, incentivizing early participation while maintaining economic stability over time.</li>
+</ul>
+</li>
+<li class=""><strong>Block Reward System</strong>:<!-- -->
+<ul>
+<li class=""><strong>Reward Adjustment Cycle</strong>: Block rewards are adjusted every <strong>31,536,000 blocks</strong>, creating predictable emission cycles.</li>
+<li class=""><strong>Reward Distribution Frequency</strong>: Rewards are distributed every <strong>60 blocks</strong>, ensuring regular and consistent compensation for network participants.</li>
+<li class=""><strong>Transaction-Based Rewards</strong>: Each block provides transaction-based rewards, creating direct incentives for transaction processing and network activity.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="emission-schedule-over-100-years">Emission Schedule Over 100 Years</h4>
+<p>The following table demonstrates the systematic reduction of mining rewards over a 100-year period. Emission is minted once per 60-block cycle — approximately once per minute — so the middle column states the amount minted per cycle, not per individual block:</p>
+<table><thead><tr><th>Year</th><th>Annual Mining Reward</th><th>Reward per 60-Block Cycle</th><th>Cumulative Supply</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>1,500,000,000</td></tr><tr><td>1</td><td>1,051,200,000</td><td>2,000</td><td>2,551,200,000</td></tr><tr><td>2</td><td>774,944,640</td><td>1,474.4</td><td>3,326,144,640</td></tr><tr><td>3</td><td>571,289,188.608</td><td>1,086.92768</td><td>3,897,433,828</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>98</td><td>0.00015047</td><td>0.00000029</td><td>5,500,000,000</td></tr><tr><td>99</td><td>0.00011093</td><td>0.00000021</td><td>5,500,000,000</td></tr><tr><td>100</td><td>0.00008178</td><td>0.00000016</td><td>5,500,000,000</td></tr></tbody></table>
+<p>At a one-second block time, a 60-block cycle occurs 525,600 times per year, so the Year 1 figure of 2,000 XP per cycle corresponds to the 1,051,200,000 XP annual emission shown in the table.</p>
+<p><strong>Total Emission Over 100 Years</strong>: 4,000,000,000 XP. The 5,500,000,000 XP figure in the Cumulative Supply column is the total supply, which comprises this 100-year emission plus the 1,500,000,000 XP pre-distribution.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>The first reduction cycle has already completed. The network is currently minting <strong>1,474.4 XP per 60-block cycle</strong>, corresponding to the Year 2 row above.</p></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-characteristics-of-the-emission-schedule">Key Characteristics of the Emission Schedule:</h4>
+<ul>
+<li class=""><strong>Predictable Decline</strong>: The 26.28% annual reduction creates a predictable and transparent emission curve</li>
+<li class=""><strong>Long-term Sustainability</strong>: The model ensures network incentives remain viable for decades while maintaining scarcity</li>
+<li class=""><strong>Early Adopter Advantage</strong>: Higher initial rewards incentivize early network participation and security</li>
+<li class=""><strong>Mathematical Precision</strong>: The emission schedule is algorithmically determined, ensuring fairness and transparency</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="d-transaction-fee-burn-mechanism">D. Transaction Fee Burn Mechanism</h3>
+<p>XPHERE implements a <strong>50% transaction fee burn mechanism</strong> as a cornerstone of its sustainable economic model, designed to create long-term value preservation and network stability. The remaining half of every fee is not retained by a single party — it is distributed to the participants that operate the network.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-fee-distribution">Transaction Fee Distribution</h4>
+<p>Every transaction fee collected on the network is split four ways:</p>
+<table><thead><tr><th>Recipient</th><th>Share</th></tr></thead><tbody><tr><td>Burn</td><td><strong>50%</strong></td></tr><tr><td>Union</td><td><strong>20%</strong></td></tr><tr><td>Miner</td><td><strong>20%</strong></td></tr><tr><td>Foundation</td><td><strong>10%</strong></td></tr></tbody></table>
+<ul>
+<li class=""><strong>Burn (50%)</strong> is permanently removed from circulation.</li>
+<li class=""><strong>Union (20%)</strong> compensates Union validators for Main Chain consensus and block finalization.</li>
+<li class=""><strong>Miner (20%)</strong> compensates Proof Chain miners for xpHash Proof-of-Work.</li>
+<li class=""><strong>Foundation (10%)</strong> funds network operations and ecosystem development.</li>
+</ul>
+<p>This split applies to transaction fees only. It is separate from the minted block reward, which is divided 40% Union / 40% Miner / 20% Foundation as set out in <a href="#e-distribution-model" class="">Distribution Model</a>.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="balanced-deflation">Balanced Deflation</h4>
+<ol>
+<li class=""><strong>Controlled Network Activity Mitigation</strong>:<!-- -->
+<ul>
+<li class="">The burn mechanism provides balanced deflationary pressure to prevent excessive network activity from causing inflationary effects.</li>
+<li class="">By permanently removing 50% of transaction fees from circulation, the system maintains economic equilibrium even during high-usage periods.</li>
+</ul>
+</li>
+<li class=""><strong>Value Stability Through Appropriate Inflation Pressure Management</strong>:<!-- -->
+<ul>
+<li class="">The burn mechanism works synergistically with the 26.28% annual emission reduction to ensure optimal inflation control.</li>
+<li class="">This dual-deflationary approach creates a stable foundation for long-term value preservation.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="participant-incentive-preservation">Participant Incentive Preservation</h4>
+<ol>
+<li class=""><strong>Sufficient Reward Maintenance</strong>:<!-- -->
+<ul>
+<li class="">While 50% of fees are burned, the remaining 50% is routed to the participants that secure the network — 20% to the Union, 20% to miners, and 10% to the Foundation.</li>
+<li class="">This balance maintains both validator and miner participation, each of which is essential to a different half of the dual-chain consensus.</li>
+</ul>
+</li>
+<li class=""><strong>Decentralized Consensus Mechanism Sustainability</strong>:<!-- -->
+<ul>
+<li class="">The distributed portion of transaction fees supports the long-term viability of the consensus mechanism as block emission declines.</li>
+<li class="">Union validators and miners remain economically incentivized to maintain network security and performance.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="transparency-and-predictability">Transparency and Predictability</h4>
+<ol>
+<li class=""><strong>Clear and Reliable Burn Policy for Market Confidence</strong>:<!-- -->
+<ul>
+<li class="">The fixed 50% burn rate provides market participants with transparent and predictable tokenomics.</li>
+<li class="">This clarity enhances investor confidence and supports informed decision-making within the ecosystem.</li>
+</ul>
+</li>
+<li class=""><strong>Democratic Policy Decision Process Through Governance</strong>:<!-- -->
+<ul>
+<li class="">Future adjustments to the burn mechanism can be implemented through community governance.</li>
+<li class="">This democratic approach ensures that policy changes reflect the collective interests of network participants.</li>
+</ul>
+</li>
+</ol>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="economic-impact-and-benefits">Economic Impact and Benefits</h4>
+<p>The 50% burn mechanism creates several key advantages for the XPHERE ecosystem:</p>
+<ul>
+<li class=""><strong>Usage-Based Scarcity</strong>: Higher network activity directly correlates with increased coin burns, creating a positive feedback loop between adoption and value preservation.</li>
+<li class=""><strong>Long-term Sustainability</strong>: The mechanism ensures that network growth contributes to coin scarcity rather than dilution, supporting sustainable economic growth.</li>
+<li class=""><strong>Market Stability</strong>: By providing predictable deflationary pressure, the burn mechanism helps stabilize coin value against market volatility.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e-distribution-model">E. Distribution Model</h3>
+<p>Each minted block reward is distributed across three recipients, balancing network operation, mining participation, and Union-based validation:</p>
+<table><thead><tr><th>Recipient</th><th>Share</th></tr></thead><tbody><tr><td>Foundation</td><td><strong>20%</strong></td></tr><tr><td>Miner</td><td><strong>40%</strong></td></tr><tr><td>Union</td><td><strong>40%</strong></td></tr></tbody></table>
+<ul>
+<li class=""><strong>Miner (40%)</strong> rewards Proof-of-Work participants securing the Proof Chain.</li>
+<li class=""><strong>Union (40%)</strong> is distributed to Union members through the block-proposer rotation described in <a href="#b-union-staking-and-reward-mechanism" class="">Union Staking and Reward Mechanism</a>.</li>
+<li class=""><strong>Foundation (20%)</strong> funds ongoing network operations and ecosystem development.</li>
+</ul>
+<p>This table covers minted block rewards. Transaction fees follow a different split — 50% burned, 20% Union, 20% Miner, 10% Foundation — described in <a href="#d-transaction-fee-burn-mechanism" class="">Transaction Fee Burn Mechanism</a>.</p>
+<p><img decoding="async" loading="lazy" alt="Distribution Model" src="https://docs.x-phere.com/assets/images/distribution-model-1bf8d3d6e63de8d03d6d8cd256ad1721.png" width="1146" height="658" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-ethereum-compatibility-in-xphere"><span class="n">6</span>ETHEREUM COMPATIBILITY IN XPHERE</h2>
+<p>XPHERE is designed to ensure <strong>seamless compatibility with Ethereum</strong>, leveraging its established ecosystem while providing the scalability and flexibility of a next-generation blockchain. By supporting Ethereum&#x27;s widely adopted <strong>EVM (Ethereum Virtual Machine)</strong> standard, XPHERE opens its network to developers, tools, and decentralized applications (dApps) that already operate within the Ethereum ecosystem.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="i-key-aspects-of-ethereum-compatibility">i. Key Aspects of Ethereum Compatibility</h3>
+<ol>
+<li class=""><strong>EVM Compatibility</strong>:<!-- -->
+<ul>
+<li class="">XPHERE supports the execution of smart contracts written in <strong>Solidity</strong>, the primary programming language used on Ethereum.</li>
+<li class="">Developers can deploy existing Ethereum-based dApps directly on XPHERE with minimal changes, reducing migration costs and time.</li>
+</ul>
+</li>
+<li class=""><strong>Cross-Chain Interoperability</strong>:<!-- -->
+<ul>
+<li class="">XPHERE&#x27;s architecture allows seamless interaction with Ethereum, enabling assets and data to move between the two networks.</li>
+<li class="">This interoperability creates a bridge for users and developers to leverage the strengths of both ecosystems.</li>
+</ul>
+</li>
+<li class=""><strong>Tool Integration</strong>:<!-- -->
+<ul>
+<li class="">Popular Ethereum tools such as <strong>MetaMask</strong>, <strong>Truffle</strong>, and <strong>Hardhat</strong> are fully compatible with XPHERE, ensuring developers can use familiar workflows.</li>
+<li class="">This lowers the barrier to entry for developers transitioning to XPHERE while maintaining a consistent user experience.</li>
+</ul>
+</li>
+<li class=""><strong>Scalable Infrastructure</strong>:<!-- -->
+<ul>
+<li class="">While maintaining compatibility with Ethereum, XPHERE addresses Ethereum&#x27;s scalability challenges by leveraging its dual-chain architecture.</li>
+<li class="">XPHERE offers higher transaction throughput and lower fees, making it a viable alternative for dApps facing performance bottlenecks on Ethereum.</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ii-benefits-of-ethereum-compatibility">ii. Benefits of Ethereum Compatibility</h3>
+<ol>
+<li class=""><strong>Access to a Large Ecosystem</strong>:<!-- -->
+<ul>
+<li class="">By aligning with Ethereum standards, XPHERE taps into the vast Ethereum developer community and its existing dApps, fostering rapid adoption.</li>
+</ul>
+</li>
+<li class=""><strong>User and Developer Familiarity</strong>:<!-- -->
+<ul>
+<li class="">Developers familiar with Ethereum can easily transition to XPHERE without needing to learn a new language or framework.</li>
+<li class="">End-users benefit from a familiar wallet and dApp experience, ensuring a smooth onboarding process.</li>
+</ul>
+</li>
+<li class=""><strong>Enhanced Performance for dApps</strong>:<!-- -->
+<ul>
+<li class="">dApps running on XPHERE enjoy faster transaction speeds and lower costs, addressing Ethereum&#x27;s congestion and high gas fee issues.</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iii-building-a-bridge-between-ecosystems">iii. Building a Bridge Between Ecosystems</h3>
+<p>XPHERE’s Ethereum compatibility ensures that it acts as a <strong>complementary network</strong> rather than a competing platform. By creating a bridge between the two ecosystems, XPHERE enables developers and users to leverage Ethereum’s mature ecosystem alongside XPHERE’s scalable and efficient infrastructure.</p>
+<p>This strategic interoperability not only accelerates adoption but also positions XPHERE as a critical player in the evolution of blockchain ecosystems, supporting both innovation and integration across networks.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-roadmap"><span class="n">7</span>ROADMAP</h2>
+<p>XPHERE&#x27;s development proceeds in three phases: commercializing the upgraded mainnet, expanding an open ecosystem on top of stable protocol infrastructure, and scaling real-usage applications. Items are marked <strong>Delivered</strong> where they are already live on the network; all other items are forward-looking plans and are subject to change based on network conditions, ecosystem readiness, and Foundation decisions.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="i-2025--network-commercialization-and-global-ecosystem-foundation">i. 2025 — Network Commercialization and Global Ecosystem Foundation</h3>
+<p>2025 established the commercial foundation of XPHERE on the upgraded mainnet — validator participation, liquidity access, global infrastructure partnerships, and the groundwork for the dApp ecosystem.</p>
+<p><strong>1Q–2Q: XPHERE 2.0 Launch and Liquidity</strong></p>
+<ul>
+<li class=""><strong>XPHERE 2.0 Mainnet Launch</strong> <em>(Delivered)</em> — The upgraded mainnet launched with full EVM compatibility and enhanced network performance, enabling developers to deploy Solidity-based applications with existing EVM tooling.</li>
+<li class=""><strong>Union Validator Onboarding</strong> <em>(Delivered)</em> — Onboarding of Union Validators began, building the foundation for decentralization, governance participation, and a long-term validator ecosystem.</li>
+<li class=""><strong>CEX Listing</strong> <em>(Delivered)</em> — XP was listed on centralized exchanges to broaden global liquidity access and ecosystem participation.</li>
+<li class=""><strong>Ultra-Low Gas Fee Optimization</strong> <em>(Delivered)</em> — Transaction fees were optimized for high-frequency, micro-payment, and real-usage applications.</li>
+</ul>
+<p><strong>3Q–4Q: Infrastructure Expansion and dApp Ecosystem Preparation</strong></p>
+<ul>
+<li class=""><strong>Network Infrastructure Expansion</strong> <em>(Delivered)</em> — Network capacity was expanded to reliably support large-scale traffic, enterprise-grade use cases, and future dApp deployment.</li>
+<li class=""><strong>Global Union Partner Onboarding</strong> <em>(Delivered)</em> — Global blockchain data, infrastructure, and ecosystem partners began onboarding into the Union Validator network, strengthening technical and ecosystem credibility.</li>
+<li class=""><strong>Protocol Upgrades and Network Stability</strong> — Staged review of the protocol upgrades and hard forks required to improve security, operational stability, and validator/node participation.</li>
+<li class=""><strong>Ecosystem Expansion Preparation</strong> — Preparation of the dApp expansion strategy, developer support programs, early ecosystem programs, and infrastructure partnerships for DeFi, RWA, utility, and enterprise applications.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ii-2026--open-ecosystem-expansion-and-public-infrastructure-growth">ii. 2026 — Open Ecosystem Expansion and Public Infrastructure Growth</h3>
+<p>In 2026, XPHERE moves beyond core infrastructure to focus on open ecosystem expansion as an independent public Layer 1 — expanding Union Validators, hardening the protocol, supporting dApp builders, growing liquidity, and laying the groundwork for stablecoin, payment, tokenization, and B2B/B2G-compatible applications.</p>
+<p><strong>1Q: Ecosystem Fund and Union Expansion</strong></p>
+<ul>
+<li class=""><strong>XPHERE Ecosystem Fund</strong> — Launch of a fund supporting promising projects on the mainnet, focused on DeFi, RWA, wallets, developer tools, bridges, oracles, DID, payments, stablecoins, and utility applications.</li>
+<li class=""><strong>Milestone-Based Ecosystem Support</strong> — A planned approach in which support would be tied to concrete development, deployment, user-growth, liquidity, and integration progress rather than disbursed as simple grants. No milestone structure has been published; see <a class="" href="grant-program.html">Grant Program</a> for what the Foundation has actually published.</li>
+<li class=""><strong>Union Validator Expansion</strong> — Continued expansion of the Union Validator network toward a target of <strong>31 validators</strong> across global infrastructure firms, ecosystem partners, and strategic institutions.</li>
+</ul>
+<p><strong>2Q: Protocol Stability and dApp Onboarding</strong></p>
+<ul>
+<li class=""><strong>Protocol Upgrade and Hard Fork</strong> <em>(Delivered)</em> — The staged protocol upgrade was executed as the <strong>xpHash hard fork</strong>, now active on both networks (testnet block <code>327,400</code>, mainnet block <code>1,740,000</code>).</li>
+<li class=""><strong>PoW Security Layer Strengthening</strong> <em>(Delivered)</em> — The Proof Chain transitioned to the xpHash algorithm with ASIC-based mining, while the PBFT-based Main Chain continues to provide fast finality and stable execution.</li>
+<li class=""><strong>Ecosystem Fund — First Cohort</strong> — First supported projects across DeFi protocols, DEX infrastructure, RWA applications, payment tools, wallet integrations, analytics, and developer infrastructure.</li>
+<li class=""><strong>Oracle Infrastructure Expansion</strong> — Expansion of oracle infrastructure so dApps can reliably consume external data for DeFi, RWA, pricing, identity, payments, and enterprise use cases.</li>
+<li class=""><strong>Network Operations Improvements</strong> — Sustainable mainnet operations through stable validator operations, improved node participation, and stronger network monitoring.</li>
+</ul>
+<p><strong>3Q: DeFi, Liquidity, and Payment Infrastructure</strong></p>
+<ul>
+<li class=""><strong>Native DeFi and Liquidity Infrastructure</strong> — Preparation of core on-chain financial primitives: DEX, lending, staking, liquidity management, and related components.</li>
+<li class=""><strong>CEX and DEX Expansion</strong> — Additional centralized and decentralized liquidity channels to strengthen market access and user onboarding.</li>
+<li class=""><strong>Stablecoin and Payment-Asset Infrastructure</strong> — Infrastructure enabling third-party issuers and dApps to use stable settlement assets on XPHERE for DeFi, payments, RWA, and cross-border settlement. XPHERE does not issue a stablecoin itself.</li>
+<li class=""><strong>Tokenization and RWA Infrastructure Research</strong> — Support for projects exploring real-world assets, digital vouchers, points, payment credits, membership rights, and other asset- or utility-based on-chain models.</li>
+<li class=""><strong>dApp Support Framework</strong> — A clear support framework covering technical documentation, integration support, ecosystem marketing, grant or investment review, and go-to-market support.</li>
+</ul>
+<p><strong>4Q: Union Network Growth and Institution-Compatible Applications</strong></p>
+<ul>
+<li class=""><strong>31 Union Validator Target</strong> — Completing the expansion of the Union Validator network to 31 validators.</li>
+<li class=""><strong>Cross-Chain Bridge Enhancement</strong> — Enhanced cross-chain bridge infrastructure for asset movement with Ethereum, BNB Chain, and major EVM-compatible ecosystems.</li>
+<li class=""><strong>DID and Credential Applications</strong> — Support for DID, Verifiable Credential, and identity-related applications as one pillar of the broader dApp ecosystem — one of several supported use cases rather than a single core business.</li>
+<li class=""><strong>B2B and B2G-Compatible Application Framework</strong> — A framework for enterprise, institutional, and public-sector applications, leveraging low fees, fast finality, transparent data verification, EVM compatibility, and stable network operations.</li>
+<li class=""><strong>Native Staking Solution</strong> — Introduction or expansion of staking-related infrastructure for XP holders, validators, and ecosystem participants to strengthen long-term participation and stability.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iii-2027--application-layer-expansion-and-real-usage-ecosystem">iii. 2027 — Application Layer Expansion and Real-Usage Ecosystem</h3>
+<p>Building on the infrastructure established in 2026, 2027 focuses on scaling real applications, liquidity, and user activity — evolving XPHERE from technical infrastructure into a real-usage public Layer 1 where DeFi, RWA, stablecoins, payments, DID, and B2B/B2G-compatible services interconnect.</p>
+<p><strong>1Q: Application Layer Activation</strong></p>
+<ul>
+<li class=""><strong>Core dApp Ecosystem Expansion</strong> — Launch and growth support for core dApps across DeFi, RWA, DID, payments, wallet infrastructure, tokenization, and utility services.</li>
+<li class=""><strong>Stablecoin-Based Payment and Settlement Use Cases</strong> — Support for dApps using stablecoins and payment assets for on-chain payment, settlement, liquidity provision, and user reward structures.</li>
+<li class=""><strong>Real-Usage Application Integration</strong> — Support for applications generating sustainable on-chain activity: identity verification, payments, digital certificates, asset tokenization, loyalty systems, and enterprise/public-sector-compatible services.</li>
+<li class=""><strong>Data and API Infrastructure for dApps</strong> — Expanded data access, indexing, analytics, and API infrastructure for developers and external protocols.</li>
+</ul>
+<p><strong>2Q: RWA, DeFi, and Institutional Tokenization</strong></p>
+<ul>
+<li class=""><strong>RWA and Tokenization Pilots</strong> — Support for projects tokenizing real-world assets, digital credits, vouchers, membership rights, certificates, and other utility-based assets.</li>
+<li class=""><strong>Institutional and Enterprise Tokenization Pilots</strong> — Regulation-friendly, verifiable on-chain infrastructure for asset issuance, access control, transaction records, certificate issuance, and settlement records.</li>
+<li class=""><strong>DeFi Ecosystem Growth</strong> — Growth of DEXs, lending protocols, staking products, liquidity pools, and yield applications.</li>
+<li class=""><strong>Cross-Application Liquidity</strong> — Connecting DeFi, RWA, payment, wallet, and stablecoin applications so liquidity circulates efficiently across the ecosystem.</li>
+</ul>
+<p><strong>3Q: Liquidity Hub and Sustainable Network Economy</strong></p>
+<ul>
+<li class=""><strong>Expansion into a Stablecoin Liquidity Hub</strong> — Positioning XPHERE as a liquidity hub connecting stablecoins, DeFi, RWA, and payment applications, improving asset mobility and dApp interoperability.</li>
+<li class=""><strong>Active On-Chain User Growth</strong> — Growth centered on applications generating repeated, real transactions rather than short-term speculative activity.</li>
+<li class=""><strong>Sustainable Tokenomics Loop</strong> — As network usage grows, strengthening the economic loop in which transaction activity, fee burn, validator rewards, miner participation, and ecosystem incentives operate together.</li>
+<li class=""><strong>Developer and Community Growth</strong> — Expanded developer education, community programs, technical support, and ecosystem campaigns.</li>
+</ul>
+<p><strong>4Q: Governance Expansion and Global Layer 1 Positioning</strong></p>
+<ul>
+<li class=""><strong>DAO Framework Preparation</strong> — As the Union Validator network and community mature, preparation of a DAO framework for decentralized decision-making, governance proposals, and community participation.</li>
+<li class=""><strong>Union-Based Governance Advancement</strong> — Strengthening the role of Union Validators in network security, governance, ecosystem contribution, and long-term protocol evolution.</li>
+<li class=""><strong>Global Ecosystem Expansion</strong> — Expansion across developers, infrastructure partners, dApps, liquidity providers, and institutional use cases.</li>
+<li class=""><strong>Positioning as a Real-Usage Public Layer 1</strong> — Combining PoW security, PBFT-based finality, EVM compatibility, ultra-low fees, Union Validator governance, protocol stability, stablecoin and payment infrastructure, B2B/B2G-compatible application support, and the dApp support framework.</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Roadmap items not marked <em>(Delivered)</em> are forward-looking statements. Timelines, scope, and priorities may change; several areas — including staking participation details, governance, and bridging — will be documented as they are finalized and publicly announced.</p></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-conclusion"><span class="n">8</span>CONCLUSION</h2>
+<p>XPHERE represents a transformative step forward in blockchain technology, combining innovation, scalability, and robust security to address the limitations of existing networks. By introducing a <strong>dual-chain architecture</strong> that integrates the <strong>Main Chain</strong> and <strong>Proof Chain</strong>, XPHERE achieves an optimized balance between scalability, security, and decentralization.</p>
+<p>The <strong>Main Chain</strong>, with its PBFT-based consensus, ensures consistent block creation and high-speed transaction processing while maintaining decentralization through its Council and Committee structure. Simultaneously, the <strong>Proof Chain</strong> employs <strong>xpHash</strong>, a Proof-of-Work algorithm designed specifically for the XPHERE ecosystem, to deliver secure validator selection and trust through efficient computational proof mechanisms. Together, these chains form a cohesive and scalable foundation for the ecosystem.</p>
+<p>XPHERE also prioritizes interoperability and accessibility. By supporting <strong>Ethereum compatibility</strong>, XPHERE bridges the gap between its innovative infrastructure and the vast Ethereum ecosystem. Developers and users can seamlessly leverage familiar tools, dApps, and workflows while benefiting from XPHERE&#x27;s superior performance and efficiency.</p>
+<p>The <strong>coinomics</strong> of XPHERE further underscores its sustainability, with a capped supply of 5.5 billion coins, a deflationary model reducing emission by 26.28% annually, and a distribution model that balances incentives across miners, the Union, and the Foundation — 40% / 40% / 20% of each minted block reward, and 20% / 20% / 10% of transaction fees with the remaining 50% burned. This economic model is designed to encourage early participation and to support long-term network health.</p>
+<p>XPHERE&#x27;s approach to network security is designed to make 51% attacks economically impractical: mining remains open to any participant, while blocks are finalized by PBFT consensus among staked Union validators, and miners are randomly assigned to Union nodes rather than choosing their own. Together these measures raise the cost of manipulating the network while promoting a trustless and decentralized ecosystem.</p>
+<p>In conclusion, XPHERE is not just a blockchain platform but a foundational infrastructure for the next generation of decentralized applications and services. Its innovative architecture, robust security, seamless Ethereum compatibility, and sustainable economic model make XPHERE a pivotal player in shaping the future of blockchain technology. With a clear vision and a strong technical foundation, XPHERE is poised to drive adoption and innovation, fostering a new era of decentralized ecosystems.</p></div></div></div>
+    <div class="dx-pager"><span></span></div>
+    
+  </main>
+  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#abstract">ABSTRACT</a><a href="#table-of-contents">Table of Contents</a><a href="#1-introduction">1. INTRODUCTION</a><a href="#key-limitations-of-xphere-10" class="sub">Key Limitations of XPHERE 1.0:</a><a href="#2-technical-specifications">2. TECHNICAL SPECIFICATIONS</a><a href="#i-network-architecture" class="sub">i. Network Architecture</a><a href="#ii-node-requirements" class="sub">ii. Node Requirements</a><a href="#iii-transaction-throughput" class="sub">iii. Transaction Throughput</a><a href="#3-dual-chain-architecture">3. DUAL-CHAIN ARCHITECTURE</a><a href="#i-main-chain-optimized-pbft-consensus" class="sub">i. Main Chain: Optimized PBFT Consensus</a><a href="#ii-proof-chain-pow-based-validation-layer" class="sub">ii. Proof Chain: PoW-Based Validation Layer</a><a href="#iii-interaction-between-main-chain-and-proof-chain" class="sub">iii. Interaction Between Main Chain and Proof Chain</a><a href="#4-consensus">4. CONSENSUS</a><a href="#i-consensus-mechanism-trust-and-security-with-proof-of-work-pow" class="sub">i. Consensus Mechanism: Trust and Security with Proof of Work (PoW)</a><a href="#ii-51-attack-mitigation-in-xphere" class="sub">ii. 51% Attack Mitigation in XPHERE</a><a href="#5-economic-model-of-the-coin">5. ECONOMIC MODEL OF THE COIN</a><a href="#a-coin-utility-and-role-in-the-network" class="sub">A. Coin Utility and Role in the Network</a><a href="#b-union-staking-and-reward-mechanism" class="sub">B. Union Staking and Reward Mechanism</a><a href="#c-emission-mechanism" class="sub">C. Emission Mechanism</a><a href="#d-transaction-fee-burn-mechanism" class="sub">D. Transaction Fee Burn Mechanism</a><a href="#e-distribution-model" class="sub">E. Distribution Model</a><a href="#6-ethereum-compatibility-in-xphere">6. ETHEREUM COMPATIBILITY IN XPHERE</a><a href="#i-key-aspects-of-ethereum-compatibility" class="sub">i. Key Aspects of Ethereum Compatibility</a><a href="#ii-benefits-of-ethereum-compatibility" class="sub">ii. Benefits of Ethereum Compatibility</a><a href="#iii-building-a-bridge-between-ecosystems" class="sub">iii. Building a Bridge Between Ecosystems</a><a href="#7-roadmap">7. ROADMAP</a><a href="#i-2025--network-commercialization-and-global-ecosystem-foundation" class="sub">i. 2025 — Network Commercialization and Global Ecosystem Foundation</a><a href="#ii-2026--open-ecosystem-expansion-and-public-infrastructure-growth" class="sub">ii. 2026 — Open Ecosystem Expansion and Public Infrastructure Growth</a><a href="#iii-2027--application-layer-expansion-and-real-usage-ecosystem" class="sub">iii. 2027 — Application Layer Expansion and Real-Usage Ecosystem</a><a href="#8-conclusion">8. CONCLUSION</a></nav></aside>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('noteToggle');
+  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
+  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
+  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
+  /* code blocks: add a label bar with a copy button */
+  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
+    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
+    var bar=document.createElement('div');bar.className='bar';
+    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
+    c.insertBefore(bar,c.firstChild);
+    var btn=bar.querySelector('button');
+    btn.onclick=function(){var t=c.querySelector('code').innerText;
+      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
+      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
+  });
+  /* tables scroll sideways on small screens */
+  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
+  /* on-this-page highlight */
+  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
+  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
+})();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
