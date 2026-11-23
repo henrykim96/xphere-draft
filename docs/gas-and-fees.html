@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gas and Transaction Fees | XPHERE Docs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="docs.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="../assets/css/docs.css">
 </head>
-<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+<body class="pg-docs dx-gas-and-fees">
 
-
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="../index.html" aria-label="XPHERE home"><img class="th-d" src="../assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="../assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../union.html">Union</a>
       <a href="../stake.html">Stake</a>
       <a href="../ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="../grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -30,15 +36,15 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
@@ -47,99 +53,101 @@
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<div class="dx">
-  <aside class="dx-side"><div class="dx-grp">Build</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Developer Guide <i>&#8964;</i></button><div class="dx-sec-p"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a href="evm-compatibility.html">EVM Compatibility</a></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button">References &amp; RPC <i>&#8964;</i></button><div class="dx-sec-p"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a class="on" href="gas-and-fees.html">Gas and Transaction Fees</a><a href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div><a class="dx-top" href="testnet-faucet.html">Testnet Faucet</a></nav></aside>
-  <main class="dx-main">
-    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Build</span><i>/</i><span>References &amp; RPC</span></div>
-    <h1>Gas and Transaction Fees</h1>
-    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<div class="dx-prog" aria-hidden="true"><i></i></div>
+<div class="dx" id="dx">
+  <aside class="dx-side" id="dxSide" data-lenis-prevent><div class="dx-side-in"><div class="dx-grp">Build</div><nav aria-label="Docs" class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs1"><span>Developer Guide</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs1"><div class="dx-sec-in"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a href="evm-compatibility.html">EVM Compatibility</a></div></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button" aria-expanded="true" aria-controls="dxs2"><span>References &amp; RPC</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs2"><div class="dx-sec-in"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a class="on" aria-current="page" href="gas-and-fees.html">Gas and Transaction Fees</a><a href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div></div><a class="dx-top" href="testnet-faucet.html">Testnet Faucet</a></nav></div></aside>
+  <main id="main" class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i aria-hidden="true">/</i><span>Build</span><i aria-hidden="true">/</i><span>References &amp; RPC</span></div>
+    <h1 class="dx-h1">Gas and Transaction Fees</h1>
+    <div class="dx-doc prose">
 <p>What a transaction costs on XPHERE, measured on Mainnet rather than estimated.</p>
 <p>For where those fees go once paid — the burn, Union, miner, and Foundation split — see
-<a class="" href="tokenomics.html#transaction-fees-and-burn">Tokenomics</a>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="gas-price">Gas price</h2>
+<a href="tokenomics.html#transaction-fees-and-burn">Tokenomics</a>.</p>
+<h2 id="gas-price">Gas price</h2>
 <p>XPHERE uses a <strong>bounded gas price</strong>. The network sets the price; a transaction pays it.
 You cannot bid above the ceiling to jump the queue, and a transaction offering less than the
 floor is rejected.</p>
-<table><thead><tr><th></th><th>Value</th><th>How to read it</th></tr></thead><tbody><tr><td>Floor</td><td><strong>25 gwei</strong></td><td><code>xp_lowerBoundGasPrice</code> — the price never drops below this</td></tr><tr><td>Current</td><td><strong>27.5 gwei</strong></td><td><code>eth_gasPrice</code> / <code>xp_gasPrice</code> — what to use right now</td></tr><tr><td>Ceiling</td><td><strong>750 gwei</strong></td><td><code>xp_upperBoundGasPrice</code> — the price never rises above this</td></tr></tbody></table>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST https://rpc.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_gasPrice&quot;,&quot;params&quot;:[],&quot;id&quot;:1}&#x27;</span><br></div></code></pre></div></div>
-<p>Always read <code>eth_gasPrice</code> before sending rather than hardcoding a number. The values above
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Value</th><th>How to read it</th></tr></thead><tbody><tr><td>Floor</td><td><strong>25 gwei</strong></td><td><code class="nw">xp_lowerBoundGasPrice</code> — the price never drops below this</td></tr><tr><td>Current</td><td><strong>27.5 gwei</strong></td><td><code class="nw">eth_gasPrice</code> / <code class="nw">xp_gasPrice</code> — what to use right now</td></tr><tr><td>Ceiling</td><td><strong>750 gwei</strong></td><td><code class="nw">xp_upperBoundGasPrice</code> — the price never rises above this</td></tr></tbody></table></div>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-s</span> <span class="token flag">-X</span> POST https://rpc.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> <span class="token string">'{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":1}'</span></span><br></div></code></pre></div>
+<p>Always read <code class="nw">eth_gasPrice</code> before sending rather than hardcoding a number. The values above
 were read on 2026-08-09 and the current price moves within the bounds.</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Legacy pricing, not a priority auction</div><div class="admonitionContent_BuS1"><p>Blocks carry a <code>baseFeePerGas</code>, but transactions on Mainnet are sent with a plain <code>gasPrice</code>.
-There is no priority fee to tune: <code>xp_maxPriorityFeePerGas</code> returns <code>0</code>. Wallets and libraries
-that default to EIP-1559 style <code>maxFeePerGas</code> should be configured to send legacy transactions.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-operations-cost">What operations cost</h2>
+<div class="callout note"><div class="callout-t"><animate-icons name="info" size="13"></animate-icons><span>Legacy pricing, not a priority auction</span></div><div class="callout-b"><p>Blocks carry a <code class="nw">baseFeePerGas</code>, but transactions on Mainnet are sent with a plain <code class="nw">gasPrice</code>.
+There is no priority fee to tune: <code class="nw">xp_maxPriorityFeePerGas</code> returns <code class="nw">0</code>. Wallets and libraries
+that default to EIP-1559 style <code class="nw">maxFeePerGas</code> should be configured to send legacy transactions.</p></div></div>
+<h2 id="what-operations-cost">What operations cost</h2>
 <p>Measured from real Mainnet transactions. Gas used is a property of the operation and does not
 change; the fee moves with the gas price.</p>
-<table><thead><tr><th>Operation</th><th>Gas used</th><th>Fee @ 25 gwei</th><th>Fee @ 27.5 gwei</th></tr></thead><tbody><tr><td>Native XP transfer</td><td>21,000</td><td>0.000525 XP</td><td>0.000578 XP</td></tr><tr><td>ERC-20 <code>approve</code></td><td>52,898</td><td>0.001322 XP</td><td>0.001455 XP</td></tr><tr><td>ERC-20 <code>transfer</code></td><td>58,550</td><td>0.001464 XP</td><td>0.001610 XP</td></tr><tr><td>Contract deployment — small</td><td>279,046</td><td>0.006976 XP</td><td>0.007674 XP</td></tr><tr><td>Contract deployment — ERC-20</td><td>1,078,672</td><td>0.026967 XP</td><td>0.029663 XP</td></tr></tbody></table>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Operation</th><th>Gas used</th><th>Fee @ 25 gwei</th><th>Fee @ 27.5 gwei</th></tr></thead><tbody><tr><td>Native XP transfer</td><td>21,000</td><td>0.000525 XP</td><td>0.000578 XP</td></tr><tr><td>ERC-20 <code class="nw">approve</code></td><td>52,898</td><td>0.001322 XP</td><td>0.001455 XP</td></tr><tr><td>ERC-20 <code class="nw">transfer</code></td><td>58,550</td><td>0.001464 XP</td><td>0.001610 XP</td></tr><tr><td>Contract deployment — small</td><td>279,046</td><td>0.006976 XP</td><td>0.007674 XP</td></tr><tr><td>Contract deployment — ERC-20</td><td>1,078,672</td><td>0.026967 XP</td><td>0.029663 XP</td></tr></tbody></table></div>
 <p>Deployment cost scales with bytecode size, so treat the two deployment rows as a range rather
 than a fixed price. An unoptimised contract with many external functions costs more than the
 ERC-20 figure above.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-means-in-practice">What this means in practice</h3>
-<p>Deploying an ERC-20 token and exercising it — deploy, <code>approve</code>, <code>transfer</code> — costs well under
+<h3 id="what-this-means-in-practice">What this means in practice</h3>
+<p>Deploying an ERC-20 token and exercising it — deploy, <code class="nw">approve</code>, <code class="nw">transfer</code> — costs well under
 <strong>0.05 XP</strong> in total. A wallet doing ordinary transfers spends fractions of a thousandth of an XP
 per transaction.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="estimating-before-you-send">Estimating before you send</h2>
-<p><code>eth_estimateGas</code> runs the transaction against current state and returns the gas it would use.</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST https://rpc.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{</span><br></div><div class="token-line"><span class="token plain">    &quot;jsonrpc&quot;:&quot;2.0&quot;,</span><br></div><div class="token-line"><span class="token plain">    &quot;method&quot;:&quot;eth_estimateGas&quot;,</span><br></div><div class="token-line"><span class="token plain">    &quot;params&quot;:[{</span><br></div><div class="token-line"><span class="token plain">      &quot;from&quot;:&quot;0x0000000000000000000000000000000000000000&quot;,</span><br></div><div class="token-line"><span class="token plain">      &quot;to&quot;:&quot;0x0000000000000000000000000000000000000000&quot;,</span><br></div><div class="token-line"><span class="token plain">      &quot;value&quot;:&quot;0x1&quot;</span><br></div><div class="token-line"><span class="token plain">    }],</span><br></div><div class="token-line"><span class="token plain">    &quot;id&quot;:1</span><br></div><div class="token-line"><span class="token plain">  }&#x27;</span><br></div><div class="token-line"><span class="token plain"># → {&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:&quot;0x5208&quot;}   // 21000</span><br></div></code></pre></div></div>
+<h2 id="estimating-before-you-send">Estimating before you send</h2>
+<p><code class="nw">eth_estimateGas</code> runs the transaction against current state and returns the gas it would use.</p>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-s</span> <span class="token flag">-X</span> POST https://rpc.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> '{</span><br></div><div class="ln"><span class="token plain">    "jsonrpc":"2.0",</span><br></div><div class="ln"><span class="token plain">    "method":"eth_estimateGas",</span><br></div><div class="ln"><span class="token plain">    "params":[{</span><br></div><div class="ln"><span class="token plain">      "from":"0x0000000000000000000000000000000000000000",</span><br></div><div class="ln"><span class="token plain">      "to":"0x0000000000000000000000000000000000000000",</span><br></div><div class="ln"><span class="token plain">      "value":"0x1"</span><br></div><div class="ln"><span class="token plain">    }],</span><br></div><div class="ln"><span class="token plain">    "id":1</span><br></div><div class="ln"><span class="token plain">  }'</span><br></div><div class="ln"><span class="token comment"># → {"jsonrpc":"2.0","id":1,"result":"0x5208"}   // 21000</span><br></div></code></pre></div>
 <p>The estimate reflects state at the time of the call. A transaction whose cost depends on storage
 that another transaction changes first can use more gas than estimated, so leave headroom on the
 gas limit for anything beyond a plain transfer.</p>
 <p>Unused gas is refunded. Setting a gas limit above what the transaction consumes costs nothing
 extra; setting it too low wastes the whole fee on a failed transaction.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="block-gas-limit">Block gas limit</h2>
-<p>Blocks report a gas limit of <code>999,999,999,999</code>, which is not a practical constraint — a single
+<h2 id="block-gas-limit">Block gas limit</h2>
+<p>Blocks report a gas limit of <code class="nw">999,999,999,999</code>, which is not a practical constraint — a single
 block can hold far more than any current workload produces. Transaction size, not block capacity,
 is what limits what you can do in one transaction.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="testnet">Testnet</h2>
+<h2 id="testnet">Testnet</h2>
 <p>Testnet uses the same mechanics with <strong>XPT</strong> instead of XP. Fund an address from the
-<a class="" href="testnet-faucet.html">Faucet</a> — 10 XPT per address per 24 hours, which covers thousands of transfers or
+<a href="testnet-faucet.html">Faucet</a> — 10 XPT per address per 24 hours, which covers thousands of transfers or
 several hundred contract deployments.</p>
 <p>Develop against Testnet. There is no reason to spend Mainnet XP proving that a deployment script
 works.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li class=""><a class="" href="tokenomics.html#transaction-fees-and-burn">Tokenomics — Transaction Fees and Burn</a> — where fees go</li>
-<li class=""><a class="" href="network-info.html">Network Information</a> — chain IDs and endpoints</li>
-<li class=""><a class="" href="xphere-rpc.html">XPHERE-specific RPC</a> — <code>xp_gasPrice</code> and the bound methods</li>
-<li class=""><a class="" href="smart-contracts.html">Smart Contracts</a> — deploying and verifying</li>
-</ul></div></div></div>
-    <div class="dx-pager"><a class="pv" href="network-info.html"><small>Previous</small><i>&#8592;</i> Network Information</a><a class="nx" href="public-endpoints.html"><small>Next</small>Public JSON-RPC Endpoints <i>&#8594;</i></a></div>
-    
+<li><a href="tokenomics.html#transaction-fees-and-burn">Tokenomics — Transaction Fees and Burn</a> — where fees go</li>
+<li><a href="network-info.html">Network Information</a> — chain IDs and endpoints</li>
+<li><a href="xphere-rpc.html">XPHERE-specific RPC</a> — <code class="nw">xp_gasPrice</code> and the bound methods</li>
+<li><a href="smart-contracts.html">Smart Contracts</a> — deploying and verifying</li>
+</ul></div>
+    <nav class="dx-pager"><a class="pv" href="network-info.html"><small class="lab">Previous</small><span class="pg-t"><animate-icons name="arrow-left" size="14"></animate-icons><span>Network Information</span></span></a><a class="nx" href="public-endpoints.html"><small class="lab">Next</small><span class="pg-t"><animate-icons name="arrow-right" size="14"></animate-icons><span>Public JSON-RPC Endpoints</span></span></a></nav>
   </main>
-  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#gas-price">Gas price</a><a href="#what-operations-cost">What operations cost</a><a href="#what-this-means-in-practice" class="sub">What this means in practice</a><a href="#estimating-before-you-send">Estimating before you send</a><a href="#block-gas-limit">Block gas limit</a><a href="#testnet">Testnet</a><a href="#see-also">See Also</a></nav></aside>
+  <aside class="dx-toc" id="dxToc">
+    <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#gas-price">Gas price</a><a href="#what-operations-cost">What operations cost</a><a href="#what-this-means-in-practice" class="sub">What this means in practice</a><a href="#estimating-before-you-send">Estimating before you send</a><a href="#block-gas-limit">Block gas limit</a><a href="#testnet">Testnet</a><a href="#see-also">See Also</a></nav>
+  </aside>
+  <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
-  /* code blocks: add a label bar with a copy button */
-  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
-    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
-    var bar=document.createElement('div');bar.className='bar';
-    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
-    c.insertBefore(bar,c.firstChild);
-    var btn=bar.querySelector('button');
-    btn.onclick=function(){var t=c.querySelector('code').innerText;
-      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
-  });
-  /* tables scroll sideways on small screens */
-  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
-  /* on-this-page highlight */
-  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
-  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
-})();
-</script>
-<script src="../nav.js"></script>
+<!-- @scripts -->
+<script src="../assets/vendor/animateicons-lucide.js"></script>
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/js/block-stream.js"></script>
+<script src="../assets/js/glass.js"></script>
+<script src="../assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="../assets/js/docs.js"></script>
 </body>
 </html>

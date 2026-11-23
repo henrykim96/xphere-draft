@@ -1,0 +1,306 @@
+/* ==========================================================================
+   XPHERE site — docs.css  (docs/*.html only; everything shared lives in core.css)
+   Layout: sidebar (collapsible groups, drawer ≤960) · content (.prose, ~70ch text, wider code/tables)
+   · on-page TOC (sticky rail ≥1200, collapsible bar below). Long-read variant for the whitepaper (.dx-wp).
+   Kit pieces used as-is: .prose .code .cp .tbl-wrap/.tbl .callout .lab — this file only arranges them.
+   ========================================================================== */
+
+.pg-docs{--dx-max:1400px;--dx-side:264px;--dx-toc:232px;--dx-bar:0px;--dx-stick:calc(60px + var(--dx-bar));--dx-text:600px}
+/* header: always frosted on docs (content runs right under it); same 1120 grid as every other page */
+.pg-docs .hdr::before{opacity:1}
+.pg-docs .hdr{border-bottom-color:var(--line)}
+
+/* reading progress (long pages only; docs.js sets --p and .on) */
+.dx-prog{position:fixed;top:59px;left:0;right:0;z-index:51;height:1px;pointer-events:none;opacity:0;transition:opacity .4s var(--ease)}
+.dx-prog.on{opacity:1}
+.dx-prog i{display:block;height:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));
+  background:linear-gradient(90deg,color-mix(in srgb,var(--brand) 40%,transparent),var(--accent) 70%,var(--accent-2))}
+
+/* ---------- grid ---------- */
+.dx{display:grid;grid-template-columns:var(--dx-side) minmax(0,1fr) var(--dx-toc);max-width:var(--dx-max);margin:0 auto;padding-top:60px;min-height:100vh}
+
+/* ---------- sidebar ---------- */
+.dx-side{position:sticky;top:60px;align-self:start;height:calc(100vh - 60px);overflow-y:auto;overscroll-behavior:contain;
+  border-right:1px solid var(--line);scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+.dx-side-in{padding:32px 18px 56px var(--gut)}
+.dx-grp{display:flex;align-items:center;gap:9px;margin:0 0 14px 10px;font-family:var(--m);font-size:11px;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3)}
+.dx-grp::before{content:"";width:5px;height:5px;border-radius:1px;background:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 16%,transparent)}
+.dx-nav{display:flex;flex-direction:column;gap:1px}
+.dx-top,.dx-sec-t,.dx-sec-in>a{position:relative;display:flex;align-items:center;min-height:32px;padding:6px 10px;border-radius:8px;font-size:13.5px;line-height:1.35;
+  color:var(--tx-2);transition:color .2s,background-color .2s}
+.dx-top:hover,.dx-sec-t:hover,.dx-sec-in>a:hover{color:var(--tx);background:var(--chip-bg)}
+.dx-sec-t{width:100%;justify-content:space-between;gap:10px;text-align:left;color:var(--tx);font-weight:500}
+.dx-sec-t animate-icons{color:var(--tx-3);transition:transform .35s var(--ease)}
+.dx-sec:not(.open) .dx-sec-t animate-icons{transform:rotate(-90deg)}
+.dx-sec-p{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .38s var(--ease),visibility 0s .38s}
+.dx-sec.open>.dx-sec-p{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .38s var(--ease),visibility 0s}
+.dx-sec-in{min-height:0;overflow:hidden;display:flex;flex-direction:column;gap:1px;margin-left:15px;padding:2px 0 8px 8px;border-left:1px solid var(--line)}
+.dx-sec-in>a{font-size:13.5px}
+.dx-top{color:var(--tx);font-weight:500}
+/* active page: ember tick on the rail + quiet surface */
+.dx-nav a.on{color:var(--tx);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.dx-sec-in>a.on::before{content:"";position:absolute;left:-9px;top:7px;bottom:7px;width:1.5px;border-radius:2px;background:var(--accent);box-shadow:0 0 10px color-mix(in srgb,var(--accent) 60%,transparent)}
+.dx-top.on::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1.5px;border-radius:2px;background:var(--accent)}
+/* whitepaper chapter list (in-page links; spy marks .on) */
+.dx-ch .dx-top{font-weight:400;font-size:12.5px;line-height:1.4;color:var(--tx-2);letter-spacing:.02em;padding:7px 10px;text-wrap:balance}
+.dx-ch .dx-top.on{color:var(--tx)}
+
+/* ---------- main ---------- */
+.dx-main{min-width:0;padding:40px clamp(32px,4.2vw,64px) 96px}
+.dx-main>*{max-width:800px}
+.dx-crumb{display:flex;flex-wrap:wrap;align-items:center;gap:6px 9px;font-family:var(--m);font-size:11px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3)}
+.dx-crumb i{font-style:normal;color:var(--line-3)}
+.dx-crumb span:last-child{color:var(--tx-2)}
+.dx-h1{margin-top:18px;font-family:var(--d);font-variation-settings:"wdth" 96;font-weight:500;font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.03em;color:var(--tx);max-width:24ch}
+
+/* prose: text keeps a ~68ch (600px) measure; code, tables and figures use the full column */
+.dx-doc.prose{max-width:800px;margin-top:28px;font-size:15px}
+.dx-doc>:is(p,ul,ol,blockquote,h2,h3,h4,h5,h6){max-width:var(--dx-text)}
+.dx-doc>:first-child{margin-top:0}
+.dx-doc h2{position:relative;margin-top:64px;padding-top:30px;border-top:1px solid var(--line);scroll-margin-top:calc(var(--dx-stick) + 20px)}
+.dx-doc>h2:first-child{margin-top:8px}
+.dx-doc h3,.dx-doc h4,.dx-doc h5{position:relative;scroll-margin-top:calc(var(--dx-stick) + 20px)}
+.dx-doc h5{margin-top:28px;font-family:var(--m);font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-2)}
+.dx-doc h2 .n{display:inline-grid;place-items:center;min-width:26px;height:26px;margin-right:12px;padding:0 6px;vertical-align:3px;border-radius:7px;
+  font-family:var(--m);font-size:12px;font-weight:500;letter-spacing:0;color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent);border:1px solid color-mix(in srgb,var(--accent) 26%,transparent)}
+.dx-doc :is(ul,ol) :is(ul,ol){margin-top:6px}
+.dx-doc li>p{margin-top:6px}
+.dx-doc li>p:first-child{margin-top:0}
+.dx-doc a{text-decoration-color:color-mix(in srgb,var(--tx) 45%,transparent);transition:color .2s,text-decoration-color .2s}
+.dx-doc a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.dx-doc a.lk{font-weight:500;color:var(--tx)}
+.dx-doc a.lk:hover{color:var(--accent)}
+.lk-i{margin-left:4px;vertical-align:-1px;color:var(--tx-3);transition:color .2s}
+a.lk:hover .lk-i{color:var(--accent)}
+/* inline code: short chips never split; long ones wrap as whole boxes */
+.dx-doc :not(pre)>code{-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dx-doc code.nw{white-space:nowrap}
+/* inline copy (network-info / public-endpoints): icon-only kit .cp next to the value */
+.cpw{display:inline-flex;align-items:center;gap:2px;max-width:100%;vertical-align:baseline}
+.cpw>code{min-width:0}
+.dx-doc .cp-in{width:24px;height:24px;padding:0;justify-content:center;vertical-align:middle;color:var(--tx-3)}
+.dx-doc .cp-in:hover{color:var(--tx)}
+/* status emoji -> icons (the glyph stays for assistive tech in .sr) */
+.emo{display:inline-flex;vertical-align:-3px;margin-right:6px}
+.emo-ok{color:var(--ok)}.emo-warn{color:var(--warn)}.emo-tool{color:var(--tx-3)}
+/* protocol splits: colour keys in the table + the index ring beside it (graphic only) */
+.dx-viz{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:32px;align-items:center;margin-top:20px}
+.dx-viz>.tbl-wrap,.dx-viz>.code{margin:0}
+.dx-viz-code{grid-template-columns:minmax(0,1fr) 128px}
+.dx-ring.tk-ring{width:136px;height:136px;margin:0 auto}
+.dx-rings{display:flex;flex-direction:column;gap:28px;align-items:center}
+.dx-rings .dx-ring{width:116px;height:116px}
+.sw{display:inline-block;width:8px;height:8px;margin-right:10px;border-radius:2px;vertical-align:1px;background:var(--c);box-shadow:0 0 0 1px var(--line)}
+.dx-doc blockquote{color:var(--tx-2)}
+.dx-doc blockquote>*+*{margin-top:8px}
+.dx-doc>.code,.dx-doc>.tbl-wrap,.dx-doc>.callout,.dx-doc>p:has(>.dx-img){margin-top:20px}
+.dx-doc>:is(.code,.tbl-wrap,.callout,.dx-viz)+:is(p,ul,ol){margin-top:20px}
+.dx-doc li .code,.dx-doc li .tbl-wrap,.dx-doc li .callout{margin-top:10px}
+.dx-doc .callout .code{margin-top:10px}
+
+/* heading anchors (docs.js adds an icon link; visible on hover/focus) */
+.hd-a{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;margin-left:6px;vertical-align:middle;border-radius:6px;color:var(--tx-3);
+  opacity:0;transition:opacity .2s,color .2s,background-color .2s;text-decoration:none!important}
+:is(h2,h3,h4,h5):hover>.hd-a,.hd-a:focus-visible{opacity:1}
+.hd-a:hover{color:var(--accent);background:var(--chip-bg)}
+@media (hover:none){.hd-a{opacity:.4}}
+.dx-side:focus{outline:0}
+
+/* code: kit .code + syntax tint for the Prism tokens the draft carries */
+.dx-doc .code pre{font-size:12.75px;line-height:1.7;max-height:none;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+.dx-doc .code pre code{display:block;min-width:max-content}
+.dx-doc .code .ln{display:block;min-height:1.7em;white-space:pre}
+.dx-doc .code .ln>br{display:none}
+.dx-doc .code-bar{height:36px}
+.dx-doc .code-bar .lab{font-size:10.5px;letter-spacing:.08em}
+.dx-doc .code .cp{width:30px;height:28px;padding:0;justify-content:center}
+.dx-doc .code{transition:border-color .25s}
+.dx-doc .code:hover{border-color:var(--line-3)}
+.token.property,.token.string-property,.token.literal-property,.token.attr-name{color:color-mix(in srgb,var(--syn-f) 82%,var(--syn-k))}
+.token.function,.token.method,.token.function-variable,.token.class-name,.token.maybe-class-name{color:var(--syn-f);font-weight:560}
+.token.control-flow,.token.module,.token.imports .token.keyword{color:var(--syn-k)}
+.token.flag{color:var(--syn-n)}
+.token.parameter,.token.variable,.token.property-access{color:var(--syn-f)}
+.token.null,.token.nil,.token.dom,.token.console{color:var(--syn-n)}
+
+/* tables: kit .tbl, docs density; header sticks while the table scrolls past (docs.js) */
+.dx-doc .tbl{font-size:13.5px;line-height:1.55}
+.dx-doc .tbl th{padding:11px 16px 10px;position:relative;z-index:1}
+.dx-doc .tbl td{padding:11px 16px}
+.dx-doc .tbl td code{white-space:nowrap;overflow-wrap:normal}
+.dx-doc .tbl-wrap{box-shadow:none;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+.dx-doc .tbl-wrap.stuck th{box-shadow:0 1px 0 var(--line-2),0 10px 18px -14px rgba(0,0,0,.5)}
+/* more to the right: soft fade on the scrolling edge (docs.js toggles .ov-r) */
+.dx-doc .tbl-wrap.ov-r,.dx-doc .code pre.ov-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 56px),rgba(0,0,0,.08));mask-image:linear-gradient(90deg,#000 calc(100% - 56px),rgba(0,0,0,.08))}
+
+/* callouts: kit; titles in sentence case Geist (Docusaurus headings may carry links) */
+.dx-doc .callout{max-width:var(--dx-text)}
+.dx-doc .callout-t{align-items:flex-start;gap:9px;margin-bottom:4px;font-family:var(--f);font-size:13.5px;font-weight:560;line-height:1.4;letter-spacing:-.005em;text-transform:none;color:var(--tx)}
+.dx-doc .callout-t>animate-icons{margin-top:2px;color:var(--c)}
+.dx-doc .callout-t>span{display:block;min-width:0}
+.dx-doc .callout-t>span::first-letter{text-transform:uppercase}
+.dx-doc .callout-t a{color:inherit}
+.dx-doc .callout-b>*+*{margin-top:8px}
+.dx-doc .callout-b :is(ul,ol){padding-left:1.2em}
+
+/* figures: framed plate; line diagrams invert on dark */
+.dx-img{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line-2);background:var(--surface)}
+[data-theme="dark"] .dx-img[src*="wp-xphere-architecture"]{filter:invert(.93) hue-rotate(180deg) saturate(1.4)}
+
+/* pager (draft Previous / Next) */
+.dx-pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}
+.dx-pager[hidden]{display:none}
+.dx-pager>span:empty{display:block}
+.dx-pager a{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--surface);
+  transition:border-color .25s,background-color .25s,transform .35s var(--ease)}
+.dx-pager a:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line-2));background:var(--surface-2)}
+.dx-pager .nx{grid-column:2;text-align:right;align-items:flex-end}
+.dx-pager .pg-t{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:var(--tx);line-height:1.35}
+.dx-pager .nx .pg-t{flex-direction:row-reverse}
+.dx-pager .pg-t animate-icons{color:var(--tx-3);transition:color .25s,transform .35s var(--ease)}
+.dx-pager a:hover .pg-t animate-icons{color:var(--accent)}
+.dx-pager .pv:hover .pg-t animate-icons{transform:translateX(-3px)}
+.dx-pager .nx:hover .pg-t animate-icons{transform:translateX(3px)}
+
+/* ---------- on-page TOC ---------- */
+.dx-toc{position:sticky;top:60px;align-self:start;max-height:calc(100vh - 60px);padding:40px var(--gut) 32px 4px;display:flex;flex-direction:column}
+.dx-toc-bar{display:flex;align-items:center;gap:8px}
+.dx-dw{display:none}
+.dx-toc-t{display:flex;align-items:center;gap:8px;font-family:var(--m);font-size:11px;line-height:1;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-3);cursor:default}
+@media (min-width:1200px){.dx-toc-t animate-icons{display:none!important}}
+#toc{position:relative;display:flex;flex-direction:column;margin-top:14px;padding-left:1px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;
+  -webkit-mask-image:linear-gradient(#000 calc(100% - 28px),transparent);mask-image:linear-gradient(#000 calc(100% - 28px),transparent);padding-bottom:28px}
+#toc::-webkit-scrollbar{display:none}
+#toc::before{content:"";position:absolute;left:0;top:0;bottom:28px;width:1px;background:var(--line)}
+#toc a{position:relative;padding:5px 0 5px 14px;font-size:12.5px;line-height:1.45;color:var(--tx-3);transition:color .2s}
+#toc a.sub{padding-left:26px;font-size:12px}
+#toc a:hover{color:var(--tx)}
+#toc a.on{color:var(--tx)}
+.dx-toc-ind{position:absolute;left:0;top:0;width:1.5px;height:0;border-radius:2px;background:var(--accent);box-shadow:0 0 10px color-mix(in srgb,var(--accent) 70%,transparent);
+  transform:translateY(var(--y,0));transition:transform .4s var(--ease),height .4s var(--ease),opacity .3s;opacity:0}
+.dx-toc-ind.on{opacity:1}
+
+.dx-scrim{display:none}
+
+/* ---------- whitepaper: long-read ---------- */
+.dx-wp{--dx-text:640px}
+/* the paper keeps one chapter index (right rail / bar): the left chapter list duplicates it, so it is hidden,
+   and the crumb's repeated last item is hidden; both stay in the DOM exactly as in the draft */
+.dx-wp .dx-side,.dx-wp .dx-dw,.dx-wp .dx-scrim{display:none!important}
+.dx-wp .dx{grid-template-columns:var(--dx-toc) minmax(0,1fr) var(--dx-toc)}
+.dx-wp .dx-main{grid-column:2}
+.dx-wp .dx-toc{grid-column:3}
+.dx-wp .dx-main>*{max-width:720px;margin-inline:auto}
+.dx-wp .dx-crumb>span:last-child,.dx-wp .dx-crumb>i:last-of-type{display:none}
+.dx-wp .dx-crumb>span:nth-last-child(3){color:var(--tx-2)}
+.dx-fig[src*="distribution"]{max-width:640px;margin-inline:auto}
+.dx-wp .dx-h1{font-size:var(--fs-h1);line-height:1.02;letter-spacing:-.038em;margin-top:22px}
+.dx-wp .dx-doc.prose{font-size:16px;line-height:1.8;margin-top:22px}
+.dx-wp .dx-doc>p:first-child{display:inline-flex;align-items:center;gap:10px;margin:0;font-size:14px;color:var(--tx);font-weight:500}
+.dx-wp .dx-doc>p:first-child::before{content:"";width:22px;height:1px;background:var(--accent)}
+.dx-wp .dx-doc>p:nth-child(2){margin-top:4px;font-family:var(--m);font-size:11.5px;letter-spacing:.04em;color:var(--tx-3)}
+.dx-wp .dx-doc>p:nth-child(2) em{font-style:normal}
+.dx-wp .dx-doc h2{margin-top:88px;padding-top:40px;font-size:clamp(24px,.8vw + 18px,30px);letter-spacing:-.02em}
+.dx-wp .dx-doc h2::before{content:"";position:absolute;left:0;top:-1px;width:72px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+.dx-wp .dx-doc>h2:first-of-type{margin-top:48px}
+.dx-wp .dx-doc h3{margin-top:44px;font-size:18px}
+.dx-wp .dx-doc h4{margin-top:32px;font-size:15.5px}
+.dx-wp .dx-doc>p,.dx-wp .dx-doc li{color:color-mix(in srgb,var(--tx-2) 78%,var(--tx))}
+.dx-wp .dx-doc hr{margin:56px 0 0;background:transparent}
+.dx-wp .dx-doc hr+h2{margin-top:0}
+/* the paper's own contents list as a quiet index */
+.dx-wp #table-of-contents+ol{list-style:decimal;padding:0 0 0 2.4em;max-width:var(--dx-text)}
+.dx-wp #table-of-contents+ol>li:first-child{border-top:1px solid var(--line)}
+.dx-wp #table-of-contents+ol>li{position:relative;margin:0;padding:12px 0 12px 6px;border-bottom:1px solid var(--line)}
+.dx-wp #table-of-contents+ol>li::marker{font-family:var(--m);font-size:12px;color:var(--accent)}
+.dx-wp #table-of-contents+ol>li>a{font-weight:500;color:var(--tx);text-decoration:none}
+.dx-wp #table-of-contents+ol>li>a:hover{color:var(--accent)}
+.dx-wp #table-of-contents+ol ol{list-style:none;padding:0;margin-top:6px;display:flex;flex-direction:column;gap:2px}
+.dx-wp #table-of-contents+ol ol li{margin:0;font-size:14px;line-height:1.55}
+.dx-wp #table-of-contents+ol ol a{color:var(--tx-2);text-decoration:none}
+.dx-wp #table-of-contents+ol ol a:hover{color:var(--tx)}
+.dx-wp .dx-doc>p:has(>.dx-img){margin-top:28px;max-width:none}
+
+/* ---------- ≤1199: TOC becomes a collapsible bar above the content ---------- */
+@media (max-width:1199px){
+  .pg-docs{--dx-bar:44px}
+  .dx{grid-template-columns:var(--dx-side) minmax(0,1fr);grid-template-rows:auto 1fr}
+  .dx-side{grid-row:1 / span 2}
+  .dx-toc{grid-column:2;grid-row:1;z-index:30;max-height:none;padding:0;display:block;
+    border-bottom:1px solid var(--line);background:var(--hdr-bg);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4)}
+  .dx-main{grid-column:2;grid-row:2}
+  .dx-toc-bar{height:44px;padding:0 clamp(20px,4.2vw,64px)}
+  .dx-toc-t{height:44px;cursor:pointer;color:var(--tx-2);transition:color .2s}
+  .dx-toc-t:hover{color:var(--tx)}
+  .dx-toc-t animate-icons{transition:transform .35s var(--ease)}
+  .dx-toc.open .dx-toc-t animate-icons{transform:rotate(180deg)}
+  #toc{position:absolute;left:0;right:0;top:100%;margin:0;max-height:min(62vh,520px);padding:10px clamp(20px,4.2vw,64px) 18px;
+    background:var(--bg);border-bottom:1px solid var(--line-2);box-shadow:var(--shadow-pop);-webkit-mask-image:none;mask-image:none;
+    opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s var(--ease),transform .3s var(--ease),visibility 0s .3s}
+  .dx-toc.open #toc{opacity:1;visibility:visible;transform:none;transition:opacity .25s var(--ease),transform .3s var(--ease),visibility 0s}
+  #toc::before{display:none}
+  .dx-toc-ind{display:none}
+  #toc a{padding:7px 0 7px 12px;font-size:13.5px;border-left:1px solid var(--line)}
+  #toc a.sub{padding-left:24px;font-size:13px}
+  #toc a.on{border-left-color:var(--accent)}
+  .dx-main{padding-top:32px}
+  .dx-wp .dx{grid-template-columns:minmax(0,1fr)}
+  .dx-wp .dx-toc,.dx-wp .dx-main{grid-column:1}
+}
+
+/* ---------- ≤960: sidebar becomes a drawer ---------- */
+@media (max-width:960px){
+  .dx{grid-template-columns:minmax(0,1fr)}
+  .dx-toc,.dx-main{grid-column:1}
+  .dx-side{position:fixed;top:60px;left:0;bottom:0;z-index:45;width:min(320px,86vw);height:auto;background:var(--bg);border-right:1px solid var(--line-2);
+    box-shadow:var(--shadow-pop);transform:translateX(-102%);visibility:hidden;transition:transform .42s var(--ease),visibility 0s .42s}
+  .dx.drawer .dx-side{transform:none;visibility:visible;transition:transform .42s var(--ease),visibility 0s}
+  .dx-side-in{padding:24px 16px 48px}
+  .dx-scrim{display:block;position:fixed;inset:60px 0 0 0;z-index:44;background:color-mix(in srgb,var(--bg) 55%,transparent);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility 0s .35s}
+  .dx.drawer .dx-scrim{opacity:1;visibility:visible;transition:opacity .35s var(--ease),visibility 0s}
+  .dx-toc-bar{padding:0 var(--gut) 0 calc(var(--gut) - 8px);gap:4px}
+  .dx-dw{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:9px;color:var(--tx-2);transition:color .2s,background-color .2s}
+  .dx-dw:hover,.dx-dw[aria-expanded="true"]{color:var(--tx);background:var(--chip-bg)}
+  .dx-toc-t{flex:1;justify-content:space-between;padding-left:10px;border-left:1px solid var(--line)}
+  #toc{padding:10px var(--gut) 18px}
+  .dx-main{padding:28px var(--gut) 72px}
+  .dx-wp .dx-toc-t{border-left:0;padding-left:0}
+  .dx-wp .dx-toc-bar{padding-left:var(--gut)}
+}
+@media (max-width:760px){
+  .dx-h1{font-size:28px;margin-top:14px}
+  .dx-wp .dx-h1{font-size:clamp(36px,9vw,44px)}
+  .dx-doc.prose{margin-top:22px}
+  .dx-doc h2{margin-top:52px;padding-top:24px}
+  .dx-wp .dx-doc.prose{font-size:15.5px;line-height:1.75}
+  .dx-wp .dx-doc h2{margin-top:64px;padding-top:30px;font-size:23px}
+  .dx-doc .code pre{font-size:12px;padding:12px 14px 14px}
+  .dx-doc .tbl{font-size:13px}
+  .dx-doc .tbl:has(th:nth-child(3)){min-width:600px}
+  .dx-doc .tbl:has(th:nth-child(4)){min-width:680px}
+  .dx-doc .tbl th{padding:10px 12px 9px}
+  .dx-doc .tbl td{padding:10px 12px}
+  /* two-column field/value tables: label above value */
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) thead{display:none}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) :is(tbody,tr,td){display:block}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) tr{padding:12px 14px 13px;border-top:1px solid var(--line)}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) tbody tr:first-child{border-top:0}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) td{padding:0;border:0}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) td:first-child{margin-bottom:5px;font-family:var(--m);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--tx-3)}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) td:first-child :is(strong,a){color:inherit;font-weight:500}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) td+td{color:var(--tx)}
+  .dx-doc :not(.dx-viz)>.tbl-wrap>.tbl:not(:has(th:nth-child(3))) td code:not(.nw){white-space:normal;overflow-wrap:anywhere}
+  .dx-viz,.dx-viz-code{grid-template-columns:minmax(0,1fr);gap:18px}
+  .dx-ring.tk-ring{width:112px;height:112px}
+  .dx-rings{flex-direction:row;justify-content:center;gap:28px}
+  .dx-rings .dx-ring{width:104px;height:104px}
+  .dx-pager{grid-template-columns:1fr;margin-top:44px}
+  .dx-pager .nx{grid-column:1}
+  .dx-pager>span:empty{display:none}
+  
+}
+@media (prefers-reduced-motion:reduce){
+  .dx-side,.dx-scrim,#toc,.dx-sec-p,.dx-toc-ind{transition:none!important}
+}
+.dx-doc>p:has(>.dx-img){max-width:none}

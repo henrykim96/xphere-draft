@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Union Staking | XPHERE Docs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="docs.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="../assets/css/docs.css">
 </head>
-<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+<body class="pg-docs dx-union-staking">
 
-
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="../index.html" aria-label="XPHERE home"><img class="th-d" src="../assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="../assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../union.html">Union</a>
       <a href="../stake.html">Stake</a>
       <a href="../ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="../grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -30,15 +36,15 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
@@ -47,106 +53,108 @@
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<div class="dx">
-  <aside class="dx-side"><div class="dx-grp">Resources</div><nav class="dx-nav"><a class="dx-top" href="faq.html">FAQ</a><a class="dx-top" href="glossary.html">Glossary</a><a class="dx-top on" href="union-staking.html">Union Staking</a><a class="dx-top" href="tokenomics.html">Tokenomics</a><a class="dx-top" href="governance.html">Governance</a><a class="dx-top" href="security.html">Security</a><a class="dx-top" href="network-upgrades.html">Network Upgrades</a><a class="dx-top" href="bridge.html">Bridge</a></nav></aside>
-  <main class="dx-main">
-    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Resources</span><i>/</i><span>Union Staking</span></div>
-    <h1>Union Staking</h1>
-    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<div class="dx-prog" aria-hidden="true"><i></i></div>
+<div class="dx" id="dx">
+  <aside class="dx-side" id="dxSide" data-lenis-prevent><div class="dx-side-in"><div class="dx-grp">Resources</div><nav aria-label="Docs" class="dx-nav"><a class="dx-top" href="faq.html">FAQ</a><a class="dx-top" href="glossary.html">Glossary</a><a class="dx-top on" aria-current="page" href="union-staking.html">Union Staking</a><a class="dx-top" href="tokenomics.html">Tokenomics</a><a class="dx-top" href="governance.html">Governance</a><a class="dx-top" href="security.html">Security</a><a class="dx-top" href="network-upgrades.html">Network Upgrades</a><a class="dx-top" href="bridge.html">Bridge</a></nav></div></aside>
+  <main id="main" class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i aria-hidden="true">/</i><span>Resources</span><i aria-hidden="true">/</i><span>Union Staking</span></div>
+    <h1 class="dx-h1">Union Staking</h1>
+    <div class="dx-doc prose">
 <p><strong>Union Staking</strong> is XPHERE&#x27;s staking mechanism. Union members secure the Main Chain, take part in
 block validation, and are paid from <strong>two distinct protocol income streams</strong>:</p>
-<table><thead><tr><th>Income stream</th><th>Union share</th></tr></thead><tbody><tr><td>Minted block rewards</td><td><strong>40%</strong> of every minted block reward</td></tr><tr><td>Transaction fees</td><td><strong>20%</strong> of every transaction fee (the fee is also <strong>50% burned</strong>, with 20% Miner and 10% Foundation)</td></tr></tbody></table>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Income stream</th><th>Union share</th></tr></thead><tbody><tr><td>Minted block rewards</td><td><strong>40%</strong> of every minted block reward</td></tr><tr><td>Transaction fees</td><td><strong>20%</strong> of every transaction fee (the fee is also <strong>50% burned</strong>, with 20% Miner and 10% Foundation)</td></tr></tbody></table></div>
 <p>The two are accounted for separately: minted rewards follow the emission schedule, while fee income
-scales with network <em>usage</em>. See <a class="" href="mining-rewards.html">Mining Rewards</a> and
-<a class="" href="tokenomics.html">Tokenomics</a>.</p>
+scales with network <em>usage</em>. See <a href="mining-rewards.html">Mining Rewards</a> and
+<a href="tokenomics.html">Tokenomics</a>.</p>
 <p>This page covers the <strong>protocol-level economics</strong>. For the staking service you can use today, see
-the <a class="" href="staking.html">XP Staking (Union Vault)</a> section.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="two-ways-to-take-part">Two Ways to Take Part</h2>
-<table><thead><tr><th></th><th><a class="" href="staking.html">XP Union Vault</a></th><th>Union validator membership</th></tr></thead><tbody><tr><td>Who it is for</td><td>Any XP holder</td><td>Institutions and infrastructure partners</td></tr><tr><td>What you do</td><td>Stake native XP in a non-custodial vault at <a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer" class="">stake.x-phere.com</a></td><td>Operate a Union validator node admitted by the Foundation</td></tr><tr><td>Requirement</td><td>No node, no membership — see the <a class="" href="staking-user-guide.html">User Guide</a></td><td><strong>35,000,000 XP</strong> stake and a registered node address</td></tr><tr><td>Yield source</td><td>Validator rewards the Foundation&#x27;s Union node actually earned</td><td>The <strong>40%</strong> Union share of blocks your node proposes, plus the Union&#x27;s <strong>20%</strong> share of transaction fees</td></tr><tr><td>Admission</td><td>Open, subject to the vault cap</td><td><strong>Permissioned</strong> — onboarding runs through the Foundation</td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-the-minted-block-reward-share-is-earned">How the Minted Block Reward Share Is Earned</h2>
-<p><img decoding="async" loading="lazy" alt="Union Staking reward flow: the minted block reward is split 20% Foundation / 40% Miner / 40% Union, and the Union share is paid to the member whose registered node address holds the round-robin proposer turn" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgNDMwIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjQzMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPlVuaW9uIFN0YWtpbmcgcmV3YXJkIGZsb3cgb24gWHBoZXJlPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+RXZlcnkgNjAgc2Vjb25kcyBhIGJsb2NrIHJld2FyZCBpcyBtaW50ZWQgYW5kIHNwbGl0IGludG8gMjAgcGVyY2VudCBGb3VuZGF0aW9uLCA0MCBwZXJjZW50IE1pbmVyIGFuZCA0MCBwZXJjZW50IFVuaW9uLiBUaGUgVW5pb24gc2hhcmUgZnVuZHMgdGhlIFVuaW9uIHN0YWtpbmcgcG9vbCwgd2hpY2ggcGF5cyB0aGUgbWVtYmVyIHdob3NlIG5vZGUgYWRkcmVzcyBpcyB0aGUgYmxvY2sgcHJvcG9zZXIgaW4gdGhlIHJvdW5kLXJvYmluIHJvdGF0aW9uLjwvZGVzYz4KCiAgPHN0eWxlPgogICAgLmJnICAgIHsgZmlsbDogI2ZmZmZmZjsgfQogICAgLmNhcmQgIHsgZmlsbDogI2Y4ZmFmYzsgc3Ryb2tlOiAjY2JkNWUxOyB9CiAgICAubWludCAgeyBmaWxsOiAjZWVmMmZmOyBzdHJva2U6ICM2MzY2ZjE7IH0KICAgIC51bmlvbiB7IGZpbGw6ICNlY2ZkZjU7IHN0cm9rZTogIzEwYjk4MTsgfQogICAgLm11dGVkIHsgZmlsbDogI2YxZjVmOTsgc3Ryb2tlOiAjY2JkNWUxOyB9CiAgICAudCAgICAgeyBmaWxsOiAjMGYxNzJhOyBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAiU2Vnb2UgVUkiLCBQcmV0ZW5kYXJkLCBzYW5zLXNlcmlmOyB9CiAgICAuc3ViICAgeyBmaWxsOiAjNDc1NTY5OyBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAiU2Vnb2UgVUkiLCBQcmV0ZW5kYXJkLCBzYW5zLXNlcmlmOyB9CiAgICAuYXJyb3cgeyBzdHJva2U6ICM5NGEzYjg7IH0KICAgIC5hcnJvd2hlYWQgeyBmaWxsOiAjOTRhM2I4OyB9CiAgICAuYWNjZW50IHsgZmlsbDogIzA1OTY2OTsgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgIlNlZ29lIFVJIiwgUHJldGVuZGFyZCwgc2Fucy1zZXJpZjsgfQoKICAgIEBtZWRpYSAocHJlZmVycy1jb2xvci1zY2hlbWU6IGRhcmspIHsKICAgICAgLmJnICAgIHsgZmlsbDogIzFiMWIxZDsgfQogICAgICAuY2FyZCAgeyBmaWxsOiAjMjYyODJjOyBzdHJva2U6ICMzZjQ0NTA7IH0KICAgICAgLm1pbnQgIHsgZmlsbDogIzIzMjY0NTsgc3Ryb2tlOiAjODE4Y2Y4OyB9CiAgICAgIC51bmlvbiB7IGZpbGw6ICMxMjMwMmE7IHN0cm9rZTogIzM0ZDM5OTsgfQogICAgICAubXV0ZWQgeyBmaWxsOiAjMjQyNjJhOyBzdHJva2U6ICMzZjQ0NTA7IH0KICAgICAgLnQgICAgIHsgZmlsbDogI2YxZjVmOTsgfQogICAgICAuc3ViICAgeyBmaWxsOiAjYTliMWJkOyB9CiAgICAgIC5hcnJvdyB7IHN0cm9rZTogIzZiNzI4MDsgfQogICAgICAuYXJyb3doZWFkIHsgZmlsbDogIzZiNzI4MDsgfQogICAgICAuYWNjZW50IHsgZmlsbDogIzM0ZDM5OTsgfQogICAgfQogIDwvc3R5bGU+CgogIDxyZWN0IGNsYXNzPSJiZyIgeD0iMCIgeT0iMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI0MzAiIHJ4PSIxMiIvPgoKICA8IS0tIEVtaXNzaW9uIC0tPgogIDxyZWN0IGNsYXNzPSJtaW50IiB4PSIzMjUiIHk9IjI0IiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjY2IiByeD0iMTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgY2xhc3M9InQiIHg9IjQ1MCIgeT0iNTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI3MDAiPk1pbnRlZCBibG9jayByZXdhcmQ8L3RleHQ+CiAgPHRleHQgY2xhc3M9InN1YiIgeD0iNDUwIiB5PSI3NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMyI+ZXZlcnkgNjAgcyDCtyAxLDQ3NC40IFhQIChjdXJyZW50KTwvdGV4dD4KCiAgPCEtLSBTcGxpdCBhcnJvd3MgLS0+CiAgPHBhdGggY2xhc3M9ImFycm93IiBkPSJNNDUwIDkwIFYxMTYiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPHBhdGggY2xhc3M9ImFycm93IiBkPSJNMTUwIDExNiBINzUwIiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGNsYXNzPSJhcnJvdyIgZD0iTTE1MCAxMTYgVjE0NiIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik00NTAgMTE2IFYxNDYiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPHBhdGggY2xhc3M9ImFycm93IiBkPSJNNzUwIDExNiBWMTQ2IiBzdHJva2Utd2lkdGg9IjEuNSIgZmlsbD0ibm9uZSIvPgogIDxwb2x5Z29uIGNsYXNzPSJhcnJvd2hlYWQiIHBvaW50cz0iMTUwLDE1NiAxNDQsMTQ0IDE1NiwxNDQiLz4KICA8cG9seWdvbiBjbGFzcz0iYXJyb3doZWFkIiBwb2ludHM9IjQ1MCwxNTYgNDQ0LDE0NCA0NTYsMTQ0Ii8+CiAgPHBvbHlnb24gY2xhc3M9ImFycm93aGVhZCIgcG9pbnRzPSI3NTAsMTU2IDc0NCwxNDQgNzU2LDE0NCIvPgoKICA8IS0tIFRocmVlIHJlY2lwaWVudHMgLS0+CiAgPHJlY3QgY2xhc3M9Im11dGVkIiB4PSI0MCIgeT0iMTU4IiB3aWR0aD0iMjIwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgY2xhc3M9InQiIHg9IjE1MCIgeT0iMTg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNjAwIj5Gb3VuZGF0aW9uPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJzdWIiIHg9IjE1MCIgeT0iMjExIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEzIj4yMCUgwrcgMjk0Ljg4IFhQPC90ZXh0PgoKICA8cmVjdCBjbGFzcz0ibXV0ZWQiIHg9IjM0MCIgeT0iMTU4IiB3aWR0aD0iMjIwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgY2xhc3M9InQiIHg9IjQ1MCIgeT0iMTg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNjAwIj5NaW5lciAoUHJvb2YgQ2hhaW4pPC90ZXh0PgogIDx0ZXh0IGNsYXNzPSJzdWIiIHg9IjQ1MCIgeT0iMjExIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEzIj40MCUgwrcgNTg5Ljc2IFhQPC90ZXh0PgoKICA8cmVjdCBjbGFzcz0idW5pb24iIHg9IjY0MCIgeT0iMTU4IiB3aWR0aD0iMjIwIiBoZWlnaHQ9Ijc0IiByeD0iMTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgY2xhc3M9InQiIHg9Ijc1MCIgeT0iMTg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNzAwIj5VbmlvbiAoc3Rha2luZyk8L3RleHQ+CiAgPHRleHQgY2xhc3M9ImFjY2VudCIgeD0iNzUwIiB5PSIyMTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI2MDAiPjQwJSDCtyA1ODkuNzYgWFA8L3RleHQ+CgogIDwhLS0gVW5pb24gcG9vbCAtLT4KICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik03NTAgMjMyIFYyNjQiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPHBvbHlnb24gY2xhc3M9ImFycm93aGVhZCIgcG9pbnRzPSI3NTAsMjc0IDc0NCwyNjIgNzU2LDI2MiIvPgoKICA8cmVjdCBjbGFzcz0idW5pb24iIHg9IjYwNSIgeT0iMjc2IiB3aWR0aD0iMjU1IiBoZWlnaHQ9IjY2IiByeD0iMTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgY2xhc3M9InQiIHg9IjczMiIgeT0iMzA0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE1IiBmb250LXdlaWdodD0iNjAwIj5VbmlvbiBzdGFraW5nIHBvb2w8L3RleHQ+CiAgPHRleHQgY2xhc3M9InN1YiIgeD0iNzMyIiB5PSIzMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTMiPmZ1bmRlZCBldmVyeSBlbWlzc2lvbiBjeWNsZTwvdGV4dD4KCiAgPCEtLSBSb3RhdGlvbiAtLT4KICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik02MDUgMzA5IEg1MDAiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPHBvbHlnb24gY2xhc3M9ImFycm93aGVhZCIgcG9pbnRzPSI0OTAsMzA5IDUwMiwzMDMgNTAyLDMxNSIvPgoKICA8cmVjdCBjbGFzcz0iY2FyZCIgeD0iMjMwIiB5PSIyNzYiIHdpZHRoPSIyNjAiIGhlaWdodD0iNjYiIHJ4PSIxMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCBjbGFzcz0idCIgeD0iMzYwIiB5PSIzMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtd2VpZ2h0PSI2MDAiPlJvdW5kLXJvYmluIHByb3Bvc2VyIHR1cm48L3RleHQ+CiAgPHRleHQgY2xhc3M9InN1YiIgeD0iMzYwIiB5PSIzMjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTMiPnNlcXVlbnRpYWwsIHByZWRldGVybWluZWQgb3JkZXI8L3RleHQ+CgogIDwhLS0gTWVtYmVyIHBheW91dCAtLT4KICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik0zNjAgMzQyIFYzNzQiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPHBvbHlnb24gY2xhc3M9ImFycm93aGVhZCIgcG9pbnRzPSIzNjAsMzg0IDM1NCwzNzIgMzY2LDM3MiIvPgoKICA8cmVjdCBjbGFzcz0iY2FyZCIgeD0iMjAwIiB5PSIzODYiIHdpZHRoPSIzMjAiIGhlaWdodD0iMzQiIHJ4PSI4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDx0ZXh0IGNsYXNzPSJ0IiB4PSIzNjAiIHk9IjQwOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjYwMCI+VW5pb24gbWVtYmVyJiM4MjE3O3MgcmVnaXN0ZXJlZCBub2RlIGFkZHJlc3M8L3RleHQ+CgogIDwhLS0gU3Rha2UgcmVxdWlyZW1lbnQgbm90ZSAtLT4KICA8cmVjdCBjbGFzcz0iY2FyZCIgeD0iNDAiIHk9IjI3NiIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI2NiIgcng9IjEwIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNSA0Ii8+CiAgPHRleHQgY2xhc3M9InQiIHg9IjEyMCIgeT0iMzAzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNjAwIj5TdGFrZTwvdGV4dD4KICA8dGV4dCBjbGFzcz0ic3ViIiB4PSIxMjAiIHk9IjMyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMyI+MzUsMDAwLDAwMCBYUDwvdGV4dD4KICA8cGF0aCBjbGFzcz0iYXJyb3ciIGQ9Ik0yMDAgMzA5IEgyMjIiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz4KICA8cG9seWdvbiBjbGFzcz0iYXJyb3doZWFkIiBwb2ludHM9IjIzMiwzMDkgMjIwLDMwMyAyMjAsMzE1Ii8+Cjwvc3ZnPgo=" width="900" height="430" class="img_ev3q"></p>
+the <a href="staking.html">XP Staking (Union Vault)</a> section.</p>
+<h2 id="two-ways-to-take-part">Two Ways to Take Part</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th><a href="staking.html">XP Union Vault</a></th><th>Union validator membership</th></tr></thead><tbody><tr><td>Who it is for</td><td>Any XP holder</td><td>Institutions and infrastructure partners</td></tr><tr><td>What you do</td><td>Stake native XP in a non-custodial vault at <a class="lk" href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer">stake.x-phere.com<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a></td><td>Operate a Union validator node admitted by the Foundation</td></tr><tr><td>Requirement</td><td>No node, no membership — see the <a href="staking-user-guide.html">User Guide</a></td><td><strong>35,000,000 XP</strong> stake and a registered node address</td></tr><tr><td>Yield source</td><td>Validator rewards the Foundation&#x27;s Union node actually earned</td><td>The <strong>40%</strong> Union share of blocks your node proposes, plus the Union&#x27;s <strong>20%</strong> share of transaction fees</td></tr><tr><td>Admission</td><td>Open, subject to the vault cap</td><td><strong>Permissioned</strong> — onboarding runs through the Foundation</td></tr></tbody></table></div>
+<h2 id="how-the-minted-block-reward-share-is-earned">How the Minted Block Reward Share Is Earned</h2>
+<p><img decoding="async" loading="lazy" alt="Union Staking reward flow: the minted block reward is split 20% Foundation / 40% Miner / 40% Union, and the Union share is paid to the member whose registered node address holds the round-robin proposer turn" width="900" height="430" class="dx-img dx-fig th-d" src="../assets/media/dx-union-reward-flow-dark.svg"><img decoding="async" loading="lazy" alt="Union Staking reward flow: the minted block reward is split 20% Foundation / 40% Miner / 40% Union, and the Union share is paid to the member whose registered node address holds the round-robin proposer turn" width="900" height="430" class="dx-img dx-fig th-l" src="../assets/media/dx-union-reward-flow-light.svg"></p>
 <ol>
-<li class=""><strong>A reward is minted every 60 seconds.</strong> At the current emission that is <code>1,474.4 XP</code> per cycle
-(see <a class="" href="mining-rewards.html">Mining Rewards</a>).</li>
-<li class=""><strong>The reward is split three ways</strong> — 20% Foundation, 40% Miner, 40% Union.</li>
-<li class=""><strong>The Union share goes to the block proposer.</strong> When a Union member&#x27;s registered node address
+<li><strong>A reward is minted every 60 seconds.</strong> At the current emission that is <code class="nw">1,474.4 XP</code> per cycle
+(see <a href="mining-rewards.html">Mining Rewards</a>).</li>
+<li><strong>The reward is split three ways</strong> — 20% Foundation, 40% Miner, 40% Union.</li>
+<li><strong>The Union share goes to the block proposer.</strong> When a Union member&#x27;s registered node address
 serves as the <strong>block proposer</strong>, that member receives the <strong>40% Union share</strong> of that block&#x27;s
 reward.</li>
-<li class=""><strong>Proposer turns rotate round-robin.</strong> Eligible Union members are cycled in a predetermined,
+<li><strong>Proposer turns rotate round-robin.</strong> Eligible Union members are cycled in a predetermined,
 sequential order — this is separate from Proof Chain mining, where miners compete through xpHash
 Proof-of-Work.</li>
-<li class=""><strong>Rewards are credited automatically</strong> to the registered node address. There is <strong>no separate
+<li><strong>Rewards are credited automatically</strong> to the registered node address. There is <strong>no separate
 claim transaction</strong> at the protocol level.</li>
 </ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-the-transaction-fee-share-works">How the Transaction-Fee Share Works</h2>
+<h2 id="how-the-transaction-fee-share-works">How the Transaction-Fee Share Works</h2>
 <p>Minted block rewards are not the Union&#x27;s only income. Transaction fees are <strong>not</strong> burned in full —
 every transaction&#x27;s fee is split four ways, and <strong>20% goes to the Union</strong>:</p>
-<table><thead><tr><th>Destination</th><th>Share</th></tr></thead><tbody><tr><td>Burn</td><td><strong>50%</strong></td></tr><tr><td><strong>Union</strong></td><td><strong>20%</strong></td></tr><tr><td>Miner</td><td>20%</td></tr><tr><td>Foundation</td><td>10%</td></tr><tr><td><strong>Total</strong></td><td><strong>100%</strong></td></tr></tbody></table>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Two separate streams</div><div class="admonitionContent_BuS1"><p>Fee revenue is distributed separately from minted emission. A Union member therefore earns from
-network <em>usage</em> as well as from block issuance — see <a class="" href="mining-rewards.html">Mining Rewards</a> for the miner
-side of the same split, and <a class="" href="tokenomics.html">Tokenomics</a> for the full fee and burn accounting.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="union-membership-requirements">Union Membership Requirements</h2>
-<table><thead><tr><th>Requirement</th><th>Value</th></tr></thead><tbody><tr><td>Stake amount</td><td><strong>35,000,000 XP</strong> per Union membership</td></tr><tr><td>Node address</td><td>A valid address, registered with the stake, that receives proposer rewards</td></tr><tr><td>Node operation</td><td>Infrastructure meeting the <a class="" href="nodes-validator-node.html">Validator Node requirements</a></td></tr><tr><td>Admission</td><td>Union slots are <strong>permissioned</strong> in the current network phase — onboarding runs through the Foundation</td></tr></tbody></table>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Destination</th><th>Share</th></tr></thead><tbody><tr><td>Burn</td><td><strong>50%</strong></td></tr><tr><td><strong>Union</strong></td><td><strong>20%</strong></td></tr><tr><td>Miner</td><td>20%</td></tr><tr><td>Foundation</td><td>10%</td></tr><tr><td><strong>Total</strong></td><td><strong>100%</strong></td></tr></tbody></table></div>
+<div class="callout note"><div class="callout-t"><animate-icons name="info" size="13"></animate-icons><span>Two separate streams</span></div><div class="callout-b"><p>Fee revenue is distributed separately from minted emission. A Union member therefore earns from
+network <em>usage</em> as well as from block issuance — see <a href="mining-rewards.html">Mining Rewards</a> for the miner
+side of the same split, and <a href="tokenomics.html">Tokenomics</a> for the full fee and burn accounting.</p></div></div>
+<h2 id="union-membership-requirements">Union Membership Requirements</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Requirement</th><th>Value</th></tr></thead><tbody><tr><td>Stake amount</td><td><strong>35,000,000 XP</strong> per Union membership</td></tr><tr><td>Node address</td><td>A valid address, registered with the stake, that receives proposer rewards</td></tr><tr><td>Node operation</td><td>Infrastructure meeting the <a href="nodes-validator-node.html">Validator Node requirements</a></td></tr><tr><td>Admission</td><td>Union slots are <strong>permissioned</strong> in the current network phase — onboarding runs through the Foundation</td></tr></tbody></table></div>
 <p>The substantial stake threshold is deliberate: it prevents Sybil attacks and aligns Union members
 with the long-term health of the network.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="staking-xp-without-running-a-node">Staking XP Without Running a Node</h2>
-<p>The <strong><a class="" href="staking.html">XP Union Vault</a></strong> at <a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer" class="">stake.x-phere.com</a> is the
+<h2 id="staking-xp-without-running-a-node">Staking XP Without Running a Node</h2>
+<p>The <strong><a href="staking.html">XP Union Vault</a></strong> at <a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer">stake.x-phere.com</a> is the
 Foundation&#x27;s non-custodial staking vault. It pays stakers out of the <strong>real earnings</strong> of the
 Foundation&#x27;s Union validator node and <strong>permanently burns</strong> the remainder — no node, no membership,
 and no minimum membership stake required.</p>
 <ul>
-<li class=""><a class="" href="staking.html">Overview</a> — what it is and why it is different</li>
-<li class=""><a class="" href="staking-how-it-works.html">How It Works</a> — daily settlement, the reserved-seat split, streaming</li>
-<li class=""><a class="" href="staking-user-guide.html">User Guide</a> — stake, claim, and unstake</li>
-<li class=""><a class="" href="staking-fees-and-risks.html">Fees &amp; Risks</a> — 0% fees, and the risks you accept</li>
+<li><a href="staking.html">Overview</a> — what it is and why it is different</li>
+<li><a href="staking-how-it-works.html">How It Works</a> — daily settlement, the reserved-seat split, streaming</li>
+<li><a href="staking-user-guide.html">User Guide</a> — stake, claim, and unstake</li>
+<li><a href="staking-fees-and-risks.html">Fees &amp; Risks</a> — 0% fees, and the risks you accept</li>
 </ul>
-<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Check the domain</div><div class="admonitionContent_BuS1"><p>The only official staking address is <code>https://stake.x-phere.com</code>. The Foundation will <strong>never</strong> ask
-for your seed phrase or private key. See <a class="" href="staking-fees-and-risks.html#staying-safe">Fees &amp; Risks</a>.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<div class="callout warn"><div class="callout-t"><animate-icons name="triangle-alert" size="13"></animate-icons><span>Check the domain</span></div><div class="callout-b"><p>The only official staking address is <code class="nw">https://stake.x-phere.com</code>. The Foundation will <strong>never</strong> ask
+for your seed phrase or private key. See <a href="staking-fees-and-risks.html#staying-safe">Fees &amp; Risks</a>.</p></div></div>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li class=""><a class="" href="staking.html">XP Staking (Union Vault)</a></li>
-<li class=""><a class="" href="mining-rewards.html">Mining Rewards</a> — the 20 / 40 / 40 minted split and the four-way fee split</li>
-<li class=""><a class="" href="nodes-validator-node.html">Validator Node</a> — infrastructure and operational requirements</li>
-<li class=""><a class="" href="tokenomics.html">Tokenomics</a></li>
-<li class=""><a class="" href="whitepaper.html#b-union-staking-and-reward-mechanism">Whitepaper — Union Staking and Reward Mechanism</a></li>
-</ul></div></div></div>
-    <div class="dx-pager"><a class="pv" href="glossary.html"><small>Previous</small><i>&#8592;</i> Glossary</a><a class="nx" href="tokenomics.html"><small>Next</small>Tokenomics <i>&#8594;</i></a></div>
-    
+<li><a href="staking.html">XP Staking (Union Vault)</a></li>
+<li><a href="mining-rewards.html">Mining Rewards</a> — the 20 / 40 / 40 minted split and the four-way fee split</li>
+<li><a href="nodes-validator-node.html">Validator Node</a> — infrastructure and operational requirements</li>
+<li><a href="tokenomics.html">Tokenomics</a></li>
+<li><a href="whitepaper.html#b-union-staking-and-reward-mechanism">Whitepaper — Union Staking and Reward Mechanism</a></li>
+</ul></div>
+    <nav class="dx-pager"><a class="pv" href="glossary.html"><small class="lab">Previous</small><span class="pg-t"><animate-icons name="arrow-left" size="14"></animate-icons><span>Glossary</span></span></a><a class="nx" href="tokenomics.html"><small class="lab">Next</small><span class="pg-t"><animate-icons name="arrow-right" size="14"></animate-icons><span>Tokenomics</span></span></a></nav>
   </main>
-  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#two-ways-to-take-part">Two Ways to Take Part</a><a href="#how-the-minted-block-reward-share-is-earned">How the Minted Block Reward Share Is Earned</a><a href="#how-the-transaction-fee-share-works">How the Transaction-Fee Share Works</a><a href="#union-membership-requirements">Union Membership Requirements</a><a href="#staking-xp-without-running-a-node">Staking XP Without Running a Node</a><a href="#see-also">See Also</a></nav></aside>
+  <aside class="dx-toc" id="dxToc">
+    <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#two-ways-to-take-part">Two Ways to Take Part</a><a href="#how-the-minted-block-reward-share-is-earned">How the Minted Block Reward Share Is Earned</a><a href="#how-the-transaction-fee-share-works">How the Transaction-Fee Share Works</a><a href="#union-membership-requirements">Union Membership Requirements</a><a href="#staking-xp-without-running-a-node">Staking XP Without Running a Node</a><a href="#see-also">See Also</a></nav>
+  </aside>
+  <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
-  /* code blocks: add a label bar with a copy button */
-  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
-    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
-    var bar=document.createElement('div');bar.className='bar';
-    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
-    c.insertBefore(bar,c.firstChild);
-    var btn=bar.querySelector('button');
-    btn.onclick=function(){var t=c.querySelector('code').innerText;
-      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
-  });
-  /* tables scroll sideways on small screens */
-  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
-  /* on-this-page highlight */
-  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
-  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
-})();
-</script>
-<script src="../nav.js"></script>
+<!-- @scripts -->
+<script src="../assets/vendor/animateicons-lucide.js"></script>
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/js/block-stream.js"></script>
+<script src="../assets/js/glass.js"></script>
+<script src="../assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="../assets/js/docs.js"></script>
 </body>
 </html>

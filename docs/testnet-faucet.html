@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Testnet Faucet | XPHERE Docs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="docs.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="../assets/css/docs.css">
 </head>
-<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+<body class="pg-docs dx-testnet-faucet">
 
-
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="../index.html" aria-label="XPHERE home"><img class="th-d" src="../assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="../assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../union.html">Union</a>
       <a href="../stake.html">Stake</a>
       <a href="../ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="../grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -30,103 +36,105 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
+          <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html" aria-current="page">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
           <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
           <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<div class="dx">
-  <aside class="dx-side"><div class="dx-grp">Build</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Developer Guide <i>&#8964;</i></button><div class="dx-sec-p"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a href="evm-compatibility.html">EVM Compatibility</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">References &amp; RPC <i>&#8964;</i></button><div class="dx-sec-p"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a href="gas-and-fees.html">Gas and Transaction Fees</a><a href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div><a class="dx-top on" href="testnet-faucet.html">Testnet Faucet</a></nav></aside>
-  <main class="dx-main">
-    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Build</span><i>/</i><span>Testnet Faucet</span></div>
-    <h1>Testnet Faucet</h1>
-    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<div class="dx-prog" aria-hidden="true"><i></i></div>
+<div class="dx" id="dx">
+  <aside class="dx-side" id="dxSide" data-lenis-prevent><div class="dx-side-in"><div class="dx-grp">Build</div><nav aria-label="Docs" class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs1"><span>Developer Guide</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs1"><div class="dx-sec-in"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a href="evm-compatibility.html">EVM Compatibility</a></div></div></div><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs2"><span>References &amp; RPC</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs2"><div class="dx-sec-in"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a href="gas-and-fees.html">Gas and Transaction Fees</a><a href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div></div><a class="dx-top on" aria-current="page" href="testnet-faucet.html">Testnet Faucet</a></nav></div></aside>
+  <main id="main" class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i aria-hidden="true">/</i><span>Build</span><i aria-hidden="true">/</i><span>Testnet Faucet</span></div>
+    <h1 class="dx-h1">Testnet Faucet</h1>
+    <div class="dx-doc prose">
 <p>The XPHERE Faucet dispenses <strong>XPT</strong>, the native token of the <strong>XPHERE Testnet</strong>. XPT exists so you can deploy and exercise contracts before spending real gas. It has no monetary value and cannot be moved to Mainnet.</p>
-<p><strong>Faucet: <a href="https://faucet.x-phere.com" target="_blank" rel="noopener noreferrer" class="">faucet.x-phere.com</a></strong></p>
-<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>The faucet funds Testnet only</div><div class="admonitionContent_BuS1"><p>The faucet does not distribute Mainnet <code>XP</code>, and nothing it sends you is transferable to Mainnet. Any site offering &quot;free mainnet XP&quot; is not operated by the XPHERE Foundation — see <a class="" href="security.html">Security</a> for the list of verified official domains.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-you-get">What You Get</h2>
-<table><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Token</td><td><code>XPT</code> — XPHERE Testnet native token, 18 decimals</td></tr><tr><td>Amount per request</td><td><strong>10 XPT</strong></td></tr><tr><td>Interval</td><td>one request per <strong>24 hours</strong></td></tr><tr><td>Required input</td><td>a single XPHERE Testnet address (<code>0x…</code>)</td></tr><tr><td>Cost</td><td>Free — no wallet connection, no signature</td></tr></tbody></table>
+<p><strong>Faucet: <a href="https://faucet.x-phere.com" target="_blank" rel="noopener noreferrer">faucet.x-phere.com</a></strong></p>
+<div class="callout warn"><div class="callout-t"><animate-icons name="triangle-alert" size="13"></animate-icons><span>The faucet funds Testnet only</span></div><div class="callout-b"><p>The faucet does not distribute Mainnet <code class="nw">XP</code>, and nothing it sends you is transferable to Mainnet. Any site offering &quot;free mainnet XP&quot; is not operated by the XPHERE Foundation — see <a href="security.html">Security</a> for the list of verified official domains.</p></div></div>
+<h2 id="what-you-get">What You Get</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Token</td><td><code class="nw">XPT</code> — XPHERE Testnet native token, 18 decimals</td></tr><tr><td>Amount per request</td><td><strong>10 XPT</strong></td></tr><tr><td>Interval</td><td>one request per <strong>24 hours</strong></td></tr><tr><td>Required input</td><td>a single XPHERE Testnet address (<code class="nw">0x…</code>)</td></tr><tr><td>Cost</td><td>Free — no wallet connection, no signature</td></tr></tbody></table></div>
 <p>Both figures are published on the faucet page itself, which states <em>&quot;Applications can be made at 24-hour intervals&quot;</em> and <em>&quot;Token 10 XPT&quot;</em>. Requests are made through the web form; no public faucet API is documented.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1--add-the-testnet-to-your-wallet">Step 1 — Add the Testnet to Your Wallet</h2>
-<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Network Name</td><td><code>Xphere Testnet</code></td></tr><tr><td>RPC URL</td><td><code>https://testnet.x-phere.com</code></td></tr><tr><td>Chain ID (decimal)</td><td><code>1998991</code></td></tr><tr><td>Chain ID (hex)</td><td><code>0x1e808f</code></td></tr><tr><td>Currency Symbol</td><td><code>XPT</code></td></tr><tr><td>Decimals</td><td><code>18</code></td></tr><tr><td>Block Explorer</td><td><code>https://xpt.tamsa.io</code></td></tr></tbody></table>
-<p>MetaMask, Rabby, and Zigap instructions are on <a class="" href="wallet-setup.html">Wallet Setup</a>. To add the network from a dApp:</p>
-<div class="language-ts codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-ts codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token keyword">await</span><span class="token plain"> window</span><span class="token punctuation">.</span><span class="token plain">ethereum</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">  method</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;wallet_addEthereumChain&quot;</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">  params</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">    chainId</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;0x1e808f&quot;</span><span class="token punctuation">,</span><span class="token plain"> </span><span class="token comment">// 1998991 in hex</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">    chainName</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;Xphere Testnet&quot;</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">    nativeCurrency</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">{</span><span class="token plain"> name</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;Xphere Testnet&quot;</span><span class="token punctuation">,</span><span class="token plain"> </span><span class="token builtin">symbol</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;XPT&quot;</span><span class="token punctuation">,</span><span class="token plain"> decimals</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">18</span><span class="token plain"> </span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">    rpcUrls</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token string">&quot;https://testnet.x-phere.com&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">    blockExplorerUrls</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token string">&quot;https://xpt.tamsa.io&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain">  </span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="token-line"><span class="token plain"></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br></div></code></pre></div></div>
+<h2 id="step-1--add-the-testnet-to-your-wallet">Step 1 — Add the Testnet to Your Wallet</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Network Name</td><td><code class="nw">Xphere Testnet</code></td></tr><tr><td>RPC URL</td><td><code>https://testnet.x-phere.com</code></td></tr><tr><td>Chain ID (decimal)</td><td><code class="nw">1998991</code></td></tr><tr><td>Chain ID (hex)</td><td><code class="nw">0x1e808f</code></td></tr><tr><td>Currency Symbol</td><td><code class="nw">XPT</code></td></tr><tr><td>Decimals</td><td><code class="nw">18</code></td></tr><tr><td>Block Explorer</td><td><code class="nw">https://xpt.tamsa.io</code></td></tr></tbody></table></div>
+<p>MetaMask, Rabby, and Zigap instructions are on <a href="wallet-setup.html">Wallet Setup</a>. To add the network from a dApp:</p>
+<div class="code" data-lang="ts"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token keyword">await</span><span class="token plain"> window</span><span class="token punctuation">.</span><span class="token plain">ethereum</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">  method</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;wallet_addEthereumChain&quot;</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">  params</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">    chainId</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;0x1e808f&quot;</span><span class="token punctuation">,</span><span class="token plain"> </span><span class="token comment">// 1998991 in hex</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">    chainName</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;Xphere Testnet&quot;</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">    nativeCurrency</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">{</span><span class="token plain"> name</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;Xphere Testnet&quot;</span><span class="token punctuation">,</span><span class="token plain"> </span><span class="token builtin">symbol</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string">&quot;XPT&quot;</span><span class="token punctuation">,</span><span class="token plain"> decimals</span><span class="token operator">:</span><span class="token plain"> </span><span class="token number">18</span><span class="token plain"> </span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">    rpcUrls</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token string">&quot;https://testnet.x-phere.com&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">    blockExplorerUrls</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token string">&quot;https://xpt.tamsa.io&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain">  </span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token plain"></span><br></div><div class="ln"><span class="token plain"></span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br></div></code></pre></div>
 <p>Confirm your wallet is on Testnet and not Mainnet before requesting:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST https://testnet.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_chainId&quot;,&quot;params&quot;:[],&quot;id&quot;:1}&#x27;</span><br></div><div class="token-line"><span class="token plain"># {&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;id&quot;:1,&quot;result&quot;:&quot;0x1e808f&quot;}   ← 1998991, Testnet</span><br></div></code></pre></div></div>
-<p>Mainnet returns <code>0x134fe69</code> (<code>20250217</code>). If you see that, you are on the wrong network and the faucet cannot fund you.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2--request-tokens">Step 2 — Request Tokens</h2>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-s</span> <span class="token flag">-X</span> POST https://testnet.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> <span class="token string">'{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'</span></span><br></div><div class="ln"><span class="token comment"># {"jsonrpc":"2.0","id":1,"result":"0x1e808f"}   ← 1998991, Testnet</span><br></div></code></pre></div>
+<p>Mainnet returns <code class="nw">0x134fe69</code> (<code class="nw">20250217</code>). If you see that, you are on the wrong network and the faucet cannot fund you.</p>
+<h2 id="step-2--request-tokens">Step 2 — Request Tokens</h2>
 <ol>
-<li class="">Open <strong><a href="https://faucet.x-phere.com" target="_blank" rel="noopener noreferrer" class="">faucet.x-phere.com</a></strong>.</li>
-<li class="">Paste your Testnet address into the field labelled <em>&quot;Enter your XPHERE 2.0 (Testnet) address&quot;</em>.</li>
-<li class="">Submit the request.</li>
-<li class="">Wait 24 hours before requesting again for the same address.</li>
+<li>Open <strong><a href="https://faucet.x-phere.com" target="_blank" rel="noopener noreferrer">faucet.x-phere.com</a></strong>.</li>
+<li>Paste your Testnet address into the field labelled <em>&quot;Enter your XPHERE 2.0 (Testnet) address&quot;</em>.</li>
+<li>Submit the request.</li>
+<li>Wait 24 hours before requesting again for the same address.</li>
 </ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3--check-the-balance">Step 3 — Check the Balance</h2>
+<h2 id="step-3--check-the-balance">Step 3 — Check the Balance</h2>
 <p>Query the Testnet RPC directly — this is the definitive check:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST https://testnet.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getBalance&quot;,&quot;params&quot;:[&quot;0xYourAddress&quot;,&quot;latest&quot;],&quot;id&quot;:1}&#x27;</span><br></div></code></pre></div></div>
-<p>The result is a hex wei value; <code>10 XPT</code> is <code>0x8ac7230489e80000</code>.</p>
-<p>Or open the <strong>Tamsa Testnet Explorer at <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xpt.tamsa.io</a></strong> and search for your address.</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Which explorer for Testnet</div><div class="admonitionContent_BuS1"><p>Use <strong><a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xpt.tamsa.io</a></strong> for Testnet. <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> publishes <strong>Mainnet</strong> data — its own footer states <code>Chain ID: 20250217</code> — and no XPScan testnet instance is published (<code>https://xpscan.io/testnet</code> returns 404). Do not expect a Testnet transaction to appear on XPScan.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting">Troubleshooting</h2>
-<table><thead><tr><th>Symptom</th><th>Cause and fix</th></tr></thead><tbody><tr><td>Wallet shows <code>0</code> after a successful request</td><td>The wallet is on the wrong network. Confirm the Chain ID reads <code>1998991</code>, and that the currency symbol is <code>XPT</code>, not <code>XP</code>.</td></tr><tr><td>Balance is on-chain but the wallet shows nothing</td><td>The wallet&#x27;s RPC is behind or unreachable. Re-check with the <code>eth_getBalance</code> call above; if it disagrees with the wallet, switch the wallet&#x27;s RPC URL to <code>https://testnet.x-phere.com</code>.</td></tr><tr><td>A second request returns nothing</td><td>The published interval is 24 hours per address. No other limit is documented.</td></tr><tr><td>The transaction is not on <code>xpscan.io</code></td><td>Expected — XPScan serves Mainnet. Look on <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xpt.tamsa.io</a>.</td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-to-do-next">What to Do Next</h2>
-<table><thead><tr><th>Goal</th><th>Page</th></tr></thead><tbody><tr><td>Deploy your first contract on Testnet</td><td><a class="" href="developer-guide.html">Developer Quickstart</a></td></tr><tr><td>Issue an ERC-20 or ERC-721</td><td><a class="" href="token-standards.html">Token Standards</a></td></tr><tr><td>Full parameter list for both networks</td><td><a class="" href="network-info.html">Network Information</a></td></tr><tr><td>Testnet RPC endpoints and rate limits</td><td><a class="" href="public-endpoints.html">Public JSON-RPC Endpoints</a></td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-s</span> <span class="token flag">-X</span> POST https://testnet.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> <span class="token string">'{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xYourAddress","latest"],"id":1}'</span></span><br></div></code></pre></div>
+<p>The result is a hex wei value; <code class="nw">10 XPT</code> is <code class="nw">0x8ac7230489e80000</code>.</p>
+<p>Or open the <strong>Tamsa Testnet Explorer at <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer">xpt.tamsa.io</a></strong> and search for your address.</p>
+<div class="callout note"><div class="callout-t"><animate-icons name="info" size="13"></animate-icons><span>Which explorer for Testnet</span></div><div class="callout-b"><p>Use <strong><a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer">xpt.tamsa.io</a></strong> for Testnet. <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer">XPScan</a> publishes <strong>Mainnet</strong> data — its own footer states <code class="nw">Chain ID: 20250217</code> — and no XPScan testnet instance is published (<code class="nw">https://xpscan.io/testnet</code> returns 404). Do not expect a Testnet transaction to appear on XPScan.</p></div></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Symptom</th><th>Cause and fix</th></tr></thead><tbody><tr><td>Wallet shows <code class="nw">0</code> after a successful request</td><td>The wallet is on the wrong network. Confirm the Chain ID reads <code class="nw">1998991</code>, and that the currency symbol is <code class="nw">XPT</code>, not <code class="nw">XP</code>.</td></tr><tr><td>Balance is on-chain but the wallet shows nothing</td><td>The wallet&#x27;s RPC is behind or unreachable. Re-check with the <code class="nw">eth_getBalance</code> call above; if it disagrees with the wallet, switch the wallet&#x27;s RPC URL to <code>https://testnet.x-phere.com</code>.</td></tr><tr><td>A second request returns nothing</td><td>The published interval is 24 hours per address. No other limit is documented.</td></tr><tr><td>The transaction is not on <code class="nw">xpscan.io</code></td><td>Expected — XPScan serves Mainnet. Look on <a class="lk" href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer">xpt.tamsa.io<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a>.</td></tr></tbody></table></div>
+<h2 id="what-to-do-next">What to Do Next</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Goal</th><th>Page</th></tr></thead><tbody><tr><td>Deploy your first contract on Testnet</td><td><a href="developer-guide.html">Developer Quickstart</a></td></tr><tr><td>Issue an ERC-20 or ERC-721</td><td><a href="token-standards.html">Token Standards</a></td></tr><tr><td>Full parameter list for both networks</td><td><a href="network-info.html">Network Information</a></td></tr><tr><td>Testnet RPC endpoints and rate limits</td><td><a href="public-endpoints.html">Public JSON-RPC Endpoints</a></td></tr></tbody></table></div>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li class=""><a class="" href="network-info.html">Network Information</a> — Chain IDs, RPC endpoints, explorers</li>
-<li class=""><a class="" href="wallet-setup.html">Wallet Setup</a> — adding XPHERE Testnet to MetaMask, Rabby, Zigap</li>
-<li class=""><a class="" href="developer-guide.html">Developer Quickstart</a></li>
-<li class=""><a class="" href="security.html">Security</a> — verified official domains</li>
-</ul></div></div></div>
-    <div class="dx-pager"><a class="pv" href="explorer-api.html"><small>Previous</small><i>&#8592;</i> Explorer API</a></div>
-    
+<li><a href="network-info.html">Network Information</a> — Chain IDs, RPC endpoints, explorers</li>
+<li><a href="wallet-setup.html">Wallet Setup</a> — adding XPHERE Testnet to MetaMask, Rabby, Zigap</li>
+<li><a href="developer-guide.html">Developer Quickstart</a></li>
+<li><a href="security.html">Security</a> — verified official domains</li>
+</ul></div>
+    <nav class="dx-pager"><a class="pv" href="explorer-api.html"><small class="lab">Previous</small><span class="pg-t"><animate-icons name="arrow-left" size="14"></animate-icons><span>Explorer API</span></span></a></nav>
   </main>
-  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#what-you-get">What You Get</a><a href="#step-1--add-the-testnet-to-your-wallet">Step 1 — Add the Testnet to Your Wallet</a><a href="#step-2--request-tokens">Step 2 — Request Tokens</a><a href="#step-3--check-the-balance">Step 3 — Check the Balance</a><a href="#troubleshooting">Troubleshooting</a><a href="#what-to-do-next">What to Do Next</a><a href="#see-also">See Also</a></nav></aside>
+  <aside class="dx-toc" id="dxToc">
+    <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#what-you-get">What You Get</a><a href="#step-1--add-the-testnet-to-your-wallet">Step 1 — Add the Testnet to Your Wallet</a><a href="#step-2--request-tokens">Step 2 — Request Tokens</a><a href="#step-3--check-the-balance">Step 3 — Check the Balance</a><a href="#troubleshooting">Troubleshooting</a><a href="#what-to-do-next">What to Do Next</a><a href="#see-also">See Also</a></nav>
+  </aside>
+  <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
-  /* code blocks: add a label bar with a copy button */
-  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
-    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
-    var bar=document.createElement('div');bar.className='bar';
-    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
-    c.insertBefore(bar,c.firstChild);
-    var btn=bar.querySelector('button');
-    btn.onclick=function(){var t=c.querySelector('code').innerText;
-      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
-  });
-  /* tables scroll sideways on small screens */
-  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
-  /* on-this-page highlight */
-  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
-  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
-})();
-</script>
-<script src="../nav.js"></script>
+<!-- @scripts -->
+<script src="../assets/vendor/animateicons-lucide.js"></script>
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/js/block-stream.js"></script>
+<script src="../assets/js/glass.js"></script>
+<script src="../assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="../assets/js/docs.js"></script>
 </body>
 </html>

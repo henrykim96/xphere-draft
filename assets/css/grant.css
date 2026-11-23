@@ -1,0 +1,99 @@
+/* ==========================================================================
+   XPHERE site — grant.css (grant.html only). Layout + page-specific graphics.
+   Shared tokens/components come from core.css. Tokens only (no hex).
+   ========================================================================== */
+
+/* ---------- hero: centred, live chain strip below ---------- */
+.g-hero{overflow:hidden;isolation:isolate}
+.g-hero-grid{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.8;
+  background:linear-gradient(var(--line) 1px,transparent 1px) 50% 0/100% 40px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 50% 0/40px 100%;
+  -webkit-mask-image:radial-gradient(56% 62% at 50% 34%,#000 10%,transparent 78%);mask-image:radial-gradient(56% 62% at 50% 34%,#000 10%,transparent 78%)}
+.g-hero::before{content:"";position:absolute;left:50%;top:0;width:min(900px,120%);height:520px;transform:translateX(-50%);z-index:-1;pointer-events:none;
+  background:radial-gradient(50% 50% at 50% 30%,color-mix(in srgb,var(--brand) 13%,transparent),transparent 70%)}
+.g-hero .h1{margin-top:18px}
+.g-hero .lede{max-width:40ch}
+/* live ledger strip without window chrome (like the home hero ledger): hairline rails, edges fade out */
+.g-chain{position:relative;max-width:820px;margin:clamp(56px,7vw,88px) auto 0;padding:14px 0 4px;text-align:left;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.g-chain .live-dot{position:absolute;left:0;top:-4px;padding-right:8px;background:var(--bg)}
+.g-chain-cv{display:block;width:100%;height:84px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 100%);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 100%)}
+
+/* ---------- what ---------- */
+.g-lead{max-width:40ch;width:100%}
+.g-lead .lede{max-width:none;color:var(--tx)}
+.g-sub{margin-top:14px;font-size:15px;line-height:1.65;color:var(--tx-2)}
+.g-tr{display:flex;flex-direction:column}
+.g-vis{position:relative;display:flex;align-items:center;justify-content:center;height:132px;border-bottom:1px solid var(--line);
+  background:radial-gradient(circle at 1px 1px,var(--line) 1px,transparent 1.2px) 0 0/14px 14px,linear-gradient(180deg,var(--surface-2),var(--surface))}
+.g-tr-t{display:flex;align-items:center;gap:14px;padding:20px 24px 22px}
+.g-apps{gap:8px}
+.g-apps>span{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;overflow:hidden;background:var(--tile-bg);box-shadow:inset 0 1px 0 var(--edge-hi),0 0 0 1px var(--line-2);
+  transition:transform .5s var(--ease)}
+.g-apps>span img{width:60%;height:60%;object-fit:contain}
+.g-apps>span.tile img{width:100%;height:100%;object-fit:cover}
+.g-apps>span.add{color:var(--tx-3);background:none;box-shadow:inset 0 0 0 1px var(--line-2)}
+.g-tr:hover .g-apps>span:nth-child(odd){transform:translateY(-3px)}
+.g-tr:hover .g-apps>span:nth-child(even){transform:translateY(2px)}
+.g-infra{padding:24px 28px 0;align-items:flex-end}
+.g-infra canvas{display:block;width:100%;height:84px}
+.g-com{gap:12px}
+.g-com>span{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;color:var(--tx);background:var(--surface-hi);box-shadow:inset 0 1px 0 var(--edge-hi),0 0 0 1px var(--line-2),var(--shadow-pop);
+  transition:transform .5s var(--ease),color .3s}
+.g-com svg{width:18px;height:18px;fill:currentColor}
+.g-tr:hover .g-com>span{transform:translateY(-3px)}
+.g-tr:hover .g-com>span:nth-child(2){transition-delay:.05s}
+.g-tr:hover .g-com>span:nth-child(3){transition-delay:.1s}
+
+/* ---------- apply ---------- */
+.ga{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-areas:". steps" "head steps" "cta steps" ". steps";grid-template-rows:1fr auto auto 1fr;gap:0 64px;align-items:start;
+  padding:clamp(32px,4vw,48px);border-radius:20px;border:1px solid var(--line-2);box-shadow:var(--shadow);overflow:hidden;
+  background:radial-gradient(70% 90% at 0% 0%,color-mix(in srgb,var(--brand) 9%,transparent),transparent 60%),var(--surface)}
+.ga-head{grid-area:head}
+.ga-head .eyebrow::before{content:"";width:5px;height:5px;border-radius:1px;background:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 16%,transparent)}
+.ga-head .h2{margin-top:14px}
+.ga-cta{grid-area:cta;display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.ga-steps{grid-area:steps;display:grid;gap:12px}
+.ga-st{display:grid;grid-template-columns:minmax(0,1fr) 172px;grid-template-areas:"k vis" "t vis";align-items:start;column-gap:24px;padding:20px 22px;border-radius:var(--r);border:1px solid var(--line-2);background:var(--surface-2)}
+.ga-st b{grid-area:k;font-family:var(--d);font-variation-settings:"wdth" 96;font-weight:500;font-size:22px;letter-spacing:-.02em;line-height:1.2;color:var(--tx)}
+.ga-st span{grid-area:t;margin-top:6px;font-size:14px;line-height:1.6;color:var(--tx-2)}
+.ga-vis{grid-area:vis;align-self:center}
+/* rolling: applications keep arriving at the review gate */
+.ga-roll{position:relative;height:40px;display:flex;align-items:center}
+.ga-track{position:relative;display:block;flex:1;height:22px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.ga-track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line-3)}
+.ga-track i{position:absolute;top:5px;left:0;width:12px;height:12px;border-radius:3px;border:1px solid var(--line-3);background:var(--surface-hi);
+  animation:roll 4.8s linear infinite;animation-delay:calc(var(--k) * -.6s)}
+.ga-track i:nth-child(1){--k:0}.ga-track i:nth-child(2){--k:1}.ga-track i:nth-child(3){--k:2}.ga-track i:nth-child(4){--k:3}
+.ga-track i:nth-child(5){--k:4}.ga-track i:nth-child(6){--k:5}.ga-track i:nth-child(7){--k:6}.ga-track i:nth-child(8){--k:7}
+@keyframes roll{from{transform:translateX(-14px)}to{transform:translateX(150px)}}
+.ga-gate{flex:none;width:3px;height:28px;margin-left:4px;border-radius:2px;background:var(--accent);box-shadow:0 0 12px color-mix(in srgb,var(--accent) 60%,transparent)}
+/* 14 business days: three weeks, weekends dimmed */
+.ga-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.ga-cal i{aspect-ratio:1;border-radius:3px;background:color-mix(in srgb,var(--tx) 9%,transparent)}
+.ga-cal i.we{background:none;box-shadow:inset 0 0 0 1px var(--line)}
+.ga-cal i.bd{transition:background-color .4s var(--ease);transition-delay:calc(var(--k) * 70ms)}
+.ga-cal.in i.bd{background:color-mix(in srgb,var(--accent) 55%,var(--surface-3))}
+.ga-cal.in i.bd.last{background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1099px){
+  .ga{grid-template-columns:1fr;grid-template-areas:"head" "steps" "cta";grid-template-rows:auto;gap:0}
+  .ga-steps{margin-top:32px}
+}
+@media (max-width:760px){
+  .g-chain{margin-top:44px}
+  .g-chain-cv{height:80px}
+  .g-vis{height:116px}
+  .g-tr-t{padding:18px 20px 20px}
+  .ga{padding:28px 20px;border-radius:var(--r-lg)}
+  .ga-st{grid-template-columns:1fr;grid-template-areas:"vis" "k" "t";padding:18px}
+  .ga-vis{width:172px;max-width:100%;margin-bottom:16px}
+  .ga-roll{max-width:none}
+  .ga-cta .btn{flex:1 1 100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .ga-track i{animation:none}
+  .ga-track i:nth-child(n){transform:translateX(calc(var(--k) * 18px))}
+}
+[data-theme="light"] .g-hero::before{background:radial-gradient(50% 50% at 50% 30%,color-mix(in srgb,var(--brand) 7%,transparent),transparent 70%)}

@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EVM Compatibility | XPHERE Docs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="docs.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="../assets/css/docs.css">
 </head>
-<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+<body class="pg-docs dx-evm-compatibility">
 
-
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="../index.html" aria-label="XPHERE home"><img class="th-d" src="../assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="../assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../union.html">Union</a>
       <a href="../stake.html">Stake</a>
       <a href="../ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="../grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -30,15 +36,15 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
@@ -47,86 +53,88 @@
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<div class="dx">
-  <aside class="dx-side"><div class="dx-grp">Build</div><nav class="dx-nav"><div class="dx-sec open"><button class="dx-sec-t" type="button">Developer Guide <i>&#8964;</i></button><div class="dx-sec-p"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a class="on" href="evm-compatibility.html">EVM Compatibility</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">References &amp; RPC <i>&#8964;</i></button><div class="dx-sec-p"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a href="gas-and-fees.html">Gas and Transaction Fees</a><a href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div><a class="dx-top" href="testnet-faucet.html">Testnet Faucet</a></nav></aside>
-  <main class="dx-main">
-    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Build</span><i>/</i><span>Developer Guide</span></div>
-    <h1>EVM Compatibility</h1>
-    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<div class="dx-prog" aria-hidden="true"><i></i></div>
+<div class="dx" id="dx">
+  <aside class="dx-side" id="dxSide" data-lenis-prevent><div class="dx-side-in"><div class="dx-grp">Build</div><nav aria-label="Docs" class="dx-nav"><div class="dx-sec open"><button class="dx-sec-t" type="button" aria-expanded="true" aria-controls="dxs1"><span>Developer Guide</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs1"><div class="dx-sec-in"><a href="developer-guide.html">Developer Quickstart</a><a href="wallet-setup.html">Wallet Setup</a><a href="smart-contracts.html">Smart Contracts</a><a href="token-standards.html">Token Standards</a><a class="on" aria-current="page" href="evm-compatibility.html">EVM Compatibility</a></div></div></div><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs2"><span>References &amp; RPC</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs2"><div class="dx-sec-in"><a href="references.html">References</a><a href="network-info.html">Network Information</a><a href="gas-and-fees.html">Gas and Transaction Fees</a><a href="public-endpoints.html">Public JSON-RPC Endpoints</a><a href="javascript-api.html">JavaScript API libraries</a><a href="json-rpc.html">JSON-RPC API</a><a href="xphere-rpc.html">XPHERE-Specific JSON-RPC</a><a href="explorer-api.html">Explorer API</a></div></div></div><a class="dx-top" href="testnet-faucet.html">Testnet Faucet</a></nav></div></aside>
+  <main id="main" class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i aria-hidden="true">/</i><span>Build</span><i aria-hidden="true">/</i><span>Developer Guide</span></div>
+    <h1 class="dx-h1">EVM Compatibility</h1>
+    <div class="dx-doc prose">
 <p>XPHERE targets <strong>Ethereum Cancun-level EVM compatibility</strong>. The intent is bytecode equivalence — contracts deployed on Ethereum mainnet should compile, deploy, and execute identically on XPHERE.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hard-fork-equivalence">Hard Fork Equivalence</h2>
-<table><thead><tr><th>Ethereum Upgrade</th><th>Status on XPHERE</th></tr></thead><tbody><tr><td>Homestead</td><td>✅</td></tr><tr><td>Byzantium</td><td>✅</td></tr><tr><td>Constantinople</td><td>✅</td></tr><tr><td>Istanbul</td><td>✅</td></tr><tr><td>Berlin</td><td>✅</td></tr><tr><td>London (EIP-1559)</td><td>✅</td></tr><tr><td>Shanghai (PUSH0)</td><td>✅</td></tr><tr><td>Cancun (EIP-4844 blobs, transient storage)</td><td>✅ EVM features<br>⚠️ EIP-4844 blob carry: not applicable</td></tr><tr><td>Prague / Pectra</td><td>🛠 Planned</td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="opcodes">Opcodes</h2>
+<h2 id="hard-fork-equivalence">Hard Fork Equivalence</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Ethereum Upgrade</th><th>Status on XPHERE</th></tr></thead><tbody><tr><td>Homestead</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>Byzantium</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>Constantinople</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>Istanbul</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>Berlin</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>London (EIP-1559)</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>Shanghai (PUSH0)</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td>Cancun (EIP-4844 blobs, transient storage)</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span> EVM features<br><span class="emo emo-warn"><span class="sr"><span class="emo emo-warn"><span class="sr">⚠</span><animate-icons name="triangle-alert" size="15" aria-hidden="true"></animate-icons></span>️</span><animate-icons name="triangle-alert" size="15" aria-hidden="true"></animate-icons></span> EIP-4844 blob carry: not applicable</td></tr><tr><td>Prague / Pectra</td><td><span class="emo emo-tool"><span class="sr">🛠</span><animate-icons name="wrench" size="15" aria-hidden="true"></animate-icons></span> Planned</td></tr></tbody></table></div>
+<h2 id="opcodes">Opcodes</h2>
 <p>All opcodes through Cancun are supported, including:</p>
 <ul>
-<li class=""><code>PUSH0</code> (Shanghai)</li>
-<li class=""><code>TLOAD</code> / <code>TSTORE</code> (transient storage, Cancun)</li>
-<li class=""><code>MCOPY</code> (memory copy, Cancun)</li>
-<li class=""><code>BLOBHASH</code> returns <code>0x0</code> (blobs not used by XPHERE data layer)</li>
-<li class=""><code>BLOBBASEFEE</code> returns <code>0x0</code> (Ethereum returns a non-zero minimum; XPHERE has no blob market)</li>
+<li><code class="nw">PUSH0</code> (Shanghai)</li>
+<li><code class="nw">TLOAD</code> / <code class="nw">TSTORE</code> (transient storage, Cancun)</li>
+<li><code class="nw">MCOPY</code> (memory copy, Cancun)</li>
+<li><code class="nw">BLOBHASH</code> returns <code class="nw">0x0</code> (blobs not used by XPHERE data layer)</li>
+<li><code class="nw">BLOBBASEFEE</code> returns <code class="nw">0x0</code> (Ethereum returns a non-zero minimum; XPHERE has no blob market)</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="precompiles">Precompiles</h2>
-<table><thead><tr><th>Address</th><th>Function</th><th>Supported</th></tr></thead><tbody><tr><td><code>0x01</code></td><td>ecRecover</td><td>✅</td></tr><tr><td><code>0x02</code></td><td>sha256</td><td>✅</td></tr><tr><td><code>0x03</code></td><td>ripemd160</td><td>✅</td></tr><tr><td><code>0x04</code></td><td>identity</td><td>✅</td></tr><tr><td><code>0x05</code></td><td>modExp</td><td>✅</td></tr><tr><td><code>0x06</code></td><td>bn256Add</td><td>✅</td></tr><tr><td><code>0x07</code></td><td>bn256ScalarMul</td><td>✅</td></tr><tr><td><code>0x08</code></td><td>bn256Pairing</td><td>✅</td></tr><tr><td><code>0x09</code></td><td>blake2f</td><td>✅</td></tr><tr><td><code>0x0a</code></td><td>point_evaluation (KZG)</td><td>✅ (returns zero proof)</td></tr></tbody></table>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="differences-from-ethereum">Differences from Ethereum</h2>
-<table><thead><tr><th>Area</th><th>Ethereum</th><th>XPHERE</th></tr></thead><tbody><tr><td>Block time</td><td>~12 s</td><td>~1 s</td></tr><tr><td>Finality</td><td>Probabilistic (PoS slots)</td><td>Instant (PBFT) on Main Chain</td></tr><tr><td>Native token</td><td>ETH</td><td><code>XP</code> (Mainnet) / <code>XPT</code> (Testnet)</td></tr><tr><td>Chain ID</td><td>1 (mainnet)</td><td><code>20250217</code> (Mainnet), <code>1998991</code> (Testnet)</td></tr><tr><td>Base fee floor</td><td>none</td><td><code>25 gwei</code> on both networks (<code>lowerboundbasefee</code>), capped at <code>750 gwei</code></td></tr><tr><td>Priority fee</td><td>market-driven</td><td><code>eth_maxPriorityFeePerGas</code> returns <code>0x0</code> on both networks</td></tr><tr><td>Blob carry (EIP-4844)</td><td>Yes</td><td>No (op present, no data layer)</td></tr></tbody></table>
+<h2 id="precompiles">Precompiles</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Address</th><th>Function</th><th>Supported</th></tr></thead><tbody><tr><td><code class="nw">0x01</code></td><td>ecRecover</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x02</code></td><td>sha256</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x03</code></td><td>ripemd160</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x04</code></td><td>identity</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x05</code></td><td>modExp</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x06</code></td><td>bn256Add</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x07</code></td><td>bn256ScalarMul</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x08</code></td><td>bn256Pairing</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x09</code></td><td>blake2f</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span></td></tr><tr><td><code class="nw">0x0a</code></td><td>point_evaluation (KZG)</td><td><span class="emo emo-ok"><span class="sr">✅</span><animate-icons name="circle-check" size="15" aria-hidden="true"></animate-icons></span> (returns zero proof)</td></tr></tbody></table></div>
+<h2 id="differences-from-ethereum">Differences from Ethereum</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Area</th><th>Ethereum</th><th>XPHERE</th></tr></thead><tbody><tr><td>Block time</td><td>~12 s</td><td>~1 s</td></tr><tr><td>Finality</td><td>Probabilistic (PoS slots)</td><td>Instant (PBFT) on Main Chain</td></tr><tr><td>Native token</td><td>ETH</td><td><code class="nw">XP</code> (Mainnet) / <code class="nw">XPT</code> (Testnet)</td></tr><tr><td>Chain ID</td><td>1 (mainnet)</td><td><code class="nw">20250217</code> (Mainnet), <code class="nw">1998991</code> (Testnet)</td></tr><tr><td>Base fee floor</td><td>none</td><td><code class="nw">25 gwei</code> on both networks (<code class="nw">lowerboundbasefee</code>), capped at <code class="nw">750 gwei</code></td></tr><tr><td>Priority fee</td><td>market-driven</td><td><code class="nw">eth_maxPriorityFeePerGas</code> returns <code class="nw">0x0</code> on both networks</td></tr><tr><td>Blob carry (EIP-4844)</td><td>Yes</td><td>No (op present, no data layer)</td></tr></tbody></table></div>
 <p>The fee figures come from the chain&#x27;s own governance config and are readable live:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -s -X POST https://rpc.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;xp_getChainConfig&quot;,&quot;params&quot;:[],&quot;id&quot;:1}&#x27;</span><br></div><div class="token-line"><span class="token plain"># governance.dgp.lowerboundbasefee = 25000000000, upperboundbasefee = 750000000000</span><br></div></code></pre></div></div>
-<p>Both networks report the same values; the same call against <code>https://testnet.x-phere.com</code> returns the same <code>dgp</code> block with <code>chainId: 1998991</code>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="caveats-for-ported-contracts">Caveats for Ported Contracts</h2>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-s</span> <span class="token flag">-X</span> POST https://rpc.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> <span class="token string">'{"jsonrpc":"2.0","method":"xp_getChainConfig","params":[],"id":1}'</span></span><br></div><div class="ln"><span class="token comment"># governance.dgp.lowerboundbasefee = 25000000000, upperboundbasefee = 750000000000</span><br></div></code></pre></div>
+<p>Both networks report the same values; the same call against <code>https://testnet.x-phere.com</code> returns the same <code class="nw">dgp</code> block with <code class="nw">chainId: 1998991</code>.</p>
+<h2 id="caveats-for-ported-contracts">Caveats for Ported Contracts</h2>
 <ol>
-<li class=""><strong>Block time assumptions</strong> — Many DeFi protocols hard-code <code>block.timestamp</code> checks assuming 12 s blocks. Audit any <code>block.timestamp + N</code> arithmetic for the 1 s cadence.</li>
-<li class=""><strong>Reorg assumptions</strong> — XPHERE Main Chain finalizes within 1 block via PBFT. Some bridge code waits <code>N</code> confirmations for probabilistic finality; you can safely shorten this.</li>
-<li class=""><strong>Gas price</strong> — Use EIP-1559 fields (<code>maxFeePerGas</code>, <code>maxPriorityFeePerGas</code>), and read the current suggestion from <code>eth_gasPrice</code> rather than hard-coding a floor. At the time of writing both networks report <code>0x66720b300</code> (27.5 gwei) against a base fee of 25 gwei.</li>
-<li class=""><strong>Test on Testnet first</strong> — Chain ID <code>1998991</code>, native symbol <code>XPT</code>, funded from the <a class="" href="testnet-faucet.html">Faucet</a>. The EVM surface is the same as Mainnet, so a contract that behaves correctly there behaves the same way on Chain ID <code>20250217</code>. Note that Testnet transactions appear on <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer" class="">xpt.tamsa.io</a>, not on XPScan.</li>
+<li><strong>Block time assumptions</strong> — Many DeFi protocols hard-code <code class="nw">block.timestamp</code> checks assuming 12 s blocks. Audit any <code class="nw">block.timestamp + N</code> arithmetic for the 1 s cadence.</li>
+<li><strong>Reorg assumptions</strong> — XPHERE Main Chain finalizes within 1 block via PBFT. Some bridge code waits <code class="nw">N</code> confirmations for probabilistic finality; you can safely shorten this.</li>
+<li><strong>Gas price</strong> — Use EIP-1559 fields (<code class="nw">maxFeePerGas</code>, <code class="nw">maxPriorityFeePerGas</code>), and read the current suggestion from <code class="nw">eth_gasPrice</code> rather than hard-coding a floor. At the time of writing both networks report <code class="nw">0x66720b300</code> (27.5 gwei) against a base fee of 25 gwei.</li>
+<li><strong>Test on Testnet first</strong> — Chain ID <code class="nw">1998991</code>, native symbol <code class="nw">XPT</code>, funded from the <a href="testnet-faucet.html">Faucet</a>. The EVM surface is the same as Mainnet, so a contract that behaves correctly there behaves the same way on Chain ID <code class="nw">20250217</code>. Note that Testnet transactions appear on <a href="https://xpt.tamsa.io" target="_blank" rel="noopener noreferrer">xpt.tamsa.io</a>, not on XPScan.</li>
 </ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="verifying-equivalence">Verifying Equivalence</h2>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain"># Compile the same source against both targets</span><br></div><div class="token-line"><span class="token plain">solc --evm-version cancun --bin contracts/MyContract.sol</span><br></div></code></pre></div></div>
-<p>Bytecode output should be byte-identical between Ethereum and XPHERE targets when both use <code>--evm-version cancun</code>.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<h2 id="verifying-equivalence">Verifying Equivalence</h2>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token comment"># Compile the same source against both targets</span><br></div><div class="ln"><span class="token plain">solc <span class="token flag">--evm-version</span> cancun <span class="token flag">--bin</span> contracts/MyContract.sol</span><br></div></code></pre></div>
+<p>Bytecode output should be byte-identical between Ethereum and XPHERE targets when both use <code class="nw">--evm-version cancun</code>.</p>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li class=""><a class="" href="smart-contracts.html">Smart Contracts</a></li>
-<li class=""><a class="" href="network-info.html">Network Information</a> — Chain IDs, symbols, RPC endpoints, explorers</li>
-<li class=""><a class="" href="testnet-faucet.html">Testnet Faucet</a></li>
-<li class=""><a class="" href="json-rpc.html">JSON-RPC Reference</a></li>
-<li class=""><a class="" href="whitepaper.html#6-ethereum-compatibility-in-xphere">Whitepaper §6 — Ethereum Compatibility</a></li>
-</ul></div></div></div>
-    <div class="dx-pager"><a class="pv" href="token-standards.html"><small>Previous</small><i>&#8592;</i> Token Standards</a><a class="nx" href="references.html"><small>Next</small>References <i>&#8594;</i></a></div>
-    
+<li><a href="smart-contracts.html">Smart Contracts</a></li>
+<li><a href="network-info.html">Network Information</a> — Chain IDs, symbols, RPC endpoints, explorers</li>
+<li><a href="testnet-faucet.html">Testnet Faucet</a></li>
+<li><a href="json-rpc.html">JSON-RPC Reference</a></li>
+<li><a href="whitepaper.html#6-ethereum-compatibility-in-xphere">Whitepaper §6 — Ethereum Compatibility</a></li>
+</ul></div>
+    <nav class="dx-pager"><a class="pv" href="token-standards.html"><small class="lab">Previous</small><span class="pg-t"><animate-icons name="arrow-left" size="14"></animate-icons><span>Token Standards</span></span></a><a class="nx" href="references.html"><small class="lab">Next</small><span class="pg-t"><animate-icons name="arrow-right" size="14"></animate-icons><span>References</span></span></a></nav>
   </main>
-  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#hard-fork-equivalence">Hard Fork Equivalence</a><a href="#opcodes">Opcodes</a><a href="#precompiles">Precompiles</a><a href="#differences-from-ethereum">Differences from Ethereum</a><a href="#caveats-for-ported-contracts">Caveats for Ported Contracts</a><a href="#verifying-equivalence">Verifying Equivalence</a><a href="#see-also">See Also</a></nav></aside>
+  <aside class="dx-toc" id="dxToc">
+    <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#hard-fork-equivalence">Hard Fork Equivalence</a><a href="#opcodes">Opcodes</a><a href="#precompiles">Precompiles</a><a href="#differences-from-ethereum">Differences from Ethereum</a><a href="#caveats-for-ported-contracts">Caveats for Ported Contracts</a><a href="#verifying-equivalence">Verifying Equivalence</a><a href="#see-also">See Also</a></nav>
+  </aside>
+  <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
-  /* code blocks: add a label bar with a copy button */
-  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
-    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
-    var bar=document.createElement('div');bar.className='bar';
-    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
-    c.insertBefore(bar,c.firstChild);
-    var btn=bar.querySelector('button');
-    btn.onclick=function(){var t=c.querySelector('code').innerText;
-      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
-  });
-  /* tables scroll sideways on small screens */
-  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
-  /* on-this-page highlight */
-  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
-  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
-})();
-</script>
-<script src="../nav.js"></script>
+<!-- @scripts -->
+<script src="../assets/vendor/animateicons-lucide.js"></script>
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/js/block-stream.js"></script>
+<script src="../assets/js/glass.js"></script>
+<script src="../assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="../assets/js/docs.js"></script>
 </body>
 </html>

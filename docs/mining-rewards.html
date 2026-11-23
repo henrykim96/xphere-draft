@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mining Rewards | XPHERE Docs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="docs.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="../assets/css/docs.css">
 </head>
-<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+<body class="pg-docs dx-mining-rewards">
 
-
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="../index.html" aria-label="XPHERE home"><img class="th-d" src="../assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="../assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../union.html">Union</a>
       <a href="../stake.html">Stake</a>
       <a href="../ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="../grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -30,15 +36,15 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
@@ -47,129 +53,131 @@
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<div class="dx">
-  <aside class="dx-side"><div class="dx-grp">Participate</div><nav class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button">Staking (Union Vault) <i>&#8964;</i></button><div class="dx-sec-p"><a href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a href="staking-faq.html">FAQ</a></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button">Mining <i>&#8964;</i></button><div class="dx-sec-p"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a href="mining-getting-started.html">Getting Started</a><a class="on" href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Run a Node <i>&#8964;</i></button><div class="dx-sec-p"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div><div class="dx-sec"><button class="dx-sec-t" type="button">Union Membership <i>&#8964;</i></button><div class="dx-sec-p"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></nav></aside>
-  <main class="dx-main">
-    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Participate</span><i>/</i><span>Mining</span></div>
-    <h1>Mining Rewards</h1>
-    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<div class="dx-prog" aria-hidden="true"><i></i></div>
+<div class="dx" id="dx">
+  <aside class="dx-side" id="dxSide" data-lenis-prevent><div class="dx-side-in"><div class="dx-grp">Participate</div><nav aria-label="Docs" class="dx-nav"><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs1"><span>Staking (Union Vault)</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs1"><div class="dx-sec-in"><a href="staking.html">Overview</a><a href="staking-how-it-works.html">How It Works</a><a href="staking-user-guide.html">User Guide</a><a href="staking-fees-and-risks.html">Fees &amp; Risks</a><a href="staking-for-partners.html">For Partners</a><a href="staking-contracts.html">Contracts &amp; Verification</a><a href="staking-faq.html">FAQ</a></div></div></div><div class="dx-sec open"><button class="dx-sec-t" type="button" aria-expanded="true" aria-controls="dxs2"><span>Mining</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs2"><div class="dx-sec-in"><a href="mining.html">Introduction</a><a href="mining-requirements.html">System Requirements</a><a href="mining-getting-started.html">Getting Started</a><a class="on" aria-current="page" href="mining-rewards.html">Mining Rewards</a><a href="mining-xphash-fork.html">xpHash Hard Fork</a></div></div></div><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs3"><span>Run a Node</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs3"><div class="dx-sec-in"><a href="nodes.html">Node Guide</a><a href="nodes-endpoint-node.html">XPHERE Endpoint Node</a><a href="nodes-requirements.html">System Requirements</a><a href="nodes-install-xen.html">XEN Install Guide</a><a href="nodes-xen-cli.html">XEN CLI Commands</a><a href="nodes-json-rpc.html">Node JSON-RPC Setup</a><a href="nodes-snapshots.html">Use Chaindata Snapshots</a><a href="nodes-validator-node.html">Validator Node</a><a href="nodes-downloads.html">XEN Package Downloads</a></div></div></div><div class="dx-sec"><button class="dx-sec-t" type="button" aria-expanded="false" aria-controls="dxs4"><span>Union Membership</span><animate-icons name="chevron-down" size="13"></animate-icons></button><div class="dx-sec-p" id="dxs4"><div class="dx-sec-in"><a href="union-membership.html">XPHERE Union</a><a href="union-members.html">Members</a></div></div></div></nav></div></aside>
+  <main id="main" class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i aria-hidden="true">/</i><span>Participate</span><i aria-hidden="true">/</i><span>Mining</span></div>
+    <h1 class="dx-h1">Mining Rewards</h1>
+    <div class="dx-doc prose">
 <p>Miners on XPHERE earn from <strong>two</strong> protocol-level streams:</p>
-<table><thead><tr><th>Stream</th><th>Miner share</th><th>Basis</th></tr></thead><tbody><tr><td>Minted block reward</td><td><strong>40%</strong></td><td>A fixed amount minted every 60 blocks</td></tr><tr><td>Transaction fees</td><td><strong>20%</strong></td><td>Fees paid by users on every transaction</td></tr></tbody></table>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Stream</th><th>Miner share</th><th>Basis</th></tr></thead><tbody><tr><td>Minted block reward</td><td><strong>40%</strong></td><td>A fixed amount minted every 60 blocks</td></tr><tr><td>Transaction fees</td><td><strong>20%</strong></td><td>Fees paid by users on every transaction</td></tr></tbody></table></div>
 <p>XPHERE <strong>mints</strong> new XP on a fixed cadence and distributes it across three recipients; transaction
 fees are distributed separately across four. There is <strong>no separate claim transaction</strong> — allocations
 are credited directly.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="emission--reduction">Emission &amp; Reduction</h2>
-<p>A fixed amount of XP is minted <strong>every 60 seconds</strong> (every 60 main blocks). The emission <strong>decreases by <code>26.28%</code> per cycle</strong> — i.e. it is multiplied by a factor of <code>0.7372</code> — every <strong>31,536,000 main blocks</strong> (≈ 1 year at the ~1 second block time).</p>
-<p>The <strong>first reduction has already occurred</strong>, so the current emission is <code>2000 × 0.7372 = 1474.4</code> XP per 60 seconds.</p>
-<table><thead><tr><th>Period</th><th>Reduction Boundary (main block)</th><th>Emission / 60s</th></tr></thead><tbody><tr><td>Initial</td><td>0</td><td>2000 XP</td></tr><tr><td><strong>After 1st reduction (current)</strong></td><td>31,536,000</td><td><strong>1474.4 XP</strong></td></tr><tr><td>After 2nd reduction</td><td>63,072,000</td><td>~1086.93 XP</td></tr><tr><td>After 3rd reduction</td><td>94,608,000</td><td>~801.28 XP</td></tr></tbody></table>
-<p>Each successive cycle multiplies the previous emission by <code>0.7372</code> (a 26.28% annual reduction). See <a class="" href="whitepaper.html#c-emission-mechanism">Whitepaper §5.c</a> for the full 100-year schedule.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="minted-reward-allocation">Minted Reward Allocation</h2>
+<h2 id="emission--reduction">Emission &amp; Reduction</h2>
+<p>A fixed amount of XP is minted <strong>every 60 seconds</strong> (every 60 main blocks). The emission <strong>decreases by <code class="nw">26.28%</code> per cycle</strong> — i.e. it is multiplied by a factor of <code class="nw">0.7372</code> — every <strong>31,536,000 main blocks</strong> (≈ 1 year at the ~1 second block time).</p>
+<p>The <strong>first reduction has already occurred</strong>, so the current emission is <code class="nw">2000 × 0.7372 = 1474.4</code> XP per 60 seconds.</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Period</th><th>Reduction Boundary (main block)</th><th>Emission / 60s</th></tr></thead><tbody><tr><td>Initial</td><td>0</td><td>2000 XP</td></tr><tr><td><strong>After 1st reduction (current)</strong></td><td>31,536,000</td><td><strong>1474.4 XP</strong></td></tr><tr><td>After 2nd reduction</td><td>63,072,000</td><td>~1086.93 XP</td></tr><tr><td>After 3rd reduction</td><td>94,608,000</td><td>~801.28 XP</td></tr></tbody></table></div>
+<p>Each successive cycle multiplies the previous emission by <code class="nw">0.7372</code> (a 26.28% annual reduction). See <a href="whitepaper.html#c-emission-mechanism">Whitepaper §5.c</a> for the full 100-year schedule.</p>
+<h2 id="minted-reward-allocation">Minted Reward Allocation</h2>
 <p>Every emission is split across three recipients:</p>
-<table><thead><tr><th>Recipient</th><th>Share</th><th>Current (per 60s, post-1st-reduction)</th></tr></thead><tbody><tr><td>Foundation</td><td><strong>20%</strong></td><td>294.88 XP</td></tr><tr><td>Miner</td><td><strong>40%</strong></td><td>589.76 XP</td></tr><tr><td>Union</td><td><strong>40%</strong></td><td>589.76 XP</td></tr></tbody></table>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Recipient</th><th>Share</th><th>Current (per 60s, post-1st-reduction)</th></tr></thead><tbody><tr><td>Foundation</td><td><strong>20%</strong></td><td>294.88 XP</td></tr><tr><td>Miner</td><td><strong>40%</strong></td><td>589.76 XP</td></tr><tr><td>Union</td><td><strong>40%</strong></td><td>589.76 XP</td></tr></tbody></table></div>
 <ul>
-<li class=""><strong>Miner (40%)</strong> is distributed to xpHash miners according to their share of network hashrate.</li>
-<li class=""><strong>Union (40%)</strong> goes to <a class="" href="union-membership.html">Union</a> validator members — the validator group that records blocks
+<li><strong>Miner (40%)</strong> is distributed to xpHash miners according to their share of network hashrate.</li>
+<li><strong>Union (40%)</strong> goes to <a href="union-membership.html">Union</a> validator members — the validator group that records blocks
 on the Main Chain.</li>
-<li class=""><strong>Foundation (20%)</strong> funds ongoing network operations.</li>
+<li><strong>Foundation (20%)</strong> funds ongoing network operations.</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="transaction-fee-allocation">Transaction Fee Allocation</h2>
+<h2 id="transaction-fee-allocation">Transaction Fee Allocation</h2>
 <p>Transaction fees are distributed separately from minted emission, across four destinations:</p>
-<table><thead><tr><th>Destination</th><th>Share</th><th>Where it goes</th></tr></thead><tbody><tr><td>Burn</td><td><strong>50%</strong></td><td>Permanently removed from circulation</td></tr><tr><td>Union</td><td><strong>20%</strong></td><td><a class="" href="union-membership.html">Union</a> validator members</td></tr><tr><td><strong>Miner</strong></td><td><strong>20%</strong></td><td><strong>xpHash Proof Chain miners</strong></td></tr><tr><td>Foundation</td><td><strong>10%</strong></td><td>Ongoing network operations</td></tr><tr><td><strong>Total</strong></td><td><strong>100%</strong></td><td></td></tr></tbody></table>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Destination</th><th>Share</th><th>Where it goes</th></tr></thead><tbody><tr><td>Burn</td><td><strong>50%</strong></td><td>Permanently removed from circulation</td></tr><tr><td>Union</td><td><strong>20%</strong></td><td><a href="union-membership.html">Union</a> validator members</td></tr><tr><td><strong>Miner</strong></td><td><strong>20%</strong></td><td><strong>xpHash Proof Chain miners</strong></td></tr><tr><td>Foundation</td><td><strong>10%</strong></td><td>Ongoing network operations</td></tr><tr><td><strong>Total</strong></td><td><strong>100%</strong></td><td></td></tr></tbody></table></div>
 <p>This is the second half of a miner&#x27;s income. It is <strong>not</strong> minted — it comes from fees users already
 paid, so it scales with network activity rather than with the emission schedule. The same split is
-documented in <a class="" href="tokenomics.html#transaction-fees-and-burn">Tokenomics</a>.</p>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>The Union share is not the same thing as the staking vault</div><div class="admonitionContent_BuS1"><p>Mining earns you the <strong>miner</strong> shares (40% of minted rewards, 20% of fees). The <strong>Union</strong> shares go
-to <a class="" href="union-membership.html">Union</a> validator members at the protocol level — that is not a pool product you buy into.
-Separately, XP holders can stake in the Foundation&#x27;s <strong><a class="" href="staking.html">XP Union Vault</a></strong> at
-<a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer" class="">stake.x-phere.com</a>, a staking service that pays stakers from the real
+documented in <a href="tokenomics.html#transaction-fees-and-burn">Tokenomics</a>.</p>
+<div class="callout tip"><div class="callout-t"><animate-icons name="lightbulb" size="13"></animate-icons><span>The Union share is not the same thing as the staking vault</span></div><div class="callout-b"><p>Mining earns you the <strong>miner</strong> shares (40% of minted rewards, 20% of fees). The <strong>Union</strong> shares go
+to <a href="union-membership.html">Union</a> validator members at the protocol level — that is not a pool product you buy into.
+Separately, XP holders can stake in the Foundation&#x27;s <strong><a href="staking.html">XP Union Vault</a></strong> at
+<a href="https://stake.x-phere.com" target="_blank" rel="noopener noreferrer">stake.x-phere.com</a>, a staking service that pays stakers from the real
 earnings of the Foundation&#x27;s own Union node and burns the remainder. See
-<a class="" href="union-staking.html">Union Staking</a> for the protocol-level economics.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="payout-flow">Payout Flow</h2>
+<a href="union-staking.html">Union Staking</a> for the protocol-level economics.</p></div></div>
+<h2 id="payout-flow">Payout Flow</h2>
 <p>Mining is done through a pool, so there are two hops — the protocol&#x27;s, and the pool&#x27;s.</p>
 <ol>
-<li class="">Your IceRiver XP0 submits shares to the pool over Stratum.</li>
-<li class="">When the pool seals a valid Proof Chain block, the protocol credits the <strong>miner allocation</strong> for
+<li>Your IceRiver XP0 submits shares to the pool over Stratum.</li>
+<li>When the pool seals a valid Proof Chain block, the protocol credits the <strong>miner allocation</strong> for
 that reward cycle.</li>
-<li class="">The pool distributes that income among its participants according to their accumulated difficulty
+<li>The pool distributes that income among its participants according to their accumulated difficulty
 contribution, after deducting its fee.</li>
-<li class="">Your balance is queryable on <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a>, the
-<a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer" class="">Tamsa Explorer</a>, or via <code>eth_getBalance</code>.</li>
+<li>Your balance is queryable on <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer">XPScan</a>, the
+<a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer">Tamsa Explorer</a>, or via <code class="nw">eth_getBalance</code>.</li>
 </ol>
 <p>There is <strong>no claim transaction</strong> at either hop — payouts arrive in your address on the pool&#x27;s
-schedule. See <a class="" href="mining-getting-started.html#how-pool-payouts-work">Getting Started</a> for the current pool&#x27;s fee,
+schedule. See <a href="mining-getting-started.html#how-pool-payouts-work">Getting Started</a> for the current pool&#x27;s fee,
 minimum payout, and distribution interval.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="estimating-your-earnings">Estimating Your Earnings</h2>
+<h2 id="estimating-your-earnings">Estimating Your Earnings</h2>
 <p>Total mining income is the sum of both streams:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">your_income = minted_share + fee_share</span><br></div></code></pre></div></div>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="minted-share">Minted share</h3>
+<div class="code" data-lang="text"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">your_income = minted_share + fee_share</span><br></div></code></pre></div>
+<h3 id="minted-share">Minted share</h3>
 <p>This part is predictable, because the emission is fixed for the current cycle. It is proportional to
 your share of network hashrate:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">your_xp_per_60s ≈ (your_hashrate / network_hashrate) × (emission_per_60s × 0.40)</span><br></div></code></pre></div></div>
+<div class="code" data-lang="text"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">your_xp_per_60s ≈ (your_hashrate / network_hashrate) × (emission_per_60s × 0.40)</span><br></div></code></pre></div>
 <p>Example, at the current emission (1474.4 XP / 60s) with 1% of network hashrate:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">0.01 × (1474.4 × 0.40) ≈ 5.90 XP per 60s ≈ 8,493 XP/day</span><br></div></code></pre></div></div>
+<div class="code" data-lang="text"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">0.01 × (1474.4 × 0.40) ≈ 5.90 XP per 60s ≈ 8,493 XP/day</span><br></div></code></pre></div>
 <p>This is the figure <strong>before</strong> your pool&#x27;s fee. At a 1% pool fee, you would receive about
 <code>8,493 × 0.99 ≈ 8,408 XP/day</code> of it.</p>
-<p>Network and pool hashrate are published on the <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> mining dashboard and on
-<a href="https://xppool.io" target="_blank" rel="noopener noreferrer" class="">xppool.io</a>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fee-share">Fee share</h3>
+<p>Network and pool hashrate are published on the <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer">XPScan</a> mining dashboard and on
+<a href="https://xppool.io" target="_blank" rel="noopener noreferrer">xppool.io</a>.</p>
+<h3 id="fee-share">Fee share</h3>
 <p>Miners additionally receive <strong>20% of transaction fees</strong>. This part cannot be projected the same way:
 it depends on how much the network is actually used. The Foundation has published neither an
 aggregate fee-volume forecast nor a per-miner fee distribution formula, so no estimate of it should
 be treated as official.</p>
-<p>So read the <code>8,493 XP/day</code> above as the <strong>minted portion only</strong> — a floor for the current emission
+<p>So read the <code class="nw">8,493 XP/day</code> above as the <strong>minted portion only</strong> — a floor for the current emission
 cycle, not a total. Real fee income is observable after the fact: check your address balance on
-<a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> or the <a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer" class="">Tamsa Explorer</a>, or query it with
-<code>eth_getBalance</code>.</p>
-<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><p>These figures are illustrative arithmetic, not a forecast. Emission falls <strong>26.28% each cycle</strong>,
+<a href="https://xpscan.io" target="_blank" rel="noopener noreferrer">XPScan</a> or the <a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer">Tamsa Explorer</a>, or query it with
+<code class="nw">eth_getBalance</code>.</p>
+<div class="callout warn"><div class="callout-t"><animate-icons name="triangle-alert" size="13"></animate-icons><span>caution</span></div><div class="callout-b"><p>These figures are illustrative arithmetic, not a forecast. Emission falls <strong>26.28% each cycle</strong>,
 network hashrate changes continuously, and fee volume is not guaranteed. Nothing here is a projection
 of revenue or token value.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tax--reporting">Tax &amp; Reporting</h2>
+<h2 id="tax--reporting">Tax &amp; Reporting</h2>
 <p>The XPHERE Foundation does not issue mining tax forms. Consult your local jurisdiction&#x27;s rules for cryptocurrency mining income.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li class=""><a class="" href="mining-getting-started.html">Getting Started with Mining</a></li>
-<li class=""><a class="" href="mining-requirements.html">System Requirements</a></li>
-<li class=""><a class="" href="mining-xphash-fork.html">xpHash Hard Fork</a></li>
-<li class=""><a class="" href="union-membership.html">Union</a> — the validator group that receives the Union shares</li>
-<li class=""><a class="" href="tokenomics.html">Tokenomics</a> — full token supply, emission, and fee distribution</li>
-</ul></div></div></div>
-    <div class="dx-pager"><a class="pv" href="mining-getting-started.html"><small>Previous</small><i>&#8592;</i> Getting Started</a><a class="nx" href="mining-xphash-fork.html"><small>Next</small>xpHash Hard Fork <i>&#8594;</i></a></div>
-    
+<li><a href="mining-getting-started.html">Getting Started with Mining</a></li>
+<li><a href="mining-requirements.html">System Requirements</a></li>
+<li><a href="mining-xphash-fork.html">xpHash Hard Fork</a></li>
+<li><a href="union-membership.html">Union</a> — the validator group that receives the Union shares</li>
+<li><a href="tokenomics.html">Tokenomics</a> — full token supply, emission, and fee distribution</li>
+</ul></div>
+    <nav class="dx-pager"><a class="pv" href="mining-getting-started.html"><small class="lab">Previous</small><span class="pg-t"><animate-icons name="arrow-left" size="14"></animate-icons><span>Getting Started</span></span></a><a class="nx" href="mining-xphash-fork.html"><small class="lab">Next</small><span class="pg-t"><animate-icons name="arrow-right" size="14"></animate-icons><span>xpHash Hard Fork</span></span></a></nav>
   </main>
-  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#emission--reduction">Emission &amp; Reduction</a><a href="#minted-reward-allocation">Minted Reward Allocation</a><a href="#transaction-fee-allocation">Transaction Fee Allocation</a><a href="#payout-flow">Payout Flow</a><a href="#estimating-your-earnings">Estimating Your Earnings</a><a href="#minted-share" class="sub">Minted share</a><a href="#fee-share" class="sub">Fee share</a><a href="#tax--reporting">Tax &amp; Reporting</a><a href="#see-also">See Also</a></nav></aside>
+  <aside class="dx-toc" id="dxToc">
+    <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#emission--reduction">Emission &amp; Reduction</a><a href="#minted-reward-allocation">Minted Reward Allocation</a><a href="#transaction-fee-allocation">Transaction Fee Allocation</a><a href="#payout-flow">Payout Flow</a><a href="#estimating-your-earnings">Estimating Your Earnings</a><a href="#minted-share" class="sub">Minted share</a><a href="#fee-share" class="sub">Fee share</a><a href="#tax--reporting">Tax &amp; Reporting</a><a href="#see-also">See Also</a></nav>
+  </aside>
+  <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
-  /* code blocks: add a label bar with a copy button */
-  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
-    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
-    var bar=document.createElement('div');bar.className='bar';
-    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
-    c.insertBefore(bar,c.firstChild);
-    var btn=bar.querySelector('button');
-    btn.onclick=function(){var t=c.querySelector('code').innerText;
-      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
-  });
-  /* tables scroll sideways on small screens */
-  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
-  /* on-this-page highlight */
-  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
-  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
-})();
-</script>
-<script src="../nav.js"></script>
+<!-- @scripts -->
+<script src="../assets/vendor/animateicons-lucide.js"></script>
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/js/block-stream.js"></script>
+<script src="../assets/js/glass.js"></script>
+<script src="../assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="../assets/js/docs.js"></script>
 </body>
 </html>

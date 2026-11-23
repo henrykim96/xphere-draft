@@ -1,28 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Network Upgrades | XPHERE Docs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="docs.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="../assets/css/docs.css">
 </head>
-<body class="dx-body hide-notes"><button id="noteToggle" hidden></button>
+<body class="pg-docs dx-network-upgrades">
 
-
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="../index.html" aria-label="XPHERE home"><img class="mk" src="../images/xphere-logo.png" alt=""><img class="type" src="../images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="../index.html" aria-label="XPHERE home"><img class="th-d" src="../assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="../assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../union.html">Union</a>
       <a href="../stake.html">Stake</a>
       <a href="../ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="../grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -30,137 +36,139 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t on" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <div class="dg"><span class="dh">Build</span><a class="di" href="developer-guide.html">Developer Guide</a><a class="di" href="references.html">References &amp; RPC</a><a class="di" href="testnet-faucet.html">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="staking.html">Staking (Union Vault)</a><a class="di" href="mining.html">Mining</a><a class="di" href="nodes.html">Run a Node</a><a class="di" href="union-membership.html">Union Membership</a></div>
           <div class="dg"><span class="dh">Ecosystem</span><a class="di" href="grant-program.html">Grant Program</a><a class="di" href="ecosystem-directory.html">Ecosystem Directory</a></div>
-          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
+          <div class="dg"><span class="dh">Resources</span><a class="di" href="faq.html">FAQ</a><a class="di" href="glossary.html">Glossary</a><a class="di" href="tokenomics.html">Tokenomics</a><a class="di" href="security.html">Security</a><a class="di" href="network-upgrades.html" aria-current="page">Network Upgrades</a><a class="di" href="governance.html">Governance</a></div>
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<div class="dx">
-  <aside class="dx-side"><div class="dx-grp">Resources</div><nav class="dx-nav"><a class="dx-top" href="faq.html">FAQ</a><a class="dx-top" href="glossary.html">Glossary</a><a class="dx-top" href="union-staking.html">Union Staking</a><a class="dx-top" href="tokenomics.html">Tokenomics</a><a class="dx-top" href="governance.html">Governance</a><a class="dx-top" href="security.html">Security</a><a class="dx-top on" href="network-upgrades.html">Network Upgrades</a><a class="dx-top" href="bridge.html">Bridge</a></nav></aside>
-  <main class="dx-main">
-    <div class="dx-crumb"><span>Docs</span><i>/</i><span>Resources</span><i>/</i><span>Network Upgrades</span></div>
-    <h1>Network Upgrades</h1>
-    <div class="dx-doc"><div class="row"><div class="col col--12 markdown">
+<div class="dx-prog" aria-hidden="true"><i></i></div>
+<div class="dx" id="dx">
+  <aside class="dx-side" id="dxSide" data-lenis-prevent><div class="dx-side-in"><div class="dx-grp">Resources</div><nav aria-label="Docs" class="dx-nav"><a class="dx-top" href="faq.html">FAQ</a><a class="dx-top" href="glossary.html">Glossary</a><a class="dx-top" href="union-staking.html">Union Staking</a><a class="dx-top" href="tokenomics.html">Tokenomics</a><a class="dx-top" href="governance.html">Governance</a><a class="dx-top" href="security.html">Security</a><a class="dx-top on" aria-current="page" href="network-upgrades.html">Network Upgrades</a><a class="dx-top" href="bridge.html">Bridge</a></nav></div></aside>
+  <main id="main" class="dx-main">
+    <div class="dx-crumb"><span>Docs</span><i aria-hidden="true">/</i><span>Resources</span><i aria-hidden="true">/</i><span>Network Upgrades</span></div>
+    <h1 class="dx-h1">Network Upgrades</h1>
+    <div class="dx-doc prose">
 <p>This page documents how protocol upgrades reach the <strong>XPHERE</strong> network, who is obliged to act, and how each participant can verify that an upgrade took effect. It is written for node operators, miners, Union validators, exchanges, and integrators.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-upgrades-activate">How Upgrades Activate</h2>
-<p>XPHERE upgrades activate at a <strong>deterministic block height</strong>. The client carries the activation height — for the xpHash fork it is read from the <code>XPHASH_FORK_BLOCK</code> setting, so you can inspect and confirm it on your own node — and every node applies the new rules from that block onward and the old rules to every block before it.</p>
+<h2 id="how-upgrades-activate">How Upgrades Activate</h2>
+<p>XPHERE upgrades activate at a <strong>deterministic block height</strong>. The client carries the activation height — for the xpHash fork it is read from the <code class="nw">XPHASH_FORK_BLOCK</code> setting, so you can inspect and confirm it on your own node — and every node applies the new rules from that block onward and the old rules to every block before it.</p>
 <p>This has three consequences that matter operationally:</p>
-<table><thead><tr><th>Property</th><th>What it means for you</th></tr></thead><tbody><tr><td><strong>Full history is preserved</strong></td><td>The chain is not reset and chaindata is not re-downloaded. Pre-upgrade balances, transactions, and blocks remain valid.</td></tr><tr><td><strong>The boundary is verifiable</strong></td><td>The activation point is a single, public block number. Anyone can check it on <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> or the <a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer" class="">Tamsa Explorer</a> — there is no ambiguity about when the rules changed.</td></tr><tr><td><strong>Upgrading is time-bound, not optional</strong></td><td>For a <strong>consensus-breaking</strong> change, every affected operator must be running a compatible client <em>before</em> the activation height. Work produced by an outdated client after that height is not accepted by the network.</td></tr></tbody></table>
-<p>This is exactly how the <a class="" href="mining-xphash-fork.html">xpHash hard fork</a> activated: a fork height was published for Testnet, soaked there, and then activated at a separate height on Mainnet.</p>
-<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Not every upgrade is consensus-breaking. Client releases that only change performance, logging, RPC ergonomics, or tooling do not need a fork height and can be adopted on your own schedule. Check the release notes on <a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer" class="">GitHub</a> for which category a release falls into.</p></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="upgrade-history">Upgrade History</h2>
-<table><thead><tr><th>Upgrade</th><th>Scope</th><th>Testnet block</th><th>Mainnet block</th><th>Status</th></tr></thead><tbody><tr><td><a class="" href="mining-xphash-fork.html">xpHash hard fork</a></td><td>Proof Chain PoW algorithm</td><td><code>327,400</code></td><td><code>1,740,000</code></td><td><strong>Active</strong> — completed on both networks</td></tr></tbody></table>
-<p>No further hard fork <strong>activation height</strong> has been announced. Planned protocol work is described in the <a class="" href="whitepaper.html#7-roadmap">whitepaper roadmap</a>; when a height is announced for any of it, it will appear in this table.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="who-is-affected-by-what">Who Is Affected by What</h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="miners">Miners</h3>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Property</th><th>What it means for you</th></tr></thead><tbody><tr><td><strong>Full history is preserved</strong></td><td>The chain is not reset and chaindata is not re-downloaded. Pre-upgrade balances, transactions, and blocks remain valid.</td></tr><tr><td><strong>The boundary is verifiable</strong></td><td>The activation point is a single, public block number. Anyone can check it on <a class="lk" href="https://xpscan.io" target="_blank" rel="noopener noreferrer">XPScan<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a> or the <a class="lk" href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer">Tamsa Explorer<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a> — there is no ambiguity about when the rules changed.</td></tr><tr><td><strong>Upgrading is time-bound, not optional</strong></td><td>For a <strong>consensus-breaking</strong> change, every affected operator must be running a compatible client <em>before</em> the activation height. Work produced by an outdated client after that height is not accepted by the network.</td></tr></tbody></table></div>
+<p>This is exactly how the <a href="mining-xphash-fork.html">xpHash hard fork</a> activated: a fork height was published for Testnet, soaked there, and then activated at a separate height on Mainnet.</p>
+<div class="callout note"><div class="callout-t"><animate-icons name="info" size="13"></animate-icons><span>note</span></div><div class="callout-b"><p>Not every upgrade is consensus-breaking. Client releases that only change performance, logging, RPC ergonomics, or tooling do not need a fork height and can be adopted on your own schedule. Check the release notes on <a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer">GitHub</a> for which category a release falls into.</p></div></div>
+<h2 id="upgrade-history">Upgrade History</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Upgrade</th><th>Scope</th><th>Testnet block</th><th>Mainnet block</th><th>Status</th></tr></thead><tbody><tr><td><a href="mining-xphash-fork.html">xpHash hard fork</a></td><td>Proof Chain PoW algorithm</td><td><code class="nw">327,400</code></td><td><code class="nw">1,740,000</code></td><td><strong>Active</strong> — completed on both networks</td></tr></tbody></table></div>
+<p>No further hard fork <strong>activation height</strong> has been announced. Planned protocol work is described in the <a href="whitepaper.html#7-roadmap">whitepaper roadmap</a>; when a height is announced for any of it, it will appear in this table.</p>
+<h2 id="who-is-affected-by-what">Who Is Affected by What</h2>
+<h3 id="miners">Miners</h3>
 <p>Miners are the group most directly exposed to Proof Chain changes, because a consensus-breaking PoW change invalidates work produced by non-compliant hardware or software.</p>
 <ul>
-<li class="">Mining on XPHERE today requires an <strong>xpHash-capable ASIC — the IceRiver XP0</strong>. The legacy CPU software miner is deprecated and cannot produce valid xpHash blocks.</li>
-<li class="">Keep at least two mining endpoints configured (<code>sgp-mining</code>, <code>bkk-mining</code>, <code>hkg-mining</code>, <code>idn-mining</code>) so an endpoint outage around an activation height does not stop your hashrate.</li>
-<li class="">After an activation height passes, confirm your ASIC dashboard still shows <strong>accepted</strong> shares, and confirm payouts to your address on an explorer.</li>
+<li>Mining on XPHERE today requires an <strong>xpHash-capable ASIC — the IceRiver XP0</strong>. The legacy CPU software miner is deprecated and cannot produce valid xpHash blocks.</li>
+<li>Keep at least two mining endpoints configured (<code class="nw">sgp-mining</code>, <code class="nw">bkk-mining</code>, <code class="nw">hkg-mining</code>, <code class="nw">idn-mining</code>) so an endpoint outage around an activation height does not stop your hashrate.</li>
+<li>After an activation height passes, confirm your ASIC dashboard still shows <strong>accepted</strong> shares, and confirm payouts to your address on an explorer.</li>
 </ul>
-<p>See <a class="" href="mining-getting-started.html">Mining — Getting Started</a> and the <a class="" href="mining-xphash-fork.html">xpHash Hard Fork</a> guide.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="endpoint-node-xen-operators">Endpoint Node (XEN) Operators</h3>
+<p>See <a href="mining-getting-started.html">Mining — Getting Started</a> and the <a href="mining-xphash-fork.html">xpHash Hard Fork</a> guide.</p>
+<h3 id="endpoint-node-xen-operators">Endpoint Node (XEN) Operators</h3>
 <p>Endpoint Nodes serve RPC and follow the chain, so they must be able to <em>validate</em> post-activation blocks even when they produce none.</p>
 <ul>
-<li class="">Replace the <code>xen</code> binary with the release that carries the new activation height, from <a class="" href="nodes-downloads.html">XEN Package Downloads</a>.</li>
-<li class="">The xpHash fork was applied <strong>in place</strong> — no genesis re-initialisation and no chaindata re-download were required.</li>
-<li class="">After restart, confirm the head block advances past the activation height.</li>
+<li>Replace the <code class="nw">xen</code> binary with the release that carries the new activation height, from <a href="nodes-downloads.html">XEN Package Downloads</a>.</li>
+<li>The xpHash fork was applied <strong>in place</strong> — no genesis re-initialisation and no chaindata re-download were required.</li>
+<li>After restart, confirm the head block advances past the activation height.</li>
 </ul>
-<p>Setup and operations are covered in <a class="" href="nodes-install-xen.html">Install XEN</a> and <a class="" href="nodes-xen-cli.html">XEN CLI Commands</a>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="union-validators">Union Validators</h3>
+<p>Setup and operations are covered in <a href="nodes-install-xen.html">Install XEN</a> and <a href="nodes-xen-cli.html">XEN CLI Commands</a>.</p>
+<h3 id="union-validators">Union Validators</h3>
 <p>Union members validate blocks on the Main Chain under optimized PBFT consensus.</p>
 <ul>
-<li class="">A Proof Chain change does not necessarily alter Main Chain consensus. xpHash, for example, did <strong>not</strong> change validator consensus rules — but validators were still advised to update their <code>xen</code> binary so they stayed compatible with headers produced by upgraded miners.</li>
-<li class="">Treat every announced upgrade as applying to you until the announcement says otherwise, and complete the update before the activation height.</li>
-<li class="">Union membership carries governance participation — one vote per member, with the XPHERE Foundation holding the tie-breaking vote. The Foundation has <strong>not</strong> published a separate on-chain voting procedure or threshold specific to activating protocol upgrades; do not assume one exists.</li>
+<li>A Proof Chain change does not necessarily alter Main Chain consensus. xpHash, for example, did <strong>not</strong> change validator consensus rules — but validators were still advised to update their <code class="nw">xen</code> binary so they stayed compatible with headers produced by upgraded miners.</li>
+<li>Treat every announced upgrade as applying to you until the announcement says otherwise, and complete the update before the activation height.</li>
+<li>Union membership carries governance participation — one vote per member, with the XPHERE Foundation holding the tie-breaking vote. The Foundation has <strong>not</strong> published a separate on-chain voting procedure or threshold specific to activating protocol upgrades; do not assume one exists.</li>
 </ul>
-<p>See <a class="" href="nodes-validator-node.html">Validator Node</a> and <a class="" href="union-staking.html">Union Staking</a>.</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="exchanges-and-integrators">Exchanges and Integrators</h3>
+<p>See <a href="nodes-validator-node.html">Validator Node</a> and <a href="union-staking.html">Union Staking</a>.</p>
+<h3 id="exchanges-and-integrators">Exchanges and Integrators</h3>
 <p>Exchanges, custodians, bridges, and indexers should plan around the activation height rather than around a wall-clock time, since block production rate determines when the height is reached.</p>
 <ul>
-<li class="">Upgrade any self-operated Endpoint Nodes before the activation height. If you depend on a third-party RPC provider, confirm with that provider that they will have upgraded in time.</li>
-<li class="">Check the announcement for whether the upgrade touches account state, RPC surface, or the chain ID. The xpHash fork was scoped to the PoW function only — economic parameters, RPC, and account state were unaffected — but that scope is specific to that upgrade and must be re-read for each one.</li>
-<li class="">Current chain IDs and endpoints are listed in <a class="" href="network-info.html">Network Information</a>. Verify the chain ID directly against the live RPC with <code>eth_chainId</code> before resuming signing in production.</li>
-<li class="">The Foundation does not publish a network status page. Use the explorers and the official channels below to confirm network state.</li>
+<li>Upgrade any self-operated Endpoint Nodes before the activation height. If you depend on a third-party RPC provider, confirm with that provider that they will have upgraded in time.</li>
+<li>Check the announcement for whether the upgrade touches account state, RPC surface, or the chain ID. The xpHash fork was scoped to the PoW function only — economic parameters, RPC, and account state were unaffected — but that scope is specific to that upgrade and must be re-read for each one.</li>
+<li>Current chain IDs and endpoints are listed in <a href="network-info.html">Network Information</a>. Verify the chain ID directly against the live RPC with <code class="nw">eth_chainId</code> before resuming signing in production.</li>
+<li>The Foundation does not publish a network status page. Use the explorers and the official channels below to confirm network state.</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="where-upgrades-are-announced">Where Upgrades Are Announced</h2>
+<h2 id="where-upgrades-are-announced">Where Upgrades Are Announced</h2>
 <p>Upgrade announcements — including activation heights, affected components, and required operator action — are published on the official XPHERE channels and reflected in these documentation pages. There is no other authoritative source.</p>
-<table><thead><tr><th>Channel</th><th>Address</th></tr></thead><tbody><tr><td>Telegram</td><td><a href="https://t.me/Xphere_official" target="_blank" rel="noopener noreferrer" class="">t.me/Xphere_official</a></td></tr><tr><td>X</td><td><a href="https://x.com/Xphere_official" target="_blank" rel="noopener noreferrer" class="">x.com/Xphere_official</a></td></tr><tr><td>Discord</td><td><a href="https://discord.com/invite/xphere" target="_blank" rel="noopener noreferrer" class="">discord.com/invite/xphere</a></td></tr><tr><td>GitHub (releases and source)</td><td><a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer" class="">github.com/xpherechain</a></td></tr><tr><td>Documentation</td><td><a href="https://docs.x-phere.com" target="_blank" rel="noopener noreferrer" class="">docs.x-phere.com</a></td></tr></tbody></table>
-<div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><p>The Foundation has not published a fixed advance-notice period, upgrade calendar, or service-level commitment for network upgrades. Do not plan against an assumed notice window — subscribe to the channels above and act on the announcement itself.</p></div></div>
-<p>For questions that are not answered by an announcement, contact <a href="mailto:Contact@X-phere.com" target="_blank" rel="noopener noreferrer" class="">Contact@X-phere.com</a>. Suspected security issues should go to <a href="mailto:security@x-phere.com" target="_blank" rel="noopener noreferrer" class="">security@x-phere.com</a> rather than a public channel.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="pre-upgrade-checklist">Pre-Upgrade Checklist</h2>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Channel</th><th>Address</th></tr></thead><tbody><tr><td>Telegram</td><td><a class="lk" href="https://t.me/Xphere_official" target="_blank" rel="noopener noreferrer">t.me/Xphere_official<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a></td></tr><tr><td>X</td><td><a class="lk" href="https://x.com/Xphere_official" target="_blank" rel="noopener noreferrer">x.com/Xphere_official<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a></td></tr><tr><td>Discord</td><td><a class="lk" href="https://discord.com/invite/xphere" target="_blank" rel="noopener noreferrer">discord.com/invite/xphere<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a></td></tr><tr><td>GitHub (releases and source)</td><td><a class="lk" href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer">github.com/xpherechain<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a></td></tr><tr><td>Documentation</td><td><a class="lk" href="https://docs.x-phere.com" target="_blank" rel="noopener noreferrer">docs.x-phere.com<animate-icons class="lk-i" name="arrow-up-right" size="12"></animate-icons></a></td></tr></tbody></table></div>
+<div class="callout warn"><div class="callout-t"><animate-icons name="triangle-alert" size="13"></animate-icons><span>caution</span></div><div class="callout-b"><p>The Foundation has not published a fixed advance-notice period, upgrade calendar, or service-level commitment for network upgrades. Do not plan against an assumed notice window — subscribe to the channels above and act on the announcement itself.</p></div></div>
+<p>For questions that are not answered by an announcement, contact <a href="mailto:Contact@X-phere.com" target="_blank" rel="noopener noreferrer">Contact@X-phere.com</a>. Suspected security issues should go to <a href="mailto:security@x-phere.com" target="_blank" rel="noopener noreferrer">security@x-phere.com</a> rather than a public channel.</p>
+<h2 id="pre-upgrade-checklist">Pre-Upgrade Checklist</h2>
 <p>Run this sequence for any announced consensus-breaking upgrade.</p>
-<p><strong>1. Verify your client version.</strong> Confirm the binary you are running is the release named in the announcement, and that it came from the official <a class="" href="nodes-downloads.html">Downloads</a> or <a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer" class="">GitHub</a> source.</p>
+<p><strong>1. Verify your client version.</strong> Confirm the binary you are running is the release named in the announcement, and that it came from the official <a href="nodes-downloads.html">Downloads</a> or <a href="https://github.com/xpherechain" target="_blank" rel="noopener noreferrer">GitHub</a> source.</p>
 <p><strong>2. Confirm the configured activation height.</strong> Check that your client actually carries the announced height rather than assuming the upgrade shipped. For the xpHash fork the configured height is exposed as:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">xen --help | grep -i fork</span><br></div></code></pre></div></div>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">xen <span class="token flag">--help</span> | grep <span class="token flag">-i</span> fork</span><br></div></code></pre></div>
 <p>Reference clients read the height from an environment variable:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">XPHASH_FORK_BLOCK=327400   # testnet</span><br></div><div class="token-line"><span class="token plain">XPHASH_FORK_BLOCK=1740000  # mainnet</span><br></div></code></pre></div></div>
-<p><strong>3. Rehearse on Testnet.</strong> The xpHash fork activated on Testnet before Mainnet, which made Testnet the place to validate configuration, hardware, and integration first. Where an announcement gives both heights, rehearse against the Testnet height before the Mainnet one arrives. Testnet parameters are in <a class="" href="network-info.html">Network Information</a>.</p>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">XPHASH_FORK_BLOCK=327400   # testnet</span><br></div><div class="ln"><span class="token plain">XPHASH_FORK_BLOCK=1740000  # mainnet</span><br></div></code></pre></div>
+<p><strong>3. Rehearse on Testnet.</strong> The xpHash fork activated on Testnet before Mainnet, which made Testnet the place to validate configuration, hardware, and integration first. Where an announcement gives both heights, rehearse against the Testnet height before the Mainnet one arrives. Testnet parameters are in <a href="network-info.html">Network Information</a>.</p>
 <p><strong>4. Watch for the activation block.</strong> Track the head block against the announced height:</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><div class="token-line"><span class="token plain">curl -X POST https://rpc.x-phere.com \</span><br></div><div class="token-line"><span class="token plain">  -H &quot;Content-Type: application/json&quot; \</span><br></div><div class="token-line"><span class="token plain">  --data &#x27;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_blockNumber&quot;,&quot;params&quot;:[],&quot;id&quot;:1}&#x27;</span><br></div></code></pre></div></div>
-<p>Cross-check the same height on <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer" class="">XPScan</a> or the <a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer" class="">Tamsa Explorer</a>.</p>
+<div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-X</span> POST https://rpc.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> <span class="token string">'{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'</span></span><br></div></code></pre></div>
+<p>Cross-check the same height on <a href="https://xpscan.io" target="_blank" rel="noopener noreferrer">XPScan</a> or the <a href="https://xp.tamsa.io" target="_blank" rel="noopener noreferrer">Tamsa Explorer</a>.</p>
 <p><strong>5. Confirm acceptance after activation.</strong> Once the height has passed, verify that your node&#x27;s head advances monotonically, that a miner&#x27;s blocks are still accepted rather than orphaned, and that a validator is still proposing and finalising. If your node stalls at the activation height, you are almost certainly running a pre-upgrade binary.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rollback-stance-for-the-xphash-fork">Rollback Stance for the xpHash Fork</h2>
-<p>For the xpHash fork the Foundation stated that <strong>there is no rollback</strong>: if a critical bug were found after activation, it would coordinate a <strong>follow-up fork</strong> — a new upgrade with its own published activation height — rather than reverting blocks already produced. This is documented in the <a class="" href="mining-xphash-fork.html">xpHash Hard Fork</a> guide.</p>
+<h2 id="rollback-stance-for-the-xphash-fork">Rollback Stance for the xpHash Fork</h2>
+<p>For the xpHash fork the Foundation stated that <strong>there is no rollback</strong>: if a critical bug were found after activation, it would coordinate a <strong>follow-up fork</strong> — a new upgrade with its own published activation height — rather than reverting blocks already produced. This is documented in the <a href="mining-xphash-fork.html">xpHash Hard Fork</a> guide.</p>
 <p>That is the only upgrade for which a rollback position has been published; the Foundation has not stated a general stance covering future forks, so do not assume one. For the xpHash fork the practical implication was that recovery from a missed upgrade ran forward: update the client and resync from the network, rather than waiting for the chain to return to a prior state.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="see-also">See Also</h2>
+<h2 id="see-also">See Also</h2>
 <ul>
-<li class=""><a class="" href="mining-xphash-fork.html">xpHash Hard Fork</a> — the one completed upgrade, with its activation heights and migration steps</li>
-<li class=""><a class="" href="network-info.html">Network Information</a> — chain IDs, RPC endpoints, and current fork heights</li>
-<li class=""><a class="" href="nodes-validator-node.html">Validator Node</a> — Main Chain validator requirements and operations</li>
-<li class=""><a class="" href="nodes-endpoint-node.html">Endpoint Node</a> — running your own RPC node</li>
-<li class=""><a class="" href="governance.html">Governance</a></li>
-</ul></div></div></div>
-    <div class="dx-pager"><a class="pv" href="security.html"><small>Previous</small><i>&#8592;</i> Security</a><a class="nx" href="bridge.html"><small>Next</small>Bridge <i>&#8594;</i></a></div>
-    
+<li><a href="mining-xphash-fork.html">xpHash Hard Fork</a> — the one completed upgrade, with its activation heights and migration steps</li>
+<li><a href="network-info.html">Network Information</a> — chain IDs, RPC endpoints, and current fork heights</li>
+<li><a href="nodes-validator-node.html">Validator Node</a> — Main Chain validator requirements and operations</li>
+<li><a href="nodes-endpoint-node.html">Endpoint Node</a> — running your own RPC node</li>
+<li><a href="governance.html">Governance</a></li>
+</ul></div>
+    <nav class="dx-pager"><a class="pv" href="security.html"><small class="lab">Previous</small><span class="pg-t"><animate-icons name="arrow-left" size="14"></animate-icons><span>Security</span></span></a><a class="nx" href="bridge.html"><small class="lab">Next</small><span class="pg-t"><animate-icons name="arrow-right" size="14"></animate-icons><span>Bridge</span></span></a></nav>
   </main>
-  <aside class="dx-toc"><div class="dx-toc-t">On this page</div><nav id="toc"><a href="#how-upgrades-activate">How Upgrades Activate</a><a href="#upgrade-history">Upgrade History</a><a href="#who-is-affected-by-what">Who Is Affected by What</a><a href="#miners" class="sub">Miners</a><a href="#endpoint-node-xen-operators" class="sub">Endpoint Node (XEN) Operators</a><a href="#union-validators" class="sub">Union Validators</a><a href="#exchanges-and-integrators" class="sub">Exchanges and Integrators</a><a href="#where-upgrades-are-announced">Where Upgrades Are Announced</a><a href="#pre-upgrade-checklist">Pre-Upgrade Checklist</a><a href="#rollback-stance-for-the-xphash-fork">Rollback Stance for the xpHash Fork</a><a href="#see-also">See Also</a></nav></aside>
+  <aside class="dx-toc" id="dxToc">
+    <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#how-upgrades-activate">How Upgrades Activate</a><a href="#upgrade-history">Upgrade History</a><a href="#who-is-affected-by-what">Who Is Affected by What</a><a href="#miners" class="sub">Miners</a><a href="#endpoint-node-xen-operators" class="sub">Endpoint Node (XEN) Operators</a><a href="#union-validators" class="sub">Union Validators</a><a href="#exchanges-and-integrators" class="sub">Exchanges and Integrators</a><a href="#where-upgrades-are-announced">Where Upgrades Are Announced</a><a href="#pre-upgrade-checklist">Pre-Upgrade Checklist</a><a href="#rollback-stance-for-the-xphash-fork">Rollback Stance for the xpHash Fork</a><a href="#see-also">See Also</a></nav>
+  </aside>
+  <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  if(b)b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  document.querySelectorAll('.dx-sec-t').forEach(function(t){t.onclick=function(){t.parentNode.classList.toggle('open');};});
-  /* code blocks: add a label bar with a copy button */
-  document.querySelectorAll('.dx-main div[class*="codeBlockContainer"]').forEach(function(c){
-    var m=(c.className.match(/language-([\w-]+)/)||[])[1]||'code';
-    var bar=document.createElement('div');bar.className='bar';
-    bar.innerHTML='<span>'+m+'</span><button type="button">Copy</button>';
-    c.insertBefore(bar,c.firstChild);
-    var btn=bar.querySelector('button');
-    btn.onclick=function(){var t=c.querySelector('code').innerText;
-      function done(){btn.textContent='Copied';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('ok');},1500);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else done();};
-  });
-  /* tables scroll sideways on small screens */
-  document.querySelectorAll('.dx-main table').forEach(function(t){if(t.parentNode.className!=='dx-tbl'){var w=document.createElement('div');w.className='dx-tbl';t.parentNode.insertBefore(w,t);w.appendChild(t);}});
-  /* on-this-page highlight */
-  var links=[].slice.call(document.querySelectorAll('#toc a')),heads=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function spy(){var cur=0;heads.forEach(function(h,i){if(h&&h.getBoundingClientRect().top<120)cur=i;});links.forEach(function(a,i){a.classList.toggle('on',i===cur);});}
-  if(links.length){addEventListener('scroll',spy,{passive:true});spy();}
-})();
-</script>
-<script src="../nav.js"></script>
+<!-- @scripts -->
+<script src="../assets/vendor/animateicons-lucide.js"></script>
+<script src="../assets/vendor/gsap.min.js"></script>
+<script src="../assets/vendor/ScrollTrigger.min.js"></script>
+<script src="../assets/vendor/lenis.min.js"></script>
+<script src="../assets/js/block-stream.js"></script>
+<script src="../assets/js/glass.js"></script>
+<script src="../assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="../assets/js/docs.js"></script>
 </body>
 </html>

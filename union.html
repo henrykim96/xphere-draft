@@ -1,30 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>XPHERE Union — The Validator Group | XPHERE Foundation</title>
 <meta name="description" content="The XPHERE Union is the network's core validator group. Members validate blocks, vote on policy, and earn 40% of minted block rewards plus 20% of transaction fees. Each slot requires a 35,000,000 XP stake.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@200..700&family=Geist+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="union.css">
+<!-- @head -->
+<meta name="theme-color" content="#0b0909">
+<script>/* theme boot: ?theme= > saved choice > system; set before first paint (no flash) */
+(function(){var d=document.documentElement,t=null;try{var q=new URLSearchParams(location.search).get('theme');if(q==='light'||q==='dark')t=q;else t=localStorage.getItem('xp-theme');}catch(e){}
+if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/core.css">
+<noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
+<!-- /@head -->
+<link rel="stylesheet" href="assets/css/union.css">
 </head>
-<body class="hide-notes"><button id="noteToggle" hidden></button><button id="gfxToggle" hidden></button>
+<body class="pg-union">
 
-
-<!-- ================= HEADER ================= -->
-<header class="hdr">
-  <div class="nav">
-    <a class="logo2" href="index.html" aria-label="XPHERE home"><img class="mk" src="images/xphere-logo.png" alt=""><img class="type" src="images/xphere-type.png" alt="XPHERE"></a>
-    <nav class="menu" id="menu">
+<!-- @header -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="index.html" aria-label="XPHERE home"><img class="th-d" src="assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="112" height="24"><img class="th-l" src="assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="112" height="24"></a>
+    <nav class="menu" id="menu" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="union.html" class="on">Union</a>
+      <a href="union.html" class="on" aria-current="page">Union</a>
       <a href="stake.html">Stake</a>
       <a href="ecosystem.html">Ecosystem</a>
       <div class="dd">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Develop <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <a href="grant.html">Grant</a>
           <a href="https://github.com/xpherechain">GitHub</a>
@@ -32,15 +37,15 @@
         </div>
       </div>
       <div class="dd dd-com">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Community <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
-          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
-          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
-          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
+          <a href="https://x.com/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8 8 10.2h-6.3l-4.9-6.4L5.3 21H2.2l7.3-8.3L1.8 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>X</a>
+          <a href="https://t.me/Xphere_official" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.8-1.4-1.4zM9.6 14.6l-.4 4.1-1.4-4.6 10.9-6.9-9.1 7.4z"/></svg>Telegram</a>
+          <a href="https://discord.gg/xphere" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 5.3A17 17 0 0 0 15.4 4l-.5 1a15.7 15.7 0 0 0-5.8 0l-.5-1a17 17 0 0 0-4.2 1.3C1.7 9.3 1 13.2 1.3 17a17 17 0 0 0 5.2 2.6l1.1-1.8a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 11.4 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.8A17 17 0 0 0 22.7 17c.4-4.4-.7-8.3-3.1-11.7zM8.5 14.7c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2z"/></svg>Discord</a>
         </div>
       </div>
       <div class="dd dd-docs">
-        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Docs <i>⌄</i></button>
+        <button class="dd-t" type="button" aria-haspopup="true" aria-expanded="false">Docs <animate-icons class="chev" name="chevron-down" size="13"></animate-icons></button>
         <div class="dd-p">
           <div class="dg"><span class="dh">Build</span><a class="di" href="docs/developer-guide.html">Developer Guide</a><a class="di" href="docs/references.html">References &amp; RPC</a><a class="di" href="docs/testnet-faucet.html">Testnet Faucet</a></div>
           <div class="dg"><span class="dh">Participate</span><a class="di" href="docs/staking.html">Staking (Union Vault)</a><a class="di" href="docs/mining.html">Mining</a><a class="di" href="docs/nodes.html">Run a Node</a><a class="di" href="docs/union-membership.html">Union Membership</a></div>
@@ -49,467 +54,404 @@
         </div>
       </div>
     </nav>
-    <div class="nav-cta">
-      <button class="burger" id="burger" aria-label="Menu">≡</button>
+    <div class="hdr-end">
+      <button class="tt" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Light theme">
+        <span class="tt-track" aria-hidden="true">
+          <svg class="tt-hint tt-hint-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 4.5v1.6M12 17.9v1.6M4.5 12h1.6M17.9 12h1.6M6.7 6.7l1.1 1.1M16.2 16.2l1.1 1.1M6.7 17.3l1.1-1.1M16.2 7.8l1.1-1.1"/></svg>
+          <svg class="tt-hint tt-hint-moon" viewBox="0 0 24 24"><path d="M19 14.2A7.2 7.2 0 0 1 9.8 5a7.2 7.2 0 1 0 9.2 9.2z"/></svg>
+          <span class="tt-thumb">
+            <svg class="tt-orb" viewBox="0 0 24 24">
+              <defs><mask id="ttMask"><rect width="24" height="24" fill="#fff"/><circle class="tt-bite" cx="19" cy="6" r="6.2" fill="#000"/></mask></defs>
+              <g class="tt-rays"><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M5.4 18.6l1.5-1.5M17.1 6.9l1.5-1.5"/></g>
+              <circle class="tt-core" cx="12" cy="12" r="5.4" mask="url(#ttMask)"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span><span></span></button>
     </div>
   </div>
 </header>
+<!-- /@header -->
 
-<!-- ================= HERO (ring) ================= -->
-<div class="hero2">
-  <div class="frame">
-    <div class="glow"></div>
-    <div class="hero-in">
-      <div class="un-ring" aria-hidden="true"><svg id="ring" viewBox="0 0 300 300"></svg></div>
-      <p class="eyebrow" style="margin:0 0 18px;color:#c9c2bf">XPHERE Union · The validator group</p>
-      <h1>The core of<br>XPHERE 2.0</h1>
-      <p class="sub">Union members validate blocks, vote on network policy and share the rewards. Thirty-one slots, one stake each, and earlier members hold a larger share for longer.</p>
-      <div class="ctas">
-        <a class="btn btn-primary" href="#join">Join the Union</a>
-        <a class="btn btn-light" href="#process">How to join</a>
+<!-- section index: a visual duplicate of the section eyebrows below (aria-hidden; the sections themselves carry the copy) -->
+<nav class="u-idx" id="uIdx" aria-hidden="true">
+  <div class="wrap u-idx-in">
+    <div class="u-idx-list" id="uIdxList">
+      <a href="#overview" tabindex="-1">Overview</a><a href="#role" tabindex="-1">Role</a><a href="#benefits" tabindex="-1">Benefits</a><a href="#rewards" tabindex="-1">Rewards</a><a href="#requirements" tabindex="-1">Requirements</a><a href="#process" tabindex="-1">How to join</a><a href="#governance" tabindex="-1">Governance</a><a href="#expansion" tabindex="-1">Expansion</a><a href="#early" tabindex="-1">Early members</a><a href="#join" tabindex="-1">Join</a>
+    </div>
+  </div>
+  <i class="u-idx-bar"><i id="uIdxFill"></i></i>
+</nav>
+
+<main id="main" class="page">
+
+  <!-- ================= HERO ================= -->
+  <section class="phero u-hero">
+    <div class="wrap">
+      <div class="u-hero-g">
+        <div class="u-hero-t">
+          <span class="eyebrow">XPHERE Union · The validator group</span>
+          <h1 class="h1" data-gen>The core of<br>XPHERE 2.0</h1>
+          <p class="lede">Union members validate blocks, vote on network policy and share the rewards. Thirty-one slots, one stake each, and earlier members hold a larger share for longer.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#join"><span>Join the Union</span><animate-icons name="arrow-right" size="14"></animate-icons></a>
+            <a class="btn btn-ghost" href="#process"><span>How to join</span><animate-icons name="arrow-down" size="14"></animate-icons></a>
+          </div>
+        </div>
+        <div class="u-seats gcard" aria-hidden="true">
+          <span class="gc-glow"></span>
+          <canvas class="u-seats-cv" id="uSeats"></canvas>
+        </div>
+      </div>
+      <dl class="stats u-hstats">
+        <div class="stat"><dt>Slot cap</dt><dd class="v">31</dd></div>
+        <div class="stat"><dt>Stake per slot</dt><dd class="v">35M XP</dd></div>
+        <div class="stat"><dt>Block rewards</dt><dd class="v">40%</dd></div>
+        <div class="stat"><dt>Fee share</dt><dd class="v">20%</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= OVERVIEW ================= -->
+  <section class="sec u-sec" id="overview">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Overview</span>
+          <h2 class="h2" data-gen>What is <br>XPHERE Union?</h2>
+        </div>
+        <p class="lede u-state" id="ustate">XPHERE Union is the <span class="kw">core group of validators</span> within the network.</p>
+      </div>
+      <div class="cells cols-3 u-what">
+        <article class="cell pad"><span class="ic-tile" aria-hidden="true"><animate-icons name="layers" size="17"></animate-icons></span><p>Enhances network stability, scalability, and ecosystem growth.</p></article>
+        <article class="cell pad"><span class="ic-tile" aria-hidden="true"><animate-icons name="blocks" size="17"></animate-icons></span><p>Responsible for block creation and validation based on a dual-chain architecture.</p></article>
+        <article class="cell pad"><span class="ic-tile" aria-hidden="true"><animate-icons name="trending-down" size="17"></animate-icons></span><p>Slots are capped at <em>31</em> and emission declines <em>26.28%</em> per year — earlier members hold a larger share for longer.</p></article>
       </div>
     </div>
-    <dl class="hstats">
-      <div><dt>Slot cap</dt><dd>31</dd></div>
-      <div><dt>Stake per slot</dt><dd class="dd-sm">35M XP</dd></div>
-      <div><dt>Block rewards</dt><dd>40%</dd></div>
-      <div><dt>Fee share</dt><dd>20%</dd></div>
-    </dl>
-  </div>
-</div>
+  </section>
 
-<!-- ================= WHAT IS UNION — editorial rows ================= -->
-<section class="u u-sec u-what">
-  <div class="wrap">
-    <div class="lead">
-      <span class="eyebrow u-eb">Overview</span><h2>What is<br>XPHERE Union?</h2>
-      
-    </div>
-    <p class="u-state" id="ustate">XPHERE Union is the <span class="kw">core group of validators</span> within the network.</p>
-    <div class="u-what3">
-      <article class="rv">
-        <i class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12.5l9 5 9-5"/><path d="M3 17l9 5 9-5"/></svg></i>
-        <p>Enhances network stability, scalability, and ecosystem growth.</p>
-      </article>
-      <article class="rv">
-        <i class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="6" rx="1.5"/><rect x="14" y="4" width="7" height="6" rx="1.5"/><rect x="3" y="14" width="7" height="6" rx="1.5"/><rect x="14" y="14" width="7" height="6" rx="1.5"/><path d="M10 7h4M10 17h4M6.5 10v4M17.5 10v4"/></svg></i>
-        <p>Responsible for block creation and validation based on a dual-chain architecture.</p>
-      </article>
-      <article class="rv wstat">
-        <i class="ic"><svg viewBox="0 0 24 24"><path d="M3 4v16h18"/><path d="M6 8l4 4 3-2 6 6"/><path d="M15 16h4v-4"/></svg></i>
-        <p>Slots are capped at <em>31</em> and emission declines <em>26.28%</em> per year — earlier members hold a larger share for longer.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ROLE — flow schematic ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Role</span><h2>Union's Role in the<br>XPHERE Ecosystem</h2></div>
-    <div class="u-flow rv" id="roleflow">
-      <div class="dia"><svg id="flow" viewBox="0 0 1000 200" aria-hidden="true"></svg></div>
-      <div class="cols">
-        <div><span class="ix"><b>01</b></span><h3>Block Validation</h3><p>Validates blocks generated on the Proof Chain and records them on the Main Chain.</p></div>
-        <div><span class="ix"><b>02</b></span><h3>Governance Participation</h3><p>Plays a key role in policy-making and ecosystem expansion.</p></div>
-        <div><span class="ix"><b>03</b></span><h3>Reward Distribution Management</h3><p>Ensures transparent distribution to motivate participants and build a sustainable ecosystem.</p></div>
+  <!-- ================= ROLE ================= -->
+  <section class="sec band u-sec" id="role">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Role</span>
+          <h2 class="h2" data-gen>Union's Role in the <br>XPHERE Ecosystem</h2>
+        </div>
+      </div>
+      <div class="rl-dia" id="roleDia" aria-hidden="true" data-rv>
+        <div class="rl-node rl-pc">
+          <div class="rl-h"><span class="lab">Proof Chain</span></div>
+          <div class="rl-blocks"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="rl-wire"><i class="rl-pk"></i></div>
+        <div class="rl-node rl-un">
+          <div class="rl-h"><span class="lab">XPHERE Union</span></div>
+          <div class="rl-seats" id="rlSeats"></div>
+        </div>
+        <div class="rl-wire rl-w2"><i class="rl-pk"></i></div>
+        <div class="rl-node rl-mc">
+          <div class="rl-h"><span class="lab">Main Chain</span><span class="live live-dot" data-xp-live></span></div>
+          <canvas class="rl-cv" id="buildStream"></canvas>
+        </div>
+      </div>
+      <div class="cells cols-3 u-role">
+        <div class="cell pad"><span class="ix mono">01</span><h3 class="t3">Block Validation</h3><p>Validates blocks generated on the Proof Chain and records them on the Main Chain.</p></div>
+        <div class="cell pad"><span class="ix mono">02</span><h3 class="t3">Governance Participation</h3><p>Plays a key role in policy-making and ecosystem expansion.</p></div>
+        <div class="cell pad"><span class="ix mono">03</span><h3 class="t3">Reward Distribution Management</h3><p>Ensures transparent distribution to motivate participants and build a sustainable ecosystem.</p></div>
       </div>
     </div>
-    
-  </div>
-</section>
+  </section>
 
-<!-- ================= BENEFITS — bento ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Benefits</span><h2>Benefits for<br>Union Members</h2></div>
-    <div class="u-ben">
-      <!-- 01 block rewards: reward split panel -->
-      <article class="rv">
-        <div class="stage">
-          <div class="ui ui-a">
-            <div class="ui-h"><span>Reward pool</span><em><i class="live"></i>Block <b id="bk">0</b>/60</em></div>
-            <div class="ui-bar"><span class="on" style="width:40%"></span><span style="width:40%"></span><span style="width:20%"></span></div>
-            <ul class="ui-leg"><li class="on"><i></i>Union<b>40%</b></li><li><i></i>Miner<b>40%</b></li><li><i></i>Foundation<b>20%</b></li></ul>
-          </div>
+  <!-- ================= BENEFITS ================= -->
+  <section class="sec u-sec" id="benefits">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Benefits</span>
+          <h2 class="h2" data-gen>Benefits for <br>Union Members</h2>
         </div>
-        <div class="txt"><span class="ix"><b>01</b></span><h3>Block Rewards</h3><p>Allocated 40% of the reward pool.</p></div>
-      </article>
-      <!-- 02 transaction fees: fee receipt -->
-      <article class="rv">
-        <div class="stage">
-          <div class="ui ui-b">
-            <div class="ui-h"><span>Transaction fee</span><em>100%</em></div>
-            <ul class="ui-rcpt">
-              <li class="bn"><span>Burned</span><b>50%</b></li>
-              <li class="on"><span>to Union</span><b>20%</b></li>
-              <li><span>to Miner</span><b>20%</b></li>
-              <li><span>Foundation</span><b>10%</b></li>
-            </ul>
-          </div>
-        </div>
-        <div class="txt"><span class="ix"><b>02</b></span><h3>Transaction Fees</h3><p>Allocated 20% of transaction fees (50% is burned).</p></div>
-      </article>
-      <!-- 03 strategic positioning: member badge -->
-      <article class="rv">
-        <div class="stage">
-          <div class="ui ui-c">
-            <div class="ui-badge"><img src="images/xphere-logo.png" alt=""><div><b>Union Member</b><span>Strategic partner</span></div><i class="ck"><svg viewBox="0 0 14 14"><path d="M2 7.5l3 3 7-7"/></svg></i></div>
-            <div class="ui-net"><svg viewBox="0 0 220 64" aria-hidden="true"><path d="M10 50 L60 22 L110 40 L160 14 L210 34" /><circle cx="10" cy="50" r="3"/><circle cx="60" cy="22" r="3"/><circle class="r" cx="110" cy="40" r="4.5"/><circle cx="160" cy="14" r="3"/><circle cx="210" cy="34" r="3"/></svg></div>
-          </div>
-        </div>
-        <div class="txt"><span class="ix"><b>03</b></span><h3>Strategic Positioning</h3><p>Exclusive status as strategic partners within the global network.</p></div>
-      </article>
-      <!-- 04 collaboration: dApp grid -->
-      <article class="rv">
-        <div class="stage">
-          <div class="ui ui-d">
-            <div class="ui-h"><span>DApp partners</span><em>XPHERE</em></div>
-            <div class="ui-apps">
-              <img src="images/xeffy-mark.png" alt=""><img src="images/phos-black.png" alt="" style="padding:4px"><img src="images/xcroll_mark.png" alt="">
-              <img src="images/faiyah.svg" alt=""><img src="images/pumpkinswap.svg" alt=""><span class="add">+</span>
+      </div>
+      <div class="bn-grid">
+        <article class="bn card gcard" data-rv>
+          <span class="gc-glow" aria-hidden="true"></span>
+          <div class="bn-stage">
+            <div class="ui">
+              <div class="ui-h"><span class="lab">Reward pool</span><em class="mono"><i class="ui-dot" aria-hidden="true"></i><span>Block <b id="bk">0</b>/60</span></em></div>
+              <div class="ui-cyc" id="bkCyc" aria-hidden="true"></div>
+              <div class="ui-bar" aria-hidden="true"><span class="on" style="--w:40"></span><span style="--w:40"></span><span style="--w:20"></span></div>
+              <ul class="ui-leg"><li class="on"><i></i>Union<b>40%</b></li><li><i></i>Miner<b>40%</b></li><li><i></i>Foundation<b>20%</b></li></ul>
             </div>
           </div>
+          <div class="bn-t"><span class="ix mono">01</span><h3 class="t3">Block Rewards</h3><p>Allocated 40% of the reward pool.</p></div>
+        </article>
+        <article class="bn card gcard" data-rv>
+          <span class="gc-glow" aria-hidden="true"></span>
+          <div class="bn-stage">
+            <div class="ui">
+              <div class="ui-h"><span class="lab">Transaction fee</span><em class="mono">100%</em></div>
+              <ul class="ui-rcpt">
+                <li class="bn-burn"><span>Burned</span><i style="--w:50" aria-hidden="true"></i><b>50%</b></li>
+                <li class="on"><span>to Union</span><i style="--w:20" aria-hidden="true"></i><b>20%</b></li>
+                <li><span>to Miner</span><i style="--w:20" aria-hidden="true"></i><b>20%</b></li>
+                <li><span>Foundation</span><i style="--w:10" aria-hidden="true"></i><b>10%</b></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bn-t"><span class="ix mono">02</span><h3 class="t3">Transaction Fees</h3><p>Allocated 20% of transaction fees (50% is burned).</p></div>
+        </article>
+        <article class="bn card gcard" data-rv>
+          <span class="gc-glow" aria-hidden="true"></span>
+          <div class="bn-stage">
+            <div class="ui">
+              <div class="ui-badge">
+                <span class="ui-mk" aria-hidden="true"><svg viewBox="0 0 256 231.298" focusable="false"><path d="M255.99 213.612 C254.687 185.112 219.662 142.844 200.545 121.863 C187.258 107.292 171.293 91.662 154.804 77.347 C163.154 71.682 171.162 66.879 178.544 63.09 C190.935 75.033 199.06 91.575 200.545 109.394 C211.559 97.313 222.065 84.669 231.456 71.375 C240.054 59.024 248.12 46.175 253.107 31.925 C258.494 16.617 257.81 0.272 237.761 0.002 C230.925 -0.064 224.183 1.506 217.667 3.491 C209.754 5.952 202.125 9.186 194.64 12.792 C186.567 16.705 178.785 21.012 171.024 25.677 C161.451 31.444 152.176 37.62 142.988 44.182 C138.045 47.716 133.036 51.446 127.998 55.337 C122.953 51.446 117.951 47.716 113.008 44.182 C103.828 37.62 94.546 31.444 84.973 25.677 C77.219 21.012 69.429 16.705 61.356 12.792 C53.872 9.186 46.242 5.944 38.329 3.491 C31.827 1.506 25.079 -0.056 18.243 0.002 C-1.807 0.272 -2.484 16.617 2.904 31.925 C7.898 46.175 15.957 59.016 24.555 71.375 C33.939 84.676 44.451 97.313 55.466 109.394 C56.951 91.575 65.076 75.04 77.466 63.09 C84.848 66.879 92.857 71.682 101.207 77.347 C84.718 91.67 68.76 107.292 55.466 121.863 C37.579 141.683 20.529 162.635 8.364 186.462 C3.369 196.762 -4.216 214.158 2.911 224.744 C11.363 236.161 32.075 229.993 43.308 226.116 C68.403 216.896 91.19 202.486 113.016 187.082 C95.558 183.44 80.175 173.344 69.859 159.554 C81.952 141.23 105.56 116.074 128.012 97.626 C150.479 116.089 174.06 141.216 186.167 159.554 C175.85 173.336 160.468 183.44 143.002 187.082 C163.372 201.515 184.623 214.911 207.752 224.255 C223.04 230.511 256.317 240.126 255.998 213.626 Z" fill="currentColor"/></svg></span>
+                <div><b>Union Member</b><span>Strategic partner</span></div>
+                <i class="ui-ck" aria-hidden="true"><animate-icons name="badge-check" size="16"></animate-icons></i>
+              </div>
+              <div class="ui-seatrow" id="bnSeats" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="bn-t"><span class="ix mono">03</span><h3 class="t3">Strategic Positioning</h3><p>Exclusive status as strategic partners within the global network.</p></div>
+        </article>
+        <article class="bn card gcard" data-rv>
+          <span class="gc-glow" aria-hidden="true"></span>
+          <div class="bn-stage">
+            <div class="ui">
+              <div class="ui-h"><span class="lab">DApp partners</span><em class="mono">XPHERE</em></div>
+              <div class="ui-apps">
+                <span class="tile"><img src="assets/media/xeffy.png" alt="" loading="lazy"></span>
+                <span class="tile"><img src="assets/media/phos.png" alt="" loading="lazy"></span>
+                <span><img src="assets/media/xcroll_mark.png" alt="" loading="lazy"></span>
+                <span><img src="assets/media/faiyah.svg" alt="" loading="lazy"></span>
+                <span><img src="assets/media/pumpkinswap.svg" alt="" loading="lazy"></span>
+                <span class="add" aria-hidden="true"><animate-icons name="plus" size="15"></animate-icons></span>
+              </div>
+            </div>
+          </div>
+          <div class="bn-t"><span class="ix mono">04</span><h3 class="t3">Collaboration Opportunities</h3><p>Participate in and expand the ecosystem through partnerships with various DApp projects.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REWARDS ================= -->
+  <section class="sec band u-sec" id="rewards">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Rewards</span>
+          <h2 class="h2" data-gen>Block Rewards and <br>Fee Distribution</h2>
         </div>
-        <div class="txt"><span class="ix"><b>04</b></span><h3>Collaboration Opportunities</h3><p>Participate in and expand the ecosystem through partnerships with various DApp projects.</p></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= REWARDS — stacked bars ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Rewards</span><h2>Block Rewards and<br>Fee Distribution</h2></div>
-    <div class="u-flowmap" id="bars">
-      <div class="fm-m" aria-hidden="true">
-        <div><h3>Block Rewards</h3>
-          <p class="un"><span>Union</span><i style="--w:40"></i><b>40%</b></p><p><span>Miner</span><i style="--w:40"></i><b>40%</b></p><p><span>Foundation</span><i style="--w:20"></i><b>20%</b></p></div>
-        <div><h3>Transaction Fees</h3>
-          <p class="bn"><span>Burned</span><i style="--w:50"></i><b>50%</b></p><p class="un"><span>Union</span><i style="--w:20"></i><b>20%</b></p><p><span>Miner</span><i style="--w:20"></i><b>20%</b></p><p><span>Foundation</span><i style="--w:10"></i><b>10%</b></p></div>
       </div>
-      <div class="fm-scroll"><svg id="sankey" viewBox="0 0 1120 440" role="img" aria-label="Block rewards: 40% Union, 40% Miner, 20% Foundation. Transaction fees: 50% burned, 20% Union, 20% Miner, 10% Foundation."></svg></div>
-    </div>
-    <div class="u-facts">
-      <div class="rv"><b>Every 60 blocks</b><p>A reward is minted every 60 blocks and shared across active slots.</p></div>
-      <div class="rv"><b>−26.28% a year</b><p>Emission reduces 26.28% each year, so the earliest years carry the largest block rewards.</p></div>
-      <div class="rv"><b>4 interim nodes</b><p>The Foundation currently operates 4 interim validator nodes so the council stays full. Each is retired the moment a new Union member takes its place, and everything those nodes earn in the meantime is burned — a new member displaces a burn, not another member's share.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= QUALIFICATIONS — spec sheet ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Requirements</span><h2>Union Member<br>Qualifications</h2></div>
-    <div class="u-qual">
-      <article class="q-main rv">
-        <div class="q-coin" aria-hidden="true"><span class="orb"><em></em></span><span class="ring"></span><span class="disc"><img src="images/xphere-logo.png" alt=""></span></div>
-        <span class="q-k">Staking Requirement</span>
-        <div class="q-val"><b>35,000,000</b><small>XP</small></div>
-        <p>35 million XP staking.</p>
-      </article>
-      <div class="q-list">
-        <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"/></svg></i><div><h3>Technical Infrastructure</h3><p>Maintain stable server infrastructure.</p></div></article>
-        <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></i><div><h3>Commitment</h3><p>Contribute to network policies and ecosystem growth.</p></div></article>
-        <article class="rv"><i class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></i><div><h3>Operational Capability</h3><p>Demonstrate ability to manage and maintain servers.</p></div></article>
+      <div class="rw-map card" data-rv>
+        <div class="fm-m" aria-hidden="true">
+          <div class="fm-g"><h3>Block Rewards</h3>
+            <div class="fm-bar"><i class="un" style="--w:40"></i><i class="mn" style="--w:40"></i><i class="fd" style="--w:20"></i></div>
+            <p class="un"><span>Union</span><b>40%</b></p><p class="mn"><span>Miner</span><b>40%</b></p><p class="fd"><span>Foundation</span><b>20%</b></p></div>
+          <div class="fm-g"><h3>Transaction Fees</h3>
+            <div class="fm-bar"><i class="bn" style="--w:50"></i><i class="un" style="--w:20"></i><i class="mn" style="--w:20"></i><i class="fd" style="--w:10"></i></div>
+            <p class="bn"><span>Burned</span><b>50%</b></p><p class="un"><span>Union</span><b>20%</b></p><p class="mn"><span>Miner</span><b>20%</b></p><p class="fd"><span>Foundation</span><b>10%</b></p></div>
+        </div>
+        <div class="fm-svg"><svg id="sankey" viewBox="0 0 1056 392" role="img" aria-label="Block rewards: 40% Union, 40% Miner, 20% Foundation. Transaction fees: 50% burned, 20% Union, 20% Miner, 10% Foundation."></svg></div>
+      </div>
+      <div class="cells cols-3 u-facts">
+        <div class="cell pad"><div class="fx fx-cyc" id="fxCyc" aria-hidden="true"></div><b class="fx-k">Every 60 blocks</b><p>A reward is minted every 60 blocks and shared across active slots.</p></div>
+        <div class="cell pad"><div class="fx fx-em" id="fxEm" aria-hidden="true"></div><b class="fx-k">−26.28% a year</b><p>Emission reduces 26.28% each year, so the earliest years carry the largest block rewards.</p></div>
+        <div class="cell pad"><div class="fx fx-int" aria-hidden="true"><i></i><i></i><i></i><i></i><animate-icons name="flame" size="15"></animate-icons></div><b class="fx-k">4 interim nodes</b><p>The Foundation currently operates 4 interim validator nodes so the council stays full. Each is retired the moment a new Union member takes its place, and everything those nodes earn in the meantime is burned — a new member displaces a burn, not another member's share.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= PROCESS — vertical stepper ================= -->
-<section class="u u-sec u-proc" id="process">
-  <div class="wrap">
-    <div class="lead"><span class="eyebrow u-eb">How to join</span><h2>Union Member<br>Registration Process</h2></div>
-    <div class="pr-side" aria-hidden="true">
-      <div class="ui ui-stake">
-        <div class="ui-h"><span>Union application</span><em>Step <b id="psn">01</b>&nbsp;/ 05</em></div>
-        <div class="ps-amt"><span class="k">Staked</span><b id="pamt">1M</b><small>XP</small></div>
-        <div class="ps-bar"><i id="pbar"></i><span class="m m1">1M</span><span class="m m2">35M</span></div>
-        <div class="ps-steps" id="psteps"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="ps-cur" id="pcur">Application</div>
+  <!-- ================= REQUIREMENTS ================= -->
+  <section class="sec u-sec" id="requirements">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Requirements</span>
+          <h2 class="h2" data-gen>Union Member <br>Qualifications</h2>
+        </div>
+      </div>
+      <div class="q-grid">
+        <article class="q-main card gcard" data-rv>
+          <span class="gc-glow" aria-hidden="true"></span>
+          <span class="lab">Staking Requirement</span>
+          <div class="q-val"><b>35,000,000</b><small>XP</small></div>
+          <div class="q-meter" id="qMeter" aria-hidden="true"></div>
+          <div class="q-ax mono" aria-hidden="true"><span>1M</span><span>35M</span></div>
+          <p>35 million XP staking.</p>
+        </article>
+        <div class="q-list" data-rv>
+          <article class="q-it"><span class="ic-tile" aria-hidden="true"><animate-icons name="server" size="17"></animate-icons></span><div><h3 class="t3">Technical Infrastructure</h3><p>Maintain stable server infrastructure.</p></div></article>
+          <article class="q-it"><span class="ic-tile" aria-hidden="true"><animate-icons name="shield-check" size="17"></animate-icons></span><div><h3 class="t3">Commitment</h3><p>Contribute to network policies and ecosystem growth.</p></div></article>
+          <article class="q-it"><span class="ic-tile" aria-hidden="true"><animate-icons name="settings" size="17"></animate-icons></span><div><h3 class="t3">Operational Capability</h3><p>Demonstrate ability to manage and maintain servers.</p></div></article>
+        </div>
       </div>
     </div>
-    <ol class="u-steps" id="steps">
-      <i class="fill"></i>
-      <li><span class="dot">01</span><div class="box"><div><h3>Application</h3><p>Submit an application and stake an initial 1M XP.</p></div><span class="chip">1M XP</span></div></li>
-      <li><span class="dot">02</span><div class="box"><div><h3>Evaluation</h3><p>Assessed by the Foundation and existing members.</p></div></div></li>
-      <li><span class="dot">03</span><div class="box"><div><h3>Registration</h3><p>Complete the full 35M XP stake for the slot.</p></div><span class="chip">35M XP</span></div></li>
-      <li><span class="dot">04</span><div class="box"><div><h3>Support</h3><p>Receive initial technical support from the XPHERE Foundation.</p></div></div></li>
-      <li><span class="dot">05</span><div class="box"><div><h3>Obligation</h3><p>Ensure stable network operation.</p></div></div></li>
-    </ol>
-  </div>
-</section>
+  </section>
 
-<!-- ================= RESPONSIBILITIES & GOVERNANCE — vote grid ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Governance</span><h2>Union Member Responsibilities<br>and Governance</h2></div>
-    <div class="u-gov rv" id="gov">
-      <div>
-        <span class="ix"><b>01</b>&nbsp; Governance</span>
-        <ul class="u-resp">
-          <li><span>01</span>Each member holds one vote.</li>
-          <li><span>02</span>The Foundation casts an additional tie-breaking vote when needed.</li>
-        </ul>
+  <!-- ================= PROCESS ================= -->
+  <section class="sec band u-sec u-proc" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">How to join</span>
+          <h2 class="h2" data-gen>Union Member <br>Registration Process</h2>
+        </div>
       </div>
-      <div>
-        <span class="ix"><b>02</b>&nbsp; Responsibilities</span>
-        <ul class="u-resp">
-          <li><span>01</span>Validate blocks and record data.</li>
-          <li><span>02</span>Strive to expand XPHERE Union.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ECOSYSTEM EXPANSION — slot meter ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Expansion</span><h2>XPHERE Ecosystem<br>Expansion</h2></div>
-    <div class="u-meter rv">
-      <div class="top"><b>25<small>→</small>31</b><span class="ix">Member slots</span></div>
-      <div class="u-cells" id="cells" aria-hidden="true"></div>
-      <div class="u-cells-ax"><span>1</span><span>25</span><span>31</span></div>
-      <p style="margin-top:22px;font-size:15.5px;line-height:1.6;color:#bdb6b3;max-width:640px">Grow the Union from 25 member slots today to the full 31-slot target, retiring a Foundation interim node with each new member.</p>
-    </div>
-    <div class="u-list4">
-      <div class="rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3.4 3 13.6 0 17M12 3.5c-3 3.4-3 13.6 0 17"/></svg><p>Develop global strategic partnerships.</p></div>
-      <div class="rv"><svg viewBox="0 0 24 24"><path d="M4 18l5-5 4 3 7-8"/><path d="M15 8h5v5"/></svg><p>Increase use cases to boost XPHERE's economic value.</p></div>
-      <div class="rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.4"/><path d="M6 6l3.6 3.6M18 6l-3.6 3.6M6 18l3.6-3.6M18 18l-3.6-3.6"/></svg><p>Provide technical support and early Web3 consulting.</p></div>
-    </div>
-    
-  </div>
-</section>
-
-<!-- ================= EARLY RECRUITMENT — share curve ================= -->
-<section class="u u-sec">
-  <div class="wrap">
-    <div class="u-head"><span class="eyebrow u-eb">Early members</span><h2>Early Union Member<br>Recruitment Strategy</h2></div>
-    <div class="u-early">
-      <div class="u-curve" id="curve">
-        <span class="ix"><b>●</b>&nbsp; Emission −26.28% per year</span>
-        <svg id="curveSvg" viewBox="0 0 600 380" aria-hidden="true"></svg>
-      </div>
-      <div class="u-pts">
-        <div class="rv"><span class="ix"><b>01</b></span><h3>Focus on network</h3><p>Focus on network stability during early member recruitment.</p></div>
-        <div class="rv"><span class="ix"><b>02</b></span><h3>Larger share</h3><p>With a fixed 31-slot cap, earlier members hold a larger share of block rewards and fee distributions.</p></div>
-        <div class="rv"><span class="ix"><b>03</b></span><h3>Reliable members</h3><p>Only reliable members are selected through a strict evaluation process.</p></div>
+      <div class="pr-grid">
+        <div class="pr-side" aria-hidden="true">
+          <div class="pr-panel gcard">
+            <div class="pr-h"><span class="lab">Union application</span></div>
+            <div class="pr-amt"><b id="pamt">1M</b><small>XP</small></div>
+            <div class="pr-bar"><i id="pbar"></i></div>
+            <div class="pr-ax mono"><span>1M</span><span>35M</span></div>
+            <div class="pr-dots" id="psteps"><i class="c"></i><i></i><i></i><i></i><i></i></div>
+            <div class="pr-cur" id="pcur">Application</div>
+          </div>
+        </div>
+        <div class="pr-main">
+        <i class="pr-rail" aria-hidden="true"><i id="prFill"></i></i>
+        <ol class="pr-steps" id="steps">
+          <li><span class="dot mono">01</span><div class="box"><div><h3 class="t3">Application</h3><p>Submit an application and stake an initial 1M XP.</p></div><span class="chip chip-accent">1M XP</span></div></li>
+          <li><span class="dot mono">02</span><div class="box"><div><h3 class="t3">Evaluation</h3><p>Assessed by the Foundation and existing members.</p></div></div></li>
+          <li><span class="dot mono">03</span><div class="box"><div><h3 class="t3">Registration</h3><p>Complete the full 35M XP stake for the slot.</p></div><span class="chip chip-accent">35M XP</span></div></li>
+          <li><span class="dot mono">04</span><div class="box"><div><h3 class="t3">Support</h3><p>Receive initial technical support from the XPHERE Foundation.</p></div></div></li>
+          <li><span class="dot mono">05</span><div class="box"><div><h3 class="t3">Obligation</h3><p>Ensure stable network operation.</p></div></div></li>
+        </ol>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= JOIN ================= -->
-<section class="u u-sec u-join" id="join">
-  <div class="wrap">
-    <div class="card j2">
-      <span class="eyebrow">Join XPHERE Union</span>
-      <h2>Be part of the future of blockchain<br>as a Union member</h2>
-      <div class="j-mail">
-        <span class="j-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg></span>
-        <span class="j-addr">Contact@X-phere.com</span>
-        <button type="button" class="j-copy" id="jcopy">Copy</button>
-        <a class="j-send" href="mailto:Contact@X-phere.com">Send email <span>→</span></a>
+  <!-- ================= GOVERNANCE ================= -->
+  <section class="sec u-sec" id="governance">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Governance</span>
+          <h2 class="h2" data-gen>Union Member Responsibilities <br>and Governance</h2>
+        </div>
       </div>
-      <a class="j-alt" href="https://stake.x-phere.com">Not running a node? Stake XP instead <span>↗</span></a>
+      <div class="cells cols-2 u-gov">
+        <div class="cell pad">
+          <div class="gv-h"><span class="ix mono">01</span><span class="t3">Governance</span></div>
+          <div class="gv-votes" id="gvVotes" aria-hidden="true"></div>
+          <ul class="gv-list">
+            <li><span class="mono">01</span>Each member holds one vote.</li>
+            <li><span class="mono">02</span>The Foundation casts an additional tie-breaking vote when needed.</li>
+          </ul>
+        </div>
+        <div class="cell pad">
+          <div class="gv-h"><span class="ix mono">02</span><span class="t3">Responsibilities</span></div>
+          <div class="gv-rec" id="gvRec" aria-hidden="true"><div class="gv-rec-t" id="gvRecT"></div></div>
+          <ul class="gv-list">
+            <li><span class="mono">01</span>Validate blocks and record data.</li>
+            <li><span class="mono">02</span>Strive to expand XPHERE Union.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPANSION ================= -->
+  <section class="sec band u-sec" id="expansion">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Expansion</span>
+          <h2 class="h2" data-gen>XPHERE Ecosystem <br>Expansion</h2>
+        </div>
+      </div>
+      <div class="mt card gcard" data-rv>
+        <span class="gc-glow" aria-hidden="true"></span>
+        <div class="mt-top"><b class="mt-n">25<animate-icons name="arrow-right" size="18" aria-hidden="true"></animate-icons>31</b><span class="lab">Member slots</span></div>
+        <div class="mt-cells" id="cells" aria-hidden="true"></div>
+        <div class="mt-ax mono"><span>1</span><span>25</span><span>31</span></div>
+        <p class="mt-p">Grow the Union from 25 member slots today to the full 31-slot target, retiring a Foundation interim node with each new member.</p>
+      </div>
+      <div class="cells cols-3 u-list">
+        <div class="cell pad"><span class="ic-tile" aria-hidden="true"><animate-icons name="globe" size="17"></animate-icons></span><p>Develop global strategic partnerships.</p></div>
+        <div class="cell pad"><span class="ic-tile" aria-hidden="true"><animate-icons name="trending-up" size="17"></animate-icons></span><p>Increase use cases to boost XPHERE's economic value.</p></div>
+        <div class="cell pad"><span class="ic-tile" aria-hidden="true"><animate-icons name="life-buoy" size="17"></animate-icons></span><p>Provide technical support and early Web3 consulting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EARLY MEMBERS ================= -->
+  <section class="sec u-sec" id="early">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sh-l">
+          <span class="eyebrow">Early members</span>
+          <h2 class="h2" data-gen>Early Union Member <br>Recruitment Strategy</h2>
+        </div>
+      </div>
+      <div class="er-grid">
+        <div class="er-chart card gcard" data-rv>
+          <span class="gc-glow" aria-hidden="true"></span>
+          <span class="lab"><i class="er-dot" aria-hidden="true"></i>Emission −26.28% per year</span>
+          <svg id="curveSvg" viewBox="0 0 560 300" aria-hidden="true"></svg>
+        </div>
+        <div class="er-pts" data-rv>
+          <div class="er-pt"><span class="ix mono">01</span><div><h3 class="t3">Focus on network</h3><p>Focus on network stability during early member recruitment.</p></div></div>
+          <div class="er-pt"><span class="ix mono">02</span><div><h3 class="t3">Larger share</h3><p>With a fixed 31-slot cap, earlier members hold a larger share of block rewards and fee distributions.</p></div></div>
+          <div class="er-pt"><span class="ix mono">03</span><div><h3 class="t3">Reliable members</h3><p>Only reliable members are selected through a strict evaluation process.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= JOIN ================= -->
+  <section class="sec u-sec u-join" id="join">
+    <div class="wrap">
+      <div class="jn gcard" data-rv>
+        <span class="gc-glow" aria-hidden="true"></span>
+        <i class="jn-grid" aria-hidden="true"></i>
+        <span class="eyebrow">Join XPHERE Union</span>
+        <h2 class="h2" data-gen>Be part of the future of blockchain <br>as a Union member</h2>
+        <div class="jn-mail">
+          <span class="jn-ic" aria-hidden="true"><animate-icons name="mail" size="15"></animate-icons></span>
+          <span class="jn-addr mono">Contact@X-phere.com</span>
+          <button type="button" class="cp" data-cp="Contact@X-phere.com"><animate-icons class="cp-i" name="copy" size="12"></animate-icons><span class="cp-t">Copy</span></button>
+          <a class="btn btn-primary btn-sm" href="mailto:Contact@X-phere.com"><span>Send email</span><animate-icons name="arrow-right" size="13"></animate-icons></a>
+        </div>
+        <a class="lnk jn-alt" href="https://stake.x-phere.com">Not running a node? Stake XP instead <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- @footer -->
+<footer class="ft" id="footer">
+  <div class="wrap ft-in">
+    <div class="ft-main">
+      <a class="ft-logo" href="index.html" aria-label="XPHERE home"><img class="th-d" src="assets/brand/XPHERE-ondark.svg" alt="XPHERE" width="124" height="27"><img class="th-l" src="assets/brand/XPHERE-onlight.svg" alt="XPHERE" width="124" height="27"></a>
+      <a class="ft-mail" href="mailto:Contact@X-phere.com">Contact@X-phere.com<animate-icons name="mail" size="14"></animate-icons></a>
+      <nav class="ft-links" aria-label="Footer"><a href="security.html">Security &amp; official domains</a><a href="docs/developer-guide.html">Docs</a><a href="https://stake.x-phere.com">Stake XP</a><a href="https://xpscan.io">Explorer</a></nav>
+    </div>
+    <div class="ft-x" id="ftStage" aria-hidden="true">
+      <canvas class="ft-gl" id="ftGL"></canvas>
+      <div class="mark-slot ft-mark" id="ftMark"><svg class="mark-fb" viewBox="0 0 256 231.298" focusable="false"><defs><linearGradient id="fmg" x1="255.104" y1="229.953" x2="0" y2="-19.762" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a8011f"/><stop offset="1" stop-color="#bb0022"/></linearGradient></defs><path d="M255.99 213.612 C254.687 185.112 219.662 142.844 200.545 121.863 C187.258 107.292 171.293 91.662 154.804 77.347 C163.154 71.682 171.162 66.879 178.544 63.09 C190.935 75.033 199.06 91.575 200.545 109.394 C211.559 97.313 222.065 84.669 231.456 71.375 C240.054 59.024 248.12 46.175 253.107 31.925 C258.494 16.617 257.81 0.272 237.761 0.002 C230.925 -0.064 224.183 1.506 217.667 3.491 C209.754 5.952 202.125 9.186 194.64 12.792 C186.567 16.705 178.785 21.012 171.024 25.677 C161.451 31.444 152.176 37.62 142.988 44.182 C138.045 47.716 133.036 51.446 127.998 55.337 C122.953 51.446 117.951 47.716 113.008 44.182 C103.828 37.62 94.546 31.444 84.973 25.677 C77.219 21.012 69.429 16.705 61.356 12.792 C53.872 9.186 46.242 5.944 38.329 3.491 C31.827 1.506 25.079 -0.056 18.243 0.002 C-1.807 0.272 -2.484 16.617 2.904 31.925 C7.898 46.175 15.957 59.016 24.555 71.375 C33.939 84.676 44.451 97.313 55.466 109.394 C56.951 91.575 65.076 75.04 77.466 63.09 C84.848 66.879 92.857 71.682 101.207 77.347 C84.718 91.67 68.76 107.292 55.466 121.863 C37.579 141.683 20.529 162.635 8.364 186.462 C3.369 196.762 -4.216 214.158 2.911 224.744 C11.363 236.161 32.075 229.993 43.308 226.116 C68.403 216.896 91.19 202.486 113.016 187.082 C95.558 183.44 80.175 173.344 69.859 159.554 C81.952 141.23 105.56 116.074 128.012 97.626 C150.479 116.089 174.06 141.216 186.167 159.554 C175.85 173.336 160.468 183.44 143.002 187.082 C163.372 201.515 184.623 214.911 207.752 224.255 C223.04 230.511 256.317 240.126 255.998 213.626 Z" fill="url(#fmg)"/></svg></div>
     </div>
   </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="ft2" id="footer">
-  <div class="wrap">
-    <div class="ft2-top">
-      <a class="ft2-logo" href="index.html" aria-label="XPHERE home"><img src="images/xphere-logo.png" alt=""><img src="images/xphere-type.png" alt="XPHERE"></a>
-      <a class="ft2-mail" href="mailto:Contact@X-phere.com">Contact@X-phere.com<i><svg viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7l8 6 8-6"/></svg></i></a>
-    </div>
-    <nav class="ft2-links"><a href="security.html">Security &amp; official domains</a><span>·</span><a href="docs/developer-guide.html">Docs</a><span>·</span><a href="https://stake.x-phere.com">Stake XP</a><span>·</span><a href="https://xpscan.io">Explorer</a></nav>
-    <p class="ft2-copy">© All rights reserved - XPHERE Foundation</p>
+  <div class="wrap ft-ledger" aria-hidden="true"><canvas id="ftStream"></canvas></div>
+  <div class="wrap ft-base">
+    <p class="ft-copy mono">© All rights reserved - XPHERE Foundation</p>
   </div>
 </footer>
+<!-- /@footer -->
 
-<script>
-(function(){
-  var b=document.getElementById('noteToggle');
-  b.onclick=function(){document.body.classList.toggle('hide-notes');b.textContent=document.body.classList.contains('hide-notes')?'검토 메모 보기':'검토 메모 숨기기';};
-  document.getElementById('burger').onclick=function(){document.getElementById('menu').classList.toggle('open');};
-  var NS='http://www.w3.org/2000/svg';
-  function f(n){return n.toFixed(1);}
-
-  /* hero: isometric council, in the same line-art style as the Union card on Home —
-     seat pillars on a ring around a taller core, linked to it; signals rise to the core */
-  (function(){
-    var s=document.getElementById('ring');s.parentNode.classList.add('arena','iso');
-    var SC=30;function P(x,y,z){return [(x-y)*0.866*SC,(x+y)*0.5*SC-z*SC];}
-    var o='',b=[1e9,1e9,-1e9,-1e9];
-    function pt(p){b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);return p[0].toFixed(1)+','+p[1].toFixed(1);}
-    function d(a,cl){return a.map(function(p,i){return (i?'L':'M')+pt(p);}).join('')+(cl?'Z':'');}
-    function poly(a,c){o+='<polygon class="'+(c||'')+'" points="'+a.map(pt).join(' ')+'"/>';}
-    function box(x,y,z,w,dd,h,c){o+='<g class="'+(c||'')+'">';
-      poly([P(x,y+dd,z),P(x+w,y+dd,z),P(x+w,y+dd,z+h),P(x,y+dd,z+h)],'fl');
-      poly([P(x+w,y,z),P(x+w,y+dd,z),P(x+w,y+dd,z+h),P(x+w,y,z+h)],'fr');
-      poly([P(x,y,z+h),P(x+w,y,z+h),P(x+w,y+dd,z+h),P(x,y+dd,z+h)],'ft');o+='</g>';}
-    function arc(cx,cy,z,r,n){var a=[];for(var i=0;i<=n;i++){var t=i/n*Math.PI*2;a.push(P(cx+r*Math.cos(t),cy+r*Math.sin(t),z));}return a;}
-    var n=10,R=3.3,CH=3.0,CW=.95,i;
-    /* ground: rings and spokes */
-    o+='<path class="dash" d="'+d(arc(0,0,0,R+.9,96),true)+'"/>';
-    o+='<path class="soft" d="'+d(arc(0,0,0,R,96),true)+'"/>';
-    o+='<path class="soft" d="'+d(arc(0,0,0,1.25,64),true)+'"/>';
-    var seats=[];
-    for(i=0;i<n;i++){var t=i/n*Math.PI*2+Math.PI/4+Math.PI/10,ds=Math.abs(Math.cos(t-Math.PI/4));seats.push({x:R*Math.cos(t),y:R*Math.sin(t),h:1.0+.35*ds,i:i});}
-    seats.forEach(function(st){o+='<polyline class="soft" points="'+pt(P(st.x,st.y,0))+' '+pt(P(0,0,0))+'" opacity=".35"/>';});
-    var all=seats.slice();all.push({x:0,y:0,h:CH,core:1});
-    all.sort(function(a,c){return (a.x+a.y)-(c.x+c.y);});
-    var top=P(0,0,CH);
-    /* links from each seat top to the core top, with a signal travelling up */
-    var sig='';
-    seats.forEach(function(st){var a=P(st.x,st.y,st.h),path='M'+pt(a)+' L'+pt(top),bg=(st.i*1.44).toFixed(2)+'s';
-      o+='<path class="soft lk" d="'+path+'"/>';
-      sig+='<circle class="dot" r="2.6" opacity="0"><animateMotion dur="14.4s" begin="'+bg+'" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.22;1" calcMode="linear" path="'+path+'"/><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.03;.19;.22;1" dur="14.4s" begin="'+bg+'" repeatCount="indefinite"/></circle>';});
-    all.forEach(function(st){var w=st.core?CW:.5;box(st.x-w/2,st.y-w/2,0,w,w,st.h,st.core?'hot':'');});
-    o+=sig;
-    /* core: pulse ring on its top face and the XPHERE mark floating above */
-    o+='<path class="pulse" d="'+d(arc(0,0,CH,.6,40),true)+'"><animate attributeName="opacity" values=".9;0" dur="2.4s" repeatCount="indefinite"/></path>';
-    var lg=P(0,0,CH+1.25);
-
-    o+='<circle class="dot" r="3"><animateMotion dur="9s" repeatCount="indefinite" path="'+d(arc(0,0,0,R+.9,96),true)+'"/></circle>';
-    var p=16;s.setAttribute('viewBox',[b[0]-p,b[1]-p,b[2]-b[0]+2*p,b[3]-b[1]+2*p].map(function(v){return v.toFixed(1);}).join(' '));
-    s.setAttribute('preserveAspectRatio','xMidYMid meet');s.innerHTML=o;
-  })();
-  /* old hero ring (kept, not rendered) */
-  (function(){return;
-    var s=document.getElementById('ring'),N=31,R=118,cx=150,cy=150,hot=[0,6,11,17,23,28],h='',i;
-    for(i=0;i<60;i++){var t=i/60*Math.PI*2,r1=i%5?136:132,r2=142;h+='<line class="'+(i%5?'tickm':'tickM')+'" x1="'+f(cx+r1*Math.cos(t))+'" y1="'+f(cy+r1*Math.sin(t))+'" x2="'+f(cx+r2*Math.cos(t))+'" y2="'+f(cy+r2*Math.sin(t))+'"/>';}
-    h+='<circle cx="150" cy="150" r="'+R+'" fill="none" stroke="#2e2826" stroke-dasharray="2 5"/>';
-    h+='<circle cx="150" cy="150" r="76" fill="none" stroke="#2e2826"/>';
-    h+='<circle cx="150" cy="150" r="76" fill="none" stroke="#e7453a" stroke-opacity=".5"><animate attributeName="r" values="60;96" dur="2.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" repeatCount="indefinite"/></circle>';
-    for(i=0;i<N;i++){var a=-Math.PI/2+i*2*Math.PI/N,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a),k=hot.indexOf(i)>-1;
-      h+='<circle class="d'+(k?' hot':'')+'" cx="'+f(x)+'" cy="'+f(y)+'" r="'+(k?7:8)+'"'+(k?' style="animation-delay:'+(hot.indexOf(i)*.5)+'s"':'')+'/>';}
-    h+='<circle class="orb" r="4"><animateMotion dur="9s" repeatCount="indefinite" path="M32,150a118,118 0 1,1 236,0a118,118 0 1,1 -236,0"/></circle>';
-    h+='<text class="num" x="150" y="162" text-anchor="middle">31</text>';
-    h+='<text class="cap" x="150" y="188" text-anchor="middle">SLOT CAP</text>';
-    s.innerHTML=h;
-  })();
-
-  /* role: proof chain → union → main chain */
-  (function(){
-    var s=document.getElementById('flow'),h='',i;
-    h+='<path class="wire" d="M290,100 H420"/><path class="wire" d="M580,100 H710"/>';
-    h+='<rect class="node" x="20" y="40" width="270" height="120" rx="14"/><text class="lbl" x="44" y="72">PROOF CHAIN</text>';
-    for(i=0;i<5;i++)h+='<rect class="blk'+(i===4?' on':'')+'" x="'+(44+i*46)+'" y="96" width="34" height="34" rx="6"><animate attributeName="opacity" values="1;.45;1" dur="2.4s" begin="'+(i*.3)+'s" repeatCount="indefinite"/></rect>';
-    h+='<circle class="pk" r="5"><animateMotion dur="2.6s" repeatCount="indefinite" path="M260,100 H740"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.6s" repeatCount="indefinite"/></circle>';
-    h+='<circle class="node hub" cx="500" cy="100" r="80"/><image href="images/xphere-logo.png" x="478" y="68" width="44" height="44" style="filter:brightness(0) invert(1)"><animate attributeName="opacity" values=".5;.35;.5" dur="2.4s" repeatCount="indefinite"/></image><text class="lbl" x="500" y="131" text-anchor="middle">XPHERE UNION</text>';
-    h='<defs><radialGradient id="hubg"><stop offset="0" stop-color="#e7453a" stop-opacity=".35"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></radialGradient></defs>'+h;
-    for(i=0;i<31;i++){var a=i/31*Math.PI*2-Math.PI/2;h+='<circle cx="'+f(500+66*Math.cos(a))+'" cy="'+f(100+66*Math.sin(a))+'" r="2.4" fill="'+(i%5?'#4a403d':'#e7453a')+'"/>';}
-    h+='<circle cx="500" cy="100" r="80" fill="none" stroke="#e7453a" stroke-opacity=".5"><animate attributeName="r" values="80;100" dur="2.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".5;0" dur="2.4s" repeatCount="indefinite"/></circle>';
-    h+='<rect class="node" x="710" y="40" width="270" height="120" rx="14"/><text class="lbl" x="734" y="72">MAIN CHAIN</text>';
-    for(i=0;i<5;i++)h+='<rect class="blk on" x="'+(734+i*46)+'" y="96" width="34" height="34" rx="6" opacity="'+(.35+i*.16).toFixed(2)+'"/>';
-    s.innerHTML=h;
-  })();
-
-  /* rewards: flow map (sankey) — two sources split into four destinations */
-  (function(){
-    var s=document.getElementById('sankey'),U=1.6,X0=230,X1=850,NW=14,h='';
-    var src=[{k:'Block Rewards',y:40},{k:'Transaction Fees',y:240}];
-    var dst=[{k:'Union',c:'un'},{k:'Miner',c:'mn'},{k:'Foundation',c:'fd'},{k:'Burned',c:'bn'}];
-    var flows=[[0,0,40],[0,1,40],[0,2,20],[1,0,20],[1,1,20],[1,2,10],[1,3,50]];
-    var y=26;dst.forEach(function(d,i){d.v=0;flows.forEach(function(f){if(f[1]===i)d.v+=f[2];});d.y=y;d.h=d.v*U;d.f=y;y+=d.h+30;});
-    src.forEach(function(o){o.f=o.y;o.h=100*U;});
-    h+='<defs><linearGradient id="gU" x1="0" x2="1"><stop offset="0" stop-color="#ff9738" stop-opacity=".55"/><stop offset="1" stop-color="#e7453a" stop-opacity=".75"/></linearGradient>'+
-       '<linearGradient id="gN" x1="0" x2="1"><stop offset="0" stop-color="#5f5654" stop-opacity=".35"/><stop offset="1" stop-color="#5f5654" stop-opacity=".5"/></linearGradient>'+
-       '<pattern id="gB" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#e7453a" fill-opacity=".12"/><rect width="3" height="8" fill="#e7453a" fill-opacity=".38"/></pattern></defs>';
-    var g='',p='';
-    flows.forEach(function(f,i){
-      var a=src[f[0]],b=dst[f[1]],t=f[2]*U,ya=a.f,yb=b.f;a.f+=t;b.f+=t;
-      var xa=X0+NW,xb=X1,mx=(xa+xb)/2,cls=b.c==='un'?'un':(b.c==='bn'?'bn':'nt');
-      var d='M'+xa+','+ya+' C'+mx+','+ya+' '+mx+','+yb+' '+xb+','+yb+' L'+xb+','+(yb+t)+' C'+mx+','+(yb+t)+' '+mx+','+(ya+t)+' '+xa+','+(ya+t)+'Z';
-      g+='<path class="rb '+cls+'" data-d="'+b.c+'" d="'+d+'" style="--i:'+i+'"/>';
-      g+='<text class="pc'+(cls==='un'?' on':'')+'" x="'+(xa+10)+'" y="'+(ya+t/2+4)+'">'+f[2]+'%</text>';
-      if(cls==='un'){var c='M'+xa+','+(ya+t/2)+' C'+mx+','+(ya+t/2)+' '+mx+','+(yb+t/2)+' '+xb+','+(yb+t/2);
-        for(var j=0;j<3;j++)p+='<circle class="pt" r="2.6"><animateMotion dur="3.6s" begin="'+(-j*1.2-i*.4).toFixed(1)+'s" repeatCount="indefinite" path="'+c+'"/></circle>';}
-    });
-    h+='<g class="rbs">'+g+'</g>'+p;
-    src.forEach(function(o){h+='<rect class="nd" x="'+X0+'" y="'+o.y+'" width="'+NW+'" height="'+o.h+'" rx="3"/>'+
-      '<text class="nk" x="'+(X0-22)+'" y="'+(o.y+o.h/2-10)+'" text-anchor="end">'+o.k+'</text><text class="nv" x="'+(X0-22)+'" y="'+(o.y+o.h/2+22)+'" text-anchor="end">100%</text>';});
-    var sub={un:'40% of rewards + 20% of fees',mn:'40% of rewards + 20% of fees',fd:'20% of rewards + 10% of fees',bn:'50% of fees, removed from supply'};
-    dst.forEach(function(d){h+='<g class="dn '+d.c+'" data-d="'+d.c+'"><rect class="nd" x="'+X1+'" y="'+d.y+'" width="'+NW+'" height="'+d.h+'" rx="3"/>'+
-      '<text class="nk" x="'+(X1+NW+20)+'" y="'+(d.y+d.h/2-4)+'">'+d.k+'</text><text class="ns" x="'+(X1+NW+20)+'" y="'+(d.y+d.h/2+15)+'">'+sub[d.c]+'</text></g>';});
-    s.innerHTML=h;
-    s.querySelectorAll('.dn').forEach(function(n){var k=n.dataset.d;
-      n.addEventListener('mouseenter',function(){s.classList.add('hl');s.querySelectorAll('.rb').forEach(function(r){r.classList.toggle('on',r.dataset.d===k);});n.classList.add('on');});
-      n.addEventListener('mouseleave',function(){s.classList.remove('hl');s.querySelectorAll('.rb.on,.dn.on').forEach(function(r){r.classList.remove('on');});});});
-  })();
-
-  /* role diagram: on narrow screens it scrolls sideways — start centred on the Union hub */
-  (function(){var d=document.querySelector('.u-flow .dia');function c(){if(d.scrollWidth>d.clientWidth)d.scrollLeft=(d.scrollWidth-d.clientWidth)/2;}c();addEventListener('load',c);})();
-
-  /* benefits: block counter toward the next reward (every 60 blocks, ~1s each) */
-  (function(){var e=document.getElementById('bk'),n=0;setInterval(function(){n=n>=60?1:n+1;e.textContent=n;},1000);})();
-
-  /* expansion: 31-slot meter, 25 filled, 6 open */
-  (function(){
-    var c=document.getElementById('cells'),i;
-    for(i=0;i<31;i++){var e=document.createElement('i');e.className=i<25?'f':'o';if(i>=25)e.style.animationDelay=((i-25)*.2)+'s';c.appendChild(e);}
-  })();
-
-  /* early: emission curve (relative, −26.28% per year) */
-  (function(){
-    var s=document.getElementById('curveSvg'),W=600,H=340,L=36,n=8,pts=[],i,h='';
-    h+='<defs><linearGradient id="ug" x1="0" x2="1"><stop offset="0" stop-color="#ff9738"/><stop offset=".5" stop-color="#e7453a"/><stop offset="1" stop-color="#7a2a22"/></linearGradient><linearGradient id="ua" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7453a" stop-opacity=".32"/><stop offset="1" stop-color="#e7453a" stop-opacity="0"/></linearGradient></defs>';
-    for(i=0;i<=4;i++){var y=20+i*(H-20)/4;h+='<line class="gr" x1="'+L+'" y1="'+f(y)+'" x2="'+W+'" y2="'+f(y)+'"/>';}
-    for(i=0;i<n;i++){var x=L+i*(W-L)/(n-1),y2=H-(H-20)*Math.pow(.7372,i);pts.push([x,y2]);h+='<text class="ax" x="'+f(x)+'" y="'+(H+26)+'" text-anchor="middle">Y'+(i+1)+'</text>';}
-    var d='M'+pts.map(function(p){return f(p[0])+','+f(p[1]);}).join(' L');
-    h+='<path class="ar" d="'+d+' L'+W+','+H+' L'+L+','+H+'Z"/><path class="ln" d="'+d+'"/>';
-    h+='<circle class="pt0" cx="'+f(pts[0][0])+'" cy="'+f(pts[0][1])+'" r="12"><animate attributeName="r" values="7;16" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0" dur="2s" repeatCount="indefinite"/></circle><circle class="pt" cx="'+f(pts[0][0])+'" cy="'+f(pts[0][1])+'" r="5"/>';
-    h+='<text class="ax" x="'+f(pts[0][0]+18)+'" y="'+f(pts[0][1]+22)+'" fill="#f5f1ef">EARLIER MEMBERS</text>';
-    s.innerHTML=h;
-  })();
-
-  /* reveal on scroll */
-  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.2}):null;
-  document.querySelectorAll('.u .rv,#bars,#curve').forEach(function(el,i){if(el.classList.contains('rv'))el.style.transitionDelay=((i%4)*.08)+'s';io?io.observe(el):el.classList.add('in');});
-
-  /* overview statement: words light up one by one as it scrolls into view */
-  (function(){
-    var el=document.getElementById('ustate'),ws=[];
-    function wrap(node,kw){Array.prototype.slice.call(node.childNodes).forEach(function(c){
-      if(c.nodeType===3){var fr=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(t){
-        if(!t)return;if(/^\s+$/.test(t)){fr.appendChild(document.createTextNode(t));return;}
-        var s=document.createElement('span');s.className='w'+(kw?' k':'');s.textContent=t;fr.appendChild(s);ws.push(s);});
-        node.replaceChild(fr,c);}
-      else wrap(c,kw||c.classList.contains('kw'));});}
-    wrap(el,false);
-    function run(){var r=el.getBoundingClientRect(),vh=innerHeight,p=(vh*.88-r.top)/(vh*.4);p=Math.max(0,Math.min(1,p));
-      var n=Math.round(p*ws.length);ws.forEach(function(w,i){w.classList.toggle('on',i<n);});}
-    addEventListener('scroll',run,{passive:true});addEventListener('resize',run);run();
-  })();
-
-  /* join: copy the contact address */
-  (function(){var b=document.getElementById('jcopy');if(!b)return;
-    b.onclick=function(){var t='Contact@X-phere.com';
-      function done(){b.textContent='Copied';b.classList.add('ok');setTimeout(function(){b.textContent='Copy';b.classList.remove('ok');},1600);}
-      if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,done);else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');}catch(e){}a.remove();done();}};
-  })();
-
-  /* stepper: line fills and steps light as you scroll */
-  var st=document.getElementById('steps'),fill=st.querySelector('.fill'),lis=st.querySelectorAll('li');
-  function step(){var r=st.getBoundingClientRect(),mid=innerHeight*.6,p=Math.max(0,Math.min(1,(mid-r.top)/(r.height-44)));fill.style.height=(p*(r.height-44))+'px';
-    var n=0;lis.forEach(function(li){var on=li.getBoundingClientRect().top+22<mid;li.classList.toggle('on',on);if(on)n++;});
-    pane(Math.max(1,n));}
-  /* process side panel: follows the active step */
-  var PN=['Application','Evaluation','Registration','Support','Obligation'],last=0;
-  function pane(n){if(n===last)return;last=n;
-    document.getElementById('psn').textContent='0'+n;
-    document.getElementById('pamt').textContent=n>=3?'35M':'1M';
-    document.getElementById('pbar').style.width=(n>=3?100:4)+'%';
-    document.getElementById('pcur').textContent=PN[n-1];
-    document.querySelectorAll('#psteps i').forEach(function(d,j){d.className=j<n-1?'d':(j===n-1?'c':'');});}
-  addEventListener('scroll',step,{passive:true});addEventListener('resize',step);step();
-})();
-</script>
-<script src="nav.js"></script>
+<!-- @scripts -->
+<script src="assets/vendor/animateicons-lucide.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/block-stream.js"></script>
+<script src="assets/js/glass.js"></script>
+<script src="assets/js/core.js"></script>
+<!-- /@scripts -->
+<script src="assets/js/union.js"></script>
 </body>
 </html>
