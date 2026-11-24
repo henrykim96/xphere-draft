@@ -92,9 +92,9 @@ a.eco-card:hover,a.life-card:hover{transform:translateY(-2px)}
 .core{padding:32px 32px 28px;min-height:330px}
 .core-lg{height:36px;display:flex;align-items:center}
 .core-lg img{height:32px;width:auto;max-width:100%}
-.core-lg img[src$="core-rwa.svg"]{height:38px}
+.core-lg img[src*="core-rwa"]{height:38px}
 /* both marks are drawn for dark grounds (near-white type); on light the type inverts and the blues keep their hue */
-[data-theme="light"] .core-lg img{filter:invert(1) hue-rotate(180deg) saturate(1.15)}
+.core-lg .lg-lt{display:none}[data-theme="light"] .core-lg .lg-lt{display:block}[data-theme="light"] .core-lg .lg-dk{display:none}
 .core .t3{margin-top:32px}
 .core>p{max-width:52ch}
 .core-tags{margin-top:18px}
@@ -170,7 +170,7 @@ a.eco-card:hover,a.life-card:hover{transform:translateY(-2px)}
   .pt-wall{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pw{height:76px;padding:0 14px}
   .pt-wall .lg img{height:calc(var(--h,22px) * .94);max-width:128px}
-  .core-lg img[src$="core-rwa.svg"]{height:32px}
+  .core-lg img[src*="core-rwa"]{height:32px}
   .pt-wall.sm{grid-template-columns:repeat(3,minmax(0,1fr))}
   .pt-wall.sm .pw{padding:0 10px}
   .pt-wall.sm .lg img{max-width:88px}
