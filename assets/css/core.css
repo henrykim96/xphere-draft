@@ -566,3 +566,5 @@ button.chip[aria-pressed="true"]{color:var(--tx);background:var(--surface-hi);bo
   .mq-track{animation:none}
   .mq{overflow-x:auto}
 }
+
+.dd.shut .dd-p,.dd.shut:hover .dd-p,.dd.shut:focus-within .dd-p{opacity:0;visibility:hidden;transition:opacity .15s var(--ease),visibility 0s .15s}
