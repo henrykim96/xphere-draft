@@ -103,7 +103,7 @@
         if (o) playIcons(t);
       });
       dd.addEventListener('mouseenter', function () { if (!mqMobile.matches) { t.setAttribute('aria-expanded', 'true'); playIcons(t); } });
-      dd.addEventListener('mouseleave', function () { dd.classList.remove('shut'); if (!mqMobile.matches && !dd.classList.contains('open')) t.setAttribute('aria-expanded', 'false'); });
+      dd.addEventListener('mouseleave', function () { dd.classList.remove('shut'); if (!mqMobile.matches) { dd.classList.remove('open'); if (document.activeElement && dd.contains(document.activeElement)) document.activeElement.blur(); } if (!mqMobile.matches && !dd.classList.contains('open')) t.setAttribute('aria-expanded', 'false'); });
       dd.addEventListener('focusout', function (e) { if (!dd.contains(e.relatedTarget) && !mqMobile.matches) { dd.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); } });
     });
     document.addEventListener('click', function (e) { dds.forEach(function (d) { if (!d.contains(e.target)) { d.classList.remove('open'); $('.dd-t', d).setAttribute('aria-expanded', 'false'); } }); });
