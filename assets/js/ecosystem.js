@@ -23,8 +23,8 @@
   /* @data:P */
   var P=[
     {n:'XCROLL',c:'apps',k:'Watch short videos, earn rewards',t:'Watch-to-earn · Shorts · Viewer rewards',u:'https://xcroll.ai/',img:'images/xcroll_mark.png'},
-    {n:'Phos',c:'apps',k:'Token launchpad built on XPHERE',t:'Launchpad · Token launches · XPHERE-native',u:'https://phos.land/',img:'images/phos-black.png',s:1.25},
-    {n:'Xeffy',c:'defi',k:'An institutional-grade gateway to vaults and RWA',t:'Vault strategies · Real-world assets · XEF token on XPHERE',u:'https://xeffy.io/',img:'images/xeffy-mark.png',s:1.15},
+    {n:'Phos',c:'apps',k:'Token launchpad built on XPHERE',t:'Launchpad · Token launches · XPHERE-native',u:'https://phos.land/',img:'images/phos-mark-transparent.png'},
+    {n:'Xeffy',c:'defi',k:'An institutional-grade gateway to vaults and RWA',t:'Vault strategies · Real-world assets · XEF token on XPHERE',u:'https://xeffy.io/',img:'images/xeffy-mark-transparent.png',s:1.45},
     {n:'Faiyah',c:'defi',k:'Multichain DeFi, from swaps to launches',t:'Staking · P2P swap · Burn pools · Launchpad · DEX',u:'https://faiyah.app/',img:'images/faiyah.svg'},
     {n:'PumpkinSwap',c:'defi',k:'Swap tokens on XPHERE in one step',t:'Swap · Pools · Bridge',u:'https://pumpkinswap.app/swap',img:'images/pumpkinswap.svg'},
     {n:'XP Union Vault',c:'defi',k:'Real-yield staking for XP',t:'60% to stakers · 40%+ burned · 0% fees',u:'https://stake.x-phere.com/',img:'images/eco-vault.png'},
@@ -41,7 +41,7 @@
     {n:'Campass',c:'life',k:'Digital identity for universities. Student documents arrive on your phone and can be verified on the spot.',t:'University · Digital ID · Certificates',st:'Live',mono:'CP',img:'images/life-superwallet.png',sq:1},
     {n:'Yaknaru',c:'life',k:'A health app with XPHERE-based rewards on the way',t:'Health shop · Prescriptions · Points',st:'Coming to XPHERE',mono:'약',img:'images/life-yaknaru.png',sq:1},
     {n:'KWAN',c:'life',k:'A Korean won stablecoin built for real-time tax refunds for visitors, and for local businesses',t:'KRW stablecoin · Tax refunds · Local economy',st:'In development',mono:'₩',img:'images/life-kwan.png'},
-    {n:'Local currency',c:'life',k:'Local currency programs on XPHERE',t:'Local payments · Community',st:'Coming soon',mono:'LC'}
+    {n:'Local currency',c:'life',k:'Local currency programs on XPHERE',t:'Local payments · Community',st:'Coming soon',mono:'LC',img:'images/life-localcurrency.svg',sq:1}
   ];
   /* @data:end */
   var PARTNERS = 19;   /* draft: same 19 logos as the Home logo strip (16 partners + 3 media) */
