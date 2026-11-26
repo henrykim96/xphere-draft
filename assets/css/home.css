@@ -282,32 +282,3 @@
   .evc{display:flex}
   .evc-img{aspect-ratio:16/10;border-right:0;border-bottom:1px solid var(--line)}
 }
-
-/* ---------- Burn history (Union Vault daily feed) ---------- */
-.tk-hist{grid-column:1 / -1;padding:26px 26px 22px;display:flex;flex-direction:column;gap:20px}
-.th-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.th-head h4{margin-top:10px;font-size:15px;font-weight:560;letter-spacing:-.01em}
-.th-total{text-align:right}
-.th-total b{display:block;font-family:var(--d);font-variation-settings:"wdth" 96;font-weight:500;font-size:30px;line-height:1.1;letter-spacing:-.03em;color:var(--tk-ember);font-variant-numeric:tabular-nums}
-.th-total em{font-style:normal;font-size:12.5px;color:var(--tx-3)}
-.th-body{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:26px;align-items:stretch}
-.th-chart{position:relative;min-height:200px;align-self:center}
-.th-chart svg{display:block;width:100%;height:200px;overflow:visible}
-.th-chart .ax{font-family:var(--m,ui-monospace,monospace);font-size:10.5px;fill:var(--tx-3)}
-.th-chart .gl{stroke:var(--line);stroke-width:1}
-.th-chart .ms circle{fill:var(--surface);stroke:var(--tk-ember);stroke-width:1.5}
-.th-chart .ms text{font-size:10.5px;fill:var(--tx-2)}
-.th-tip{position:absolute;pointer-events:none;padding:7px 10px;border-radius:8px;background:var(--tx);color:var(--surface);font-size:12px;line-height:1.4;white-space:nowrap;transform:translate(-50%,-100%);margin-top:-10px;opacity:0;transition:opacity .12s}
-.th-tip.on{opacity:1}
-.th-log{border-left:1px solid var(--line);padding-left:22px}
-.th-log ol{margin-top:12px;border-top:1px solid var(--line)}
-.th-log li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--tx-2)}
-.th-log li b{font-weight:560;color:var(--tx);font-variant-numeric:tabular-nums}
-.th-log li.th-empty{color:var(--tx-3)}
-.th-foot{display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--line)}
-.th-foot p{font-size:13px;line-height:1.55;color:var(--tx-2)}
-.th-foot code{font-size:12px;padding:1px 5px;border-radius:5px;background:var(--chip-bg)}
-.th-links{display:flex;gap:6px 18px;flex-wrap:wrap}
-.th-links a{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--accent)}
-@media (max-width:960px){.th-body{grid-template-columns:1fr}.th-log{border-left:0;padding-left:0}}
-@media (max-width:760px){.tk-hist{padding:20px}.th-total{text-align:left}.th-total b{font-size:26px}.th-chart svg{height:170px}.th-chart{min-height:170px}}
