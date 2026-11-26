@@ -12,10 +12,10 @@
 if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
 d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==='light'?'#f6f4f2':'#0b0909';})();</script>
 <link rel="stylesheet" href="assets/fonts/fonts.css">
-<link rel="stylesheet" href="assets/css/core.css?v=20261126b">
+<link rel="stylesheet" href="assets/css/core.css?v=20261126c">
 <noscript><style>.mark-fb{opacity:1!important}.rv,[data-rv]{opacity:1!important;transform:none!important}</style></noscript>
 <!-- /@head -->
-<link rel="stylesheet" href="assets/css/home.css?v=20261126b">
+<link rel="stylesheet" href="assets/css/home.css?v=20261126c">
 </head>
 <body>
 
@@ -352,6 +352,17 @@ d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-co
         <div class="tk-ring" data-split="50,20,20,10" data-c="red,ember,ink,mute"><div class="mid"><b>50%</b><em>burned forever</em></div></div>
         <ul class="tk-leg"><li><i style="background:var(--tk-red)"></i>Burned<b>50%</b></li><li><i style="background:var(--tk-ember)"></i>Union<b>20%</b></li><li><i style="background:var(--tk-ink)"></i>Miners<b>20%</b></li><li><i style="background:var(--tk-mute)"></i>Foundation<b>10%</b></li></ul>
       </div>
+      <div class="tk-card cell burn-card">
+        <span class="lab mono">Three burns</span>
+        <h4>XP that never comes back</h4>
+        <ol class="tk-burns">
+          <li><span class="mono">01</span><div><b>Transaction fees</b>50% of every fee is destroyed.</div></li>
+          <li><span class="mono">02</span><div><b>Union Vault</b>40%+ of daily staking rewards, plus yield from unfilled capacity.</div></li>
+          <li><span class="mono">03</span><div><b>Interim validator nodes</b>Everything they earn until a Union member takes the seat.</div></li>
+        </ol>
+        <a class="tk-link" href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener">Burn records <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
+      </div>
+
       <div class="tk-hist cell" id="burnHist">
         <div class="th-head">
           <div>
@@ -360,11 +371,6 @@ d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-co
           </div>
           <div class="th-total"><b class="mono" data-bh="total">—</b><em>XP burned since <span data-bh="since">launch</span></em></div>
         </div>
-        <ol class="th-burns" aria-label="Three burns">
-          <li><span class="mono">01</span><div><b>Transaction fees</b>50% of every fee is destroyed.</div></li>
-          <li><span class="mono">02</span><div><b>Union Vault</b>40%+ of daily staking rewards, plus yield from unfilled capacity. Charted below.</div></li>
-          <li><span class="mono">03</span><div><b>Interim validator nodes</b>Everything they earn until a Union member takes the seat.</div></li>
-        </ol>
         <div class="th-body">
           <div class="th-chart" data-bh="chart" role="img" aria-label="Cumulative XP burned by the Union Vault, by day"></div>
           <div class="th-log">
@@ -377,7 +383,6 @@ d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-co
           <div class="th-links">
             <a href="https://xpscan.io/address/0x000000000000000000000000000000000000dEaD" target="_blank" rel="noopener noreferrer">Burn address on XPScan <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
             <a href="https://xpscan.io/address/0x24C5912B63a8B41DA80EBDC2115949fcbb41Fddf" target="_blank" rel="noopener noreferrer">Distributor contract <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
-            <a href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener noreferrer">Full burn log <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
             <a href="docs/tokenomics.html#burn-history">Burn timeline <animate-icons name="arrow-right" size="12"></animate-icons></a>
           </div>
         </div>
@@ -551,10 +556,10 @@ d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-co
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/vendor/lenis.min.js"></script>
-<script src="assets/js/block-stream.js?v=20261126b"></script>
-<script src="assets/js/glass.js?v=20261126b"></script>
-<script src="assets/js/core.js?v=20261126b"></script>
+<script src="assets/js/block-stream.js?v=20261126c"></script>
+<script src="assets/js/glass.js?v=20261126c"></script>
+<script src="assets/js/core.js?v=20261126c"></script>
 <!-- /@scripts -->
-<script src="assets/js/home.js?v=20261126b"></script>
+<script src="assets/js/home.js?v=20261126c"></script>
 </body>
 </html>

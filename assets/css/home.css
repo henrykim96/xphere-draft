@@ -311,15 +311,3 @@
 .th-links a{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--accent)}
 @media (max-width:960px){.th-body{grid-template-columns:1fr}.th-log{border-left:0;padding-left:0}}
 @media (max-width:760px){.tk-hist{padding:20px}.th-total{text-align:left}.th-total b{font-size:26px}.th-chart svg{height:170px}.th-chart{min-height:170px}}
-/* Three burns folded into the history card; middle row is now two ring cards */
-.tk-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
-.tk-grid .tk-s{grid-column:span 2}
-.tk-grid .ring-card{grid-column:span 3}
-.tk-grid .tk-hist{grid-column:1 / -1}
-.th-burns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.th-burns li{display:grid;grid-template-columns:28px 1fr;gap:6px;padding:14px 0}
-.th-burns li>span{font-size:11px;color:var(--accent);padding-top:2px}
-.th-burns li div{font-size:13px;line-height:1.55;color:var(--tx-2)}
-.th-burns li b{display:block;font-size:14px;font-weight:560;color:var(--tx);margin-bottom:2px}
-@media (max-width:1099px){.tk-grid{grid-template-columns:1fr 1fr}.tk-grid .tk-s,.tk-grid .ring-card{grid-column:span 1}.tk-grid .tk-burn{grid-column:1 / -1}}
-@media (max-width:760px){.tk-grid{grid-template-columns:1fr}.tk-grid .tk-s,.tk-grid .ring-card,.tk-grid .tk-burn{grid-column:1 / -1}.th-burns{grid-template-columns:1fr}.th-burns li+li{border-top:1px solid var(--line)}.th-burns li{padding:11px 0}}
