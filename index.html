@@ -362,6 +362,31 @@ d.setAttribute('data-theme',t);var m=document.querySelector('meta[name="theme-co
         </ol>
         <a class="tk-link" href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener">Burn records <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
       </div>
+
+      <div class="tk-hist cell" id="burnHist">
+        <div class="th-head">
+          <div>
+            <span class="lab mono">Burn history · Union Vault</span>
+            <h4>Every daily burn, on the record.</h4>
+          </div>
+          <div class="th-total"><b class="mono" data-bh="total">—</b><em>XP burned since <span data-bh="since">launch</span></em></div>
+        </div>
+        <div class="th-body">
+          <div class="th-chart" data-bh="chart" role="img" aria-label="Cumulative XP burned by the Union Vault, by day"></div>
+          <div class="th-log">
+            <span class="lab mono">Latest settlements</span>
+            <ol data-bh="log"><li class="th-empty">Loading the daily log…</li></ol>
+          </div>
+        </div>
+        <div class="th-foot">
+          <p>Burned XP goes to <code>0x000…dEaD</code>, an address no one controls. Check any day on-chain yourself.</p>
+          <div class="th-links">
+            <a href="https://xpscan.io/address/0x000000000000000000000000000000000000dEaD" target="_blank" rel="noopener noreferrer">Burn address on XPScan <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
+            <a href="https://xpscan.io/address/0x24C5912B63a8B41DA80EBDC2115949fcbb41Fddf" target="_blank" rel="noopener noreferrer">Distributor contract <animate-icons name="arrow-up-right" size="12"></animate-icons></a>
+            <a href="docs/tokenomics.html#burn-history">Burn timeline <animate-icons name="arrow-right" size="12"></animate-icons></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

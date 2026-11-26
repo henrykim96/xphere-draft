@@ -116,6 +116,30 @@ settlement, <strong>more than 40% of the rewards</strong> flowing into the vault
 <p>The first two blocks are <strong>protocol-level</strong> distributions built into the network. The third is the
 Foundation&#x27;s <a href="staking.html">XP Union Vault</a> staking service, which redistributes what the
 Foundation&#x27;s own Union node earns.</p>
+<h2 id="burn-history">Burn History</h2>
+<p>The XP Union Vault has settled once a day since launch, and every settlement is on-chain. At each
+settlement, stakers receive <strong>60% × (staked ÷ cap)</strong> of what came in, and the rest goes to
+<code class="nw">0x000000000000000000000000000000000000dEaD</code>. Before the vault filled up, most of each day&#x27;s
+rewards were burned. Once it was full, the burned share settled at about 40%.</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>What happened</th></tr></thead><tbody>
+<tr><td>Aug 3, 2026</td><td>The vault launches with a 2M XP cap. The first settlement burns all 1,450 XP it receives.</td></tr>
+<tr><td>Aug 14, 2026</td><td>The cap rises to 35M XP through the Timelock, after its 48-hour delay.</td></tr>
+<tr><td>Aug 19, 2026</td><td>Total burned passes <strong>100,000 XP</strong>.</td></tr>
+<tr><td>Aug 20, 2026</td><td>Deposits reach the 35M XP cap.</td></tr>
+<tr><td>Sep 16, 2026</td><td>The cap rises to 70M XP through the Timelock.</td></tr>
+<tr><td>Sep 19, 2026</td><td>Deposits reach the 70M XP cap.</td></tr>
+<tr><td>Sep 20, 2026</td><td>Total burned passes <strong>500,000 XP</strong>.</td></tr>
+<tr><td>Oct 10, 2026</td><td>Total burned passes <strong>1,000,000 XP</strong>.</td></tr>
+<tr><td>Nov 22, 2026</td><td>Total burned passes <strong>2,000,000 XP</strong>.</td></tr>
+<tr><td>Nov 25, 2026</td><td><strong>2,089,202 XP</strong> burned across 113 daily settlements.</td></tr>
+</tbody></table></div>
+<p>These figures cover the Union Vault only. The protocol&#x27;s 50% fee burn happens separately and is not included.
+The live total and a day-by-day chart are on the <a href="../index.html#tokenomics">home page</a> and at
+<a href="https://stake.x-phere.com/burn.html" target="_blank" rel="noopener noreferrer"><code class="nw">stake.x-phere.com/burn</code></a>.</p>
+<div class="callout note"><div class="callout-t"><animate-icons name="info" size="13"></animate-icons><span>verify it yourself</span></div><div class="callout-b"><p>The <a href="https://xpscan.io/address/0x24C5912B63a8B41DA80EBDC2115949fcbb41Fddf" target="_blank" rel="noopener noreferrer">RewardDistributor contract</a>&#x27;s
+<code class="nw">totalBurned()</code> returns the running total. The
+<a href="https://xpscan.io/address/0x000000000000000000000000000000000000dEaD" target="_blank" rel="noopener noreferrer">burn address on XPScan</a>
+shows everything sent there.</p></div></div>
 <h2 id="tracking-supply">Tracking Supply</h2>
 <p>Query current circulating supply:</p>
 <div class="code" data-lang="bash"><div class="code-bar"><span class="lab"></span><button class="cp" type="button" data-cp="" aria-label="Copy"><animate-icons class="cp-i" name="copy" size="13"></animate-icons></button></div><pre tabindex="0"><code><div class="ln"><span class="token plain">curl <span class="token flag">-X</span> POST https://rpc.x-phere.com \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">-H</span> <span class="token string">"Content-Type: application/json"</span> \</span><br></div><div class="ln"><span class="token plain">  <span class="token flag">--data</span> <span class="token string">'{"jsonrpc":"2.0","method":"xp_getTotalSupply","params":[],"id":1}'</span></span><br></div></code></pre></div>
@@ -132,7 +156,7 @@ Foundation&#x27;s own Union node earns.</p>
   </main>
   <aside class="dx-toc" id="dxToc">
     <div class="dx-toc-bar"><button class="dx-dw" id="dxDw" type="button" aria-label="Menu" aria-controls="dxSide" aria-expanded="false"><animate-icons name="panel-left" size="16"></animate-icons></button><button class="dx-toc-t" id="dxTocT" type="button" aria-controls="toc" aria-expanded="false"><span>On this page</span><animate-icons name="chevron-down" size="14"></animate-icons></button></div>
-    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#token-parameters">Token Parameters</a><a href="#supply-composition">Supply Composition</a><a href="#emission-schedule">Emission Schedule</a><a href="#transaction-fees-and-burn">Transaction Fees and Burn</a><a href="#where-xp-flows">Where XP Flows</a><a href="#tracking-supply">Tracking Supply</a><a href="#see-also">See Also</a></nav>
+    <nav id="toc" data-lenis-prevent><i class="dx-toc-ind" aria-hidden="true"></i><a href="#token-parameters">Token Parameters</a><a href="#supply-composition">Supply Composition</a><a href="#emission-schedule">Emission Schedule</a><a href="#transaction-fees-and-burn">Transaction Fees and Burn</a><a href="#where-xp-flows">Where XP Flows</a><a href="#burn-history">Burn History</a><a href="#tracking-supply">Tracking Supply</a><a href="#see-also">See Also</a></nav>
   </aside>
   <div class="dx-scrim" id="dxScrim" aria-hidden="true"></div>
 </div>
